@@ -1,0 +1,15 @@
+algemeen:
+hoogte en breedte waarden --> nullable true
+
+sommige geometrie objecten hebben Z (=0) terwijl kolomn geen Z ondersteund. Is opgelost in transformatie
+
+BrabantseDelta:
+- nhi:Stuw --> nhi:stuw
+- <nhi:afvoercoëfficiënt> --> <nhi:afvoercoefficient>
+
+
+AaenMaas:
+- <nhi:lateraknoop --> <nhi:lateraleknoop>
+- profielen bevatten ook dijkprofielen. Is hier onderschijd in te maken
+- lateraleknoop-code heeft extra 'L' terwijl verwijzing vanuit afvoergebied dit niet heeft
+- selecteer nhiFeatureTypes.xsd bij aanmaken van gmls. hierdoor worden vermoedelijk geometries eenduidig gegenereerd

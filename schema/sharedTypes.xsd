@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by ICT (Stichting Deltares) -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" xmlns:nhi="http://www.nhi.nu/gml" targetNamespace="http://www.nhi.nu/gml" elementFormDefault="qualified" version="1.0">
+	<import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/2.1.2/feature.xsd"/>
+	<complexType name="FeatureCollectionType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureCollectionType"/>
+		</complexContent>
+	</complexType>
+	<simpleType name="administratiefgebiedWaterschappenSimpleType">
+		<restriction base="string">
+			<enumeration value="aa en maas"/>
+			<enumeration value="amstel gooi en vecht"/>
+			<enumeration value="brabantse delta"/>
+			<enumeration value="delfland"/>
+			<enumeration value="dommel"/>
+			<enumeration value="fryslan"/>
+			<enumeration value="hollands noorderkwartier"/>
+			<enumeration value="hollandse delta"/>
+			<enumeration value="hunze en aas"/>
+			<enumeration value="noorderzijlvest"/>
+			<enumeration value="peel en maasvallei"/>
+			<enumeration value="rijn en ijssel"/>
+			<enumeration value="rijnland"/>
+			<enumeration value="rivierenland"/>
+			<enumeration value="roer en overmaas"/>
+			<enumeration value="schieland en krimpenerwaard"/>
+			<enumeration value="stichtse rijnlanden"/>
+			<enumeration value="zuiderzeeland"/>
+			<enumeration value="scheldestromen"/>
+			<enumeration value="vallei en veluwe"/>
+			<enumeration value="vechtstromen"/>
+			<enumeration value="drents overijsselse delta"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="administratiefgebiedSimpleType">
+		<union memberTypes="nhi:administratiefgebiedWaterschappenSimpleType"/>
+	</simpleType>
+	<simpleType name="dateTimeSimpleType">
+		<restriction base="string">
+			<pattern value="\d\d\d\d\d\d\d\d\d\d\d\d\d\d"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="jaNeeSimpleType">
+		<restriction base="string">
+			<enumeration value="ja" />
+			<enumeration value="nee"/>
+			<enumeration value="onbekend"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="vormCodeSimpleType">
+		<restriction base="string">
+			<enumeration value="rond"/>
+			<enumeration value="driehoekig"/>
+			<enumeration value="rechthoekig"/>
+			<enumeration value="eivormig"/>
+			<enumeration value="ellipsvormig"/>
+			<enumeration value="paraboolvormig"/>
+			<enumeration value="trapeziumvormig"/>
+			<enumeration value="heulprofiel"/>
+			<enumeration value="muilprofiel"/>
+			<enumeration value="langwerpig"/>
+			<enumeration value="scherp"/>
+			<enumeration value="onbekend"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="typeProfielCodeSimpleType">
+		<restriction base="string">
+			<enumeration value="stuw"/>
+			<enumeration value="bodemval"/>
+			<enumeration value="brug"/>
+			<enumeration value="waterloop"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="soortKokerVormigeConstructieCodeSimpleType">
+		<restriction base="string">
+			<enumeration value="duiker"/>
+			<enumeration value="hevel"/>
+			<enumeration value="sifon"/>
+			<enumeration value="bypass"/>
+			<enumeration value="onbekend"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="statusObjectCodeSimpleType">
+		<restriction base="string">
+			<enumeration value="planvorming"/>
+			<enumeration value="gerealiseerd"/>
+			<enumeration value="buiten bedrijf"/>
+			<enumeration value="niet meer aanwezig"/>
+			<enumeration value="te verwijderen"/>
+			<enumeration value="onbekend"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="ruwheidsTypeCodeSimpleType">
+		<restriction base="string">
+			<enumeration value="chezy"/>
+			<enumeration value="manning"/>
+			<enumeration value="stricklerkn"/>
+			<enumeration value="stricklerks"/>
+			<enumeration value="white colebrook"/>
+			<enumeration value="bos en bijkerk"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="soortAfsluitmiddelCodeSimpleType">
+		<restriction base="string">
+			<enumeration value="deur"/>
+			<enumeration value="schotbalk sponning"/>
+			<enumeration value="zandzakken"/>
+			<enumeration value="schuif"/>
+			<enumeration value="terugslagklep"/>
+			<enumeration value="tolklep"/>
+			<enumeration value="niet afsluitbaar"/>
+			<enumeration value="overig"/>
+			<enumeration value="onbekend"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="soortRegelbaarheidCodeSimpleType">
+		<restriction base="string">
+			<enumeration value="niet regelbaar (vast)"/>
+			<enumeration value="regelbaar, niet automatisch"/>
+			<enumeration value="regelbaar, automatisch"/>
+			<enumeration value="handmatig"/>
+			<enumeration value="overig"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="typeHydraulischObjectCodeSimpleType">
+		<restriction base="string">
+			<enumeration value="vispassage"/>
+			<enumeration value="dood hout"/>
+			<enumeration value="beverdam"/>
+			<enumeration value="zandvang"/>
+			<enumeration value="watermolen"/>
+			<enumeration value="overig"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="typeRandvoorwaardeCodeSimpleType">
+		<restriction base="string">
+			<enumeration value="waterstand"/>
+			<enumeration value="debiet"/>
+			<enumeration value="qh-relatie"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="sturingTypeCodeSimpleType">
+		<restriction base="string">
+			<enumeration value="continue"/>
+			<enumeration value="discreet"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="stuurvariabeleCodeSimpleType">
+		<restriction base="string">
+			<enumeration value="kruinhoogte"/>
+			<enumeration value="schuifhoogte"/>
+			<enumeration value="pompcapaciteit"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="soortStuwCodeSimpleType">
+		<restriction base="string">
+			<enumeration value="schotbalkstuw"/>
+			<enumeration value="stuw met schuif"/>
+			<enumeration value="stuw met klep"/>
+			<enumeration value="segmentstuw"/>
+			<enumeration value="cascadestuw"/>
+			<enumeration value="hevelstuw"/>
+			<enumeration value="meetstuw"/>
+			<enumeration value="meetschot"/>
+			<enumeration value="stuw met contra-gewicht"/>
+			<enumeration value="inlaat- en/of aflaatstuw"/>
+			<enumeration value="overlaat"/>
+			<enumeration value="drijverstuw"/>
+			<enumeration value="trommelstuw"/>
+			<enumeration value="gronddamstuw"/>
+			<enumeration value="stuwbak"/>
+			<enumeration value="tuimel- of kantelstuw"/>
+			<enumeration value="balgstuw"/>
+			<enumeration value="brievenbusstuw"/>
+			<enumeration value="knijpstuw"/>
+			<enumeration value="conserveringstuw"/>
+			<enumeration value="onbekend"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="doelvariabeleCodeSimpleType">
+		<restriction base="string">
+			<enumeration value="waterstand"/>
+			<enumeration value="debiet"/>
+		</restriction>
+	</simpleType>
+	<group name="ruwheid">
+		<sequence>
+			<element name="ruwheidstypecode" type="nhi:ruwheidsTypeCodeSimpleType"/>
+			<element name="ruwheidswaarde" type="decimal"/>
+		</sequence>
+	</group>
+	<group name="ruwheidsbereik">
+		<sequence>
+			<element name="ruwheidstypecode" type="nhi:ruwheidsTypeCodeSimpleType"/>
+			<element name="ruwheidswaardelaag" type="decimal"/>
+			<element name="ruwheidswaardehoog" type="decimal"/>
+		</sequence>
+	</group>
+	<group name="general">
+		<sequence>
+			<element name="code" type="string"/>
+			<element name="statusobjectcode" type="nhi:statusObjectCodeSimpleType" minOccurs="0"/>
+			<element name="objectbegintijd" type="nhi:dateTimeSimpleType" minOccurs="0"/>
+			<element name="objecteindtijd" type="nhi:dateTimeSimpleType" minOccurs="0"/>
+		</sequence>
+	</group>
+	<group name="generalExtended">
+		<sequence>
+			<element name="code" type="string"/>
+			<element name="naam" type="string" minOccurs="0"/>
+			<element name="statusobjectcode" type="nhi:statusObjectCodeSimpleType" minOccurs="0"/>
+			<element name="objectbegintijd" type="nhi:dateTimeSimpleType" minOccurs="0"/>
+			<element name="objecteindtijd" type="nhi:dateTimeSimpleType" minOccurs="0"/>
+			<element name="hyperlink" type="string" minOccurs="0"/>
+		</sequence>
+	</group>
+</schema>
