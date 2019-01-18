@@ -1,0 +1,2742 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    Command-line to run this workspace:
+#        "C:\Program Files (x86)\FME\fme.exe" \\wsl-app09\Sobek\HDB\Workspaces\GDBnaarGML.fmw
+#              --DestDataset_GML2 "\\wsl-app09\Sobek\HDB\Output"
+#              --SourceDataset_GEODATABASE_FILE_12 "\\wsl-app09\Sobek\HDB\Data\HDB.gdb"
+#              --SourceDataset_GEODATABASE_FILE "\\wsl-app09\Sobek\HDB\Data\HDB.gdb"
+#              --DestDataset_GML2_3 "\\wsl-app09\Sobek\HDB\Output\dwarsprofiel.gml"
+#    
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BEGIN_PYTHON=""
+#!   BEGIN_TCL=""
+#!   CATEGORY=""
+#!   DESCRIPTION=""
+#!   DESTINATION="VISUALIZER"
+#!   DESTINATION_ROUTING_FILE=""
+#!   DOC_EXTENTS="2635.42 3395.15"
+#!   DOC_TOP_LEFT="-313.266 -2791.49"
+#!   END_PYTHON=""
+#!   END_TCL=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="18301"
+#!   FME_DOCUMENT_GUID="946d5c08-f15a-4a58-9759-d36b163217de"
+#!   FME_DOCUMENT_PRIORGUID="290e80ac-0b54-49da-8d30-3f338c247609,29634ff9-a8f6-4f46-89a9-7c6ebd95eb5c,e1dfd249-3341-49ee-8f48-6504de334f23,794c63b0-dd19-4f87-a731-e49fe223bcf3,3777df96-2f6b-42d5-8ce1-41804620f940,023f7d52-617d-4726-8a68-1e23ad033e58,6aa457b3-0301-44e4-9381-2806fd675046,d841bda0-8ce8-4c8f-8432-401a406a773d,86be6d45-4792-4edf-a74b-1883279f50ba"
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   FME_SERVER_SERVICES=""
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   HISTORY=""
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_BUILD="FME(R) 2018.0.0.2 (20180414 - Build 18301 - WIN32)"
+#!   LAST_SAVE_DATE="2018-10-19T11:34:36"
+#!   LOG_FILE=""
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOG_FEATURES="200"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="27"
+#!   REDIRECT_TERMINATORS="NONE"
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   SOURCE="NONE"
+#!   SOURCE_ROUTING_FILE=""
+#!   TERMINATE_REJECTED="YES"
+#!   TITLE=""
+#!   USAGE=""
+#!   USE_MARKDOWN=""
+#!   VIEW_POSITION="-1025.75 345.592"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   ZOOM_SCALE="85"
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="GEODATABASE_FILE"
+#!   DATASET="$(SourceDataset_GEODATABASE_FILE_12)"
+#!   KEYWORD="GEODATABASE_FILE_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE="geodb_type {FME_GEN_GEOMETRY} geodb_where_wwjd &quot;&quot;"
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="geodb_dim_begin_dimension_y double geodb_text_char_spacing double fme_basename char(50) geodb_dim_begin_dimension_x double geodb_dim_end_dimension_x double geodb_text_lc_margin_bottom double geodb_dim_text_z double geodb_dim_type smallint geodb_text_leader_line_anchor_point char(254) geodb_font_weight smallint geodb_feature_dataset char(254) geodb_text_size double geodb_junction_element_count integer geodb_text_leader_line char(254) geodb_dim_begin_dimension_z double geodb_anno_class_id integer geodb_text_lc_textbox_y2 double geodb_dim_style_id integer fme_geometry char(50) fme_feature_type char(50) geodb_text_leader_line_width double geodb_secondary_axis double geodb_dim_line_z double geodb_font_underline boolean geodb_text_string char(254) geodb_junction_feature_count integer geodb_feature_class_alias char(254) geodb_text_break_char integer geodb_v_align char(50) multi_reader_keyword char(50) geodb_text_lc_accent_bar_width double fme_fill_color char(50) geodb_dim_line_x double geodb_font_charset smallint geodb_dim_custom_length double geodb_font_italic boolean geodb_h_align char(50) geodb_start_angle double geodb_rel_origin_oid integer geodb_text_part_count integer geodb_from_junction_element_id integer fme_type char(50) geodb_text_leader_line_tolerance double geodb_element_id integer fme_dataset char(50) geodb_text_lc_textbox_x2 double geodb_raster_compression_quality integer geodb_text_y_offset double geodb_text_lc_textbox_y4 double geodb_edge_element_count integer geodb_text_lc_textbox_y1 double geodb_dim_text_x double geodb_text_point_scale_factor double geodb_text_lc_margin_top double geodb_text_character_width double geodb_font_bold boolean geodb_raster_compression_type char(100) geodb_text_lc_style char(20) geodb_element_index integer fme_sweep_angle double geodb_dim_end_dimension_z double geodb_dim_extn_line_angle double geodb_text_lc_textbox_x1 double geodb_right_to_left boolean geodb_dim_text_y double geodb_oid integer fme_color char(50) fme_secondary_axis double geodb_topological_configuration char(6) geodb_feature_has_relationships boolean geodb_dim_line_y double geodb_text_ref_scale double geodb_text_lc_gap double geodb_dim_length double geodb_subtype_name char(254) geodb_text_lc_accent_bar_color char(50) geodb_text_word_spacing double geodb_sweep_angle double geodb_font_size double geodb_rotation double geodb_to_junction_element_id integer geodb_ancillary_role char(7) geodb_dim_extn_line_display smallint geodb_font_strikethrough boolean geodb_text_x_offset double geodb_edge_feature_count integer geodb_text_color char(254) geodb_dim_text_angle double geodb_raster_pyramid_level integer fme_primary_axis double geodb_text_clip boolean geodb_type char(25) geodb_text_line_spacing double geodb_text_lc_textbox_x3 double geodb_color char(50) fme_rotation double geodb_dim_line_display smallint geodb_text_scale boolean geodb_raster_pyramid_resample_type char(100) geodb_feature_is_simple boolean geodb_text_string_with_format_tags char(254) geodb_text_angle double fme_text_size double geodb_primary_axis double geodb_dim_end_dimension_y double geodb_metadata_string char(254) geodb_text_lc_textbox_y3 double geodb_text_lc_textbox_x4 double geodb_dim_marker_display smallint geodb_symbol_id integer fme_text_string char(50) geodb_text_lc_margin_left double fme_start_angle double geodb_text_leader_line_color char(50) geodb_dim_using_custom_length boolean multi_reader_type char(50) geodb_rel_destination_oid integer geodb_linked_feature_id integer multi_reader_id integer geodb_measures char(254) geodb_text_lc_margin_right double multi_reader_full_id integer geodb_font_name char(254)"
+#!   DEFLINE_PARMS="&quot;GUI OPTIONAL NAMEDGROUP geodb_table_settings_group geodb_where_wwjd Table Settings&quot; &quot;&quot; &quot;GUI OPTIONAL TEXT_EDIT_SQL_CFG geodb_where_wwjd MODE,WHERE WHERE Clause&quot; &quot;&quot; "
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="GEODATABASE"
+#!   GENERATE_FME_BUILD_NUM="18301"
+#!   COORDSYS=""
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="_GEODBOverwriteGEODB _GEODBOutTransactionType _GEODBOutSimplifyGeometry _GEODBOutXOrigin _GEODBOutYOrigin _GEODBOutScale _GEODBOutZOrigin _GEODBOutZScale _GEODBOutGrid1 _TRANSLATE_SPATIAL_DATA_ONLY _GEODBInResolveDomains _GEODBInResolveSubtypeNames _GEODBInIgnoreNetworkInfo _GEODBInIgnoreRelationshipInfo _GEODBInSplitComplexEdges _GEODBInWhereClause GEODATABASE_FILE_IN_SPLIT_COMPLEX_ANNOS GEODATABASE_FILE_IN_CACHE_MULTIPATCH_TEXTURES GEODATABASE_FILE_IN_SEARCH_METHOD GEODATABASE_FILE_IN_SEARCH_ORDER GEODATABASE_FILE_IN_SEARCH_FEATURE GEODATABASE_FILE_IN_CHECK_SIMPLE_GEOM GEODATABASE_FILE_IN_MERGE_FEAT_LINKED_ANNOS GEODATABASE_FILE_IN_BEGIN_SQL{0} GEODATABASE_FILE_IN_END_SQL{0} _GEODB_IN_ALIAS_MODE NULL_OUT_REQUESTED_GEODATABASE_VERSION NULL_OUT_DEFAULT_Z_VALUE NULL_OUT_WRITER_MODE NULL_OUT_TRANSACTION NULL_OUT_TRANSACTION_INTERVAL NULL_OUT_IGNORE_FAILED_FEATURE_ENTRY NULL_OUT_MAX_NUMBER_FAILED_FEATURES NULL_OUT_DUMP_FAILED_FEATURES NULL_OUT_FFS_DUMP_FILE NULL_OUT_ANNOTATION_UNITS NULL_OUT_HAS_MEASURES NULL_OUT_MEASURES_ORIGIN NULL_OUT_MEASURES_SCALE NULL_OUT_COMPRESS_AT_END NULL_OUT_VALIDATE_FEATURES NULL_OUT_SIMPLIFY_NETWORK_FEATURES NULL_OUT_BEGIN_SQL{0} NULL_OUT_END_SQL{0}"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="ATTRIBUTE_READING"
+#!   VALUE="DEFLINE"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="ATTRIBUTE_READING_HISTORIC"
+#!   VALUE="ALL"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="gdb file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="FeatureClass1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="Feature Class or Table"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="PARAMS_TO_NOT_PROPAGATE_ON_INSPECT"
+#!   VALUE="BEGIN_SQL{0} END_SQL{0}"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Specify the Esri File Geodatabase"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="SUPPORTS_SCHEMA_IN_FEATURE_TYPE_NAME"
+#!   VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify the Esri File Geodatabase"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="GEODATABASE_FILE"
+#!   DATASET="$(SourceDataset_GEODATABASE_FILE)"
+#!   KEYWORD="GEODATABASE_FILE_2"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE="geodb_type {FME_GEN_GEOMETRY} geodb_where_wwjd &quot;&quot;"
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="geodb_dim_begin_dimension_y double geodb_text_char_spacing double fme_basename char(50) geodb_dim_begin_dimension_x double geodb_dim_end_dimension_x double geodb_text_lc_margin_bottom double geodb_dim_text_z double geodb_dim_type smallint geodb_text_leader_line_anchor_point char(254) geodb_font_weight smallint geodb_feature_dataset char(254) geodb_text_size double geodb_junction_element_count integer geodb_text_leader_line char(254) geodb_dim_begin_dimension_z double geodb_anno_class_id integer geodb_text_lc_textbox_y2 double geodb_dim_style_id integer fme_geometry char(50) fme_feature_type char(50) geodb_text_leader_line_width double geodb_secondary_axis double geodb_dim_line_z double geodb_font_underline boolean geodb_text_string char(254) geodb_junction_feature_count integer geodb_feature_class_alias char(254) geodb_text_break_char integer geodb_v_align char(50) multi_reader_keyword char(50) geodb_text_lc_accent_bar_width double fme_fill_color char(50) geodb_dim_line_x double geodb_font_charset smallint geodb_dim_custom_length double geodb_font_italic boolean geodb_h_align char(50) geodb_start_angle double geodb_rel_origin_oid integer geodb_text_part_count integer geodb_from_junction_element_id integer fme_type char(50) geodb_text_leader_line_tolerance double geodb_element_id integer fme_dataset char(50) geodb_text_lc_textbox_x2 double geodb_raster_compression_quality integer geodb_text_y_offset double geodb_text_lc_textbox_y4 double geodb_edge_element_count integer geodb_text_lc_textbox_y1 double geodb_dim_text_x double geodb_text_point_scale_factor double geodb_text_lc_margin_top double geodb_text_character_width double geodb_font_bold boolean geodb_raster_compression_type char(100) geodb_text_lc_style char(20) geodb_element_index integer fme_sweep_angle double geodb_dim_end_dimension_z double geodb_dim_extn_line_angle double geodb_text_lc_textbox_x1 double geodb_right_to_left boolean geodb_dim_text_y double geodb_oid integer fme_color char(50) fme_secondary_axis double geodb_topological_configuration char(6) geodb_feature_has_relationships boolean geodb_dim_line_y double geodb_text_ref_scale double geodb_text_lc_gap double geodb_dim_length double geodb_subtype_name char(254) geodb_text_lc_accent_bar_color char(50) geodb_text_word_spacing double geodb_sweep_angle double geodb_font_size double geodb_rotation double geodb_to_junction_element_id integer geodb_ancillary_role char(7) geodb_dim_extn_line_display smallint geodb_font_strikethrough boolean geodb_text_x_offset double geodb_edge_feature_count integer geodb_text_color char(254) geodb_dim_text_angle double geodb_raster_pyramid_level integer fme_primary_axis double geodb_text_clip boolean geodb_type char(25) geodb_text_line_spacing double geodb_text_lc_textbox_x3 double geodb_color char(50) fme_rotation double geodb_dim_line_display smallint geodb_text_scale boolean geodb_raster_pyramid_resample_type char(100) geodb_feature_is_simple boolean geodb_text_string_with_format_tags char(254) geodb_text_angle double fme_text_size double geodb_primary_axis double geodb_dim_end_dimension_y double geodb_metadata_string char(254) geodb_text_lc_textbox_y3 double geodb_text_lc_textbox_x4 double geodb_dim_marker_display smallint geodb_symbol_id integer fme_text_string char(50) geodb_text_lc_margin_left double fme_start_angle double geodb_text_leader_line_color char(50) geodb_dim_using_custom_length boolean multi_reader_type char(50) geodb_rel_destination_oid integer geodb_linked_feature_id integer multi_reader_id integer geodb_measures char(254) geodb_text_lc_margin_right double multi_reader_full_id integer geodb_font_name char(254)"
+#!   DEFLINE_PARMS="&quot;GUI OPTIONAL NAMEDGROUP geodb_table_settings_group geodb_where_wwjd Table Settings&quot; &quot;&quot; &quot;GUI OPTIONAL TEXT_EDIT_SQL_CFG geodb_where_wwjd MODE,WHERE WHERE Clause&quot; &quot;&quot; "
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="GEODATABASE"
+#!   GENERATE_FME_BUILD_NUM="18301"
+#!   COORDSYS=""
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="_GEODBOverwriteGEODB _GEODBOutTransactionType _GEODBOutSimplifyGeometry _GEODBOutXOrigin _GEODBOutYOrigin _GEODBOutScale _GEODBOutZOrigin _GEODBOutZScale _GEODBOutGrid1 _TRANSLATE_SPATIAL_DATA_ONLY _GEODBInResolveDomains _GEODBInResolveSubtypeNames _GEODBInIgnoreNetworkInfo _GEODBInIgnoreRelationshipInfo _GEODBInSplitComplexEdges _GEODBInWhereClause GEODATABASE_FILE_IN_SPLIT_COMPLEX_ANNOS GEODATABASE_FILE_IN_CACHE_MULTIPATCH_TEXTURES GEODATABASE_FILE_IN_SEARCH_METHOD GEODATABASE_FILE_IN_SEARCH_ORDER GEODATABASE_FILE_IN_SEARCH_FEATURE GEODATABASE_FILE_IN_CHECK_SIMPLE_GEOM GEODATABASE_FILE_IN_MERGE_FEAT_LINKED_ANNOS GEODATABASE_FILE_IN_BEGIN_SQL{0} GEODATABASE_FILE_IN_END_SQL{0} _GEODB_IN_ALIAS_MODE NULL_OUT_REQUESTED_GEODATABASE_VERSION NULL_OUT_DEFAULT_Z_VALUE NULL_OUT_WRITER_MODE NULL_OUT_TRANSACTION NULL_OUT_TRANSACTION_INTERVAL NULL_OUT_IGNORE_FAILED_FEATURE_ENTRY NULL_OUT_MAX_NUMBER_FAILED_FEATURES NULL_OUT_DUMP_FAILED_FEATURES NULL_OUT_FFS_DUMP_FILE NULL_OUT_ANNOTATION_UNITS NULL_OUT_HAS_MEASURES NULL_OUT_MEASURES_ORIGIN NULL_OUT_MEASURES_SCALE NULL_OUT_COMPRESS_AT_END NULL_OUT_VALIDATE_FEATURES NULL_OUT_SIMPLIFY_NETWORK_FEATURES NULL_OUT_BEGIN_SQL{0} NULL_OUT_END_SQL{0}"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="ATTRIBUTE_READING"
+#!   VALUE="DEFLINE"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="ATTRIBUTE_READING_HISTORIC"
+#!   VALUE="ALL"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="gdb file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="FeatureClass1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="Feature Class or Table"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="PARAMS_TO_NOT_PROPAGATE_ON_INSPECT"
+#!   VALUE="BEGIN_SQL{0} END_SQL{0}"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Specify the Esri File Geodatabase"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="SUPPORTS_SCHEMA_IN_FEATURE_TYPE_NAME"
+#!   VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify the Esri File Geodatabase"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="false"
+#!   ROLE="WRITER"
+#!   FORMAT="GML2"
+#!   DATASET="$(DestDataset_GML2)"
+#!   KEYWORD="GML2_1"
+#!   MULTI_GEOM_ALLOWED="true"
+#!   ATTR_MAX_LENGTH="60"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE="xml_type {FME_GEN_GEOMETRY}"
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_dataset xml_char(50) fme_text_string xml_char(50) fme_sweep_angle xml_real64 fme_text_size xml_real64 xml_type xml_char(50) fme_start_angle xml_real64 fme_type xml_char(50) fme_color xml_char(50) fme_primary_axis xml_real64 fme_basename xml_char(50) fme_geometry xml_char(50) fme_secondary_axis xml_real64 fme_fill_color xml_char(50) fme_rotation xml_real64 fme_feature_type xml_char(50)"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS="[]= %~!@$&amp;#[()^?*&apos;+\\/&quot;:"
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE"
+#!   GENERATE_FME_BUILD_NUM="18301"
+#!   COORDSYS="EPSG:28992"
+#!   FANOUT_EXPRESSION="&lt;at&gt;Value&lt;openparen&gt;fme_feature_type&lt;closeparen&gt;.gml"
+#!   FANOUT_GROUP="YES"
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="GML2_OUT_XSD_DOC GML2_OUT_TARGET_NS_PREFIX GML2_OUT_TARGET_NS_URI GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL GML2_OUT_OUTPUT_ENCODING GML2_OUT_USE_WFS_FEATURE_COLLECTION GML2_OUT_APPLY_STYLESHEET GML2_OUT_STYLESHEET_RESULT GML2_OUT_SUPPRESS_NULL_ATTRS GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS GML2_OUT_DOCUMENTS_TO_WRITE GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES GML2_OUT_MULTI_VALUE_SEPARATOR"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="gml file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE="application/xml"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the GML file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a name for the GML file"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="false"
+#!   ROLE="WRITER"
+#!   FORMAT="GML2"
+#!   DATASET="$(DestDataset_GML2_3)"
+#!   KEYWORD="GML2_2"
+#!   MULTI_GEOM_ALLOWED="true"
+#!   ATTR_MAX_LENGTH="60"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE="xml_type {FME_GEN_GEOMETRY}"
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_dataset xml_char(50) fme_text_string xml_char(50) fme_sweep_angle xml_real64 fme_text_size xml_real64 xml_type xml_char(50) fme_start_angle xml_real64 fme_type xml_char(50) fme_color xml_char(50) fme_primary_axis xml_real64 fme_basename xml_char(50) fme_geometry xml_char(50) fme_secondary_axis xml_real64 fme_fill_color xml_char(50) fme_rotation xml_real64 fme_feature_type xml_char(50)"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS="[]= %~!@$&amp;#[()^?*&apos;+\\/&quot;:"
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE"
+#!   GENERATE_FME_BUILD_NUM="18301"
+#!   COORDSYS="EPSG:28992"
+#!   FANOUT_EXPRESSION=""
+#!   FANOUT_GROUP="NO"
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="GML2_OUT_XSD_DOC GML2_OUT_TARGET_NS_PREFIX GML2_OUT_TARGET_NS_URI GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL GML2_OUT_OUTPUT_ENCODING GML2_OUT_USE_WFS_FEATURE_COLLECTION GML2_OUT_APPLY_STYLESHEET GML2_OUT_STYLESHEET_RESULT GML2_OUT_SUPPRESS_NULL_ATTRS GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS GML2_OUT_DOCUMENTS_TO_WRITE GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES GML2_OUT_MULTI_VALUE_SEPARATOR"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="gml file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE="application/xml"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the GML file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a name for the GML file"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(2048)"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(2048)"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(2048)"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="blob"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="blob"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="blob"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="guid"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="integer"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="integer"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="smallint"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="smallint"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="smallint"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="double"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="double"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(20)"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(20)"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="boolean"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="double(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="subtype(stringset)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="subtype_codes(stringmap)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="range_domain(range_domain)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="coded_domain(coded_domain)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_buffer"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_buffer"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_buffer"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_xml"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_datetime"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_date"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_time"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_int64"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_uint64"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_int32"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_uint32"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_int16"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_uint16"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_byte"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_ubyte"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_real32"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_real64"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_decimal(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_boolean"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(20)"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(8)"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(12)"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_geometry"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="GML2"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_polygon"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_polygon"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_polyline"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_multipoint"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_table"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_table"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_arc"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_ellipse"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_polygon"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_annotation"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_dimension"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_simple_junction"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_simple_edge"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_complex_junction"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_complex_edge"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_attributed_relationship"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_relationship"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_undefined"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_metadata"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_multipatch"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_multipatch"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_polygon"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_polygon"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geodb_table"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="GEODATABASE_FILE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_no_geom"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_aggregate"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_text"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_line"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_surface"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_solid"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_mesh"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_raster"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_point_cloud"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_line"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_line"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_no_geom"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="GML2"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="bodemval"
+#!   FEATURE_TYPE_NAME="@Value(fme_feature_type)"
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="29"
+#!   FEAT_GEOMTYPE="All"
+#!   POSITION="1400.5474607535839 -847.17008510104961"
+#!   BOUNDING_RECT="1400.5474607535839 -847.17008510104961 825.015625 71"
+#!   ORDER="500000000000041"
+#!   COLLAPSED="true"
+#!   KEYWORD="GML2_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="code" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="dwarsprofielbovenstrooms" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="dwarsprofielbenedenstrooms" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="statusobjectcode" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="administratiefgebied" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="fme_feature_type" ATTR_TYPE="xml_char(50)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="brug"
+#!   FEATURE_TYPE_NAME="@Value(fme_feature_type)"
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="32"
+#!   FEAT_GEOMTYPE="All"
+#!   POSITION="1405.0924607490383 -1005.1257101118451"
+#!   BOUNDING_RECT="1405.0924607490383 -1005.1257101118451 825.015625 71"
+#!   ORDER="500000000000039"
+#!   COLLAPSED="true"
+#!   KEYWORD="GML2_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="code" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hoogteonderzijde" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="dwarsprofielcode" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="lengte" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidstypecode" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidswaarde" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="intreeverlies" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="uittreeverlies" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="statusobjectcode" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hoogtebovenzijde" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="administratiefgebied" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="AFSLUITMIDDEL"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="34"
+#!   FEAT_GEOMTYPE="geodb_point"
+#!   POSITION="-237.02490134949173 -1901.9823795526627"
+#!   BOUNDING_RECT="-237.02490134949173 -1901.9823795526627 468 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="GEODATABASE_FILE_1"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="A_OBJECTID" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="A_CODE" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DuikerSifonHevelID" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FlexibeleWaterKeringID" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GemaalID" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SluisID" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="StuwID" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="RegenWaterBufferCompartimentID" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="TunnelID" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="VispassageID" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="StatusObject" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GerelateerdObjectID" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Afsluitmiddel_Identify" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Overlaps" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_table_settings_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_where_wwjd" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="bodemval"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="35"
+#!   FEAT_GEOMTYPE="geodb_point"
+#!   POSITION="-130.00809907560415 -839.47456185825376"
+#!   BOUNDING_RECT="-130.00809907560415 -839.47456185825376 -1 -1"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="GEODATABASE_FILE_1"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER="*"
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="code" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="dwarsprofielbovenstrooms" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="dwarsprofielbenedenstrooms" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="statusobjectcode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="administratiefgebied" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="fme_feature_type" ATTR_TYPE="char(50)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_table_settings_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_where_wwjd" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="brug"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="36"
+#!   FEAT_GEOMTYPE="geodb_point"
+#!   POSITION="-126.14126747799492 -999.83584658221275"
+#!   BOUNDING_RECT="-126.14126747799492 -999.83584658221275 -1 -1"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="GEODATABASE_FILE_1"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="code" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hoogteonderzijde" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="dwarsprofielcode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="lengte" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidstypecode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidswaarde" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="intreeverlies" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="uittreeverlies" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="statusobjectcode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hoogtebovenzijde" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="administratiefgebied" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_table_settings_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_where_wwjd" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="duikersifonhevel"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="37"
+#!   FEAT_GEOMTYPE="geodb_polyline"
+#!   POSITION="-126.45692720024886 -414.29320762046984"
+#!   BOUNDING_RECT="-126.45692720024886 -414.29320762046984 459 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="GEODATABASE_FILE_1"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="code" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hoogteopening" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="breedteopening" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hoogtebinnenonderkantbenedenstrooms" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hoogtebinnenonderkantbovenstrooms" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="vormkokercode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="soortkokervormigeconstructiecode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidstypecode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidswaarde" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="intreeverlies" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="uittreeverlies" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="statusobjectcode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="indpeilregulpeilscheidend" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="lengte" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="administratiefgebied" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_table_settings_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_where_wwjd" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="DWARSPROFIELLOCATIES"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="40"
+#!   FEAT_GEOMTYPE="geodb_point"
+#!   POSITION="-237.02490134949173 -2058.2209759737152"
+#!   BOUNDING_RECT="-237.02490134949173 -2058.2209759737152 645.015625 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="GEODATABASE_FILE_1"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Code" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HyOb_Code" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HyOb_Naam" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID_1" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_table_settings_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_where_wwjd" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="GEMAAL"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="43"
+#!   FEAT_GEOMTYPE="geodb_point"
+#!   POSITION="-227.02347225492449 -2196.6478948043064"
+#!   BOUNDING_RECT="-227.02347225492449 -2196.6478948043064 -1 -1"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="GEODATABASE_FILE_1"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Code" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="StatusObject" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Functiegemaal" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Kerendehoogte" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Maximalecapaciteit" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Objectbegintijd" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Objecteindtijd" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Hyperlink" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Pompcode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DoorstroomopeningCode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="AdministratiefGebied" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Naam" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_table_settings_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_where_wwjd" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="hydroobject"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="44"
+#!   FEAT_GEOMTYPE="geodb_polyline"
+#!   POSITION="-116.32425011590203 -217.49082555624551"
+#!   BOUNDING_RECT="-116.32425011590203 -217.49082555624551 -1 -1"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="GEODATABASE_FILE_1"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="code" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="administatiefgebied" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidstypecode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidswaardelaag" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidswaardehoog" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="statusobjectcode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="naam" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_table_settings_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_where_wwjd" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="MEETLOCATIE"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="46"
+#!   FEAT_GEOMTYPE="geodb_point"
+#!   POSITION="-222.99881079618868 -2367.969879427661"
+#!   BOUNDING_RECT="-222.99881079618868 -2367.969879427661 431 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="GEODATABASE_FILE_1"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Code" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="StatusObjectCode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOORTMEETNET" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="NAAM" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MetingWaterstand" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MetingKlepOfSchuifstand" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MetingAfvoer" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MetingStroomsnelheid" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MetingWaterKwaliteit" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Administatiefgebiedid" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DatumStatusObject" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DatumRealisatieObject" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Hyperlink" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_table_settings_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_where_wwjd" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="MEETPUNT"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="47"
+#!   FEAT_GEOMTYPE="geodb_point"
+#!   POSITION="-235.34179371033449 -2615.1375877714122"
+#!   BOUNDING_RECT="-235.34179371033449 -2615.1375877714122 -1 -1"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="GEODATABASE_FILE_1"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Code" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="StatusObjectCode" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DatumRealisatieObject" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MetingWaterstand" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MetingKlepOfSchuifstand" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MetingAfvoer" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MetingStroomsnelheid" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Hyperlink" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MetingWaterKwaliteit" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Administatiefgebiedid" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DatumStatusObject" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_table_settings_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_where_wwjd" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="stuw"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="48"
+#!   FEAT_GEOMTYPE="geodb_point"
+#!   POSITION="-117.6500209493679 -615.54653560829843"
+#!   BOUNDING_RECT="-117.6500209493679 -615.54653560829843 -1 -1"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="GEODATABASE_FILE_1"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="code" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="soortregelbaarheidcode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="laagstedoorstroombreedte" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hoogstedoorstroombreedte" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="laagstedoorstroomhoogte" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hoogstedoorstroomhoogte" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="afvoercoefficient" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="soortstuwcode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="statusobjectcode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="kruinbreedte" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="administratiefgebied" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_table_settings_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_where_wwjd" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="VISPASSAGE"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="49"
+#!   FEAT_GEOMTYPE="geodb_point"
+#!   POSITION="-269.04359607126071 -2791.4873684622034"
+#!   BOUNDING_RECT="-269.04359607126071 -2791.4873684622034 -1 -1"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="GEODATABASE_FILE_1"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Code" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Administatiefgebiedid" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="StatusObject" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Soortvispassage" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BodemhoogteBovenstrooms" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BodemhoogteBenedenstrooms" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DatumStatusObject" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DatumRealisatieObject" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID_1" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_table_settings_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_where_wwjd" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="bodemval00"
+#!   FEATURE_TYPE_NAME="@Value(fme_feature_type)"
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="28"
+#!   FEAT_GEOMTYPE="All"
+#!   POSITION="1376.1873452096793 -253.10352424948752"
+#!   BOUNDING_RECT="1376.1873452096793 -253.10352424948752 825.015625 71"
+#!   ORDER="500000000000041"
+#!   COLLAPSED="true"
+#!   KEYWORD="GML2_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="code" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="administatiefgebied" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidstypecode" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidswaardelaag" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidswaardehoog" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="statusobjectcode" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="naam" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="bodemval01"
+#!   FEATURE_TYPE_NAME="@Value(fme_feature_type)"
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="30"
+#!   FEAT_GEOMTYPE="All"
+#!   POSITION="1388.6869702059294 -453.10502426448755"
+#!   BOUNDING_RECT="1388.6869702059294 -453.10502426448755 825.015625 71"
+#!   ORDER="500000000000041"
+#!   COLLAPSED="true"
+#!   KEYWORD="GML2_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="code" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hoogteopening" ATTR_TYPE="xml_real64" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="breedteopening" ATTR_TYPE="xml_real64" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hoogtebinnenonderkantbenedenstrooms" ATTR_TYPE="xml_real64" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hoogtebinnenonderkantbovenstrooms" ATTR_TYPE="xml_real64" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="vormkokercode" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="soortkokervormigeconstructiecode" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidstypecode" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidswaarde" ATTR_TYPE="xml_real64" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="intreeverlies" ATTR_TYPE="xml_real64" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="uittreeverlies" ATTR_TYPE="xml_real64" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="statusobjectcode" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="indpeilregulpeilscheidend" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="lengte" ATTR_TYPE="xml_real64" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="administratiefgebied" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="bodemval02"
+#!   FEATURE_TYPE_NAME="@Value(fme_feature_type)"
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="31"
+#!   FEAT_GEOMTYPE="All"
+#!   POSITION="1401.1875952121786 -640.6073992882375"
+#!   BOUNDING_RECT="1401.1875952121786 -640.6073992882375 825.015625 71"
+#!   ORDER="500000000000041"
+#!   COLLAPSED="true"
+#!   KEYWORD="GML2_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="code" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="soortregelbaarheidcode" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="laagstedoorstroombreedte" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hoogstedoorstroombreedte" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="laagstedoorstroomhoogte" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hoogstedoorstroomhoogte" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="afvoercoefficient" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="soortstuwcode" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="statusobjectcode" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="kruinbreedte" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="administratiefgebied" ATTR_TYPE="xml_char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="dwarsprofielpunten_ingemeten"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="24"
+#!   FEAT_GEOMTYPE="geodb_point"
+#!   POSITION="-110.89047368461092 88.902610095283308"
+#!   BOUNDING_RECT="-110.89047368461092 88.902610095283308 722.015625 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="GEODATABASE_FILE_2"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="code" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="codevolgnummer" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="profielcode" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="typeprofielcode" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidstypecode" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidswaardelaag" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidswaardehoog" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="administratiefgebied" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="statusobjectcode" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_table_settings_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_where_wwjd" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="dwarsprofielpunten_interpolatie"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="25"
+#!   FEAT_GEOMTYPE="geodb_point"
+#!   POSITION="-110.89047368461092 -54.097389904716692"
+#!   BOUNDING_RECT="-110.89047368461092 -54.097389904716692 731 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="GEODATABASE_FILE_2"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="code" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="codevolgnummer" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="profielcode" ATTR_TYPE="char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="administratiefgebied" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidstypecode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidswaardelaag" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidswaardehoog" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="statusobjectcode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="typeprofielcode" ATTR_TYPE="char(75)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_table_settings_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="geodb_where_wwjd" PARM_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="dwarsprofiel"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="26"
+#!   FEAT_GEOMTYPE="All"
+#!   POSITION="1372.2659845466392 -62.766434554330999"
+#!   BOUNDING_RECT="1372.2659845466392 -62.766434554330999 722.015625 71"
+#!   ORDER="500000000000042"
+#!   COLLAPSED="true"
+#!   KEYWORD="GML2_2"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="code" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="codevolgnummer" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="profielcode" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="administratiefgebied" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidstypecode" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidswaardelaag" ATTR_TYPE="xml_real64" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidswaardehoog" ATTR_TYPE="xml_real64" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="statusobjectcode" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="typeprofielcode" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI FILENAME DestDataset_GML2 GML_Files(*.xml;*.gml;*.gz)|*.xml;*.gml;*.gz|GML_Files(*.xml)|*.xml|GML_Files(*.gml)|*.gml|Compressed_GML_Files(*.gz)|*.gz|All_Files|* Destination Geography Markup Language (GML) v2.1.2 File:"
+#!   DEFAULT_VALUE="\\wsl-app09\Sobek\HDB\Output"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI SOURCE_GEODATABASE SourceDataset_GEODATABASE_FILE_12 File Geodatabase:"
+#!   DEFAULT_VALUE="\\wsl-app09\Sobek\HDB\Data\HDB.gdb"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI SOURCE_GEODATABASE SourceDataset_GEODATABASE_FILE File Geodatabase:"
+#!   DEFAULT_VALUE="\\wsl-app09\Sobek\HDB\Data\HDB.gdb"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI FILENAME DestDataset_GML2_3 GML_Files(*.xml;*.gml;*.gz)|*.xml;*.gml;*.gz|GML_Files(*.xml)|*.xml|GML_Files(*.gml)|*.gml|Compressed_GML_Files(*.gz)|*.gz|All_Files|* Destination Geography Markup Language (GML) v2.1.2 File:"
+#!   DEFAULT_VALUE="\\wsl-app09\Sobek\HDB\Output\dwarsprofiel.gml"
+#!   IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="42"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Aparte writer aangezien er 2 feature types naar toe gaan, hierdoor kan feature type niet gebruikt worden als naam&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="1348.2659845466392 220.7355654656692"
+#!   TOP_LEFT="1348.2659845466392 220.7355654656692"
+#!   BOTTOM_RIGHT="2112.2816095466392 221.7355654656692"
+#!   BOUNDING_RECT="1348.2659845466392 220.7355654656692 764.015625 -1"
+#!   ORDER="500000000000043"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.78431372549019607,0.19607843137254902"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="26"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="53"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Deze workspace schrijft de gegevenstabellen uit de gdb weg naar de gml&apos;s waarmee ze aan NHI kunnen worden geleverd. De gecontroleerde feature types staan in dit roodgekleurde blok. Van de overige feature types zijn nog geen definitieve workspaces, zodra deze definitief zijn kunnen ze ook aan dit blok worden toegevoegd.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-263.22000190683889 452.80524073584525"
+#!   TOP_LEFT="-263.22000190683889 452.80524073584525"
+#!   BOTTOM_RIGHT="2322.1538202480706 453.80524073584525"
+#!   BOUNDING_RECT="-263.22000190683889 452.80524073584525 2585.3738221549092 -1"
+#!   ORDER="500000000000046"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.78431372549019607,0.19607843137254902"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="19"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! <BOOKMARK
+#!   IDENTIFIER="19"
+#!   NAME="Gecontroleerd Gaat Goed "
+#!   DESCRIPTION="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   TOP_LEFT="-313.26573640587162 603.66731250421208"
+#!   ORDER="500000000000045.13"
+#!   BOTTOM_RIGHT="2322.1080857490379 -1314.8716392824304"
+#!   BOUNDING_RECT="-313.26573640587162 603.66731250421208 2635.3738221549092 1918.5389517866424"
+#!   STICKY="true"
+#!   COLOUR="0.89411764705882357,0.21176470588235294,0.2196078431372549"
+#!   CONTENTS="42 26 32 45 30 29 37 38 25 36 33 44 28 50 24 39 35 31 41 48 27 "
+#! >
+#! </BOOKMARK>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="51"
+#!   TYPE="Inspector"
+#!   VERSION="5"
+#!   POSITION="1043.6642852249136 -1901.9823795526627"
+#!   BOUNDING_RECT="1043.6642852249136 -1901.9823795526627 -1 -1"
+#!   ORDER="500000000000044"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18301"
+#! >
+#!     <XFORM_PARM PARM_NAME="AREA_COLOR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PEN_COLOR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="POINTCLOUD_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RASTER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RASTER_NUM_COLS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_NUM_ROWS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_START_COL" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_START_ROW" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_VISUALIZATION_OPTION" PARM_VALUE="No Reduction"/>
+#!     <XFORM_PARM PARM_NAME="TACKATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="THINNER_INTERVAL" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="THINNER_MAX_NUM_POINTS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="THINNER_TYPE_DISPLAY" PARM_VALUE="No Thinning"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="VECTOR_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AFSLUITMIDDEL"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="41"
+#!   SOURCE_NODE="24"
+#!   TARGET_NODE="26"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="27"
+#!   SOURCE_NODE="25"
+#!   TARGET_NODE="26"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="52"
+#!   SOURCE_NODE="34"
+#!   TARGET_NODE="51"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="50"
+#!   SOURCE_NODE="35"
+#!   TARGET_NODE="29"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="33"
+#!   SOURCE_NODE="36"
+#!   TARGET_NODE="32"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="39"
+#!   SOURCE_NODE="37"
+#!   TARGET_NODE="30"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="45"
+#!   SOURCE_NODE="44"
+#!   TARGET_NODE="28"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="38"
+#!   SOURCE_NODE="48"
+#!   TARGET_NODE="31"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+FME_PYTHON_VERSION 27
+GUI IGNORE SourceDataset_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_FME_CONNECTION_GROUP_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_FME_GROUP_NAMED1_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_WHERE_WWJD_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_RESOLVE_DOMAINS_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_IGNORE_NETWORK_INFO_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_USE_SEARCH_ENVELOPE_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_CLIP_TO_ENVELOPE_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_GEODB_SHARED_RDR_ADV_PARM_GROUP_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_SPLIT_COMPLEX_ANNOS_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_CACHE_MULTIPATCH_TEXTURES_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_SEARCH_METHOD_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_SEARCH_ORDER_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_SEARCH_FEATURE_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_CHECK_SIMPLE_GEOM_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_MERGE_FEAT_LINKED_ANNOS_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_BEGIN_SQL{0}_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_END_SQL{0}_GEODATABASE_FILE_1,GEODATABASE_FILE_IN_NETWORK_AUTHENTICATION_GEODATABASE_FILE_1,_GEODB_IN_ALIAS_MODE_GEODATABASE_FILE_1,SourceDataset_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_FME_CONNECTION_GROUP_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_FME_GROUP_NAMED1_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_WHERE_WWJD_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_RESOLVE_DOMAINS_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_IGNORE_NETWORK_INFO_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_USE_SEARCH_ENVELOPE_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_CLIP_TO_ENVELOPE_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_GEODB_SHARED_RDR_ADV_PARM_GROUP_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_SPLIT_COMPLEX_ANNOS_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_CACHE_MULTIPATCH_TEXTURES_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_SEARCH_METHOD_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_SEARCH_ORDER_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_SEARCH_FEATURE_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_CHECK_SIMPLE_GEOM_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_MERGE_FEAT_LINKED_ANNOS_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_BEGIN_SQL{0}_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_END_SQL{0}_GEODATABASE_FILE_2,GEODATABASE_FILE_IN_NETWORK_AUTHENTICATION_GEODATABASE_FILE_2,_GEODB_IN_ALIAS_MODE_GEODATABASE_FILE_2,DestDataset_GML2_1,_OUT_SCHEMA_MODE_GML2_1,GML2_OUT_ADVANCED_GML2_1,GML2_OUT_XSD_DOC_GML2_1,GML2_OUT_TARGET_NS_PREFIX_GML2_1,GML2_OUT_TARGET_NS_URI_GML2_1,GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL_GML2_1,GML2_OUT_OUTPUT_ENCODING_GML2_1,GML2_OUT_USE_WFS_FEATURE_COLLECTION_GML2_1,GML2_OUT_APPLY_STYLESHEET_GML2_1,GML2_OUT_STYLESHEET_RESULT_GML2_1,GML2_OUT_SUPPRESS_NULL_ATTRS_GML2_1,GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS_GML2_1,GML2_OUT_DOCUMENTS_TO_WRITE_GML2_1,GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR_GML2_1,GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES_GML2_1,GML2_OUT_MULTI_VALUE_SEPARATOR_GML2_1,DestDataset_GML2_2,_OUT_SCHEMA_MODE_GML2_2,GML2_OUT_ADVANCED_GML2_2,GML2_OUT_XSD_DOC_GML2_2,GML2_OUT_TARGET_NS_PREFIX_GML2_2,GML2_OUT_TARGET_NS_URI_GML2_2,GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL_GML2_2,GML2_OUT_OUTPUT_ENCODING_GML2_2,GML2_OUT_USE_WFS_FEATURE_COLLECTION_GML2_2,GML2_OUT_APPLY_STYLESHEET_GML2_2,GML2_OUT_STYLESHEET_RESULT_GML2_2,GML2_OUT_SUPPRESS_NULL_ATTRS_GML2_2,GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS_GML2_2,GML2_OUT_DOCUMENTS_TO_WRITE_GML2_2,GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR_GML2_2,GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES_GML2_2,GML2_OUT_MULTI_VALUE_SEPARATOR_GML2_2
+DEFAULT_MACRO DestDataset_GML2 \\wsl-app09\Sobek\HDB\Output
+GUI FILENAME DestDataset_GML2 GML_Files(*.xml;*.gml;*.gz)|*.xml;*.gml;*.gz|GML_Files(*.xml)|*.xml|GML_Files(*.gml)|*.gml|Compressed_GML_Files(*.gz)|*.gz|All_Files|* Destination Geography Markup Language (GML) v2.1.2 File:
+DEFAULT_MACRO SourceDataset_GEODATABASE_FILE_12 \\wsl-app09\Sobek\HDB\Data\HDB.gdb
+GUI SOURCE_GEODATABASE SourceDataset_GEODATABASE_FILE_12 File Geodatabase:
+DEFAULT_MACRO SourceDataset_GEODATABASE_FILE \\wsl-app09\Sobek\HDB\Data\HDB.gdb
+GUI SOURCE_GEODATABASE SourceDataset_GEODATABASE_FILE File Geodatabase:
+DEFAULT_MACRO DestDataset_GML2_3 \\wsl-app09\Sobek\HDB\Output\dwarsprofiel.gml
+GUI FILENAME DestDataset_GML2_3 GML_Files(*.xml;*.gml;*.gz)|*.xml;*.gml;*.gz|GML_Files(*.xml)|*.xml|GML_Files(*.gml)|*.gml|Compressed_GML_Files(*.gz)|*.gz|All_Files|* Destination Geography Markup Language (GML) v2.1.2 File:
+INCLUDE [ if {{$(DestDataset_GML2)} == {}} { puts_real {Parameter 'DestDataset_GML2' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_GEODATABASE_FILE_12)} == {}} { puts_real {Parameter 'SourceDataset_GEODATABASE_FILE_12' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_GEODATABASE_FILE)} == {}} { puts_real {Parameter 'SourceDataset_GEODATABASE_FILE' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(DestDataset_GML2_3)} == {}} { puts_real {Parameter 'DestDataset_GML2_3' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+MULTI_READER_TYPE{0} GEODATABASE_FILE
+MULTI_READER_KEYWORD{0} GEODATABASE_FILE_1
+MULTI_READER_GEN_DIRECTIVES{0} ALIAS_MODE,NONE,USE_SEARCH_ENVELOPE,NO,SEARCH_METHOD,,TRANSLATE_SPATIAL_DATA_ONLY,no,QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,Yes,FEATURE_READ_MODE,Features,_MERGE_SCHEMAS,YES,IGNORE_RELATIONSHIP_INFO,yes,IGNORE_NETWORK_INFO,yes,RESOLVE_SUBTYPE_NAMES,yes,CHECK_SIMPLE_GEOM,no,SEARCH_ENVELOPE_MAXX,0,MERGE_FEAT_LINKED_ANNOS,no,TABLELIST,AFSLUITMIDDEL<space>bodemval<space>brug<space>duikersifonhevel<space>DUIKERSIFONHEVEL_BuitenHydroObject<space>DUIKERSIFONHEVEL_MissendeWaardes<space>DWARSPROFIELLOCATIES<space>DWARSPROFIELPUNTEN_Ingemeten<space>DWARSPROFIELPUNTEN_Interpolatie<space>GEMAAL<space>hydroobject<space>HYDROOBJECT_MissendeWaardes<space>MEETLOCATIE<space>MEETPUNT<space>stuw<space>VISPASSAGE,CACHE_MULTIPATCH_TEXTURES,yes,SEARCH_ORDER,,END_SQL<opencurly>0<closecurly>,,SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MAXY,0,WHERE_WWJD,,SPLIT_COMPLEX_ANNOS,no,BEGIN_SQL<opencurly>0<closecurly>,,RESOLVE_DOMAINS,no,GEODATABASE_FILE_EXPOSE_FORMAT_ATTRS,,SEARCH_ENVELOPE_COORDINATE_SYSTEM,,SEARCH_FEATURE,,CLIP_TO_ENVELOPE,NO,SEARCH_ENVELOPE_MINY,0,SPLIT_COMPLEX_EDGES,no,GEODB_SHARED_RDR_ADV_PARM_GROUP,,SPLIT_MULTI_PART_ANNOS,no,EXPOSE_ATTRS_GROUP,
+MULTI_READER_TYPE{1} GEODATABASE_FILE
+MULTI_READER_KEYWORD{1} GEODATABASE_FILE_2
+MULTI_READER_GEN_DIRECTIVES{1} ALIAS_MODE,NONE,USE_SEARCH_ENVELOPE,NO,SEARCH_METHOD,,TRANSLATE_SPATIAL_DATA_ONLY,no,QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,Yes,FEATURE_READ_MODE,Features,_MERGE_SCHEMAS,YES,IGNORE_RELATIONSHIP_INFO,yes,IGNORE_NETWORK_INFO,yes,RESOLVE_SUBTYPE_NAMES,yes,CHECK_SIMPLE_GEOM,no,SEARCH_ENVELOPE_MAXX,0,MERGE_FEAT_LINKED_ANNOS,no,TABLELIST,dwarsprofielpunten_ingemeten<space>dwarsprofielpunten_interpolatie,CACHE_MULTIPATCH_TEXTURES,yes,SEARCH_ORDER,,END_SQL<opencurly>0<closecurly>,,SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MAXY,0,WHERE_WWJD,,SPLIT_COMPLEX_ANNOS,no,BEGIN_SQL<opencurly>0<closecurly>,,RESOLVE_DOMAINS,no,GEODATABASE_FILE_EXPOSE_FORMAT_ATTRS,,SEARCH_ENVELOPE_COORDINATE_SYSTEM,,SEARCH_FEATURE,,CLIP_TO_ENVELOPE,NO,SEARCH_ENVELOPE_MINY,0,SPLIT_COMPLEX_EDGES,no,GEODB_SHARED_RDR_ADV_PARM_GROUP,,SPLIT_MULTI_PART_ANNOS,no,EXPOSE_ATTRS_GROUP,
+
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} MULTI_WRITER
+MULTI_WRITER_KEYWORD{0} GML2_1_FANOUT
+GML2_1_FANOUT_TYPE{*} GML2
+GML2_1_FANOUT_KEYWORD{*} GML2_1
+GML2_1_FANOUT_DATASET_ORDER BY_INPUT
+MULTI_WRITER_TYPE{1} GML2
+MULTI_WRITER_KEYWORD{1} GML2_2
+#! END_WB_HEADER
+
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GEODATABASE_FILE_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEODATABASE_FILE GEODATABASE_FILE_1
+# ============================================================================
+# The following GUI line prompts for a file to be used as the source.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_GEODATABASE_FILE_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEODATABASE_FILE GEODATABASE_FILE_1
+DEFAULT_MACRO SourceDataset_GEODATABASE_FILE_1 $(SourceDataset_GEODATABASE_FILE_12)
+GUI SOURCE_GEODATABASE SourceDataset_GEODATABASE_FILE_1 File Geodatabase:
+# Translation flags.
+#
+DEFAULT_MACRO GEODATABASE_FILE_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_GEODATABASE_FILE_1 Yes
+GEODATABASE_FILE_1_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS "$(GEODATABASE_FILE_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_GEODATABASE_FILE_1)"
+DEFAULT_MACRO GEODATABASE_FILE_IN_FME_CONNECTION_GROUP_GEODATABASE_FILE_1 
+GUI OPTIONAL DISCLOSUREGROUP GEODATABASE_FILE_IN_FME_CONNECTION_GROUP_GEODATABASE_FILE_1 GEODATABASE_FILE_IN_NAMED_CONNECTION Database Connection
+DEFAULT_MACRO GEODATABASE_FILE_IN_FME_GROUP_NAMED1_GEODATABASE_FILE_1 
+GUI OPTIONAL DISCLOSUREGROUP GEODATABASE_FILE_IN_FME_GROUP_NAMED1_GEODATABASE_FILE_1 GEODATABASE_FILE_IN_TABLELIST%GEODATABASE_FILE_IN_WHERE_WWJD_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_RESOLVE_DOMAINS_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_IGNORE_NETWORK_INFO_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_FEATURE_READ_MODE Constraints
+# ========================================================================
+# The following defines the global where clause to be used when retrieving
+# features from the Geodatabase.
+DEFAULT_MACRO GEODATABASE_FILE_IN_WHERE_WWJD_GEODATABASE_FILE_1 
+GEODATABASE_FILE_1_WHERE_WWJD "$(GEODATABASE_FILE_IN_WHERE_WWJD_GEODATABASE_FILE_1)"
+GUI OPTIONAL TEXT_EDIT_SQL_CFG GEODATABASE_FILE_IN_WHERE_WWJD_GEODATABASE_FILE_1 Mode,WHERE WHERE Clause:
+#==============================================================================
+# Determines whether non-spatial data, such as tables, subtypes, domains,
+# and relationship classes, get translated
+DEFAULT_MACRO GEODATABASE_FILE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_FILE_1 no
+GEODATABASE_FILE_1_TRANSLATE_SPATIAL_DATA_ONLY "$(GEODATABASE_FILE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_FILE_1)"
+GUI OPTIONAL CHECKBOX GEODATABASE_FILE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_FILE_1 yes%no Spatial Data Only
+#==============================================================================
+# Determines whether to resolve domains
+DEFAULT_MACRO GEODATABASE_FILE_IN_RESOLVE_DOMAINS_GEODATABASE_FILE_1 no
+GEODATABASE_FILE_1_RESOLVE_DOMAINS "$(GEODATABASE_FILE_IN_RESOLVE_DOMAINS_GEODATABASE_FILE_1)"
+GUI OPTIONAL CHECKBOX GEODATABASE_FILE_IN_RESOLVE_DOMAINS_GEODATABASE_FILE_1 yes%no Resolve Domains
+#==============================================================================
+# Determines whether to resolve the subtype associated with a feature to the
+# text description linked to the subtype value. The text description will
+# be added as an attribute on the feature.
+DEFAULT_MACRO GEODATABASE_FILE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_FILE_1 yes
+GEODATABASE_FILE_1_RESOLVE_SUBTYPE_NAMES "$(GEODATABASE_FILE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_FILE_1)"
+GUI OPTIONAL CHECKBOX GEODATABASE_FILE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_FILE_1 yes%no Resolve Subtypes
+#==============================================================================
+# Determines whether to ignore the network info associated with a feature
+# coming from a network feature class. When set to 'yes', junctions will be
+# treated as point features, and edges will be treated as polyline features,
+# with the geodb_type being set to geodb_point and geodb_polyline, respectively.
+# Caution should be taken when changing the value for this keyword to a different
+# value than was specified when creating the mapping file/workspace.
+DEFAULT_MACRO GEODATABASE_FILE_IN_IGNORE_NETWORK_INFO_GEODATABASE_FILE_1 yes
+GEODATABASE_FILE_1_IGNORE_NETWORK_INFO "$(GEODATABASE_FILE_IN_IGNORE_NETWORK_INFO_GEODATABASE_FILE_1)"
+GUI OPTIONAL CHECKBOX GEODATABASE_FILE_IN_IGNORE_NETWORK_INFO_GEODATABASE_FILE_1 yes%no Ignore Network Info
+# ========================================================================
+# Determines whether to ignore the relationship info associated with a feature
+# coming from a feature class containing relationships. When set to 'yes', simple
+# relationships will not be read, and attributed relationships will be read as
+# tables. Caution should be taken when changing the value for this keyword to a
+# different value than was specified when creating the mapping file/workspace.
+DEFAULT_MACRO GEODATABASE_FILE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_FILE_1 yes
+GEODATABASE_FILE_1_IGNORE_RELATIONSHIP_INFO "$(GEODATABASE_FILE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_FILE_1)"
+GUI OPTIONAL CHECKBOX GEODATABASE_FILE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_FILE_1 yes%no Ignore Relationship Info
+#==============================================================================
+# Determines whether complex edge features should be split up and each edge
+# element read as a separate feature. The default behaviour is to treat an
+# entire edge *feature* as an FME feature, rather than an edge *element* as an
+# FME feature. Returning edge elements ensures that all network connectivity
+# information on complex edges is read.
+DEFAULT_MACRO GEODATABASE_FILE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_FILE_1 no
+GEODATABASE_FILE_1_SPLIT_COMPLEX_EDGES "$(GEODATABASE_FILE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_FILE_1)"
+GUI OPTIONAL CHECKBOX GEODATABASE_FILE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_FILE_1 yes%no Split Complex Edges
+#==============================================================================
+# Determines whether annotation features should be split up and each part
+# element read as a separate feature. The default behaviour is to treat an
+# entire annotation *feature* as an FME feature, rather than an annotation
+# *element* as an FME feature. Returning edge elements ensures that all
+# rotation and positional information for each element is preserved.
+DEFAULT_MACRO GEODATABASE_FILE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_FILE_1 no
+GEODATABASE_FILE_1_SPLIT_MULTI_PART_ANNOS "$(GEODATABASE_FILE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_FILE_1)"
+GUI OPTIONAL CHECKBOX GEODATABASE_FILE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_FILE_1 yes%no Split Multi-Part Annotations
+# ========================================================================
+# The following determines whether to read features from the geodatabase
+# tables/feature classes or to read metadata from those tables/feature
+# classes.
+DEFAULT_MACRO GEODATABASE_FILE_IN_FEATURE_READ_MODE_GEODATABASE_FILE_1 Features
+GEODATABASE_FILE_1_FEATURE_READ_MODE "$(GEODATABASE_FILE_IN_FEATURE_READ_MODE_GEODATABASE_FILE_1)"
+DEFAULT_MACRO GEODATABASE_FILE_IN_EXPOSE_ATTRS_GROUP_GEODATABASE_FILE_1 
+GEODATABASE_FILE_1_EXPOSE_ATTRS_GROUP "$(GEODATABASE_FILE_IN_EXPOSE_ATTRS_GROUP_GEODATABASE_FILE_1)"
+# Include this file in source setting section to add native search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+DEFAULT_MACRO GEODATABASE_FILE_IN_USE_SEARCH_ENVELOPE_GEODATABASE_FILE_1 NO
+GEODATABASE_FILE_1_USE_SEARCH_ENVELOPE "$(GEODATABASE_FILE_IN_USE_SEARCH_ENVELOPE_GEODATABASE_FILE_1)"
+GUI ACTIVEDISCLOSUREGROUP GEODATABASE_FILE_IN_USE_SEARCH_ENVELOPE_GEODATABASE_FILE_1 GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_CLIP_TO_ENVELOPE_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_SEARCH_METHOD_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_SEARCH_METHOD_FILTER%GEODATABASE_FILE_IN_SEARCH_ORDER_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_SEARCH_FEATURE_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_DUMMY_SEARCH_ENVELOPE_PARAMETER Use Search Envelope
+# ===========================================================================
+GUI LOOKUP GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_FILE_1 <Unused>,0 
+DEFAULT_MACRO GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_FILE_1 0
+GEODATABASE_FILE_1_SEARCH_ENVELOPE "$(GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_FILE_1)"
+GUI OPTIONAL FLOAT GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_FILE_1 Minimum X:
+# ===========================================================================
+GUI LOOKUP GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_FILE_1 <Unused>,0 
+DEFAULT_MACRO GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_FILE_1 0
+GEODATABASE_FILE_1_SEARCH_ENVELOPE "$(GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_FILE_1)"
+GUI OPTIONAL FLOAT GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_FILE_1 Minimum Y:
+# ===========================================================================
+GUI LOOKUP GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_FILE_1 <Unused>,0 
+DEFAULT_MACRO GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_FILE_1 0
+GEODATABASE_FILE_1_SEARCH_ENVELOPE "$(GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_FILE_1)"
+GUI OPTIONAL FLOAT GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_FILE_1 Maximum X:
+# ===========================================================================
+GUI LOOKUP GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_FILE_1 <Unused>,0 
+DEFAULT_MACRO GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_FILE_1 0
+GEODATABASE_FILE_1_SEARCH_ENVELOPE "$(GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_FILE_1)"
+GUI OPTIONAL FLOAT GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_FILE_1 Maximum Y:
+# ===========================================================================
+GUI LOOKUP GEODATABASE_FILE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_FILE_1 <Unused>, 
+DEFAULT_MACRO GEODATABASE_FILE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_FILE_1 
+GEODATABASE_FILE_1_SEARCH_ENVELOPE "$(GEODATABASE_FILE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_FILE_1)"
+GUI OPTIONAL COORDSYS GEODATABASE_FILE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_FILE_1 Search Envelope Coordinate System:
+# ===========================================================================
+GUI LOOKUP GEODATABASE_FILE_IN_CLIP_TO_ENVELOPE_GEODATABASE_FILE_1 <Unused>,NO 
+DEFAULT_MACRO GEODATABASE_FILE_IN_CLIP_TO_ENVELOPE_GEODATABASE_FILE_1 NO
+GEODATABASE_FILE_1_CLIP_TO_ENVELOPE "$(GEODATABASE_FILE_IN_CLIP_TO_ENVELOPE_GEODATABASE_FILE_1)"
+GUI OPTIONAL CHECKBOX GEODATABASE_FILE_IN_CLIP_TO_ENVELOPE_GEODATABASE_FILE_1 YES%NO Clip to Search Envelope
+DEFAULT_MACRO GEODATABASE_FILE_IN_GEODB_SHARED_RDR_ADV_PARM_GROUP_GEODATABASE_FILE_1 
+GUI OPTIONAL DISCLOSUREGROUP GEODATABASE_FILE_IN_GEODB_SHARED_RDR_ADV_PARM_GROUP_GEODATABASE_FILE_1 GEODATABASE_FILE_IN_SPLIT_COMPLEX_ANNOS_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_CACHE_MULTIPATCH_TEXTURES_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_CHECK_SIMPLE_GEOM_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_MERGE_FEAT_LINKED_ANNOS_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_BEGIN_SQL{0}_GEODATABASE_FILE_1%GEODATABASE_FILE_IN_END_SQL{0}_GEODATABASE_FILE_1 Advanced
+#==============================================================================
+# The following specifies that complex representations for annotation should
+# be split into simpler representations.
+DEFAULT_MACRO GEODATABASE_FILE_IN_SPLIT_COMPLEX_ANNOS_GEODATABASE_FILE_1 no
+GEODATABASE_FILE_1_SPLIT_COMPLEX_ANNOS "$(GEODATABASE_FILE_IN_SPLIT_COMPLEX_ANNOS_GEODATABASE_FILE_1)"
+GUI CHOICE GEODATABASE_FILE_IN_SPLIT_COMPLEX_ANNOS_GEODATABASE_FILE_1 yes%no Split Complex Annotations:
+#==============================================================================
+# The following specifies whether to keep (YES) or clean up (NO) Esri's
+# multipatch texture caches.
+DEFAULT_MACRO GEODATABASE_FILE_IN_CACHE_MULTIPATCH_TEXTURES_GEODATABASE_FILE_1 yes
+GEODATABASE_FILE_1_CACHE_MULTIPATCH_TEXTURES "$(GEODATABASE_FILE_IN_CACHE_MULTIPATCH_TEXTURES_GEODATABASE_FILE_1)"
+GUI CHOICE GEODATABASE_FILE_IN_CACHE_MULTIPATCH_TEXTURES_GEODATABASE_FILE_1 yes%no Cache Multipatch Textures:
+# ========================================================================
+# Determines which type of search method to use. This keyword is only applicable
+# when either the keyword SEARCH_ENVELOPE or the keyword SEARCH_FEATURE is specified.
+GUI LOOKUP GEODATABASE_FILE_IN_SEARCH_METHOD_GEODATABASE_FILE_1 <Unused>, 
+DEFAULT_MACRO GEODATABASE_FILE_IN_SEARCH_METHOD_GEODATABASE_FILE_1 
+GEODATABASE_FILE_1_SEARCH_METHOD "$(GEODATABASE_FILE_IN_SEARCH_METHOD_GEODATABASE_FILE_1)"
+GUI OPTIONAL LOOKUP_CHOICE GEODATABASE_FILE_IN_SEARCH_METHOD_GEODATABASE_FILE_1 "\"Geodb Intersects\",GEODB_INTERSECTS"%"\"Geodb Envelope Intersects\",GEODB_ENVELOPE_INTERSECTS"%"\"Geodb Touches\",GEODB_TOUCHES"%"\"Geodb Overlaps\",GEODB_OVERLAPS"%"\"Geodb Crosses\",GEODB_CROSSES"%"\"Geodb Within\",GEODB_WITHIN"%"\"Geodb Contains\",GEODB_CONTAINS" Search Method
+# ========================================================================
+# Determines whether the spatial component or the attribute component of a
+# query is performed first. This is only applicable when both spatial and
+# non-spatial searches are being performed.
+GUI LOOKUP GEODATABASE_FILE_IN_SEARCH_ORDER_GEODATABASE_FILE_1 <Unused>, 
+DEFAULT_MACRO GEODATABASE_FILE_IN_SEARCH_ORDER_GEODATABASE_FILE_1 
+GEODATABASE_FILE_1_SEARCH_ORDER "$(GEODATABASE_FILE_IN_SEARCH_ORDER_GEODATABASE_FILE_1)"
+GUI OPTIONAL LOOKUP_CHOICE GEODATABASE_FILE_IN_SEARCH_ORDER_GEODATABASE_FILE_1 "\"Spatial First\",SPATIAL_FIRST"%"\"Attribute First\",ATTRIBUTE_FIRST" Search Order:
+# ========================================================================
+# The following defines the search feature for the query. It defines an
+# arbitrarily complex search feature as a spatial contraint. It is in the
+# form <keyword>_SEARCH_FEATURE [<xCoord> <yCoord>]+.
+GUI LOOKUP GEODATABASE_FILE_IN_SEARCH_FEATURE_GEODATABASE_FILE_1 <Unused>, 
+DEFAULT_MACRO GEODATABASE_FILE_IN_SEARCH_FEATURE_GEODATABASE_FILE_1 
+GEODATABASE_FILE_1_SEARCH_FEATURE "$(GEODATABASE_FILE_IN_SEARCH_FEATURE_GEODATABASE_FILE_1)"
+GUI OPTIONAL TEXT GEODATABASE_FILE_IN_SEARCH_FEATURE_GEODATABASE_FILE_1 Search Feature:
+# ========================================================================
+# The following specifies that simple geometry should be checked for
+# when reading features.
+DEFAULT_MACRO GEODATABASE_FILE_IN_CHECK_SIMPLE_GEOM_GEODATABASE_FILE_1 no
+GEODATABASE_FILE_1_CHECK_SIMPLE_GEOM "$(GEODATABASE_FILE_IN_CHECK_SIMPLE_GEOM_GEODATABASE_FILE_1)"
+GUI CHOICE GEODATABASE_FILE_IN_CHECK_SIMPLE_GEOM_GEODATABASE_FILE_1 yes%no Check for Simple Geometry:
+# ========================================================================
+# The following specifies whether feature-linked annotations should
+# be merged onto the main feature as a text list attribute when reading.
+DEFAULT_MACRO GEODATABASE_FILE_IN_MERGE_FEAT_LINKED_ANNOS_GEODATABASE_FILE_1 no
+GEODATABASE_FILE_1_MERGE_FEAT_LINKED_ANNOS "$(GEODATABASE_FILE_IN_MERGE_FEAT_LINKED_ANNOS_GEODATABASE_FILE_1)"
+GUI CHOICE GEODATABASE_FILE_IN_MERGE_FEAT_LINKED_ANNOS_GEODATABASE_FILE_1 yes%no Merge Feature Linked Annotations:
+# ==============================================================================
+# The following specifies an SQL command to execute before opening the first
+# Geodatabase table.
+DEFAULT_MACRO GEODATABASE_FILE_IN_BEGIN_SQL{0}_GEODATABASE_FILE_1 
+GEODATABASE_FILE_1_BEGIN_SQL{0} "$(GEODATABASE_FILE_IN_BEGIN_SQL{0}_GEODATABASE_FILE_1)"
+GUI OPTIONAL TEXT_EDIT_SQL_CFG GEODATABASE_FILE_IN_BEGIN_SQL{0}_GEODATABASE_FILE_1 MODE,SQL;FORMAT,GEODATABASE_FILE SQL To Run Before Read
+# ==============================================================================
+# The following specifies an SQL command to execute after closing all the
+# Geodatabase tables.
+DEFAULT_MACRO GEODATABASE_FILE_IN_END_SQL{0}_GEODATABASE_FILE_1 
+GEODATABASE_FILE_1_END_SQL{0} "$(GEODATABASE_FILE_IN_END_SQL{0}_GEODATABASE_FILE_1)"
+GUI OPTIONAL TEXT_EDIT_SQL_CFG GEODATABASE_FILE_IN_END_SQL{0}_GEODATABASE_FILE_1 MODE,SQL;FORMAT,GEODATABASE_FILE SQL To Run After Read
+# ===========================================================================
+DEFAULT_MACRO GEODATABASE_FILE_IN_NETWORK_AUTHENTICATION_GEODATABASE_FILE_1 
+GEODATABASE_FILE_1_NETWORK_AUTHENTICATION "$(GEODATABASE_FILE_IN_NETWORK_AUTHENTICATION_GEODATABASE_FILE_1)"
+GUI OPTIONAL AUTHENTICATOR GEODATABASE_FILE_IN_NETWORK_AUTHENTICATION_GEODATABASE_FILE_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ============================================================================ 
+DEFAULT_MACRO GEODATABASE_FILE_IN_ATTRIBUTE_READING_GEODATABASE_FILE_1 DEFLINE
+GEODATABASE_FILE_1_ATTRIBUTE_READING "$(GEODATABASE_FILE_IN_ATTRIBUTE_READING_GEODATABASE_FILE_1)"
+# ============================================================================ 
+GEODATABASE_FILE_1_GENERATE_FME_BUILD_NUM 18301
+DEFAULT_MACRO _GEODB_IN_ALIAS_MODE_GEODATABASE_FILE_1 NONE
+GUI LOOKUP_CHOICE _GEODB_IN_ALIAS_MODE_GEODATABASE_FILE_1 None,NONE%Expose<space>Aliases<space>as<space>Metadata<space>Attributes<space><openparen><lt>name<gt>_alias<closeparen>,ON_DATA_FEATURES Alias Mode:
+GEODATABASE_FILE_1_ALIAS_MODE "$(_GEODB_IN_ALIAS_MODE_GEODATABASE_FILE_1)"
+GEODATABASE_FILE_1_DATASET "$(SourceDataset_GEODATABASE_FILE_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GEODATABASE_FILE_2"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEODATABASE_FILE GEODATABASE_FILE_2
+# ============================================================================
+# The following GUI line prompts for a file to be used as the source.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_GEODATABASE_FILE_2 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEODATABASE_FILE GEODATABASE_FILE_2
+DEFAULT_MACRO SourceDataset_GEODATABASE_FILE_2 $(SourceDataset_GEODATABASE_FILE)
+GUI SOURCE_GEODATABASE SourceDataset_GEODATABASE_FILE_2 File Geodatabase:
+# Translation flags.
+#
+DEFAULT_MACRO GEODATABASE_FILE_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_GEODATABASE_FILE_2 Yes
+GEODATABASE_FILE_2_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS "$(GEODATABASE_FILE_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_GEODATABASE_FILE_2)"
+DEFAULT_MACRO GEODATABASE_FILE_IN_FME_CONNECTION_GROUP_GEODATABASE_FILE_2 
+GUI OPTIONAL DISCLOSUREGROUP GEODATABASE_FILE_IN_FME_CONNECTION_GROUP_GEODATABASE_FILE_2 GEODATABASE_FILE_IN_NAMED_CONNECTION Database Connection
+DEFAULT_MACRO GEODATABASE_FILE_IN_FME_GROUP_NAMED1_GEODATABASE_FILE_2 
+GUI OPTIONAL DISCLOSUREGROUP GEODATABASE_FILE_IN_FME_GROUP_NAMED1_GEODATABASE_FILE_2 GEODATABASE_FILE_IN_TABLELIST%GEODATABASE_FILE_IN_WHERE_WWJD_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_RESOLVE_DOMAINS_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_IGNORE_NETWORK_INFO_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_FEATURE_READ_MODE Constraints
+# ========================================================================
+# The following defines the global where clause to be used when retrieving
+# features from the Geodatabase.
+DEFAULT_MACRO GEODATABASE_FILE_IN_WHERE_WWJD_GEODATABASE_FILE_2 
+GEODATABASE_FILE_2_WHERE_WWJD "$(GEODATABASE_FILE_IN_WHERE_WWJD_GEODATABASE_FILE_2)"
+GUI OPTIONAL TEXT_EDIT_SQL_CFG GEODATABASE_FILE_IN_WHERE_WWJD_GEODATABASE_FILE_2 Mode,WHERE WHERE Clause:
+#==============================================================================
+# Determines whether non-spatial data, such as tables, subtypes, domains,
+# and relationship classes, get translated
+DEFAULT_MACRO GEODATABASE_FILE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_FILE_2 no
+GEODATABASE_FILE_2_TRANSLATE_SPATIAL_DATA_ONLY "$(GEODATABASE_FILE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_FILE_2)"
+GUI OPTIONAL CHECKBOX GEODATABASE_FILE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_FILE_2 yes%no Spatial Data Only
+#==============================================================================
+# Determines whether to resolve domains
+DEFAULT_MACRO GEODATABASE_FILE_IN_RESOLVE_DOMAINS_GEODATABASE_FILE_2 no
+GEODATABASE_FILE_2_RESOLVE_DOMAINS "$(GEODATABASE_FILE_IN_RESOLVE_DOMAINS_GEODATABASE_FILE_2)"
+GUI OPTIONAL CHECKBOX GEODATABASE_FILE_IN_RESOLVE_DOMAINS_GEODATABASE_FILE_2 yes%no Resolve Domains
+#==============================================================================
+# Determines whether to resolve the subtype associated with a feature to the
+# text description linked to the subtype value. The text description will
+# be added as an attribute on the feature.
+DEFAULT_MACRO GEODATABASE_FILE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_FILE_2 yes
+GEODATABASE_FILE_2_RESOLVE_SUBTYPE_NAMES "$(GEODATABASE_FILE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_FILE_2)"
+GUI OPTIONAL CHECKBOX GEODATABASE_FILE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_FILE_2 yes%no Resolve Subtypes
+#==============================================================================
+# Determines whether to ignore the network info associated with a feature
+# coming from a network feature class. When set to 'yes', junctions will be
+# treated as point features, and edges will be treated as polyline features,
+# with the geodb_type being set to geodb_point and geodb_polyline, respectively.
+# Caution should be taken when changing the value for this keyword to a different
+# value than was specified when creating the mapping file/workspace.
+DEFAULT_MACRO GEODATABASE_FILE_IN_IGNORE_NETWORK_INFO_GEODATABASE_FILE_2 yes
+GEODATABASE_FILE_2_IGNORE_NETWORK_INFO "$(GEODATABASE_FILE_IN_IGNORE_NETWORK_INFO_GEODATABASE_FILE_2)"
+GUI OPTIONAL CHECKBOX GEODATABASE_FILE_IN_IGNORE_NETWORK_INFO_GEODATABASE_FILE_2 yes%no Ignore Network Info
+# ========================================================================
+# Determines whether to ignore the relationship info associated with a feature
+# coming from a feature class containing relationships. When set to 'yes', simple
+# relationships will not be read, and attributed relationships will be read as
+# tables. Caution should be taken when changing the value for this keyword to a
+# different value than was specified when creating the mapping file/workspace.
+DEFAULT_MACRO GEODATABASE_FILE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_FILE_2 yes
+GEODATABASE_FILE_2_IGNORE_RELATIONSHIP_INFO "$(GEODATABASE_FILE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_FILE_2)"
+GUI OPTIONAL CHECKBOX GEODATABASE_FILE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_FILE_2 yes%no Ignore Relationship Info
+#==============================================================================
+# Determines whether complex edge features should be split up and each edge
+# element read as a separate feature. The default behaviour is to treat an
+# entire edge *feature* as an FME feature, rather than an edge *element* as an
+# FME feature. Returning edge elements ensures that all network connectivity
+# information on complex edges is read.
+DEFAULT_MACRO GEODATABASE_FILE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_FILE_2 no
+GEODATABASE_FILE_2_SPLIT_COMPLEX_EDGES "$(GEODATABASE_FILE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_FILE_2)"
+GUI OPTIONAL CHECKBOX GEODATABASE_FILE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_FILE_2 yes%no Split Complex Edges
+#==============================================================================
+# Determines whether annotation features should be split up and each part
+# element read as a separate feature. The default behaviour is to treat an
+# entire annotation *feature* as an FME feature, rather than an annotation
+# *element* as an FME feature. Returning edge elements ensures that all
+# rotation and positional information for each element is preserved.
+DEFAULT_MACRO GEODATABASE_FILE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_FILE_2 no
+GEODATABASE_FILE_2_SPLIT_MULTI_PART_ANNOS "$(GEODATABASE_FILE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_FILE_2)"
+GUI OPTIONAL CHECKBOX GEODATABASE_FILE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_FILE_2 yes%no Split Multi-Part Annotations
+# ========================================================================
+# The following determines whether to read features from the geodatabase
+# tables/feature classes or to read metadata from those tables/feature
+# classes.
+DEFAULT_MACRO GEODATABASE_FILE_IN_FEATURE_READ_MODE_GEODATABASE_FILE_2 Features
+GEODATABASE_FILE_2_FEATURE_READ_MODE "$(GEODATABASE_FILE_IN_FEATURE_READ_MODE_GEODATABASE_FILE_2)"
+DEFAULT_MACRO GEODATABASE_FILE_IN_EXPOSE_ATTRS_GROUP_GEODATABASE_FILE_2 
+GEODATABASE_FILE_2_EXPOSE_ATTRS_GROUP "$(GEODATABASE_FILE_IN_EXPOSE_ATTRS_GROUP_GEODATABASE_FILE_2)"
+# Include this file in source setting section to add native search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+DEFAULT_MACRO GEODATABASE_FILE_IN_USE_SEARCH_ENVELOPE_GEODATABASE_FILE_2 NO
+GEODATABASE_FILE_2_USE_SEARCH_ENVELOPE "$(GEODATABASE_FILE_IN_USE_SEARCH_ENVELOPE_GEODATABASE_FILE_2)"
+GUI ACTIVEDISCLOSUREGROUP GEODATABASE_FILE_IN_USE_SEARCH_ENVELOPE_GEODATABASE_FILE_2 GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_CLIP_TO_ENVELOPE_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_SEARCH_METHOD_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_SEARCH_METHOD_FILTER%GEODATABASE_FILE_IN_SEARCH_ORDER_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_SEARCH_FEATURE_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_DUMMY_SEARCH_ENVELOPE_PARAMETER Use Search Envelope
+# ===========================================================================
+GUI LOOKUP GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_FILE_2 <Unused>,0 
+DEFAULT_MACRO GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_FILE_2 0
+GEODATABASE_FILE_2_SEARCH_ENVELOPE "$(GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_FILE_2)"
+GUI OPTIONAL FLOAT GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_FILE_2 Minimum X:
+# ===========================================================================
+GUI LOOKUP GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_FILE_2 <Unused>,0 
+DEFAULT_MACRO GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_FILE_2 0
+GEODATABASE_FILE_2_SEARCH_ENVELOPE "$(GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_FILE_2)"
+GUI OPTIONAL FLOAT GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_FILE_2 Minimum Y:
+# ===========================================================================
+GUI LOOKUP GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_FILE_2 <Unused>,0 
+DEFAULT_MACRO GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_FILE_2 0
+GEODATABASE_FILE_2_SEARCH_ENVELOPE "$(GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_FILE_2)"
+GUI OPTIONAL FLOAT GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_FILE_2 Maximum X:
+# ===========================================================================
+GUI LOOKUP GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_FILE_2 <Unused>,0 
+DEFAULT_MACRO GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_FILE_2 0
+GEODATABASE_FILE_2_SEARCH_ENVELOPE "$(GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_FILE_2)"
+GUI OPTIONAL FLOAT GEODATABASE_FILE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_FILE_2 Maximum Y:
+# ===========================================================================
+GUI LOOKUP GEODATABASE_FILE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_FILE_2 <Unused>, 
+DEFAULT_MACRO GEODATABASE_FILE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_FILE_2 
+GEODATABASE_FILE_2_SEARCH_ENVELOPE "$(GEODATABASE_FILE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_FILE_2)"
+GUI OPTIONAL COORDSYS GEODATABASE_FILE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_FILE_2 Search Envelope Coordinate System:
+# ===========================================================================
+GUI LOOKUP GEODATABASE_FILE_IN_CLIP_TO_ENVELOPE_GEODATABASE_FILE_2 <Unused>,NO 
+DEFAULT_MACRO GEODATABASE_FILE_IN_CLIP_TO_ENVELOPE_GEODATABASE_FILE_2 NO
+GEODATABASE_FILE_2_CLIP_TO_ENVELOPE "$(GEODATABASE_FILE_IN_CLIP_TO_ENVELOPE_GEODATABASE_FILE_2)"
+GUI OPTIONAL CHECKBOX GEODATABASE_FILE_IN_CLIP_TO_ENVELOPE_GEODATABASE_FILE_2 YES%NO Clip to Search Envelope
+DEFAULT_MACRO GEODATABASE_FILE_IN_GEODB_SHARED_RDR_ADV_PARM_GROUP_GEODATABASE_FILE_2 
+GUI OPTIONAL DISCLOSUREGROUP GEODATABASE_FILE_IN_GEODB_SHARED_RDR_ADV_PARM_GROUP_GEODATABASE_FILE_2 GEODATABASE_FILE_IN_SPLIT_COMPLEX_ANNOS_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_CACHE_MULTIPATCH_TEXTURES_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_CHECK_SIMPLE_GEOM_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_MERGE_FEAT_LINKED_ANNOS_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_BEGIN_SQL{0}_GEODATABASE_FILE_2%GEODATABASE_FILE_IN_END_SQL{0}_GEODATABASE_FILE_2 Advanced
+#==============================================================================
+# The following specifies that complex representations for annotation should
+# be split into simpler representations.
+DEFAULT_MACRO GEODATABASE_FILE_IN_SPLIT_COMPLEX_ANNOS_GEODATABASE_FILE_2 no
+GEODATABASE_FILE_2_SPLIT_COMPLEX_ANNOS "$(GEODATABASE_FILE_IN_SPLIT_COMPLEX_ANNOS_GEODATABASE_FILE_2)"
+GUI CHOICE GEODATABASE_FILE_IN_SPLIT_COMPLEX_ANNOS_GEODATABASE_FILE_2 yes%no Split Complex Annotations:
+#==============================================================================
+# The following specifies whether to keep (YES) or clean up (NO) Esri's
+# multipatch texture caches.
+DEFAULT_MACRO GEODATABASE_FILE_IN_CACHE_MULTIPATCH_TEXTURES_GEODATABASE_FILE_2 yes
+GEODATABASE_FILE_2_CACHE_MULTIPATCH_TEXTURES "$(GEODATABASE_FILE_IN_CACHE_MULTIPATCH_TEXTURES_GEODATABASE_FILE_2)"
+GUI CHOICE GEODATABASE_FILE_IN_CACHE_MULTIPATCH_TEXTURES_GEODATABASE_FILE_2 yes%no Cache Multipatch Textures:
+# ========================================================================
+# Determines which type of search method to use. This keyword is only applicable
+# when either the keyword SEARCH_ENVELOPE or the keyword SEARCH_FEATURE is specified.
+GUI LOOKUP GEODATABASE_FILE_IN_SEARCH_METHOD_GEODATABASE_FILE_2 <Unused>, 
+DEFAULT_MACRO GEODATABASE_FILE_IN_SEARCH_METHOD_GEODATABASE_FILE_2 
+GEODATABASE_FILE_2_SEARCH_METHOD "$(GEODATABASE_FILE_IN_SEARCH_METHOD_GEODATABASE_FILE_2)"
+GUI OPTIONAL LOOKUP_CHOICE GEODATABASE_FILE_IN_SEARCH_METHOD_GEODATABASE_FILE_2 "\"Geodb Intersects\",GEODB_INTERSECTS"%"\"Geodb Envelope Intersects\",GEODB_ENVELOPE_INTERSECTS"%"\"Geodb Touches\",GEODB_TOUCHES"%"\"Geodb Overlaps\",GEODB_OVERLAPS"%"\"Geodb Crosses\",GEODB_CROSSES"%"\"Geodb Within\",GEODB_WITHIN"%"\"Geodb Contains\",GEODB_CONTAINS" Search Method
+# ========================================================================
+# Determines whether the spatial component or the attribute component of a
+# query is performed first. This is only applicable when both spatial and
+# non-spatial searches are being performed.
+GUI LOOKUP GEODATABASE_FILE_IN_SEARCH_ORDER_GEODATABASE_FILE_2 <Unused>, 
+DEFAULT_MACRO GEODATABASE_FILE_IN_SEARCH_ORDER_GEODATABASE_FILE_2 
+GEODATABASE_FILE_2_SEARCH_ORDER "$(GEODATABASE_FILE_IN_SEARCH_ORDER_GEODATABASE_FILE_2)"
+GUI OPTIONAL LOOKUP_CHOICE GEODATABASE_FILE_IN_SEARCH_ORDER_GEODATABASE_FILE_2 "\"Spatial First\",SPATIAL_FIRST"%"\"Attribute First\",ATTRIBUTE_FIRST" Search Order:
+# ========================================================================
+# The following defines the search feature for the query. It defines an
+# arbitrarily complex search feature as a spatial contraint. It is in the
+# form <keyword>_SEARCH_FEATURE [<xCoord> <yCoord>]+.
+GUI LOOKUP GEODATABASE_FILE_IN_SEARCH_FEATURE_GEODATABASE_FILE_2 <Unused>, 
+DEFAULT_MACRO GEODATABASE_FILE_IN_SEARCH_FEATURE_GEODATABASE_FILE_2 
+GEODATABASE_FILE_2_SEARCH_FEATURE "$(GEODATABASE_FILE_IN_SEARCH_FEATURE_GEODATABASE_FILE_2)"
+GUI OPTIONAL TEXT GEODATABASE_FILE_IN_SEARCH_FEATURE_GEODATABASE_FILE_2 Search Feature:
+# ========================================================================
+# The following specifies that simple geometry should be checked for
+# when reading features.
+DEFAULT_MACRO GEODATABASE_FILE_IN_CHECK_SIMPLE_GEOM_GEODATABASE_FILE_2 no
+GEODATABASE_FILE_2_CHECK_SIMPLE_GEOM "$(GEODATABASE_FILE_IN_CHECK_SIMPLE_GEOM_GEODATABASE_FILE_2)"
+GUI CHOICE GEODATABASE_FILE_IN_CHECK_SIMPLE_GEOM_GEODATABASE_FILE_2 yes%no Check for Simple Geometry:
+# ========================================================================
+# The following specifies whether feature-linked annotations should
+# be merged onto the main feature as a text list attribute when reading.
+DEFAULT_MACRO GEODATABASE_FILE_IN_MERGE_FEAT_LINKED_ANNOS_GEODATABASE_FILE_2 no
+GEODATABASE_FILE_2_MERGE_FEAT_LINKED_ANNOS "$(GEODATABASE_FILE_IN_MERGE_FEAT_LINKED_ANNOS_GEODATABASE_FILE_2)"
+GUI CHOICE GEODATABASE_FILE_IN_MERGE_FEAT_LINKED_ANNOS_GEODATABASE_FILE_2 yes%no Merge Feature Linked Annotations:
+# ==============================================================================
+# The following specifies an SQL command to execute before opening the first
+# Geodatabase table.
+DEFAULT_MACRO GEODATABASE_FILE_IN_BEGIN_SQL{0}_GEODATABASE_FILE_2 
+GEODATABASE_FILE_2_BEGIN_SQL{0} "$(GEODATABASE_FILE_IN_BEGIN_SQL{0}_GEODATABASE_FILE_2)"
+GUI OPTIONAL TEXT_EDIT_SQL_CFG GEODATABASE_FILE_IN_BEGIN_SQL{0}_GEODATABASE_FILE_2 MODE,SQL;FORMAT,GEODATABASE_FILE SQL To Run Before Read
+# ==============================================================================
+# The following specifies an SQL command to execute after closing all the
+# Geodatabase tables.
+DEFAULT_MACRO GEODATABASE_FILE_IN_END_SQL{0}_GEODATABASE_FILE_2 
+GEODATABASE_FILE_2_END_SQL{0} "$(GEODATABASE_FILE_IN_END_SQL{0}_GEODATABASE_FILE_2)"
+GUI OPTIONAL TEXT_EDIT_SQL_CFG GEODATABASE_FILE_IN_END_SQL{0}_GEODATABASE_FILE_2 MODE,SQL;FORMAT,GEODATABASE_FILE SQL To Run After Read
+# ===========================================================================
+DEFAULT_MACRO GEODATABASE_FILE_IN_NETWORK_AUTHENTICATION_GEODATABASE_FILE_2 
+GEODATABASE_FILE_2_NETWORK_AUTHENTICATION "$(GEODATABASE_FILE_IN_NETWORK_AUTHENTICATION_GEODATABASE_FILE_2)"
+GUI OPTIONAL AUTHENTICATOR GEODATABASE_FILE_IN_NETWORK_AUTHENTICATION_GEODATABASE_FILE_2 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ============================================================================ 
+DEFAULT_MACRO GEODATABASE_FILE_IN_ATTRIBUTE_READING_GEODATABASE_FILE_2 DEFLINE
+GEODATABASE_FILE_2_ATTRIBUTE_READING "$(GEODATABASE_FILE_IN_ATTRIBUTE_READING_GEODATABASE_FILE_2)"
+# ============================================================================ 
+GEODATABASE_FILE_2_GENERATE_FME_BUILD_NUM 18301
+DEFAULT_MACRO _GEODB_IN_ALIAS_MODE_GEODATABASE_FILE_2 NONE
+GUI LOOKUP_CHOICE _GEODB_IN_ALIAS_MODE_GEODATABASE_FILE_2 None,NONE%Expose<space>Aliases<space>as<space>Metadata<space>Attributes<space><openparen><lt>name<gt>_alias<closeparen>,ON_DATA_FEATURES Alias Mode:
+GEODATABASE_FILE_2_ALIAS_MODE "$(_GEODB_IN_ALIAS_MODE_GEODATABASE_FILE_2)"
+GEODATABASE_FILE_2_DATASET "$(SourceDataset_GEODATABASE_FILE_2)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GML2_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER GML2 GML2_1
+# ============================================================================
+# The following GUI lines prompt for a GML v2 file to be used as the
+# the destination of the data.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be written.
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_GML2_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER GML2 GML2_1
+DEFAULT_MACRO DestDataset_GML2_1 $(DestDataset_GML2)
+GUI FILENAME DestDataset_GML2_1 GML_Files(*.xml;*.gml;*.gz)|*.xml;*.gml;*.gz|GML_Files(*.xml)|*.xml|GML_Files(*.gml)|*.gml|Compressed_GML_Files(*.gz)|*.gz|All_Files|* Destination Geography Markup Language (GML) v2.1.2 File:
+# ============================================================================
+# The SCHEMA_MODE keyword sets the GML2 writer's mode. Valid values are
+# 'FIXED', 'CREATE', and 'SCAN'.
+#
+# FIXED: In this mode the writer outputs a GML v2 instance document
+# that corresponds to the FMEFeatures.xsd GML v2 Schema.
+#
+# CREATE: The writer outputs GML v2 Schema document and a
+# corresponding GML v2 instance document.
+# The GML v2 Schema document is determined by the GML DEF lines.
+#
+# SCAN: This mode is currently NOT implemented.
+DEFAULT_MACRO _OUT_SCHEMA_MODE_GML2_1 CREATE
+GUI LOOKUP_CHOICE _OUT_SCHEMA_MODE_GML2_1 Fixed,FIXED%Create,CREATE GML2 Schema Mode:
+GML2_1_SCHEMA_MODE $(_OUT_SCHEMA_MODE_GML2_1)
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO GML2_OUT_DESTINATION_DATASETTYPE_VALIDATION_GML2_1 Yes
+GML2_1_DESTINATION_DATASETTYPE_VALIDATION "$(GML2_OUT_DESTINATION_DATASETTYPE_VALIDATION_GML2_1)"
+DEFAULT_MACRO GML2_OUT_COORDINATE_SYSTEM_GRANULARITY_GML2_1 DATASET
+GML2_1_COORDINATE_SYSTEM_GRANULARITY "$(GML2_OUT_COORDINATE_SYSTEM_GRANULARITY_GML2_1)"
+DEFAULT_MACRO GML2_OUT_ADVANCED_GML2_1 FME_DISCLOSURE_OPEN
+GUI OPTIONAL DISCLOSUREGROUP GML2_OUT_ADVANCED_GML2_1 GML2_OUT_XSD_DOC_GML2_1%GML2_OUT_TARGET_NS_PREFIX_GML2_1%GML2_OUT_TARGET_NS_URI_GML2_1%GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL_GML2_1%GML2_OUT_OUTPUT_ENCODING_GML2_1%GML2_OUT_USE_WFS_FEATURE_COLLECTION_GML2_1%GML2_OUT_APPLY_STYLESHEET_GML2_1%GML2_OUT_STYLESHEET_RESULT_GML2_1%GML2_OUT_SUPPRESS_NULL_ATTRS_GML2_1%GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS_GML2_1%GML2_OUT_DOCUMENTS_TO_WRITE_GML2_1%GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR_GML2_1%GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES_GML2_1%GML2_OUT_MULTI_VALUE_SEPARATOR_GML2_1 Advanced
+# ============================================================================
+# On FIXED schema: The XSD_DOC keyword is ignored.
+#
+# On CREATE schema: The XSD_DOC keyword is optional,
+# when it is not specified the .xsd file will be written
+# in the same folder as the output dataset and its
+# basename will be the same as the base name of the
+# GML output dataset. e.g., if the DATASET is data.xml,
+# then the GML v2 schema file that is produced will
+# be named data.xsd.
+#
+# On SCAN schema: The SCAN mode is currently NOT implemented.
+#
+# Default it to be the empty string.
+DEFAULT_MACRO GML2_OUT_XSD_DOC_GML2_1 \\wsl-fs01\OrganisatieData\Postbus\Joost_Sieben\HDB\nhi-xsds-v12\nhiFeatureTypes.xsd
+GML2_1_XSD_DOC "$(GML2_OUT_XSD_DOC_GML2_1)"
+GUI OPTIONAL FILENAME GML2_OUT_XSD_DOC_GML2_1 XML_Schema_File(*.xsd)|*.xsd|All_Files(*)|* XML Schema Document
+# ============================================================================
+# The TARGET_NS_PREFIX and TARGET_NS_URI keywords are used when the
+# GML2 writer is set on CREATE mode. They declare the namespace that
+# the output document should use.
+DEFAULT_MACRO GML2_OUT_TARGET_NS_PREFIX_GML2_1 nhi
+GML2_1_TARGET_NS_PREFIX "$(GML2_OUT_TARGET_NS_PREFIX_GML2_1)"
+GUI OPTIONAL TEXT GML2_OUT_TARGET_NS_PREFIX_GML2_1 Target Namespace Prefix
+DEFAULT_MACRO GML2_OUT_TARGET_NS_URI_GML2_1 http://www.nhi.nu/gml
+GML2_1_TARGET_NS_URI "$(GML2_OUT_TARGET_NS_URI_GML2_1)"
+GUI OPTIONAL TEXT GML2_OUT_TARGET_NS_URI_GML2_1 Target Namespace URI
+DEFAULT_MACRO GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL_GML2_1 
+GML2_1_TARGET_XSI_SCHEMALOCATION_URL "$(GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL_GML2_1)"
+GUI OPTIONAL TEXT GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL_GML2_1 Target Schema Location URL
+# ============================================================================
+# The OUTPUT_ENCODING keyword is optional. If no value is specified
+# then the encoding defaults to UTF-8.
+#
+# All files output by the GML2 writer will be output with the
+# encoding.
+DEFAULT_MACRO GML2_OUT_OUTPUT_ENCODING_GML2_1 
+GML2_1_OUTPUT_ENCODING "$(GML2_OUT_OUTPUT_ENCODING_GML2_1)"
+GUI OPTIONAL TEXT GML2_OUT_OUTPUT_ENCODING_GML2_1 Output Dataset Encoding
+# ============================================================================
+# The writer will use the wfs:FeatureCollection as the root element of the
+# GML instance when this keyword is set to yes.
+DEFAULT_MACRO GML2_OUT_USE_WFS_FEATURE_COLLECTION_GML2_1 no
+GML2_1_USE_WFS_FEATURE_COLLECTION "$(GML2_OUT_USE_WFS_FEATURE_COLLECTION_GML2_1)"
+GUI CHOICE GML2_OUT_USE_WFS_FEATURE_COLLECTION_GML2_1 no%yes Use wfs:FeatureCollection
+# ============================================================================
+# APPLY_STYLESHEET
+# Specifies the XSLT stylesheet to be applied to the output document.
+DEFAULT_MACRO GML2_OUT_APPLY_STYLESHEET_GML2_1 
+GML2_1_APPLY_STYLESHEET "$(GML2_OUT_APPLY_STYLESHEET_GML2_1)"
+GUI OPTIONAL FILENAME_MUSTEXIST GML2_OUT_APPLY_STYLESHEET_GML2_1 XSLT_Stylesheet_Files(*.xslt)|*.xslt|All_Files(*)|* XSLT Stylesheet to Apply
+# ============================================================================
+# STYLESHEET_RESULT
+# The location and name of the resulting document after XSLT stylesheet
+# transformation. This is an optional keyword.
+DEFAULT_MACRO GML2_OUT_STYLESHEET_RESULT_GML2_1 
+GML2_1_STYLESHEET_RESULT "$(GML2_OUT_STYLESHEET_RESULT_GML2_1)"
+GUI OPTIONAL FILENAME GML2_OUT_STYLESHEET_RESULT_GML2_1 All_Files(*)|* Stylesheet File to Write
+# ============================================================================
+# SUPPRESS_NULL_ATTRS
+# This parameter defines whether the GML writer will suppress writing out
+# attributes that are specified on the DEF line, but that have no values on
+# the outgoing features.
+DEFAULT_MACRO GML2_OUT_SUPPRESS_NULL_ATTRS_GML2_1 yes
+GML2_1_SUPPRESS_NULL_ATTRS "$(GML2_OUT_SUPPRESS_NULL_ATTRS_GML2_1)"
+GUI OPTIONAL CHOICE GML2_OUT_SUPPRESS_NULL_ATTRS_GML2_1 yes%no Suppress Null Attributes
+# ============================================================================
+# WRITE_ALL_FEATURE_TYPE_DEFNS
+# This parameter defines whether the GML writer will write out the feature
+# definitions whether or not it has features.
+DEFAULT_MACRO GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS_GML2_1 no
+GML2_1_WRITE_ALL_FEATURE_TYPE_DEFNS "$(GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS_GML2_1)"
+GUI OPTIONAL CHOICE GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS_GML2_1 yes%no Write All Feature Types
+# ============================================================================
+# The GML application schema document will not be written when this keyword
+# is set to yes.
+DEFAULT_MACRO GML2_OUT_DOCUMENTS_TO_WRITE_GML2_1 GML_ONLY
+GML2_1_DOCUMENTS_TO_WRITE "$(GML2_OUT_DOCUMENTS_TO_WRITE_GML2_1)"
+GUI OPTIONAL LOOKUP_CHOICE GML2_OUT_DOCUMENTS_TO_WRITE_GML2_1 "\"Both\",BOTH"%"\"GML Only\",GML_ONLY"%"\"XSD Only\",XSD_ONLY" Documents To Write
+# ============================================================================
+# The xsi:schemaLocation is merely a hint to an XML processor for a set of
+# schema namespace/location pairs whose grammar would validate the XML instance
+# document, this keyword allows the suppression of the xsi:schemaLocation in
+# the output GML instance document.
+DEFAULT_MACRO GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR_GML2_1 no
+GML2_1_SUPPRESS_SCHEMA_LOCATION_ATTR "$(GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR_GML2_1)"
+GUI CHOICE GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR_GML2_1 no%yes Suppress xsi:schemaLocation Attribute
+# ============================================================================
+DEFAULT_MACRO GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES_GML2_1 yes
+GML2_1_LISTS_IN_MULTI_VALUE_ATTRIBUTES "$(GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES_GML2_1)"
+GUI CHOICE GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES_GML2_1 no%yes Lists in Multi-Value Attributes
+# ============================================================================
+DEFAULT_MACRO GML2_OUT_MULTI_VALUE_SEPARATOR_GML2_1 ,
+GML2_1_MULTI_VALUE_SEPARATOR "$(GML2_OUT_MULTI_VALUE_SEPARATOR_GML2_1)"
+GUI OPTIONAL TEXT GML2_OUT_MULTI_VALUE_SEPARATOR_GML2_1 Multi-Value Separator
+# ============================================================================ 
+GML2_1_GENERATE_FME_BUILD_NUM 18301
+# ============================================================================
+# The FEATURE_ENCODING keyword is optional. If no value is specified
+# then the system's encoding is used.
+#
+# Tells the GML v2 writer which enconding the input FME features
+# are in.
+DEFAULT_MACRO _FEATURE_ENCODING_GML2_1
+GML2_1_FEATURE_ENCODING $(_FEATURE_ENCODING_GML2_1)
+# ============================================================================
+# The MAPPING_FILE_ENCODING enconding is optional. If no value is specified
+# then the system's encoding is used.
+#
+# Specifies the encoding used in the FME mapping file.
+DEFAULT_MACRO _MAPPING_FILE_ENCODING_GML2_1
+GML2_1_MAPPING_FILE_ENCODING $(_MAPPING_FILE_ENCODING_GML2_1)
+GML2_1_DATASET "$(DestDataset_GML2_1)"
+#! END_DEST_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GML2_2"
+#! END_WB_HEADER
+#! START_DEST_HEADER GML2 GML2_2
+# ============================================================================
+# The following GUI lines prompt for a GML v2 file to be used as the
+# the destination of the data.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be written.
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_GML2_2 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER GML2 GML2_2
+DEFAULT_MACRO DestDataset_GML2_2 $(DestDataset_GML2_3)
+GUI FILENAME DestDataset_GML2_2 GML_Files(*.xml;*.gml;*.gz)|*.xml;*.gml;*.gz|GML_Files(*.xml)|*.xml|GML_Files(*.gml)|*.gml|Compressed_GML_Files(*.gz)|*.gz|All_Files|* Destination Geography Markup Language (GML) v2.1.2 File:
+# ============================================================================
+# The SCHEMA_MODE keyword sets the GML2 writer's mode. Valid values are
+# 'FIXED', 'CREATE', and 'SCAN'.
+#
+# FIXED: In this mode the writer outputs a GML v2 instance document
+# that corresponds to the FMEFeatures.xsd GML v2 Schema.
+#
+# CREATE: The writer outputs GML v2 Schema document and a
+# corresponding GML v2 instance document.
+# The GML v2 Schema document is determined by the GML DEF lines.
+#
+# SCAN: This mode is currently NOT implemented.
+DEFAULT_MACRO _OUT_SCHEMA_MODE_GML2_2 CREATE
+GUI LOOKUP_CHOICE _OUT_SCHEMA_MODE_GML2_2 Fixed,FIXED%Create,CREATE GML2 Schema Mode:
+GML2_2_SCHEMA_MODE $(_OUT_SCHEMA_MODE_GML2_2)
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO GML2_OUT_DESTINATION_DATASETTYPE_VALIDATION_GML2_2 Yes
+GML2_2_DESTINATION_DATASETTYPE_VALIDATION "$(GML2_OUT_DESTINATION_DATASETTYPE_VALIDATION_GML2_2)"
+DEFAULT_MACRO GML2_OUT_COORDINATE_SYSTEM_GRANULARITY_GML2_2 DATASET
+GML2_2_COORDINATE_SYSTEM_GRANULARITY "$(GML2_OUT_COORDINATE_SYSTEM_GRANULARITY_GML2_2)"
+DEFAULT_MACRO GML2_OUT_ADVANCED_GML2_2 
+GUI OPTIONAL DISCLOSUREGROUP GML2_OUT_ADVANCED_GML2_2 GML2_OUT_XSD_DOC_GML2_2%GML2_OUT_TARGET_NS_PREFIX_GML2_2%GML2_OUT_TARGET_NS_URI_GML2_2%GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL_GML2_2%GML2_OUT_OUTPUT_ENCODING_GML2_2%GML2_OUT_USE_WFS_FEATURE_COLLECTION_GML2_2%GML2_OUT_APPLY_STYLESHEET_GML2_2%GML2_OUT_STYLESHEET_RESULT_GML2_2%GML2_OUT_SUPPRESS_NULL_ATTRS_GML2_2%GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS_GML2_2%GML2_OUT_DOCUMENTS_TO_WRITE_GML2_2%GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR_GML2_2%GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES_GML2_2%GML2_OUT_MULTI_VALUE_SEPARATOR_GML2_2 Advanced
+# ============================================================================
+# On FIXED schema: The XSD_DOC keyword is ignored.
+#
+# On CREATE schema: The XSD_DOC keyword is optional,
+# when it is not specified the .xsd file will be written
+# in the same folder as the output dataset and its
+# basename will be the same as the base name of the
+# GML output dataset. e.g., if the DATASET is data.xml,
+# then the GML v2 schema file that is produced will
+# be named data.xsd.
+#
+# On SCAN schema: The SCAN mode is currently NOT implemented.
+#
+# Default it to be the empty string.
+DEFAULT_MACRO GML2_OUT_XSD_DOC_GML2_2 \\wsl-app09\Sobek\HDB\nhi-xsds-v12\nhiFeatureTypes.xsd
+GML2_2_XSD_DOC "$(GML2_OUT_XSD_DOC_GML2_2)"
+GUI OPTIONAL FILENAME GML2_OUT_XSD_DOC_GML2_2 XML_Schema_File(*.xsd)|*.xsd|All_Files(*)|* XML Schema Document
+# ============================================================================
+# The TARGET_NS_PREFIX and TARGET_NS_URI keywords are used when the
+# GML2 writer is set on CREATE mode. They declare the namespace that
+# the output document should use.
+DEFAULT_MACRO GML2_OUT_TARGET_NS_PREFIX_GML2_2 nhi
+GML2_2_TARGET_NS_PREFIX "$(GML2_OUT_TARGET_NS_PREFIX_GML2_2)"
+GUI OPTIONAL TEXT GML2_OUT_TARGET_NS_PREFIX_GML2_2 Target Namespace Prefix
+DEFAULT_MACRO GML2_OUT_TARGET_NS_URI_GML2_2 http://www.nhi.nu/gml
+GML2_2_TARGET_NS_URI "$(GML2_OUT_TARGET_NS_URI_GML2_2)"
+GUI OPTIONAL TEXT GML2_OUT_TARGET_NS_URI_GML2_2 Target Namespace URI
+DEFAULT_MACRO GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL_GML2_2 nhiFeatureTypes.xsd
+GML2_2_TARGET_XSI_SCHEMALOCATION_URL "$(GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL_GML2_2)"
+GUI OPTIONAL TEXT GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL_GML2_2 Target Schema Location URL
+# ============================================================================
+# The OUTPUT_ENCODING keyword is optional. If no value is specified
+# then the encoding defaults to UTF-8.
+#
+# All files output by the GML2 writer will be output with the
+# encoding.
+DEFAULT_MACRO GML2_OUT_OUTPUT_ENCODING_GML2_2 
+GML2_2_OUTPUT_ENCODING "$(GML2_OUT_OUTPUT_ENCODING_GML2_2)"
+GUI OPTIONAL TEXT GML2_OUT_OUTPUT_ENCODING_GML2_2 Output Dataset Encoding
+# ============================================================================
+# The writer will use the wfs:FeatureCollection as the root element of the
+# GML instance when this keyword is set to yes.
+DEFAULT_MACRO GML2_OUT_USE_WFS_FEATURE_COLLECTION_GML2_2 no
+GML2_2_USE_WFS_FEATURE_COLLECTION "$(GML2_OUT_USE_WFS_FEATURE_COLLECTION_GML2_2)"
+GUI CHOICE GML2_OUT_USE_WFS_FEATURE_COLLECTION_GML2_2 no%yes Use wfs:FeatureCollection
+# ============================================================================
+# APPLY_STYLESHEET
+# Specifies the XSLT stylesheet to be applied to the output document.
+DEFAULT_MACRO GML2_OUT_APPLY_STYLESHEET_GML2_2 
+GML2_2_APPLY_STYLESHEET "$(GML2_OUT_APPLY_STYLESHEET_GML2_2)"
+GUI OPTIONAL FILENAME_MUSTEXIST GML2_OUT_APPLY_STYLESHEET_GML2_2 XSLT_Stylesheet_Files(*.xslt)|*.xslt|All_Files(*)|* XSLT Stylesheet to Apply
+# ============================================================================
+# STYLESHEET_RESULT
+# The location and name of the resulting document after XSLT stylesheet
+# transformation. This is an optional keyword.
+DEFAULT_MACRO GML2_OUT_STYLESHEET_RESULT_GML2_2 
+GML2_2_STYLESHEET_RESULT "$(GML2_OUT_STYLESHEET_RESULT_GML2_2)"
+GUI OPTIONAL FILENAME GML2_OUT_STYLESHEET_RESULT_GML2_2 All_Files(*)|* Stylesheet File to Write
+# ============================================================================
+# SUPPRESS_NULL_ATTRS
+# This parameter defines whether the GML writer will suppress writing out
+# attributes that are specified on the DEF line, but that have no values on
+# the outgoing features.
+DEFAULT_MACRO GML2_OUT_SUPPRESS_NULL_ATTRS_GML2_2 yes
+GML2_2_SUPPRESS_NULL_ATTRS "$(GML2_OUT_SUPPRESS_NULL_ATTRS_GML2_2)"
+GUI OPTIONAL CHOICE GML2_OUT_SUPPRESS_NULL_ATTRS_GML2_2 yes%no Suppress Null Attributes
+# ============================================================================
+# WRITE_ALL_FEATURE_TYPE_DEFNS
+# This parameter defines whether the GML writer will write out the feature
+# definitions whether or not it has features.
+DEFAULT_MACRO GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS_GML2_2 no
+GML2_2_WRITE_ALL_FEATURE_TYPE_DEFNS "$(GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS_GML2_2)"
+GUI OPTIONAL CHOICE GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS_GML2_2 yes%no Write All Feature Types
+# ============================================================================
+# The GML application schema document will not be written when this keyword
+# is set to yes.
+DEFAULT_MACRO GML2_OUT_DOCUMENTS_TO_WRITE_GML2_2 GML_ONLY
+GML2_2_DOCUMENTS_TO_WRITE "$(GML2_OUT_DOCUMENTS_TO_WRITE_GML2_2)"
+GUI OPTIONAL LOOKUP_CHOICE GML2_OUT_DOCUMENTS_TO_WRITE_GML2_2 "\"Both\",BOTH"%"\"GML Only\",GML_ONLY"%"\"XSD Only\",XSD_ONLY" Documents To Write
+# ============================================================================
+# The xsi:schemaLocation is merely a hint to an XML processor for a set of
+# schema namespace/location pairs whose grammar would validate the XML instance
+# document, this keyword allows the suppression of the xsi:schemaLocation in
+# the output GML instance document.
+DEFAULT_MACRO GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR_GML2_2 no
+GML2_2_SUPPRESS_SCHEMA_LOCATION_ATTR "$(GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR_GML2_2)"
+GUI CHOICE GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR_GML2_2 no%yes Suppress xsi:schemaLocation Attribute
+# ============================================================================
+DEFAULT_MACRO GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES_GML2_2 yes
+GML2_2_LISTS_IN_MULTI_VALUE_ATTRIBUTES "$(GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES_GML2_2)"
+GUI CHOICE GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES_GML2_2 no%yes Lists in Multi-Value Attributes
+# ============================================================================
+DEFAULT_MACRO GML2_OUT_MULTI_VALUE_SEPARATOR_GML2_2 ,
+GML2_2_MULTI_VALUE_SEPARATOR "$(GML2_OUT_MULTI_VALUE_SEPARATOR_GML2_2)"
+GUI OPTIONAL TEXT GML2_OUT_MULTI_VALUE_SEPARATOR_GML2_2 Multi-Value Separator
+# ============================================================================ 
+GML2_2_GENERATE_FME_BUILD_NUM 18301
+# ============================================================================
+# The FEATURE_ENCODING keyword is optional. If no value is specified
+# then the system's encoding is used.
+#
+# Tells the GML v2 writer which enconding the input FME features
+# are in.
+DEFAULT_MACRO _FEATURE_ENCODING_GML2_2
+GML2_2_FEATURE_ENCODING $(_FEATURE_ENCODING_GML2_2)
+# ============================================================================
+# The MAPPING_FILE_ENCODING enconding is optional. If no value is specified
+# then the system's encoding is used.
+#
+# Specifies the encoding used in the FME mapping file.
+DEFAULT_MACRO _MAPPING_FILE_ENCODING_GML2_2
+GML2_2_MAPPING_FILE_ENCODING $(_MAPPING_FILE_ENCODING_GML2_2)
+GML2_2_DATASET "$(DestDataset_GML2_2)"
+#! END_DEST_HEADER
+#! START_WB_HEADER
+GML2_1_DATASET{*} "$(DestDataset_GML2_1)"
+GML2_1_FANOUT_EXPRESSION @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>fme_feature_type<closeparen>.gml,GML2_1)
+#! END_WB_HEADER
+
+#! END_HEADER
+
+WRITER_TYPE NULL
+WRITER_KEYWORD WBROUTER_OUT
+WBROUTER_OUT_DATASET null
+
+LOG_END_BANNER 
+LOG_END_BANNER *** All writer output has been redirected to the Data Inspector ***
+LOG_END_BANNER 
+LOG_FILENAME "$(FME_MF_DIR)GDBnaarGML.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_GEODATABASE_FILE_1 GEODATABASE_FILE_1
+DEFAULT_MACRO DATASET_KEYWORD_GEODATABASE_FILE_2 GEODATABASE_FILE_2
+DEFAULT_MACRO DATASET_KEYWORD_GML2_1 GML2_1
+DEFAULT_MACRO DATASET_KEYWORD_GML2_2 GML2_2
+# -------------------------------------------------------------------------
+
+GEODATABASE_FILE_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+GEODATABASE_FILE_2_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+GML2_1_COORDINATE_SYSTEM EPSG:28992
+GML2_2_COORDINATE_SYSTEM EPSG:28992
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME GDBnaarGML
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+INCLUDE [ if {[info exists env(FME_TEMP)] && [file isdirectory $env(FME_TEMP)]} {set gVisualizerTemp $env(FME_TEMP)}  elseif {[info exists env(TEMP)] && [file isdirectory $env(TEMP)]}  {set gVisualizerTemp $env(TEMP)}  elseif { $tcl_platform(platform) == "unix" } {set gVisualizerTemp "/tmp"} else {set gVisualizerTemp c:};  regsub -all {[ ,&]} {$(WORKSPACE_NAME)} {_} wsname; set gVisualizerTemp $gVisualizerTemp/${wsname}_[clock format [clock seconds] -format %H%M%S];  puts "MACRO WORKSPACE_TEMP_DIR $gVisualizerTemp"; 
+MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
+MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
+MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE GEODATABASE_FILE GEODATABASE_FILE_1::AFSLUITMIDDEL multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_FILE_1) TO FME_GENERIC ::AFSLUITMIDDEL ALIAS_GEOMETRY    ROUTE GEODATABASE_FILE GEODATABASE_FILE_1::MEETPUNT multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_FILE_1) TO FME_GENERIC ::MEETPUNT ALIAS_GEOMETRY    ROUTE GEODATABASE_FILE GEODATABASE_FILE_1::stuw multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_FILE_1) TO FME_GENERIC ::stuw ALIAS_GEOMETRY    ROUTE GEODATABASE_FILE GEODATABASE_FILE_1::hydroobject multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_FILE_1) TO FME_GENERIC ::hydroobject ALIAS_GEOMETRY    ROUTE GEODATABASE_FILE GEODATABASE_FILE_1::VISPASSAGE multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_FILE_1) TO FME_GENERIC ::VISPASSAGE ALIAS_GEOMETRY    ROUTE GEODATABASE_FILE GEODATABASE_FILE_1::bodemval multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_FILE_1) TO FME_GENERIC ::bodemval ALIAS_GEOMETRY    ROUTE GEODATABASE_FILE GEODATABASE_FILE_1::DWARSPROFIELLOCATIES multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_FILE_1) TO FME_GENERIC ::DWARSPROFIELLOCATIES ALIAS_GEOMETRY    ROUTE GEODATABASE_FILE GEODATABASE_FILE_1::brug multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_FILE_1) TO FME_GENERIC ::brug ALIAS_GEOMETRY    ROUTE GEODATABASE_FILE GEODATABASE_FILE_1::duikersifonhevel multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_FILE_1) TO FME_GENERIC ::duikersifonhevel ALIAS_GEOMETRY    ROUTE GEODATABASE_FILE GEODATABASE_FILE_1::MEETLOCATIE multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_FILE_1) TO FME_GENERIC ::MEETLOCATIE ALIAS_GEOMETRY    ROUTE GEODATABASE_FILE GEODATABASE_FILE_1::GEMAAL multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_FILE_1) TO FME_GENERIC ::GEMAAL ALIAS_GEOMETRY    ROUTE GEODATABASE_FILE GEODATABASE_FILE_2::dwarsprofielpunten_ingemeten multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_FILE_2) TO FME_GENERIC ::dwarsprofielpunten_ingemeten ALIAS_GEOMETRY    ROUTE GEODATABASE_FILE GEODATABASE_FILE_2::dwarsprofielpunten_interpolatie multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_FILE_2) TO FME_GENERIC ::dwarsprofielpunten_interpolatie ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+GEODATABASE_FILE_1_MERGE_DEF GEODATABASE_FILE_1::AFSLUITMIDDEL EXACT AFSLUITMIDDEL DEFLINE geodb_type,geodb_point,geodb_where_wwjd,,fme_attribute_reading,defined,A_OBJECTID,char<openparen>200<closeparen>,A_CODE,char<openparen>200<closeparen>,DuikerSifonHevelID,char<openparen>200<closeparen>,FlexibeleWaterKeringID,char<openparen>200<closeparen>,GemaalID,char<openparen>200<closeparen>,SluisID,char<openparen>200<closeparen>,StuwID,char<openparen>200<closeparen>,RegenWaterBufferCompartimentID,char<openparen>200<closeparen>,TunnelID,char<openparen>200<closeparen>,VispassageID,char<openparen>200<closeparen>,StatusObject,char<openparen>200<closeparen>,GerelateerdObjectID,char<openparen>200<closeparen>,Afsluitmiddel_Identify,char<openparen>200<closeparen>,Overlaps,char<openparen>200<closeparen>,OBJECTID,integer
+GEODATABASE_FILE_1_MERGE_DEF GEODATABASE_FILE_1::MEETPUNT EXACT MEETPUNT DEFLINE geodb_type,geodb_point,geodb_where_wwjd,,fme_attribute_reading,defined,Code,char<openparen>200<closeparen>,StatusObjectCode,char<openparen>200<closeparen>,DatumRealisatieObject,char<openparen>200<closeparen>,MetingWaterstand,char<openparen>200<closeparen>,MetingKlepOfSchuifstand,char<openparen>200<closeparen>,MetingAfvoer,char<openparen>200<closeparen>,MetingStroomsnelheid,char<openparen>200<closeparen>,Hyperlink,char<openparen>200<closeparen>,MetingWaterKwaliteit,char<openparen>200<closeparen>,Administatiefgebiedid,char<openparen>200<closeparen>,DatumStatusObject,char<openparen>200<closeparen>,OBJECTID,integer
+GEODATABASE_FILE_1_MERGE_DEF GEODATABASE_FILE_1::stuw EXACT stuw DEFLINE geodb_type,geodb_point,geodb_where_wwjd,,fme_attribute_reading,defined,code,char<openparen>75<closeparen>,soortregelbaarheidcode,char<openparen>75<closeparen>,laagstedoorstroombreedte,char<openparen>75<closeparen>,hoogstedoorstroombreedte,char<openparen>75<closeparen>,laagstedoorstroomhoogte,char<openparen>75<closeparen>,hoogstedoorstroomhoogte,char<openparen>75<closeparen>,afvoercoefficient,char<openparen>75<closeparen>,soortstuwcode,char<openparen>75<closeparen>,statusobjectcode,char<openparen>75<closeparen>,kruinbreedte,char<openparen>75<closeparen>,administratiefgebied,char<openparen>75<closeparen>,OBJECTID,integer
+GEODATABASE_FILE_1_MERGE_DEF GEODATABASE_FILE_1::hydroobject EXACT hydroobject DEFLINE geodb_type,geodb_polyline,geodb_where_wwjd,,fme_attribute_reading,defined,code,char<openparen>75<closeparen>,administatiefgebied,char<openparen>75<closeparen>,ruwheidstypecode,char<openparen>75<closeparen>,ruwheidswaardelaag,char<openparen>75<closeparen>,ruwheidswaardehoog,char<openparen>75<closeparen>,statusobjectcode,char<openparen>75<closeparen>,naam,char<openparen>200<closeparen>,OBJECTID,integer
+GEODATABASE_FILE_1_MERGE_DEF GEODATABASE_FILE_1::VISPASSAGE EXACT VISPASSAGE DEFLINE geodb_type,geodb_point,geodb_where_wwjd,,fme_attribute_reading,defined,OBJECTID,double,Code,char<openparen>75<closeparen>,Administatiefgebiedid,char<openparen>75<closeparen>,StatusObject,char<openparen>75<closeparen>,Soortvispassage,char<openparen>75<closeparen>,BodemhoogteBovenstrooms,char<openparen>75<closeparen>,BodemhoogteBenedenstrooms,char<openparen>75<closeparen>,DatumStatusObject,char<openparen>75<closeparen>,DatumRealisatieObject,char<openparen>75<closeparen>,OBJECTID_1,integer
+GEODATABASE_FILE_1_MERGE_DEF GEODATABASE_FILE_1::bodemval EXACT bodemval DEFLINE geodb_type,geodb_point,geodb_where_wwjd,,fme_attribute_reading,defined,code,char<openparen>75<closeparen>,dwarsprofielbovenstrooms,char<openparen>75<closeparen>,dwarsprofielbenedenstrooms,char<openparen>75<closeparen>,statusobjectcode,char<openparen>75<closeparen>,administratiefgebied,char<openparen>75<closeparen>,OBJECTID,integer
+GEODATABASE_FILE_1_MERGE_DEF GEODATABASE_FILE_1::DWARSPROFIELLOCATIES EXACT DWARSPROFIELLOCATIES DEFLINE geodb_type,geodb_point,geodb_where_wwjd,,fme_attribute_reading,defined,Code,char<openparen>75<closeparen>,HyOb_Code,char<openparen>200<closeparen>,HyOb_Naam,char<openparen>200<closeparen>,OBJECTID_1,integer
+GEODATABASE_FILE_1_MERGE_DEF GEODATABASE_FILE_1::brug EXACT brug DEFLINE geodb_type,geodb_point,geodb_where_wwjd,,fme_attribute_reading,defined,code,char<openparen>75<closeparen>,hoogteonderzijde,char<openparen>75<closeparen>,dwarsprofielcode,char<openparen>75<closeparen>,lengte,char<openparen>75<closeparen>,ruwheidstypecode,char<openparen>75<closeparen>,ruwheidswaarde,char<openparen>75<closeparen>,intreeverlies,char<openparen>75<closeparen>,uittreeverlies,char<openparen>75<closeparen>,statusobjectcode,char<openparen>75<closeparen>,hoogtebovenzijde,char<openparen>75<closeparen>,administratiefgebied,char<openparen>75<closeparen>,OBJECTID,integer
+GEODATABASE_FILE_1_MERGE_DEF GEODATABASE_FILE_1::duikersifonhevel EXACT duikersifonhevel DEFLINE geodb_type,geodb_polyline,geodb_where_wwjd,,fme_attribute_reading,defined,code,char<openparen>75<closeparen>,hoogteopening,double,breedteopening,double,hoogtebinnenonderkantbenedenstrooms,double,hoogtebinnenonderkantbovenstrooms,double,vormkokercode,char<openparen>75<closeparen>,soortkokervormigeconstructiecode,char<openparen>75<closeparen>,ruwheidstypecode,char<openparen>75<closeparen>,ruwheidswaarde,double,intreeverlies,double,uittreeverlies,double,statusobjectcode,char<openparen>75<closeparen>,indpeilregulpeilscheidend,char<openparen>75<closeparen>,lengte,double,administratiefgebied,char<openparen>75<closeparen>,OBJECTID,integer
+GEODATABASE_FILE_1_MERGE_DEF GEODATABASE_FILE_1::MEETLOCATIE EXACT MEETLOCATIE DEFLINE geodb_type,geodb_point,geodb_where_wwjd,,fme_attribute_reading,defined,Code,char<openparen>75<closeparen>,StatusObjectCode,char<openparen>75<closeparen>,SOORTMEETNET,double,NAAM,char<openparen>75<closeparen>,MetingWaterstand,char<openparen>75<closeparen>,MetingKlepOfSchuifstand,char<openparen>75<closeparen>,MetingAfvoer,char<openparen>75<closeparen>,MetingStroomsnelheid,char<openparen>75<closeparen>,MetingWaterKwaliteit,char<openparen>75<closeparen>,Administatiefgebiedid,char<openparen>75<closeparen>,DatumStatusObject,char<openparen>75<closeparen>,DatumRealisatieObject,char<openparen>75<closeparen>,Hyperlink,char<openparen>75<closeparen>,OBJECTID,integer
+GEODATABASE_FILE_1_MERGE_DEF GEODATABASE_FILE_1::GEMAAL EXACT GEMAAL DEFLINE geodb_type,geodb_point,geodb_where_wwjd,,fme_attribute_reading,defined,Code,char<openparen>75<closeparen>,StatusObject,char<openparen>75<closeparen>,Functiegemaal,char<openparen>75<closeparen>,Kerendehoogte,char<openparen>75<closeparen>,Maximalecapaciteit,char<openparen>75<closeparen>,Objectbegintijd,char<openparen>75<closeparen>,Objecteindtijd,char<openparen>75<closeparen>,Hyperlink,char<openparen>75<closeparen>,Pompcode,char<openparen>75<closeparen>,DoorstroomopeningCode,char<openparen>75<closeparen>,AdministratiefGebied,char<openparen>75<closeparen>,Naam,char<openparen>75<closeparen>,OBJECTID,integer
+GEODATABASE_FILE_2_MERGE_DEF GEODATABASE_FILE_2::dwarsprofielpunten_ingemeten EXACT dwarsprofielpunten_ingemeten DEFLINE geodb_type,geodb_point,geodb_where_wwjd,,fme_attribute_reading,defined,code,char<openparen>200<closeparen>,codevolgnummer,char<openparen>200<closeparen>,profielcode,char<openparen>200<closeparen>,typeprofielcode,char<openparen>200<closeparen>,ruwheidstypecode,char<openparen>200<closeparen>,ruwheidswaardelaag,double,ruwheidswaardehoog,double,administratiefgebied,char<openparen>200<closeparen>,statusobjectcode,char<openparen>200<closeparen>,OBJECTID,integer
+GEODATABASE_FILE_2_MERGE_DEF GEODATABASE_FILE_2::dwarsprofielpunten_interpolatie EXACT dwarsprofielpunten_interpolatie DEFLINE geodb_type,geodb_point,geodb_where_wwjd,,fme_attribute_reading,defined,code,char<openparen>75<closeparen>,codevolgnummer,integer,profielcode,char<openparen>200<closeparen>,administratiefgebied,char<openparen>75<closeparen>,ruwheidstypecode,char<openparen>75<closeparen>,ruwheidswaardelaag,char<openparen>75<closeparen>,ruwheidswaardehoog,char<openparen>75<closeparen>,statusobjectcode,char<openparen>75<closeparen>,typeprofielcode,char<openparen>75<closeparen>,OBJECTID,integer
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "AFSLUITMIDDEL (GEODATABASE_FILE_1) Splitter"    INPUT FEATURE_TYPE AFSLUITMIDDEL    OUTPUT FEATURE_TYPE AFSLUITMIDDEL_GEODATABASE_FILE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "bodemval (GEODATABASE_FILE_1) Splitter"    INPUT FEATURE_TYPE bodemval    OUTPUT FEATURE_TYPE bodemval_GEODATABASE_FILE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "brug (GEODATABASE_FILE_1) Splitter"    INPUT FEATURE_TYPE brug    OUTPUT FEATURE_TYPE brug_GEODATABASE_FILE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "duikersifonhevel (GEODATABASE_FILE_1) Splitter"    INPUT FEATURE_TYPE duikersifonhevel    OUTPUT FEATURE_TYPE duikersifonhevel_GEODATABASE_FILE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "DWARSPROFIELLOCATIES (GEODATABASE_FILE_1) Splitter"    INPUT FEATURE_TYPE DWARSPROFIELLOCATIES
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "GEMAAL (GEODATABASE_FILE_1) Splitter"    INPUT FEATURE_TYPE GEMAAL
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "hydroobject (GEODATABASE_FILE_1) Splitter"    INPUT FEATURE_TYPE hydroobject    OUTPUT FEATURE_TYPE hydroobject_GEODATABASE_FILE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "MEETLOCATIE (GEODATABASE_FILE_1) Splitter"    INPUT FEATURE_TYPE MEETLOCATIE
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "MEETPUNT (GEODATABASE_FILE_1) Splitter"    INPUT FEATURE_TYPE MEETPUNT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "stuw (GEODATABASE_FILE_1) Splitter"    INPUT FEATURE_TYPE stuw    OUTPUT FEATURE_TYPE stuw_GEODATABASE_FILE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "VISPASSAGE (GEODATABASE_FILE_1) Splitter"    INPUT FEATURE_TYPE VISPASSAGE
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "dwarsprofielpunten_ingemeten (GEODATABASE_FILE_2) Splitter"    INPUT FEATURE_TYPE dwarsprofielpunten_ingemeten    OUTPUT FEATURE_TYPE dwarsprofielpunten_ingemeten_GEODATABASE_FILE_2
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "dwarsprofielpunten_interpolatie (GEODATABASE_FILE_2) Splitter"    INPUT FEATURE_TYPE dwarsprofielpunten_interpolatie    OUTPUT FEATURE_TYPE dwarsprofielpunten_interpolatie_GEODATABASE_FILE_2
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+# Assumption is that the workspace temp dir has been already set and created.  See controldefs.cpp - ControlDefs::writeVisualizerTempDir
+DEFAULT_MACRO WORKSPACE_TEMP_DIR
+INCLUDE [    set safeName "[regsub -all {[^a-zA-Z0-9]} {AFSLUITMIDDEL} _]_[expr round(rand() * 1000000)]_[clock clicks  -milliseconds]";    puts "MACRO SAFE_FFS_NAME $safeName"; ]
+FACTORY_DEF {*} InspectorFactory    FACTORY_NAME AFSLUITMIDDEL_Prepper    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE AFSLUITMIDDEL_GEODATABASE_FILE_1    GROUP_ATTRIBUTE __inspector_feature_type_attr__    GROUP_BY {  }    GROUP_ATTRIBUTE_PREFIX { AFSLUITMIDDEL }    RASTER_REDUCTION NoReduction    POINT_CLOUD_REDUCTION NO_THINNING    OUTPUT RESULT FEATURE_TYPE __viewme__
+# Now route all the features into the recorder, changing their
+# feature type to the transformer name so that they view nicely
+
+DEFAULT_MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/$(SAFE_FFS_NAME).ffs
+DEFAULT_MACRO VISUALIZER_CREATE_SPATIAL_INDEX NO
+# [PR#45549] The Data Inspector will limit the maximum number of features
+# it reads on WIN32, so we will correspondingly limit the number of
+# features we record here using the MAX_FEATURES_TO_RECORD directive.
+
+FACTORY_DEF * RecorderFactory    FACTORY_NAME AFSLUITMIDDEL_Recorder    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT FEATURE_TYPE __viewme__       _wb_termination_feature Yes       @FeatureType(TERMINATOR_@Value(_wb_termination_xformer))    INPUT FEATURE_TYPE __viewme__       @FeatureType(@Value(__inspector_feature_type_attr__))       @RemoveAttributes(__inspector_feature_type_attr__)    FEATURE_FILE "$(VISUALIZER_FEATURE_FILE)"    STORE_SCANNED_SCHEMA YES    CREATE_SPATIAL_INDEX "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    INSPECTOR "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    FSC_SCHEMA A_OBJECTID,varchar<openparen>255<closeparen>,A_CODE,varchar<openparen>255<closeparen>,DuikerSifonHevelID,varchar<openparen>255<closeparen>,FlexibeleWaterKeringID,varchar<openparen>255<closeparen>,GemaalID,varchar<openparen>255<closeparen>,SluisID,varchar<openparen>255<closeparen>,StuwID,varchar<openparen>255<closeparen>,RegenWaterBufferCompartimentID,varchar<openparen>255<closeparen>,TunnelID,varchar<openparen>255<closeparen>,VispassageID,varchar<openparen>255<closeparen>,StatusObject,varchar<openparen>255<closeparen>,GerelateerdObjectID,varchar<openparen>255<closeparen>,Afsluitmiddel_Identify,varchar<openparen>255<closeparen>,Overlaps,varchar<openparen>255<closeparen>,OBJECTID,varchar<openparen>255<closeparen>    MODE RECORD    STORE_SCANNED_METADATA    RECORD_DIRECTLY_TO_DISK YES    MAX_FEATURES_TO_RECORD WIN32 2000000
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC bodemval_GEODATABASE_FILE_1 TO GML2 __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>bodemval<closeparen> COORDINATE_SYSTEM EPSG:28992 GEOMETRY    ROUTE FME_GENERIC brug_GEODATABASE_FILE_1 TO GML2 __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>brug<closeparen> COORDINATE_SYSTEM EPSG:28992 GEOMETRY    ROUTE FME_GENERIC hydroobject_GEODATABASE_FILE_1 TO GML2 __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>bodemval00<closeparen> COORDINATE_SYSTEM EPSG:28992 GEOMETRY    ROUTE FME_GENERIC duikersifonhevel_GEODATABASE_FILE_1 TO GML2 __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>bodemval01<closeparen> COORDINATE_SYSTEM EPSG:28992 GEOMETRY    ROUTE FME_GENERIC stuw_GEODATABASE_FILE_1 TO GML2 __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>bodemval02<closeparen> COORDINATE_SYSTEM EPSG:28992 GEOMETRY    ROUTE FME_GENERIC dwarsprofielpunten_ingemeten_GEODATABASE_FILE_2 TO GML2 __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,1,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>dwarsprofiel<closeparen> COORDINATE_SYSTEM EPSG:28992 GEOMETRY    ROUTE FME_GENERIC dwarsprofielpunten_interpolatie_GEODATABASE_FILE_2 TO GML2 __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,1,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>dwarsprofiel<closeparen> COORDINATE_SYSTEM EPSG:28992 GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Route to Viewer Reprojector"   INPUT FEATURE_TYPE *   OUTPUT FEATURE_TYPE *     @Reproject(EPSG:28992,EPSG:28992)
+
+# Assumption is that the workspace temp dir has been already set and created.  See controldefs.cpp - ControlDefs::writeVisualizerTempDir
+DEFAULT_MACRO WORKSPACE_TEMP_DIR
+INCLUDE [    set safeName "[regsub -all {[^a-zA-Z0-9]} {bodemval} _]_[expr round(rand() * 1000000)]_[clock clicks  -milliseconds]";    puts "MACRO SAFE_FFS_NAME $safeName"; ]
+FACTORY_DEF {*} InspectorFactory    FACTORY_NAME bodemval_Prepper    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE bodemval    GROUP_ATTRIBUTE __inspector_feature_type_attr__    GROUP_BY { @EvaluateExpression(FDIV,STRING,<at>Value<openparen>fme_feature_type<closeparen>,bodemval) }    GROUP_ATTRIBUTE_PREFIX { bodemval }    RASTER_REDUCTION NoReduction    POINT_CLOUD_REDUCTION NO_THINNING    OUTPUT RESULT FEATURE_TYPE __viewme__
+# Now route all the features into the recorder, changing their
+# feature type to the transformer name so that they view nicely
+
+DEFAULT_MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/$(SAFE_FFS_NAME).ffs
+DEFAULT_MACRO VISUALIZER_CREATE_SPATIAL_INDEX NO
+# [PR#45549] The Data Inspector will limit the maximum number of features
+# it reads on WIN32, so we will correspondingly limit the number of
+# features we record here using the MAX_FEATURES_TO_RECORD directive.
+
+FACTORY_DEF * RecorderFactory    FACTORY_NAME bodemval_Recorder    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT FEATURE_TYPE __viewme__       _wb_termination_feature Yes       @FeatureType(TERMINATOR_@Value(_wb_termination_xformer))    INPUT FEATURE_TYPE __viewme__       @FeatureType(@Value(__inspector_feature_type_attr__))       @RemoveAttributes(__inspector_feature_type_attr__)    FEATURE_FILE "$(VISUALIZER_FEATURE_FILE)"    STORE_SCANNED_SCHEMA YES    CREATE_SPATIAL_INDEX "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    INSPECTOR "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    FSC_SCHEMA code,varchar<openparen>255<closeparen>,dwarsprofielbovenstrooms,varchar<openparen>255<closeparen>,dwarsprofielbenedenstrooms,varchar<openparen>255<closeparen>,statusobjectcode,varchar<openparen>255<closeparen>,administratiefgebied,varchar<openparen>255<closeparen>,fme_feature_type,varchar<openparen>255<closeparen>    MODE RECORD    STORE_SCANNED_METADATA    RECORD_DIRECTLY_TO_DISK YES    MAX_FEATURES_TO_RECORD WIN32 2000000
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "bodemval Output Nuker"   INPUT FEATURE_TYPE bodemval
+
+# Assumption is that the workspace temp dir has been already set and created.  See controldefs.cpp - ControlDefs::writeVisualizerTempDir
+DEFAULT_MACRO WORKSPACE_TEMP_DIR
+INCLUDE [    set safeName "[regsub -all {[^a-zA-Z0-9]} {brug} _]_[expr round(rand() * 1000000)]_[clock clicks  -milliseconds]";    puts "MACRO SAFE_FFS_NAME $safeName"; ]
+FACTORY_DEF {*} InspectorFactory    FACTORY_NAME brug_Prepper    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE brug    GROUP_ATTRIBUTE __inspector_feature_type_attr__    GROUP_BY { @EvaluateExpression(FDIV,STRING,<at>Value<openparen>fme_feature_type<closeparen>,brug) }    GROUP_ATTRIBUTE_PREFIX { brug }    RASTER_REDUCTION NoReduction    POINT_CLOUD_REDUCTION NO_THINNING    OUTPUT RESULT FEATURE_TYPE __viewme__
+# Now route all the features into the recorder, changing their
+# feature type to the transformer name so that they view nicely
+
+DEFAULT_MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/$(SAFE_FFS_NAME).ffs
+DEFAULT_MACRO VISUALIZER_CREATE_SPATIAL_INDEX NO
+# [PR#45549] The Data Inspector will limit the maximum number of features
+# it reads on WIN32, so we will correspondingly limit the number of
+# features we record here using the MAX_FEATURES_TO_RECORD directive.
+
+FACTORY_DEF * RecorderFactory    FACTORY_NAME brug_Recorder    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT FEATURE_TYPE __viewme__       _wb_termination_feature Yes       @FeatureType(TERMINATOR_@Value(_wb_termination_xformer))    INPUT FEATURE_TYPE __viewme__       @FeatureType(@Value(__inspector_feature_type_attr__))       @RemoveAttributes(__inspector_feature_type_attr__)    FEATURE_FILE "$(VISUALIZER_FEATURE_FILE)"    STORE_SCANNED_SCHEMA YES    CREATE_SPATIAL_INDEX "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    INSPECTOR "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    FSC_SCHEMA code,varchar<openparen>255<closeparen>,hoogteonderzijde,varchar<openparen>255<closeparen>,dwarsprofielcode,varchar<openparen>255<closeparen>,lengte,varchar<openparen>255<closeparen>,ruwheidstypecode,varchar<openparen>255<closeparen>,ruwheidswaarde,varchar<openparen>255<closeparen>,intreeverlies,varchar<openparen>255<closeparen>,uittreeverlies,varchar<openparen>255<closeparen>,statusobjectcode,varchar<openparen>255<closeparen>,hoogtebovenzijde,varchar<openparen>255<closeparen>,administratiefgebied,varchar<openparen>255<closeparen>    MODE RECORD    STORE_SCANNED_METADATA    RECORD_DIRECTLY_TO_DISK YES    MAX_FEATURES_TO_RECORD WIN32 2000000
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "brug Output Nuker"   INPUT FEATURE_TYPE brug
+
+# Assumption is that the workspace temp dir has been already set and created.  See controldefs.cpp - ControlDefs::writeVisualizerTempDir
+DEFAULT_MACRO WORKSPACE_TEMP_DIR
+INCLUDE [    set safeName "[regsub -all {[^a-zA-Z0-9]} {bodemval00} _]_[expr round(rand() * 1000000)]_[clock clicks  -milliseconds]";    puts "MACRO SAFE_FFS_NAME $safeName"; ]
+FACTORY_DEF {*} InspectorFactory    FACTORY_NAME bodemval00_Prepper    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE bodemval00    GROUP_ATTRIBUTE __inspector_feature_type_attr__    GROUP_BY { @EvaluateExpression(FDIV,STRING,<at>Value<openparen>fme_feature_type<closeparen>,bodemval00) }    GROUP_ATTRIBUTE_PREFIX { bodemval00 }    RASTER_REDUCTION NoReduction    POINT_CLOUD_REDUCTION NO_THINNING    OUTPUT RESULT FEATURE_TYPE __viewme__
+# Now route all the features into the recorder, changing their
+# feature type to the transformer name so that they view nicely
+
+DEFAULT_MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/$(SAFE_FFS_NAME).ffs
+DEFAULT_MACRO VISUALIZER_CREATE_SPATIAL_INDEX NO
+# [PR#45549] The Data Inspector will limit the maximum number of features
+# it reads on WIN32, so we will correspondingly limit the number of
+# features we record here using the MAX_FEATURES_TO_RECORD directive.
+
+FACTORY_DEF * RecorderFactory    FACTORY_NAME bodemval00_Recorder    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT FEATURE_TYPE __viewme__       _wb_termination_feature Yes       @FeatureType(TERMINATOR_@Value(_wb_termination_xformer))    INPUT FEATURE_TYPE __viewme__       @FeatureType(@Value(__inspector_feature_type_attr__))       @RemoveAttributes(__inspector_feature_type_attr__)    FEATURE_FILE "$(VISUALIZER_FEATURE_FILE)"    STORE_SCANNED_SCHEMA YES    CREATE_SPATIAL_INDEX "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    INSPECTOR "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    FSC_SCHEMA code,varchar<openparen>255<closeparen>,administatiefgebied,varchar<openparen>255<closeparen>,ruwheidstypecode,varchar<openparen>255<closeparen>,ruwheidswaardelaag,varchar<openparen>255<closeparen>,ruwheidswaardehoog,varchar<openparen>255<closeparen>,statusobjectcode,varchar<openparen>255<closeparen>,naam,varchar<openparen>255<closeparen>    MODE RECORD    STORE_SCANNED_METADATA    RECORD_DIRECTLY_TO_DISK YES    MAX_FEATURES_TO_RECORD WIN32 2000000
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "bodemval00 Output Nuker"   INPUT FEATURE_TYPE bodemval00
+
+# Assumption is that the workspace temp dir has been already set and created.  See controldefs.cpp - ControlDefs::writeVisualizerTempDir
+DEFAULT_MACRO WORKSPACE_TEMP_DIR
+INCLUDE [    set safeName "[regsub -all {[^a-zA-Z0-9]} {bodemval01} _]_[expr round(rand() * 1000000)]_[clock clicks  -milliseconds]";    puts "MACRO SAFE_FFS_NAME $safeName"; ]
+FACTORY_DEF {*} InspectorFactory    FACTORY_NAME bodemval01_Prepper    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE bodemval01    GROUP_ATTRIBUTE __inspector_feature_type_attr__    GROUP_BY { @EvaluateExpression(FDIV,STRING,<at>Value<openparen>fme_feature_type<closeparen>,bodemval01) }    GROUP_ATTRIBUTE_PREFIX { bodemval01 }    RASTER_REDUCTION NoReduction    POINT_CLOUD_REDUCTION NO_THINNING    OUTPUT RESULT FEATURE_TYPE __viewme__
+# Now route all the features into the recorder, changing their
+# feature type to the transformer name so that they view nicely
+
+DEFAULT_MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/$(SAFE_FFS_NAME).ffs
+DEFAULT_MACRO VISUALIZER_CREATE_SPATIAL_INDEX NO
+# [PR#45549] The Data Inspector will limit the maximum number of features
+# it reads on WIN32, so we will correspondingly limit the number of
+# features we record here using the MAX_FEATURES_TO_RECORD directive.
+
+FACTORY_DEF * RecorderFactory    FACTORY_NAME bodemval01_Recorder    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT FEATURE_TYPE __viewme__       _wb_termination_feature Yes       @FeatureType(TERMINATOR_@Value(_wb_termination_xformer))    INPUT FEATURE_TYPE __viewme__       @FeatureType(@Value(__inspector_feature_type_attr__))       @RemoveAttributes(__inspector_feature_type_attr__)    FEATURE_FILE "$(VISUALIZER_FEATURE_FILE)"    STORE_SCANNED_SCHEMA YES    CREATE_SPATIAL_INDEX "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    INSPECTOR "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    FSC_SCHEMA code,varchar<openparen>255<closeparen>,hoogteopening,varchar<openparen>255<closeparen>,breedteopening,varchar<openparen>255<closeparen>,hoogtebinnenonderkantbenedenstrooms,varchar<openparen>255<closeparen>,hoogtebinnenonderkantbovenstrooms,varchar<openparen>255<closeparen>,vormkokercode,varchar<openparen>255<closeparen>,soortkokervormigeconstructiecode,varchar<openparen>255<closeparen>,ruwheidstypecode,varchar<openparen>255<closeparen>,ruwheidswaarde,varchar<openparen>255<closeparen>,intreeverlies,varchar<openparen>255<closeparen>,uittreeverlies,varchar<openparen>255<closeparen>,statusobjectcode,varchar<openparen>255<closeparen>,indpeilregulpeilscheidend,varchar<openparen>255<closeparen>,lengte,varchar<openparen>255<closeparen>,administratiefgebied,varchar<openparen>255<closeparen>    MODE RECORD    STORE_SCANNED_METADATA    RECORD_DIRECTLY_TO_DISK YES    MAX_FEATURES_TO_RECORD WIN32 2000000
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "bodemval01 Output Nuker"   INPUT FEATURE_TYPE bodemval01
+
+# Assumption is that the workspace temp dir has been already set and created.  See controldefs.cpp - ControlDefs::writeVisualizerTempDir
+DEFAULT_MACRO WORKSPACE_TEMP_DIR
+INCLUDE [    set safeName "[regsub -all {[^a-zA-Z0-9]} {bodemval02} _]_[expr round(rand() * 1000000)]_[clock clicks  -milliseconds]";    puts "MACRO SAFE_FFS_NAME $safeName"; ]
+FACTORY_DEF {*} InspectorFactory    FACTORY_NAME bodemval02_Prepper    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE bodemval02    GROUP_ATTRIBUTE __inspector_feature_type_attr__    GROUP_BY { @EvaluateExpression(FDIV,STRING,<at>Value<openparen>fme_feature_type<closeparen>,bodemval02) }    GROUP_ATTRIBUTE_PREFIX { bodemval02 }    RASTER_REDUCTION NoReduction    POINT_CLOUD_REDUCTION NO_THINNING    OUTPUT RESULT FEATURE_TYPE __viewme__
+# Now route all the features into the recorder, changing their
+# feature type to the transformer name so that they view nicely
+
+DEFAULT_MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/$(SAFE_FFS_NAME).ffs
+DEFAULT_MACRO VISUALIZER_CREATE_SPATIAL_INDEX NO
+# [PR#45549] The Data Inspector will limit the maximum number of features
+# it reads on WIN32, so we will correspondingly limit the number of
+# features we record here using the MAX_FEATURES_TO_RECORD directive.
+
+FACTORY_DEF * RecorderFactory    FACTORY_NAME bodemval02_Recorder    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT FEATURE_TYPE __viewme__       _wb_termination_feature Yes       @FeatureType(TERMINATOR_@Value(_wb_termination_xformer))    INPUT FEATURE_TYPE __viewme__       @FeatureType(@Value(__inspector_feature_type_attr__))       @RemoveAttributes(__inspector_feature_type_attr__)    FEATURE_FILE "$(VISUALIZER_FEATURE_FILE)"    STORE_SCANNED_SCHEMA YES    CREATE_SPATIAL_INDEX "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    INSPECTOR "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    FSC_SCHEMA code,varchar<openparen>255<closeparen>,soortregelbaarheidcode,varchar<openparen>255<closeparen>,laagstedoorstroombreedte,varchar<openparen>255<closeparen>,hoogstedoorstroombreedte,varchar<openparen>255<closeparen>,laagstedoorstroomhoogte,varchar<openparen>255<closeparen>,hoogstedoorstroomhoogte,varchar<openparen>255<closeparen>,afvoercoefficient,varchar<openparen>255<closeparen>,soortstuwcode,varchar<openparen>255<closeparen>,statusobjectcode,varchar<openparen>255<closeparen>,kruinbreedte,varchar<openparen>255<closeparen>,administratiefgebied,varchar<openparen>255<closeparen>    MODE RECORD    STORE_SCANNED_METADATA    RECORD_DIRECTLY_TO_DISK YES    MAX_FEATURES_TO_RECORD WIN32 2000000
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "bodemval02 Output Nuker"   INPUT FEATURE_TYPE bodemval02
+
+# Assumption is that the workspace temp dir has been already set and created.  See controldefs.cpp - ControlDefs::writeVisualizerTempDir
+DEFAULT_MACRO WORKSPACE_TEMP_DIR
+INCLUDE [    set safeName "[regsub -all {[^a-zA-Z0-9]} {dwarsprofiel} _]_[expr round(rand() * 1000000)]_[clock clicks  -milliseconds]";    puts "MACRO SAFE_FFS_NAME $safeName"; ]
+FACTORY_DEF {*} InspectorFactory    FACTORY_NAME dwarsprofiel_Prepper    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE dwarsprofiel    GROUP_ATTRIBUTE __inspector_feature_type_attr__    GROUP_BY {  }    GROUP_ATTRIBUTE_PREFIX { dwarsprofiel }    RASTER_REDUCTION NoReduction    POINT_CLOUD_REDUCTION NO_THINNING    OUTPUT RESULT FEATURE_TYPE __viewme__
+# Now route all the features into the recorder, changing their
+# feature type to the transformer name so that they view nicely
+
+DEFAULT_MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/$(SAFE_FFS_NAME).ffs
+DEFAULT_MACRO VISUALIZER_CREATE_SPATIAL_INDEX NO
+# [PR#45549] The Data Inspector will limit the maximum number of features
+# it reads on WIN32, so we will correspondingly limit the number of
+# features we record here using the MAX_FEATURES_TO_RECORD directive.
+
+FACTORY_DEF * RecorderFactory    FACTORY_NAME dwarsprofiel_Recorder    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT FEATURE_TYPE __viewme__       _wb_termination_feature Yes       @FeatureType(TERMINATOR_@Value(_wb_termination_xformer))    INPUT FEATURE_TYPE __viewme__       @FeatureType(@Value(__inspector_feature_type_attr__))       @RemoveAttributes(__inspector_feature_type_attr__)    FEATURE_FILE "$(VISUALIZER_FEATURE_FILE)"    STORE_SCANNED_SCHEMA YES    CREATE_SPATIAL_INDEX "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    INSPECTOR "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    FSC_SCHEMA code,varchar<openparen>255<closeparen>,codevolgnummer,varchar<openparen>255<closeparen>,profielcode,varchar<openparen>255<closeparen>,administratiefgebied,varchar<openparen>255<closeparen>,ruwheidstypecode,varchar<openparen>255<closeparen>,ruwheidswaardelaag,varchar<openparen>255<closeparen>,ruwheidswaardehoog,varchar<openparen>255<closeparen>,statusobjectcode,varchar<openparen>255<closeparen>,typeprofielcode,varchar<openparen>255<closeparen>    MODE RECORD    STORE_SCANNED_METADATA    RECORD_DIRECTLY_TO_DISK YES    MAX_FEATURES_TO_RECORD WIN32 2000000
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "dwarsprofiel Output Nuker"   INPUT FEATURE_TYPE dwarsprofiel
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * CreationFactory   CREATE_AT_END   OUTPUT FEATURE_TYPE __NUKEME__   @TCL("if [file exists {$(WORKSPACE_TEMP_DIR)}] {set files [glob -nocomplain -directory  {$(WORKSPACE_TEMP_DIR)} -tails *.ffs];   if {[llength $files] == 1} {    set theFile {$(WORKSPACE_TEMP_DIR)/};   append theFile [lindex $files 0];   eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -f FFS \042$theFile\042 & \175;  } elseif { [llength $files] == 0 } {  catch { file delete -force {$(WORKSPACE_TEMP_DIR)} };  } else {  set filesNoExt {}; set lastfile {}; foreach {fileName} [lsort $files] { set fileNoExt [string trimright $fileName {.ffs}]; if [regexp {(.*)_[0-9]*$} $fileNoExt wholething fileNoExtBase] {  if { $fileNoExtBase == $lastfile } { continue } }; set lastfile $fileNoExt; lappend filesNoExt $fileNoExt };  eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -d {$(WORKSPACE_TEMP_DIR)} -a ffs -f FFS $filesNoExt & \175; }; }; ")
+FACTORY_DEF * TeeFactory   INPUT FEATURE_TYPE __NUKEME__
+# -------------------------------------------------------------------------
+GML2_1_DEF bodemval01   xml_type                     All   code                         xml_char(200)   hoogteopening                xml_real64   breedteopening               xml_real64   hoogtebinnenonderkantbenedenstrooms xml_real64   hoogtebinnenonderkantbovenstrooms xml_real64   vormkokercode                xml_char(75)   soortkokervormigeconstructiecode xml_char(75)   ruwheidstypecode             xml_char(75)   ruwheidswaarde               xml_real64   intreeverlies                xml_real64   uittreeverlies               xml_real64   statusobjectcode             xml_char(200)   indpeilregulpeilscheidend    xml_char(75)   lengte                       xml_real64   administratiefgebied         xml_char(75)
+# -------------------------------------------------------------------------
+GML2_1_DEF bodemval02   xml_type                     All   code                         xml_char(200)   soortregelbaarheidcode       xml_char(75)   laagstedoorstroombreedte     xml_char(75)   hoogstedoorstroombreedte     xml_char(75)   laagstedoorstroomhoogte      xml_char(75)   hoogstedoorstroomhoogte      xml_char(75)   afvoercoefficient            xml_char(75)   soortstuwcode                xml_char(75)   statusobjectcode             xml_char(200)   kruinbreedte                 xml_char(75)   administratiefgebied         xml_char(75)
+# -------------------------------------------------------------------------
+GML2_1_DEF bodemval   xml_type                     All   code                         xml_char(200)   dwarsprofielbovenstrooms     xml_char(75)   dwarsprofielbenedenstrooms   xml_char(75)   statusobjectcode             xml_char(200)   administratiefgebied         xml_char(75)
+# -------------------------------------------------------------------------
+GML2_1_DEF bodemval00   xml_type                     All   code                         xml_char(200)   administatiefgebied          xml_char(75)   ruwheidstypecode             xml_char(75)   ruwheidswaardelaag           xml_char(75)   ruwheidswaardehoog           xml_char(75)   statusobjectcode             xml_char(200)   naam                         xml_char(200)
+# -------------------------------------------------------------------------
+GML2_1_DEF brug   xml_type                     All   code                         xml_char(200)   hoogteonderzijde             xml_char(75)   dwarsprofielcode             xml_char(75)   lengte                       xml_char(75)   ruwheidstypecode             xml_char(75)   ruwheidswaarde               xml_char(75)   intreeverlies                xml_char(75)   uittreeverlies               xml_char(75)   statusobjectcode             xml_char(200)   hoogtebovenzijde             xml_char(75)   administratiefgebied         xml_char(75)
+# -------------------------------------------------------------------------
+GML2_2_DEF dwarsprofiel   xml_type                     All   code                         xml_char(200)   codevolgnummer               xml_char(200)   profielcode                  xml_char(200)   administratiefgebied         xml_char(200)   ruwheidstypecode             xml_char(200)   ruwheidswaardelaag           xml_real64   ruwheidswaardehoog           xml_real64   statusobjectcode             xml_char(200)   typeprofielcode              xml_char(200)
+WBROUTER_OUT_DEF bodemval
+WBROUTER_OUT_DEF brug
+WBROUTER_OUT_DEF bodemval00
+WBROUTER_OUT_DEF bodemval01
+WBROUTER_OUT_DEF bodemval02
+WBROUTER_OUT_DEF dwarsprofiel
