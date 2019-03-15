@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>aaenmaas</name>
+  <name>rivierenland</name>
   <description/>
   <extended_description/>
   <job_version/>
@@ -322,7 +322,7 @@
       <fields>
         <field>
           <variable_name>administratiefgebiedid</variable_name>
-          <variable_value>1</variable_value>
+          <variable_value>14</variable_value>
           <variable_type>CURRENT_JOB</variable_type>
         </field>
         <field>
@@ -342,22 +342,22 @@
         </field>
         <field>
           <variable_name>import_dir</variable_name>
-          <variable_value>${Internal.Entry.Current.Directory}/aaenmaas/GML/</variable_value>
+          <variable_value>${Internal.Entry.Current.Directory}/${Internal.Job.Name}/GML/</variable_value>
           <variable_type>CURRENT_JOB</variable_type>
         </field>
         <field>
           <variable_name>linepath</variable_name>
-          <variable_value>gml:curveProperty/gml:LineString</variable_value>
+          <variable_value>gml:lineStringProperty/gml:LineString</variable_value>
           <variable_type>CURRENT_JOB</variable_type>
         </field>
         <field>
           <variable_name>log_dir</variable_name>
-          <variable_value>${Internal.Entry.Current.Directory}/aaenmaas/LOGS/</variable_value>
+          <variable_value>${Internal.Entry.Current.Directory}/${Internal.Job.Name}/LOGS/</variable_value>
           <variable_type>CURRENT_JOB</variable_type>
         </field>
         <field>
           <variable_name>multilinepath</variable_name>
-          <variable_value>gml:multiCurveProperty/gml:MultiCurve</variable_value>
+          <variable_value>gml:multiLineStringProperty/gml:MultiLineString</variable_value>
           <variable_type>CURRENT_JOB</variable_type>
         </field>
         <field>
@@ -377,7 +377,7 @@
         </field>
         <field>
           <variable_name>export_dir</variable_name>
-          <variable_value>${Internal.Entry.Current.Directory}/aaenmaas/GML_BK/</variable_value>
+          <variable_value>${Internal.Entry.Current.Directory}/${Internal.Job.Name}/GML_BK/</variable_value>
           <variable_type>CURRENT_JOB</variable_type>
         </field>
       </fields>
@@ -418,7 +418,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>400</xloc>
+      <xloc>448</xloc>
       <yloc>224</yloc>
     </entry>
   </entries>
