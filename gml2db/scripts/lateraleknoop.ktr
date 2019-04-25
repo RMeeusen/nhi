@@ -513,62 +513,10 @@
     </hop>
     <hop>
       <from>Get data from XML</from>
-      <to>Database lookup statusobject</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup statusobject</from>
       <to>Insert records</to>
       <enabled>Y</enabled>
     </hop>
   </order>
-  <step>
-    <name>Database lookup statusobject</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>hmdb</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>public</schema>
-      <table>statusobject</table>
-      <orderby/>
-      <fail_on_multiple>Y</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>statusobjectcode</name>
-        <field>statusobject</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>statusobjectid</name>
-        <rename>statusobjectid</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>80</xloc>
-      <yloc>352</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
   <step>
     <name>Error log</name>
     <type>TextFileOutput</type>
@@ -624,7 +572,7 @@
         <precision>-1</precision>
       </field>
       <field>
-        <name>statusobjectcode</name>
+        <name>err_desc</name>
         <type>String</type>
         <format/>
         <currency/>
@@ -634,42 +582,6 @@
         <trim_type>none</trim_type>
         <length>-1</length>
         <precision>-1</precision>
-      </field>
-      <field>
-        <name>administratiefgebied</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>Point</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>id</name>
-        <type>Integer</type>
-        <format>####0;-####0</format>
-        <currency/>
-        <decimal>.</decimal>
-        <group>,</group>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>0</precision>
       </field>
     </fields>
     <cluster_schema/>
@@ -779,7 +691,7 @@
         <xpath>nhi:statusobjectcode</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>String</type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -824,7 +736,7 @@
         <xpath>nhi:administratiefgebied</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>String</type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -872,8 +784,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>80</xloc>
-      <yloc>256</yloc>
+      <xloc>96</xloc>
+      <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -896,7 +808,7 @@
     <sql>INSERT INTO public.${table_name}
 (${table_name}id, code, statusobjectid, administratiefgebiedid, geometriepunt)
 VALUES
-(nextval('${table_name}_id_seq'), ?, ?, ${administratiefgebiedid}, ST_GeomFromGML(?));</sql>
+(nextval('${table_name}_id_seq'), ?, ?, ?, ST_GeomFromGML(?));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -907,7 +819,10 @@ VALUES
         <name>code</name>
       </argument>
       <argument>
-        <name>statusobjectid</name>
+        <name>statusobjectcode</name>
+      </argument>
+      <argument>
+        <name>administratiefgebied</name>
       </argument>
       <argument>
         <name>Point</name>

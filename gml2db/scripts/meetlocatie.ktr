@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>gemaal</name>
+    <name>meetlocatie</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -597,8 +597,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1024</xloc>
-      <yloc>576</yloc>
+      <xloc>1056</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -634,8 +634,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>880</xloc>
-      <yloc>576</yloc>
+      <xloc>912</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -801,6 +801,126 @@
         <trim_type>none</trim_type>
         <repeat>N</repeat>
       </field>
+      <field>
+        <name>codegerelateerdobject</name>
+        <xpath>nhi:codegerelateerdobject</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>datumstatusobject</name>
+        <xpath>nhi:datumstatusobject</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Date</type>
+        <format>yyyyMMddHHmmss</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>datumrealisatieobject</name>
+        <xpath>nhi:datumrealisatieobject</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Date</type>
+        <format>yyyyMMddHHmmss</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>metingwaterstand</name>
+        <xpath>nhi:metingwaterstand</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>metingklepofschuifstand</name>
+        <xpath>nhi:metingklepofschuifstand</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>metingafvoer</name>
+        <xpath>nhi:metingafvoer</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>metingstroomsnelheid</name>
+        <xpath>nhi:metingstroomsnelheid</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>metingwaterkwaliteit</name>
+        <xpath>nhi:metingwaterkwaliteit</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
     </fields>
     <limit>0</limit>
     <loopxpath>/FeatureCollection/gml:featureMember/${objectpath}</loopxpath>
@@ -824,8 +944,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>304</xloc>
-      <yloc>576</yloc>
+      <xloc>352</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -842,13 +962,13 @@
     </partitioning>
     <connection>hmdb</connection>
     <execute_each_row>Y</execute_each_row>
-    <single_statement>N</single_statement>
+    <single_statement>Y</single_statement>
     <replace_variables>Y</replace_variables>
     <quoteString>Y</quoteString>
     <sql>INSERT INTO public.${table_name}
-(${table_name}id, code, naam, statusobjectid, hyperlink, administratiefgebiedid, geometriepunt)
+(${table_name}id, code, naam, codegerelateerdobject, statusobjectid, hyperlink, metingwaterstandid, metingklepofschuifstandid, metingafvoerid, metingstroomsnelheidid, metingwaterkwaliteitid, administratiefgebiedid, geometriepunt)
 VALUES
-(nextval('${table_name}_id_seq'), ?, ?, ?, ?, ?, ST_GeomFromGML(?));</sql>
+(nextval('${table_name}_id_seq'), ?, ?, ?, ?, ?, ?, ?,?, ?,?,?, ST_GeomFromGML(?));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -862,10 +982,28 @@ VALUES
         <name>naam</name>
       </argument>
       <argument>
+        <name>codegerelateerdobject</name>
+      </argument>
+      <argument>
         <name>statusobjectcode</name>
       </argument>
       <argument>
         <name>hyperlink</name>
+      </argument>
+      <argument>
+        <name>metingwaterstand</name>
+      </argument>
+      <argument>
+        <name>metingklepofschuifstand</name>
+      </argument>
+      <argument>
+        <name>metingafvoer</name>
+      </argument>
+      <argument>
+        <name>metingstroomsnelheid</name>
+      </argument>
+      <argument>
+        <name>metingwaterkwaliteit</name>
       </argument>
       <argument>
         <name>administratiefgebied</name>
@@ -882,8 +1020,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>704</xloc>
-      <yloc>576</yloc>
+      <xloc>720</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -891,7 +1029,7 @@ VALUES
     <name>Remove Z values</name>
     <type>ReplaceString</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -920,8 +1058,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>576</yloc>
+      <xloc>528</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

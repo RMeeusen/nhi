@@ -502,21 +502,6 @@
   </connection>
   <order>
     <hop>
-      <from>Database lookup type profielcode</from>
-      <to>Database lookup ruwheidstype</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup statusobject</from>
-      <to>Database lookup type profielcode</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
-      <from>Get data from XML</from>
-      <to>Database lookup statusobject</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
       <from>Error message</from>
       <to>Error log</to>
       <enabled>Y</enabled>
@@ -532,11 +517,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Database lookup ruwheidstype</from>
-      <to>Set administratiefgebiedid</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
       <from>Switch / Case</from>
       <to>Insert record: point</to>
       <enabled>Y</enabled>
@@ -547,33 +527,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Map statusobject</from>
-      <to>Map Ruwheidstype</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get data from XML</from>
-      <to>Map statusobject</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Map Ruwheidstype</from>
-      <to>Map Typeprofiel</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Map Typeprofiel</from>
-      <to>Set administratiefgebiedid</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Switch / Case PK</from>
       <to>Make PK</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Set administratiefgebiedid</from>
-      <to>Switch / Case PK</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -584,6 +539,11 @@
     <hop>
       <from>Make PK</from>
       <to>Switch / Case</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get data from XML</from>
+      <to>Switch / Case PK</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -622,147 +582,6 @@
     <GUI>
       <xloc>880</xloc>
       <yloc>576</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Database lookup ruwheidstype</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>hmdb</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>ruwheidstype</table>
-      <orderby/>
-      <fail_on_multiple>Y</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>ruwheidstypecode</name>
-        <field>ruwheidstype</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>ruwheidstypeid</name>
-        <rename>ruwheidstypeid</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>64</xloc>
-      <yloc>480</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Database lookup statusobject</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>hmdb</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>public</schema>
-      <table>statusobject</table>
-      <orderby/>
-      <fail_on_multiple>Y</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>statusobjectcode</name>
-        <field>statusobject</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>statusobjectid</name>
-        <rename>statusobjectid</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>64</xloc>
-      <yloc>272</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Database lookup type profielcode</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>hmdb</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>typeprofiel</table>
-      <orderby/>
-      <fail_on_multiple>Y</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>typeprofielcode</name>
-        <field>typeprofiel</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>typeprofielid</name>
-        <rename>typeprofielid</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>64</xloc>
-      <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -822,18 +641,6 @@
       </field>
       <field>
         <name>err_desc</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>administratiefgebied</name>
         <type>String</type>
         <format/>
         <currency/>
@@ -955,7 +762,7 @@
         <xpath>nhi:statusobjectcode</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>String</type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -970,7 +777,7 @@
         <xpath>nhi:administratiefgebied</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>String</type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1015,7 +822,7 @@
         <xpath>nhi:typeprofielcode</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>String</type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1030,7 +837,7 @@
         <xpath>nhi:ruwheidstypecode</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>String</type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1085,21 +892,6 @@
         <trim_type>none</trim_type>
         <repeat>N</repeat>
       </field>
-      <field>
-        <name>administratiefgebiedid</name>
-        <xpath>nhi:dummy</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
     </fields>
     <limit>0</limit>
     <loopxpath>/FeatureCollection/gml:featureMember/${objectpath}</loopxpath>
@@ -1123,8 +915,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>64</xloc>
-      <yloc>176</yloc>
+      <xloc>224</xloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1147,7 +939,7 @@
     <sql>INSERT INTO public.${table_name}
 (${table_name}id, code, statusobjectid, codevolgnummer, typeprofielid, ruwheidstypeid, ruwheidswaardelaag, ruwheidswaardehoog, profielcode, administratiefgebiedid, geometriepunt)
 VALUES
-(nextval('${table_name}_id_seq'),?, ?, ?, ?, ?, ?, ?, ?, ${administratiefgebiedid}, ST_GeomFromGML(?));</sql>
+(nextval('${table_name}_id_seq'),?, ?, ?, ?, ?, ?, ?, ?, ?, ST_GeomFromGML(?));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1158,16 +950,16 @@ VALUES
         <name>code</name>
       </argument>
       <argument>
-        <name>statusobjectid</name>
+        <name>statusobjectcode</name>
       </argument>
       <argument>
         <name>codevolgnummer</name>
       </argument>
       <argument>
-        <name>typeprofielid</name>
+        <name>typeprofielcode</name>
       </argument>
       <argument>
-        <name>ruwheidstypeid</name>
+        <name>ruwheidstypecode</name>
       </argument>
       <argument>
         <name>ruwheidswaardelaag</name>
@@ -1177,6 +969,9 @@ VALUES
       </argument>
       <argument>
         <name>profielcode</name>
+      </argument>
+      <argument>
+        <name>administratiefgebied</name>
       </argument>
       <argument>
         <name>Point</name>
@@ -1192,291 +987,6 @@ VALUES
     <GUI>
       <xloc>880</xloc>
       <yloc>464</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Map Ruwheidstype</name>
-    <type>ValueMapper</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <field_to_use>ruwheidstypecode</field_to_use>
-    <target_field>ruwheidstypeid</target_field>
-    <non_match_default>-1</non_match_default>
-    <fields>
-      <field>
-        <source_value>1</source_value>
-        <target_value>1</target_value>
-      </field>
-      <field>
-        <source_value>2</source_value>
-        <target_value>2</target_value>
-      </field>
-      <field>
-        <source_value>3</source_value>
-        <target_value>3</target_value>
-      </field>
-      <field>
-        <source_value>4</source_value>
-        <target_value>4</target_value>
-      </field>
-      <field>
-        <source_value>5</source_value>
-        <target_value>5</target_value>
-      </field>
-      <field>
-        <source_value>6</source_value>
-        <target_value>6</target_value>
-      </field>
-      <field>
-        <source_value>chezy</source_value>
-        <target_value>1</target_value>
-      </field>
-      <field>
-        <source_value>manning</source_value>
-        <target_value>2</target_value>
-      </field>
-      <field>
-        <source_value>stricklerkn</source_value>
-        <target_value>3</target_value>
-      </field>
-      <field>
-        <source_value>stricklerks</source_value>
-        <target_value>4</target_value>
-      </field>
-      <field>
-        <source_value>white colebrook</source_value>
-        <target_value>5</target_value>
-      </field>
-      <field>
-        <source_value>bos en bijkerk</source_value>
-        <target_value>6</target_value>
-      </field>
-    </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>208</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Map Typeprofiel</name>
-    <type>ValueMapper</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <field_to_use>typeprofielcode</field_to_use>
-    <target_field>typeprofielid</target_field>
-    <non_match_default>-1</non_match_default>
-    <fields>
-      <field>
-        <source_value>1</source_value>
-        <target_value>1</target_value>
-      </field>
-      <field>
-        <source_value>2</source_value>
-        <target_value>2</target_value>
-      </field>
-      <field>
-        <source_value>3</source_value>
-        <target_value>3</target_value>
-      </field>
-      <field>
-        <source_value>4</source_value>
-        <target_value>4</target_value>
-      </field>
-      <field>
-        <source_value>stuw</source_value>
-        <target_value>1</target_value>
-      </field>
-      <field>
-        <source_value>bodemval</source_value>
-        <target_value>2</target_value>
-      </field>
-      <field>
-        <source_value>brug</source_value>
-        <target_value>3</target_value>
-      </field>
-      <field>
-        <source_value>waterloop</source_value>
-        <target_value>4</target_value>
-      </field>
-    </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>208</xloc>
-      <yloc>464</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Map statusobject</name>
-    <type>ValueMapper</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <field_to_use>statusobjectcode</field_to_use>
-    <target_field>statusobjectid</target_field>
-    <non_match_default>98</non_match_default>
-    <fields>
-      <field>
-        <source_value>1</source_value>
-        <target_value>1</target_value>
-      </field>
-      <field>
-        <source_value>3</source_value>
-        <target_value>3</target_value>
-      </field>
-      <field>
-        <source_value>4</source_value>
-        <target_value>4</target_value>
-      </field>
-      <field>
-        <source_value>5</source_value>
-        <target_value>5</target_value>
-      </field>
-      <field>
-        <source_value>7</source_value>
-        <target_value>7</target_value>
-      </field>
-      <field>
-        <source_value>98</source_value>
-        <target_value>98</target_value>
-      </field>
-      <field>
-        <source_value>buiten bedrijf</source_value>
-        <target_value>4</target_value>
-      </field>
-      <field>
-        <source_value>gerealiseerd</source_value>
-        <target_value>3</target_value>
-      </field>
-      <field>
-        <source_value>planvorming</source_value>
-        <target_value>1</target_value>
-      </field>
-      <field>
-        <source_value>niet meer aanwezig</source_value>
-        <target_value>5</target_value>
-      </field>
-      <field>
-        <source_value>onbekend</source_value>
-        <target_value>98</target_value>
-      </field>
-      <field>
-        <source_value/>
-        <target_value>98</target_value>
-      </field>
-    </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>208</xloc>
-      <yloc>272</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Set administratiefgebiedid</name>
-    <type>SetValueConstant</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <usevar>Y</usevar>
-    <fields>
-      <field>
-        <name>administratiefgebiedid</name>
-        <value>${administratiefgebiedid}</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>208</xloc>
-      <yloc>576</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Switch / Case</name>
-    <type>SwitchCase</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fieldname>administratiefgebiedid</fieldname>
-    <use_contains>N</use_contains>
-    <case_value_type>Integer</case_value_type>
-    <case_value_format/>
-    <case_value_decimal/>
-    <case_value_group/>
-    <default_target_step>Insert record: point</default_target_step>
-    <cases>
-      <case>
-        <value>1</value>
-        <target_step>AAenMaas - convert point value</target_step>
-      </case>
-    </cases>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>672</xloc>
-      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1562,6 +1072,43 @@ VALUES
     <GUI>
       <xloc>526</xloc>
       <yloc>457</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Switch / Case</name>
+    <type>SwitchCase</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fieldname>administratiefgebied</fieldname>
+    <use_contains>N</use_contains>
+    <case_value_type>Integer</case_value_type>
+    <case_value_format/>
+    <case_value_decimal/>
+    <case_value_group/>
+    <default_target_step>Insert record: point</default_target_step>
+    <cases>
+      <case>
+        <value>1</value>
+        <target_step>AAenMaas - convert point value</target_step>
+      </case>
+    </cases>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

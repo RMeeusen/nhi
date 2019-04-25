@@ -8,29 +8,29 @@
 		</complexContent>
 	</complexType>
 	<simpleType name="administratiefgebiedWaterschappenSimpleType">
-		<restriction base="string">
-			<enumeration value="aa en maas"/>
-			<enumeration value="amstel gooi en vecht"/>
-			<enumeration value="brabantse delta"/>
-			<enumeration value="delfland"/>
-			<enumeration value="dommel"/>
-			<enumeration value="fryslan"/>
-			<enumeration value="hollands noorderkwartier"/>
-			<enumeration value="hollandse delta"/>
-			<enumeration value="hunze en aas"/>
-			<enumeration value="noorderzijlvest"/>
-			<enumeration value="peel en maasvallei"/>
-			<enumeration value="rijn en ijssel"/>
-			<enumeration value="rijnland"/>
-			<enumeration value="rivierenland"/>
-			<enumeration value="roer en overmaas"/>
-			<enumeration value="schieland en krimpenerwaard"/>
-			<enumeration value="stichtse rijnlanden"/>
-			<enumeration value="zuiderzeeland"/>
-			<enumeration value="scheldestromen"/>
-			<enumeration value="vallei en veluwe"/>
-			<enumeration value="vechtstromen"/>
-			<enumeration value="drents overijsselse delta"/>
+		<restriction base="integer">
+			<enumeration value="1"/><!--aa en maas-->
+			<enumeration value="2"/>        <!--amstel gooi en vecht-->
+			<enumeration value="3"/>        <!--brabantse delta-->
+			<enumeration value="4"/>        <!--delfland-->
+			<enumeration value="5"/>        <!--dommel-->
+			<enumeration value="6"/>        <!--fryslan-->
+			<enumeration value="7"/>        <!--hollands noorderkwartier-->
+			<enumeration value="8"/>        <!--hollandse delta-->
+			<enumeration value="9"/>        <!--hunze en aas-->
+			<enumeration value="10"/> <!--noorderzijlvest-->
+			<enumeration value="11"/> <!--peel en maasvallei-->
+			<enumeration value="12"/> <!--rijn en ijssel-->
+			<enumeration value="13"/> <!--rijnland-->
+			<enumeration value="14"/> <!--rivierenland-->
+			<enumeration value="15"/> <!--roer en overmaas-->
+			<enumeration value="16"/> <!--schieland en krimpenerwaard-->
+			<enumeration value="17"/> <!--stichtse rijnlanden-->
+			<enumeration value="18"/> <!--zuiderzeeland-->
+			<enumeration value="19"/> <!--scheldestromen-->
+			<enumeration value="20"/> <!--vallei en veluwe-->
+			<enumeration value="21"/> <!--vechtstromen-->
+			<enumeration value="22"/> <!--drents overijsselse delta-->
 		</restriction>
 	</simpleType>
 	<simpleType name="administratiefgebiedSimpleType">
@@ -43,145 +43,146 @@
 	</simpleType>
 	<simpleType name="jaNeeSimpleType">
 		<restriction base="string">
-			<enumeration value="ja" />
-			<enumeration value="nee"/>
-			<enumeration value="onbekend"/>
+			<enumeration value="j" /><!--ja-->
+			<enumeration value="n"/><!--nee-->
+			<enumeration value="o"/><!--onbekend-->
 		</restriction>
 	</simpleType>
 	<simpleType name="vormCodeSimpleType">
-		<restriction base="string">
-			<enumeration value="rond"/>
-			<enumeration value="driehoekig"/>
-			<enumeration value="rechthoekig"/>
-			<enumeration value="eivormig"/>
-			<enumeration value="ellipsvormig"/>
-			<enumeration value="paraboolvormig"/>
-			<enumeration value="trapeziumvormig"/>
-			<enumeration value="heulprofiel"/>
-			<enumeration value="muilprofiel"/>
-			<enumeration value="langwerpig"/>
-			<enumeration value="scherp"/>
-			<enumeration value="onbekend"/>
+		<restriction base="integer">
+			<enumeration value="1"/><!--rond -->
+			<enumeration value="2"/><!--driehoekig -->
+			<enumeration value="3"/><!--rechthoekig -->
+			<enumeration value="4"/><!--eivormig -->
+			<enumeration value="5"/><!--ellipsvormig -->
+			<enumeration value="6"/><!--paraboolvormig -->
+			<enumeration value="7"/><!--trapeziumvormig-->
+			<enumeration value="8"/><!--heulprofiel-->
+			<enumeration value="9"/><!--muilprofiel-->
+			<enumeration value="10"/><!--langwerpig-->
+			<enumeration value="11"/><!--scherp-->
+			<enumeration value="99"/><!--onbekend-->
 		</restriction>
 	</simpleType>
 	<simpleType name="typeProfielCodeSimpleType">
-		<restriction base="string">
-			<enumeration value="stuw"/>
-			<enumeration value="bodemval"/>
-			<enumeration value="brug"/>
-			<enumeration value="waterloop"/>
+		<restriction base="integer">
+			<enumeration value="1"/> <!--stuw-->
+			<enumeration value="2"/> <!--bodemval-->
+			<enumeration value="3"/> <!--brug-->
+			<enumeration value="4"/> <!--waterloop-->
 		</restriction>
 	</simpleType>
 	<simpleType name="soortKokerVormigeConstructieCodeSimpleType">
-		<restriction base="string">
-			<enumeration value="duiker"/>
-			<enumeration value="hevel"/>
-			<enumeration value="sifon"/>
-			<enumeration value="bypass"/>
-			<enumeration value="onbekend"/>
+		<restriction base="integer">
+			<enumeration value="1"/> <!--duiker-->
+			<enumeration value="2"/> <!--hevel-->
+			<enumeration value="3"/> <!--sifon-->
+			<enumeration value="4"/> <!--bypass-->
+			<enumeration value="99"/> <!--onbekend-->
 		</restriction>
 	</simpleType>
 	<simpleType name="statusObjectCodeSimpleType">
-		<restriction base="string">
-			<enumeration value="planvorming"/>
-			<enumeration value="gerealiseerd"/>
-			<enumeration value="buiten bedrijf"/>
-			<enumeration value="niet meer aanwezig"/>
-			<enumeration value="te verwijderen"/>
-			<enumeration value="onbekend"/>
+		<restriction base="integer">
+			<enumeration value="1"/> <!--planvorming-->
+			<enumeration value="3"/> <!--gerealiseerd-->
+			<enumeration value="4"/> <!--buiten bedrijf-->
+			<enumeration value="5"/> <!--niet meer aanwezig-->
+			<enumeration value="7"/> <!--te verwijderen-->
+			<enumeration value="98"/> <!--onbekend-->
 		</restriction>
 	</simpleType>
 	<simpleType name="ruwheidsTypeCodeSimpleType">
-		<restriction base="string">
-			<enumeration value="chezy"/>
-			<enumeration value="manning"/>
-			<enumeration value="stricklerkn"/>
-			<enumeration value="stricklerks"/>
-			<enumeration value="white colebrook"/>
-			<enumeration value="bos en bijkerk"/>
+		<restriction base="integer">
+			<enumeration value="1"/> <!--chezy-->
+			<enumeration value="2"/> <!--manning-->
+			<enumeration value="3"/> <!--stricklerkn-->
+			<enumeration value="4"/> <!--stricklerks-->
+			<enumeration value="5"/> <!--white colebrook-->
+			<enumeration value="6"/> <!--bos en bijkerk-->
 		</restriction>
 	</simpleType>
 	<simpleType name="soortAfsluitmiddelCodeSimpleType">
-		<restriction base="string">
-			<enumeration value="deur"/>
-			<enumeration value="schotbalk sponning"/>
-			<enumeration value="zandzakken"/>
-			<enumeration value="schuif"/>
-			<enumeration value="terugslagklep"/>
-			<enumeration value="tolklep"/>
-			<enumeration value="niet afsluitbaar"/>
-			<enumeration value="overig"/>
-			<enumeration value="onbekend"/>
+		<restriction base="integer">
+			<enumeration value="1"/> <!--deur-->
+			<enumeration value="2"/> <!--schotbalk sponning-->
+			<enumeration value="3"/> <!--zandzakken-->
+			<enumeration value="4"/> <!--schuif-->
+			<enumeration value="5"/> <!--terugslagklep-->
+			<enumeration value="6"/> <!--tolklep-->
+      <enumeration value="7"/> <!--stuwklep-->
+			<enumeration value="97"/> <!--niet afsluitbaar-->
+			<enumeration value="98"/> <!--overig-->
+			<enumeration value="99"/> <!--onbekend-->
 		</restriction>
 	</simpleType>
 	<simpleType name="soortRegelbaarheidCodeSimpleType">
-		<restriction base="string">
-			<enumeration value="niet regelbaar (vast)"/>
-			<enumeration value="regelbaar, niet automatisch"/>
-			<enumeration value="regelbaar, automatisch"/>
-			<enumeration value="handmatig"/>
-			<enumeration value="overig"/>
+		<restriction base="integer">
+			<enumeration value="1"/> <!--niet regelbaar (vast)-->
+			<enumeration value="2"/> <!--regelbaar, niet automatisch-->
+			<enumeration value="3"/> <!--regelbaar, automatisch-->
+			<enumeration value="4"/> <!--handmatig-->
+			<enumeration value="99"/> <!--overig-->
 		</restriction>
 	</simpleType>
 	<simpleType name="typeHydraulischObjectCodeSimpleType">
-		<restriction base="string">
-			<enumeration value="vispassage"/>
-			<enumeration value="dood hout"/>
-			<enumeration value="beverdam"/>
-			<enumeration value="zandvang"/>
-			<enumeration value="watermolen"/>
-			<enumeration value="overig"/>
+		<restriction base="integer">
+			<enumeration value="0"/> <!--vispassage-->
+			<enumeration value="1"/> <!--dood hout-->
+			<enumeration value="2"/> <!--beverdam-->
+			<enumeration value="3"/> <!--zandvang-->
+			<enumeration value="4"/> <!--watermolen-->
+			<enumeration value="5"/> <!--overig-->
 		</restriction>
 	</simpleType>
 	<simpleType name="typeRandvoorwaardeCodeSimpleType">
-		<restriction base="string">
-			<enumeration value="waterstand"/>
-			<enumeration value="debiet"/>
-			<enumeration value="qh-relatie"/>
+		<restriction base="integer">
+			<enumeration value="0"/> <!--waterstand-->
+			<enumeration value="1"/> <!--debiet-->
+			<enumeration value="2"/> <!--qh-relatie-->
 		</restriction>
 	</simpleType>
 	<simpleType name="sturingTypeCodeSimpleType">
-		<restriction base="string">
-			<enumeration value="continue"/>
-			<enumeration value="discreet"/>
+		<restriction base="integer">
+			<enumeration value="1"/> <!--continue-->
+			<enumeration value="2"/> <!--discreet-->
 		</restriction>
 	</simpleType>
 	<simpleType name="stuurvariabeleCodeSimpleType">
-		<restriction base="string">
-			<enumeration value="kruinhoogte"/>
-			<enumeration value="schuifhoogte"/>
-			<enumeration value="pompcapaciteit"/>
+		<restriction base="integer">
+			<enumeration value="1"/> <!--kruinhoogte-->
+			<enumeration value="2"/> <!--schuifhoogte-->
+			<enumeration value="3"/> <!--pompcapaciteit-->
 		</restriction>
 	</simpleType>
 	<simpleType name="soortStuwCodeSimpleType">
-		<restriction base="string">
-			<enumeration value="schotbalkstuw"/>
-			<enumeration value="stuw met schuif"/>
-			<enumeration value="stuw met klep"/>
-			<enumeration value="segmentstuw"/>
-			<enumeration value="cascadestuw"/>
-			<enumeration value="hevelstuw"/>
-			<enumeration value="meetstuw"/>
-			<enumeration value="meetschot"/>
-			<enumeration value="stuw met contra-gewicht"/>
-			<enumeration value="inlaat- en/of aflaatstuw"/>
-			<enumeration value="overlaat"/>
-			<enumeration value="drijverstuw"/>
-			<enumeration value="trommelstuw"/>
-			<enumeration value="gronddamstuw"/>
-			<enumeration value="stuwbak"/>
-			<enumeration value="tuimel- of kantelstuw"/>
-			<enumeration value="balgstuw"/>
-			<enumeration value="brievenbusstuw"/>
-			<enumeration value="knijpstuw"/>
-			<enumeration value="conserveringstuw"/>
-			<enumeration value="onbekend"/>
+		<restriction base="integer">
+			<enumeration value="1"/> <!--schotbalkstuw-->
+			<enumeration value="2"/> <!--stuw met schuif-->
+			<enumeration value="3"/> <!--stuw met klep-->
+			<enumeration value="4"/> <!--segmentstuw-->
+			<enumeration value="5"/> <!--cascadestuw-->
+			<enumeration value="6"/> <!--hevelstuw-->
+			<enumeration value="7"/> <!--meetstuw-->
+			<enumeration value="8"/> <!--meetschot-->
+			<enumeration value="9"/> <!--stuw met contra-gewicht-->
+			<enumeration value="10"/> <!--inlaat- en/of aflaatstuw-->
+			<enumeration value="11"/> <!--overlaat-->
+			<enumeration value="12"/> <!--drijverstuw-->
+			<enumeration value="13"/> <!--trommelstuw-->
+			<enumeration value="20"/> <!--gronddamstuw-->
+			<enumeration value="21"/> <!--stuwbak-->
+			<enumeration value="22"/> <!--tuimel- of kantelstuw-->
+			<enumeration value="23"/> <!--balgstuw-->
+			<enumeration value="24"/> <!--brievenbusstuw-->
+			<enumeration value="25"/> <!--knijpstuw-->
+			<enumeration value="26"/> <!--conserveringstuw-->
+			<enumeration value="99"/> <!--onbekend-->
 		</restriction>
 	</simpleType>
 	<simpleType name="doelvariabeleCodeSimpleType">
-		<restriction base="string">
-			<enumeration value="waterstand"/>
-			<enumeration value="debiet"/>
+		<restriction base="integer">
+			<enumeration value="1"/> <!--waterstand-->
+			<enumeration value="2"/> <!--debiet-->
 		</restriction>
 	</simpleType>
 	<group name="ruwheid">

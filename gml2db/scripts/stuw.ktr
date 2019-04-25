@@ -512,23 +512,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get data from XML</from>
-      <to>Database lookup statusobject</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup soortstuw</from>
-      <to>Database lookup soortregelbaarheid</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Remove Z values</from>
       <to>Insert record: point</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup statusobject</from>
-      <to>Database lookup soortstuw</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -537,157 +522,16 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Database lookup soortregelbaarheid</from>
-      <to>If field value is null</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>If field value is null</from>
       <to>If value type is null</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Get data from XML</from>
+      <to>If field value is null</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
-  <step>
-    <name>Database lookup soortregelbaarheid</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>hmdb</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>public</schema>
-      <table>soortregelbaarheid</table>
-      <orderby/>
-      <fail_on_multiple>Y</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>soortregelbaarheidcode</name>
-        <field>soortregelbaarheid</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>soortregelbaarheidid</name>
-        <rename>soortregelbaarheidid</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>80</xloc>
-      <yloc>672</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Database lookup soortstuw</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>hmdb</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>public</schema>
-      <table>soortstuw</table>
-      <orderby/>
-      <fail_on_multiple>Y</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>soortstuwcode</name>
-        <field>soortstuw</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>soortstuwid</name>
-        <rename>soortstuwid</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>80</xloc>
-      <yloc>592</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Database lookup statusobject</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>hmdb</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>public</schema>
-      <table>statusobject</table>
-      <orderby/>
-      <fail_on_multiple>Y</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>statusobjectcode</name>
-        <field>statusobject</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>statusobjectid</name>
-        <rename>statusobjectid</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>80</xloc>
-      <yloc>496</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
   <step>
     <name>Error log</name>
     <type>TextFileOutput</type>
@@ -897,7 +741,7 @@
         <xpath>nhi:statusobjectcode</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>String</type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -957,7 +801,7 @@
         <xpath>nhi:administratiefgebied</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>String</type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -972,7 +816,7 @@
         <xpath>nhi:soortstuwcode</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>String</type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -987,7 +831,7 @@
         <xpath>nhi:soortregelbaarheidcode</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>String</type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1125,8 +969,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>80</xloc>
-      <yloc>400</yloc>
+      <xloc>112</xloc>
+      <yloc>656</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1150,7 +994,7 @@
       </valuetypes>
     <fields>
       <field>
-        <name>soortregelbaarheidid</name>
+        <name>soortregelbaarheidcode</name>
         <value>99</value>
         <mask/>
         <set_empty_string>N</set_empty_string>
@@ -1233,7 +1077,7 @@
     <sql>INSERT INTO public.${table_name}
 (${table_name}id, code, naam, statusobjectid, hyperlink, soortstuwid, soortregelbaarheidid, laagstedoorstroombreedte, hoogstedoorstroombreedte, kruinbreedte, laagstedoorstroomhoogte, hoogstedoorstroomhoogte, afvoercoefficient, administratiefgebiedid, geometriepunt)
 VALUES
-(nextval('${table_name}_id_seq'), ?, ?, ?, ?, ?, ?, NULLIF(?, -9999), NULLIF(?, -9999), NULLIF(?, -9999), NULLIF(?, -9999), NULLIF(?, -9999),?,${administratiefgebiedid}, ST_GeomFromGML(?));</sql>
+(nextval('${table_name}_id_seq'), ?, ?, ?, ?, ?, ?, NULLIF(?, -9999), NULLIF(?, -9999), NULLIF(?, -9999), NULLIF(?, -9999), NULLIF(?, -9999),?,?, ST_GeomFromGML(?));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1247,16 +1091,16 @@ VALUES
         <name>naam</name>
       </argument>
       <argument>
-        <name>statusobjectid</name>
+        <name>statusobjectcode</name>
       </argument>
       <argument>
         <name>hyperlink</name>
       </argument>
       <argument>
-        <name>soortstuwid</name>
+        <name>soortstuwcode</name>
       </argument>
       <argument>
-        <name>soortregelbaarheidid</name>
+        <name>soortregelbaarheidcode</name>
       </argument>
       <argument>
         <name>laagstedoorstroombreedte</name>
@@ -1275,6 +1119,9 @@ VALUES
       </argument>
       <argument>
         <name>afvoercoefficient</name>
+      </argument>
+      <argument>
+        <name>administratiefgebied</name>
       </argument>
       <argument>
         <name>Point</name>

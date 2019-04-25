@@ -502,11 +502,6 @@
   </connection>
   <order>
     <hop>
-      <from>Database lookup lateraleknoop</from>
-      <to>Database lookup statusobject</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Error Message</from>
       <to>Error log</to>
       <enabled>Y</enabled>
@@ -537,11 +532,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Set administratiefgebiedid</from>
-      <to>Switch / Case</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Switch / Case</from>
       <to>AAenMaas - add 'L' to code</to>
       <enabled>Y</enabled>
@@ -552,18 +542,18 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Database lookup statusobject</from>
-      <to>Filter rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Get data from XML</from>
       <to>Read afvoergebied</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Read afvoergebied</from>
-      <to>Set administratiefgebiedid</to>
+      <to>Switch / Case</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup lateraleknoop</from>
+      <to>Filter rows</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -653,53 +643,6 @@
     </GUI>
   </step>
   <step>
-    <name>Database lookup statusobject</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>hmdb</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>public</schema>
-      <table>statusobject</table>
-      <orderby/>
-      <fail_on_multiple>Y</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>statusobjectcode</name>
-        <field>statusobject</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>statusobjectid</name>
-        <rename>statusobjectid</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>496</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Error Message</name>
     <type>WriteToLog</type>
     <description/>
@@ -783,18 +726,6 @@
     <fields>
       <field>
         <name>code</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>administratiefgebied</name>
         <type>String</type>
         <format/>
         <currency/>
@@ -932,7 +863,7 @@
         <xpath>nhi:statusobjectcode</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>String</type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -992,7 +923,7 @@
         <xpath>nhi:administratiefgebied</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>String</type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1062,21 +993,6 @@
         <trim_type>none</trim_type>
         <repeat>N</repeat>
       </field>
-      <field>
-        <name>administratiefgebiedid</name>
-        <xpath>nhi:dummy</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
     </fields>
     <limit>0</limit>
     <loopxpath>/FeatureCollection/gml:featureMember/${objectpath}</loopxpath>
@@ -1106,8 +1022,8 @@
     </GUI>
   </step>
   <step>
-    <name>Set administratiefgebiedid</name>
-    <type>SetValueConstant</type>
+    <name>Read afvoergebied</name>
+    <type>WriteToLog</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1116,13 +1032,14 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <usevar>Y</usevar>
+    <loglevel>log_level_basic</loglevel>
+    <displayHeader>Y</displayHeader>
+    <limitRows>N</limitRows>
+    <limitRowsNumber>0</limitRowsNumber>
+    <logmessage>read ${table_name}</logmessage>
     <fields>
       <field>
-        <name>administratiefgebiedid</name>
-        <value>${administratiefgebiedid}</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
+        <name>size</name>
       </field>
     </fields>
     <cluster_schema/>
@@ -1134,7 +1051,7 @@
     </remotesteps>
     <GUI>
       <xloc>64</xloc>
-      <yloc>288</yloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1149,7 +1066,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <fieldname>administratiefgebiedid</fieldname>
+    <fieldname>administratiefgebied</fieldname>
     <use_contains>N</use_contains>
     <case_value_type>Integer</case_value_type>
     <case_value_format/>
@@ -1194,7 +1111,7 @@
     <sql>INSERT INTO public.${table_name}
 (${table_name}id, code, naam, statusobjectid, hyperlink,  oppervlakte, lateraleknoopid, administratiefgebiedid, geometrievlak)
 VALUES
-(nextval('${table_name}_id_seq'),?, ?, ?, ?, ?, ?, ${administratiefgebiedid}, ST_GeomFromGML(?));</sql>
+(nextval('${table_name}_id_seq'),?, ?, ?, ?, ?, ?, ?, ST_GeomFromGML(?));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1208,7 +1125,7 @@ VALUES
         <name>naam</name>
       </argument>
       <argument>
-        <name>statusobjectid</name>
+        <name>statusobjectcode</name>
       </argument>
       <argument>
         <name>hyperlink</name>
@@ -1218,6 +1135,9 @@ VALUES
       </argument>
       <argument>
         <name>lateraleknoopid</name>
+      </argument>
+      <argument>
+        <name>administratiefgebied</name>
       </argument>
       <argument>
         <name>multiPolygon</name>
@@ -1255,7 +1175,7 @@ VALUES
     <sql>INSERT INTO public.${table_name}
 (${table_name}id, code, naam, statusobjectid, hyperlink,  oppervlakte, lateraleknoopid, administratiefgebiedid, geometrievlak)
 VALUES
-(nextval('${table_name}_id_seq'),?, ?, ?, ?, ?, ?, ${administratiefgebiedid}, ST_Multi(ST_GeomFromGML(?)));</sql>
+(nextval('${table_name}_id_seq'),?, ?, ?, ?, ?, ?, ?, ST_Multi(ST_GeomFromGML(?)));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1269,7 +1189,7 @@ VALUES
         <name>naam</name>
       </argument>
       <argument>
-        <name>statusobjectid</name>
+        <name>statusobjectcode</name>
       </argument>
       <argument>
         <name>hyperlink</name>
@@ -1279,6 +1199,9 @@ VALUES
       </argument>
       <argument>
         <name>lateraleknoopid</name>
+      </argument>
+      <argument>
+        <name>administratiefgebied</name>
       </argument>
       <argument>
         <name>polygon</name>
@@ -1294,40 +1217,6 @@ VALUES
     <GUI>
       <xloc>944</xloc>
       <yloc>416</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Read afvoergebied</name>
-    <type>WriteToLog</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <loglevel>log_level_basic</loglevel>
-    <displayHeader>Y</displayHeader>
-    <limitRows>N</limitRows>
-    <limitRowsNumber>0</limitRowsNumber>
-    <logmessage>read ${table_name}</logmessage>
-    <fields>
-      <field>
-        <name>size</name>
-      </field>
-    </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>64</xloc>
-      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

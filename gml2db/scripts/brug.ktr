@@ -512,23 +512,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get data from XML</from>
-      <to>Database lookup statusobject</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup statusobject</from>
-      <to>Database lookup ruwheidstype</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>If value type is null</from>
       <to>Insert record: point</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup ruwheidstype</from>
-      <to>Remove Z values</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -536,101 +521,12 @@
       <to>If value type is null</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Get data from XML</from>
+      <to>Remove Z values</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
-  <step>
-    <name>Database lookup ruwheidstype</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>hmdb</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>ruwheidstype</table>
-      <orderby/>
-      <fail_on_multiple>Y</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>ruwheidstypecode</name>
-        <field>ruwheidstype</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>ruwheidstypeid</name>
-        <rename>ruwheidstypeid</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>80</xloc>
-      <yloc>576</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Database lookup statusobject</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>hmdb</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>public</schema>
-      <table>statusobject</table>
-      <orderby/>
-      <fail_on_multiple>Y</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>statusobjectcode</name>
-        <field>statusobject</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>statusobjectid</name>
-        <rename>statusobjectid</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>80</xloc>
-      <yloc>496</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
   <step>
     <name>Error log</name>
     <type>TextFileOutput</type>
@@ -840,7 +736,7 @@
         <xpath>nhi:statusobjectcode</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>String</type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -900,7 +796,7 @@
         <xpath>nhi:administratiefgebied</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>String</type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -960,7 +856,7 @@
         <xpath>nhi:ruwheidstypecode</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>String</type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1039,7 +935,7 @@
     </remotesteps>
     <GUI>
       <xloc>80</xloc>
-      <yloc>400</yloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1107,7 +1003,7 @@
     <sql>INSERT INTO public.${table_name}
 (${table_name}id, code, naam, statusobjectid, hyperlink, hoogteonderzijde, hoogtebovenzijde, lengte, ruwheidstypeid, ruwheidswaarde, intreeverlies, uittreeverlies, administratiefgebiedid, geometriepunt)
 VALUES
-(nextval('${table_name}_id_seq'), ?, ?, ?, ?, NULLIF(?, -9999), NULLIF(?, -9999), NULLIF(?, -9999),?,?,NULLIF(?, -9999), NULLIF(?, -9999),${administratiefgebiedid}, ST_GeomFromGML(?));</sql>
+(nextval('${table_name}_id_seq'), ?, ?, ?, ?, NULLIF(?, -9999), NULLIF(?, -9999), NULLIF(?, -9999),?,?,NULLIF(?, -9999), NULLIF(?, -9999),?, ST_GeomFromGML(?));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1121,7 +1017,7 @@ VALUES
         <name>naam</name>
       </argument>
       <argument>
-        <name>statusobjectid</name>
+        <name>statusobjectcode</name>
       </argument>
       <argument>
         <name>hyperlink</name>
@@ -1136,7 +1032,7 @@ VALUES
         <name>lengte</name>
       </argument>
       <argument>
-        <name>ruwheidstypeid</name>
+        <name>ruwheidstypecode</name>
       </argument>
       <argument>
         <name>ruwheidswaarde</name>
@@ -1146,6 +1042,9 @@ VALUES
       </argument>
       <argument>
         <name>uittreeverlies</name>
+      </argument>
+      <argument>
+        <name>administratiefgebied</name>
       </argument>
       <argument>
         <name>Point</name>

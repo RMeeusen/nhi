@@ -347,7 +347,7 @@
         </field>
         <field>
           <variable_name>linepath</variable_name>
-          <variable_value>gml:curveProperty/gml:LineString</variable_value>
+          <variable_value>gml:lineStringProperty/gml:LineString</variable_value>
           <variable_type>CURRENT_JOB</variable_type>
         </field>
         <field>
@@ -357,7 +357,7 @@
         </field>
         <field>
           <variable_name>multilinepath</variable_name>
-          <variable_value>gml:multiCurveProperty/gml:MultiCurve</variable_value>
+          <variable_value>gml:multiLineStringProperty/gml:MultiLineString</variable_value>
           <variable_type>CURRENT_JOB</variable_type>
         </field>
         <field>

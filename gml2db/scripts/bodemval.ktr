@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>gemaal</name>
+    <name>bodemval</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -597,8 +597,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1024</xloc>
-      <yloc>576</yloc>
+      <xloc>1104</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -634,8 +634,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>880</xloc>
-      <yloc>576</yloc>
+      <xloc>960</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -772,11 +772,11 @@
         <repeat>N</repeat>
       </field>
       <field>
-        <name>hyperlink</name>
-        <xpath>nhi:hyperlink</xpath>
+        <name>administratiefgebied</name>
+        <xpath>nhi:administratiefgebied</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>String</type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -787,11 +787,11 @@
         <repeat>N</repeat>
       </field>
       <field>
-        <name>administratiefgebied</name>
-        <xpath>nhi:administratiefgebied</xpath>
+        <name>hyperlink</name>
+        <xpath>nhi:hyperlink</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>Integer</type>
+        <type>String</type>
         <format/>
         <currency/>
         <decimal/>
@@ -824,8 +824,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>304</xloc>
-      <yloc>576</yloc>
+      <xloc>192</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -882,8 +882,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>704</xloc>
-      <yloc>576</yloc>
+      <xloc>784</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -921,7 +921,7 @@ VALUES
     </remotesteps>
     <GUI>
       <xloc>592</xloc>
-      <yloc>576</yloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
