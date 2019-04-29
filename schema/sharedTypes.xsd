@@ -19,11 +19,11 @@
 			<enumeration value="8"/>        <!--hollandse delta-->
 			<enumeration value="9"/>        <!--hunze en aas-->
 			<enumeration value="10"/> <!--noorderzijlvest-->
-			<enumeration value="11"/> <!--peel en maasvallei-->
+			<enumeration value="11"/> <!--limburg-->
 			<enumeration value="12"/> <!--rijn en ijssel-->
 			<enumeration value="13"/> <!--rijnland-->
 			<enumeration value="14"/> <!--rivierenland-->
-			<enumeration value="15"/> <!--roer en overmaas-->
+			<!-- <enumeration value="15"/> roer en overmaas vervallen-->
 			<enumeration value="16"/> <!--schieland en krimpenerwaard-->
 			<enumeration value="17"/> <!--stichtse rijnlanden-->
 			<enumeration value="18"/> <!--zuiderzeeland-->
@@ -42,10 +42,10 @@
 		</restriction>
 	</simpleType>
 	<simpleType name="jaNeeSimpleType">
-		<restriction base="string">
-			<enumeration value="j" /><!--ja-->
-			<enumeration value="n"/><!--nee-->
-			<enumeration value="o"/><!--onbekend-->
+		<restriction base="integer">
+			<enumeration value="1" /><!--ja-->
+			<enumeration value="2"/><!--nee-->
+			<enumeration value="3"/><!--onbekend-->
 		</restriction>
 	</simpleType>
 	<simpleType name="vormCodeSimpleType">
