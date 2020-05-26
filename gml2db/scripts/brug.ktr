@@ -1003,7 +1003,7 @@
     <sql>INSERT INTO public.${table_name}
 (${table_name}id, code, naam, statusobjectid, hyperlink, hoogteonderzijde, hoogtebovenzijde, lengte, ruwheidstypeid, ruwheidswaarde, intreeverlies, uittreeverlies, administratiefgebiedid, geometriepunt)
 VALUES
-(nextval('${table_name}_id_seq'), ?, ?, ?, ?, NULLIF(?, -9999), NULLIF(?, -9999), NULLIF(?, -9999),?,?,NULLIF(?, -9999), NULLIF(?, -9999),?, ST_GeomFromGML(?));</sql>
+(nextval('${table_name}_id_seq'), ?, ?, ?, ?, NULLIF(?, -9999), NULLIF(?, -9999), NULLIF(?, -9999),?,?,NULLIF(?, -9999), NULLIF(?, -9999),${administratiefgebiedid}, ST_GeomFromGML(?));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1042,9 +1042,6 @@ VALUES
       </argument>
       <argument>
         <name>uittreeverlies</name>
-      </argument>
-      <argument>
-        <name>administratiefgebied</name>
       </argument>
       <argument>
         <name>Point</name>

@@ -806,9 +806,9 @@
     <replace_variables>Y</replace_variables>
     <quoteString>Y</quoteString>
     <sql>INSERT INTO public.${table_name}
-(${table_name}id, code, statusobjectid, administratiefgebiedid, geometriepunt)
+(${table_name}id, code, statusobjectid, geometriepunt)
 VALUES
-(nextval('${table_name}_id_seq'), ?, ?, ?, ST_GeomFromGML(?));</sql>
+(nextval('${table_name}_id_seq'), ?, ?, ${administratiefgebiedid}, ST_GeomFromGML(?));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -820,9 +820,6 @@ VALUES
       </argument>
       <argument>
         <name>statusobjectcode</name>
-      </argument>
-      <argument>
-        <name>administratiefgebied</name>
       </argument>
       <argument>
         <name>Point</name>

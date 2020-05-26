@@ -968,7 +968,7 @@
     <sql>INSERT INTO public.${table_name}
 (${table_name}id, code, naam, codegerelateerdobject, statusobjectid, hyperlink, metingwaterstandid, metingklepofschuifstandid, metingafvoerid, metingstroomsnelheidid, metingwaterkwaliteitid, administratiefgebiedid, geometriepunt)
 VALUES
-(nextval('${table_name}_id_seq'), ?, ?, ?, ?, ?, ?, ?,?, ?,?,?, ST_GeomFromGML(?));</sql>
+(nextval('${table_name}_id_seq'), ?, ?, ?, ?, ?, ?, ?,?, ?,?,${administratiefgebiedid}, ST_GeomFromGML(?));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1004,9 +1004,6 @@ VALUES
       </argument>
       <argument>
         <name>metingwaterkwaliteit</name>
-      </argument>
-      <argument>
-        <name>administratiefgebied</name>
       </argument>
       <argument>
         <name>Point</name>

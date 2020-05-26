@@ -1111,7 +1111,7 @@
     <sql>INSERT INTO public.${table_name}
 (${table_name}id, code, naam, statusobjectid, hyperlink,  oppervlakte, lateraleknoopid, administratiefgebiedid, geometrievlak)
 VALUES
-(nextval('${table_name}_id_seq'),?, ?, ?, ?, ?, ?, ?, ST_GeomFromGML(?));</sql>
+(nextval('${table_name}_id_seq'),?, ?, ?, ?, ?, ?, ${administratiefgebiedid}, ST_GeomFromGML(?));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1135,9 +1135,6 @@ VALUES
       </argument>
       <argument>
         <name>lateraleknoopid</name>
-      </argument>
-      <argument>
-        <name>administratiefgebied</name>
       </argument>
       <argument>
         <name>multiPolygon</name>
@@ -1175,7 +1172,7 @@ VALUES
     <sql>INSERT INTO public.${table_name}
 (${table_name}id, code, naam, statusobjectid, hyperlink,  oppervlakte, lateraleknoopid, administratiefgebiedid, geometrievlak)
 VALUES
-(nextval('${table_name}_id_seq'),?, ?, ?, ?, ?, ?, ?, ST_Multi(ST_GeomFromGML(?)));</sql>
+(nextval('${table_name}_id_seq'),?, ?, ?, ?, ?, ?, ${administratiefgebiedid}, ST_Multi(ST_GeomFromGML(?)));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1199,9 +1196,6 @@ VALUES
       </argument>
       <argument>
         <name>lateraleknoopid</name>
-      </argument>
-      <argument>
-        <name>administratiefgebied</name>
       </argument>
       <argument>
         <name>polygon</name>
