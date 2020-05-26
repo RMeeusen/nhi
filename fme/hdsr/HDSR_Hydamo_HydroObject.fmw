@@ -1,0 +1,1814 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    Command-line to run this workspace:
+#        "C:\Program Files\FME\fme.exe" O:\Ondersteuning\MID\HYDAMO\HDSR\HDSR_Hydamo_HydroObject.fmw
+#              --SourceDataset_ORACLE_SPATIAL_3 "Raadpleger_IRISPRD"
+#              --DestDataset_GML2 "O:\Ondersteuning\MID\HYDAMO\HDSR\output\hydroobject.gml"
+#    
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BEGIN_PYTHON=""
+#!   BEGIN_TCL=""
+#!   CATEGORY=""
+#!   DESCRIPTION=""
+#!   DESTINATION="NONE"
+#!   DESTINATION_ROUTING_FILE=""
+#!   DOC_EXTENTS="4262.59 1959.11"
+#!   DOC_TOP_LEFT="-7623.55 1329.4"
+#!   END_PYTHON=""
+#!   END_TCL=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="18578"
+#!   FME_DOCUMENT_GUID="7695fe73-f93a-4dd6-b63d-c6704d48c9e9"
+#!   FME_DOCUMENT_PRIORGUID="08838a46-2e18-407e-a1ae-930c73bc4f0b,1d2e539a-2508-4dad-b6c7-13a46f4c8fcb,48eeca74-0d15-4395-b03a-e90e0adc64f0,a40304e3-7777-423c-bfd7-7f918b71ffb3,c10b125c-a808-4d41-8f0b-e327c343a9f5,26a7326a-763a-46ce-a5b3-0560693e9b5b,7667ffb6-286f-45ee-8133-76ea2d087862,d35c4025-a0a4-4600-80c5-6babdc0658a0,60757e08-4553-4acc-baa9-bb8b7b3baa07,9b50aa53-8943-4121-b1a7-367942547d14,3872aa3b-d9ab-4bee-b980-34ceb4ebe1be,2fa5167f-bd1a-4dc8-a382-c4faec4a055a,6f45aad8-ccf7-4c27-a81d-49be58027ced,06fd7c03-4578-492a-a95d-3f46ec7e58ee,be95f93f-f888-4939-94df-e8229a884a22,cfd8d3ae-126f-4f11-b0cf-74e6cb146e8c,9c71c69f-0e0d-4b5d-873b-fdb6123c3a61,b20ca070-066c-4439-a0ef-1c794c2fbb18,5a41d4d8-747e-491d-a9be-a2ebf3e867a3,6cc5737a-d504-4d35-91d4-90f8859c45ae,ae5fcfc3-8c6d-410d-bb73-20d9c6ed1a0c,5ee9aecc-1ad5-4393-9206-fe1e8bc095e7,ac5692aa-ea81-4fea-81c0-8ec7c89b9c64,ce88b47b-9e1a-40db-9d10-25ffe5c534ae,f9eff0b0-2b6f-4338-bd63-2c97a6ca36a0,a4a2b5fc-63ad-49eb-9406-26c7f8c5ad02,39331e19-ffc8-4c5d-9f8d-462255efeaf4,b86620f9-a0fd-4953-888d-0f3bae8dd99b,27951dc4-a760-49a0-bb0c-67eb28add887,5c03e94f-54a3-4990-af1b-94b1ae774676,b9aa3f5e-85d3-4503-98c8-bf247596ec56,203f5c55-a2d4-4a3e-a573-48d8a3119c24,d3f19567-0104-4a6d-a4f4-9e6c47c45532,9ca2a6f1-e7d8-4683-984b-c622e53ac933,b5720ab8-82ea-4d84-8fa5-3b701cde35cf,40686ef3-bd82-4e64-b763-03fe95e95581,873a2869-9bbc-4ff5-9d50-e4609b6dcf32,5c5d16c0-f283-4cd4-80a7-075928f29d27,ba256fa4-c35c-496e-8b24-8fa07b663b36,3c332535-603e-4524-adc1-a3f47deee431,a7755d70-ae64-4510-bd8d-369e397a02ce,3a955abd-6460-4d5c-b81c-33d9969bd188,766eb0c5-630e-4ced-851e-e7c411f97dfe,6a757c31-b897-4a5c-8695-b2d7ada6ce44,5dcc13c1-f558-40f6-ae50-7fa2ac0784a1,b0afaf32-17c9-4479-a661-33110ed25329,4515ee5e-3391-4104-8f9f-7715a9e6b7f8,a1a1f068-2573-4b17-b4d0-1d8f386cc3a5,dc50f949-4e63-4e5b-8a1f-b52b06ab7259,5fe25c16-9f89-4ab8-99e8-cf7ffa34e847,8527ff05-79ba-4629-bb7b-6dcb87589239,f3d5933b-c7e8-4104-9fb4-5cba4ff318c2,56bc0861-308b-4e22-9b83-96ad78ae2b59,7faed15d-7ac6-45df-b049-bc8869ce9311,780684ee-a097-415c-acb1-c4f85e44ae8a,c04d2d41-a083-4b05-affe-9bf305438faa"
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   FME_SERVER_SERVICES=""
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   HISTORY=""
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_BUILD="FME(R) 2018.1.1.1 (20181203 - Build 18578 - WIN64)"
+#!   LAST_SAVE_DATE="2019-10-23T16:11:58"
+#!   LOG_FILE=""
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOG_FEATURES="200"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="27"
+#!   REDIRECT_TERMINATORS="NONE"
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   SOURCE="NONE"
+#!   SOURCE_ROUTING_FILE=""
+#!   TERMINATE_REJECTED="NO"
+#!   TITLE=""
+#!   USAGE=""
+#!   USE_MARKDOWN=""
+#!   VIEW_POSITION="-7625.08 3284.41"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   ZOOM_SCALE="100"
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="ORACLE_SPATIAL"
+#!   DATASET="$(SourceDataset_ORACLE_SPATIAL_3)"
+#!   KEYWORD="ORACLE_SPATIAL_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE="oracle_geom_column &quot;&quot; oracle_sql_encoded &quot;&quot; oracle_where_clause_encoded &quot;&quot; oracle_envelope_min_x 0 oracle_envelope_min_y 0 oracle_envelope_max_x 0 oracle_envelope_max_y 0 oracle_mapinfo_symbology_style_column &quot;&quot;"
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_type char(50) multi_reader_full_id integer fme_text_string char(50) mif_brush_foreground integer geomedia_orient_k float oracle_primary_radius float geomedia_orient_j float mapinfo_pen_pattern integer mif_pen_pattern integer fme_color char(50) geomedia_text_font_size integer mapinfo_brush_background integer oracle_sdo_point.z float oracle_sdo_point.y float oracle_orientation float geomedia_justification integer oracle_srid char(50) oracle_rotation float fme_feature_type char(50) fme_primary_axis float mif_pen_width integer geomedia_text_string char(50) mapinfo_pen_color integer oracle_sdo_point.x float oracle_structured_geom char(50) geomedia_rtf_text_string char(50) oracle_radius float oracle_secondary_radius float geomedia_rotation float mapinfo_pen_width integer multi_reader_type char(50) mif_pen_color integer oracle_orient_i float fme_sweep_angle float fme_secondary_axis float oracle_orient_j float oracle_sweep_angle float fme_rotation float fme_geometry fme_char(50) mapinfo_brush_pattern integer geomedia_orient_i float oracle_start_angle float fme_fill_color char(50) fme_basename char(50) multi_reader_id integer mif_brush_background integer fme_text_size float geomedia_text_font char(50) fme_start_angle float geomedia_type char(50) mif_brush_pattern integer oracle_orient_k float multi_reader_keyword char(50) mapinfo_brush_foreground integer fme_dataset char(50) oracle_type char(50)"
+#!   DEFLINE_PARMS="&quot;GUI OPTIONAL NAMEDGROUP oracle_table_settings_group oracle_general_group%oracle_spatial_group%oracle_mapinfo_symbology_group Table&quot; &quot;&quot; &quot;GUI OPTIONAL NAMEDGROUP oracle_general_group oracle_where_clause_encoded%oracle_sql_encoded General&quot; &quot;&quot; &quot;GUI OPTIONAL NAMEDGROUP oracle_spatial_group oracle_geom_column%oracle_search_envelope_group Spatial&quot; &quot;&quot; &quot;GUI OPTIONAL DISCLOSUREGROUP oracle_mapinfo_symbology_group oracle_mapinfo_symbology_style_column MapInfo Symbology&quot; &quot;&quot; &quot;GUI OPTIONAL DISCLOSUREGROUP oracle_search_envelope_group oracle_envelope_min_x%oracle_envelope_min_y%oracle_envelope_max_x%oracle_envelope_max_y Search Envelope&quot; &quot;&quot; &quot;GUI OPTIONAL WHOLE_LINE TEXT oracle_geom_column Spatial Column&quot; &quot;&quot; &quot;GUI OPTIONAL WHOLE_LINE TEXT_EDIT_SQL_CFG oracle_sql_encoded MODE,SQL SELECT Statement&quot; &quot;&quot; &quot;GUI OPTIONAL WHOLE_LINE TEXT_EDIT_SQL_CFG oracle_where_clause_encoded MODE,WHERE WHERE Clause&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT oracle_envelope_min_x Minimum X&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT oracle_envelope_min_y Minimum Y&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT oracle_envelope_max_x Maximum X&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT oracle_envelope_max_y Maximum Y&quot; &quot;&quot; &quot;GUI OPTIONAL TEXT oracle_mapinfo_symbology_style_column Style Column&quot; &quot;&quot; "
+#!   ATTR_INDEX_TYPES="BTree Bitmap PrimaryKey Unique"
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="DATABASE"
+#!   GENERATE_FME_BUILD_NUM="17722"
+#!   COORDSYS=""
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="ORACLE_SPATIAL_IN_PERSISTENT_CONNECTION ORACLE_SPATIAL_IN_REMOVE_SCHEMA_QUALIFIER ORACLE_SPATIAL_IN_READ_3D_POLYGON_AS_FACE ORACLE_SPATIAL_IN_INTERACTION ORACLE_SPATIAL_IN_INTERACTION_RESULT ORACLE_SPATIAL_IN_CHUNK_SIZE ORACLE_SPATIAL_IN_BEGIN_SQL{0} ORACLE_SPATIAL_IN_END_SQL{0} ORACLE_SPATIAL_IN_HANDLE_MULTIPLE_SPATIAL_COLUMNS ORACLE_SPATIAL_IN_SHOW_SYSTEM_TABLES"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="ATTRIBUTE_READING"
+#!   VALUE="DEFLINE_ATTRS"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="Database"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="Table1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="Table"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="NETWORK_AUTHENTICATION"
+#!   VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="NETWORK_PROXY"
+#!   VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="PARAMS_TO_NOT_PROPAGATE_ON_INSPECT"
+#!   VALUE="BEGIN_SQL{0} END_SQL{0}"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="SUPPORTS_SCHEMA_IN_FEATURE_TYPE_NAME"
+#!   VALUE="YES"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="false"
+#!   ROLE="WRITER"
+#!   FORMAT="GML2"
+#!   DATASET="$(DestDataset_GML2)"
+#!   KEYWORD="GML2_1"
+#!   MULTI_GEOM_ALLOWED="true"
+#!   ATTR_MAX_LENGTH="60"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE="xml_type {FME_GEN_GEOMETRY}"
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_text_size xml_real64 fme_start_angle xml_real64 fme_type xml_char(50) xml_type xml_char(50) fme_rotation xml_real64 fme_basename xml_char(50) fme_geometry fme_char(50) fme_primary_axis xml_real64 fme_dataset xml_char(50) fme_fill_color xml_char(50) fme_feature_type xml_char(50) fme_color xml_char(50) fme_secondary_axis xml_real64 fme_text_string xml_char(50) fme_sweep_angle xml_real64"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS="[]= %~!@$&amp;#[()^?*&apos;+\\/&quot;:"
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE"
+#!   GENERATE_FME_BUILD_NUM="17722"
+#!   COORDSYS="EPSG:28992"
+#!   FANOUT_EXPRESSION="&lt;Unused&gt;"
+#!   FANOUT_GROUP="NO"
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="GML2_OUT_XSD_DOC GML2_OUT_TARGET_NS_PREFIX GML2_OUT_TARGET_NS_URI GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL GML2_OUT_OUTPUT_ENCODING GML2_OUT_USE_WFS_FEATURE_COLLECTION GML2_OUT_APPLY_STYLESHEET GML2_OUT_STYLESHEET_RESULT GML2_OUT_SUPPRESS_NULL_ATTRS GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS GML2_OUT_DOCUMENTS_TO_WRITE GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES GML2_OUT_MULTI_VALUE_SEPARATOR"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="gml file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE="application/xml"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the GML file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a name for the GML file"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="varchar2(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="raw(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="raw(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="nchar(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="nvarchar(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="blob"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="clob"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="nclob"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xmltype"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="binary_double"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="binary_float"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="integer"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="integer"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="smallint"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="smallint"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="smallint"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="timestamptz"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="timestamp"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="timestamp"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(8)"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(10,0)"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(19,0)"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(20,0)"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="clob"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_buffer"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_buffer"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_buffer"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_xml"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_datetime"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_date"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_time"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_int64"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_uint64"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_int32"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_uint32"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_int16"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_uint16"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_byte"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_ubyte"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_real32"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_real64"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_decimal(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_boolean"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(20)"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(8)"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(12)"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="GML2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_geometry"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="GML2"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_multipoint"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_point"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_multiline"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_area"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_multipoly"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_nil"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_circle"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_arc"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_rectangle"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_rectangle"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_collection"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_raster"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_solid"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_surface"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_point_cloud"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_multisolid"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_multisurface"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="oracle_nil"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="ORACLE_SPATIAL"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_no_geom"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_aggregate"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_text"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_line"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_surface"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_solid"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_mesh"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_raster"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_line"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_line"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="GML2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_no_geom"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="GML2"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="HYDROOBJECT"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER="BHREG"
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="144"
+#!   FEAT_GEOMTYPE="oracle_nil oracle_point oracle_line oracle_area oracle_multipoint oracle_multiline oracle_multipoly oracle_arc oracle_circle oracle_rectangle oracle_collection oracle_surface oracle_solid oracle_multisurface oracle_multisolid"
+#!   POSITION="-7564.2123750237506 2386.4004375043751"
+#!   BOUNDING_RECT="-7564.2123750237506 2386.4004375043751 811.38800000000003 71"
+#!   ORDER="500000000000007"
+#!   COLLAPSED="true"
+#!   KEYWORD="ORACLE_SPATIAL_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER="*"
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="number(38,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CODE" ATTR_TYPE="varchar2(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="NAAM" ATTR_TYPE="varchar2(250)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="STATUSOBJECT" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SOORTOPPWATERKWANTITEIT" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CATEGORIEOPPWATERLICHAAM" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PERSISTENTIE" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WS_OND_DROOG" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WS_ONDH_NAT" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WS_ONDH_BG" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WS_ZANDSLOOT" ATTR_TYPE="varchar2(1)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DOSSIERMAP" ATTR_TYPE="varchar2(15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IWS_W_WATPEIL" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IWS_W_WATBRREFP" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IWS_W_WATDIEPTE" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IWS_W_INSTHGTEL" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IWS_W_PLASBTALL" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IWS_W_BRPLASBL" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IWS_W_PLASBH_DL" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IWS_W_TALUDL" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IWS_W_BODBR" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IWS_W_BODHO" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WS_ONDERHOUDSMAAT" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WS_ONDERHOUDSDIEPTE" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IWS_W_TALUDR" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IWS_W_PLASBH_DR" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IWS_W_BRPLASBR" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IWS_W_PLASBTALR" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IWS_W_INSTHGTER" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTBEGINTIJD" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OBJECTEINDTIJD" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="TIJDSTIPREGISTRATIE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="EINDREGISTRATIE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="NAAMSPACE" ATTR_TYPE="varchar2(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LOKAALID" ATTR_TYPE="varchar2(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LVPUBLICATIEDATUM" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DETAILNIVEAUGEOMETRIE" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WS_ONDH_VAAR" ATTR_TYPE="varchar2(1)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WS_SCHOUW" ATTR_TYPE="varchar2(1)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WS_MODEL" ATTR_TYPE="varchar2(1)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OPMERKING" ATTR_TYPE="varchar2(500)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WS_MAAI" ATTR_TYPE="varchar2(1)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LENGTE" ATTR_TYPE="number(38,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="VISMIGRATIE" ATTR_TYPE="varchar2(1)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SE_ANNO_CAD_DATA" ATTR_TYPE="blob" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="oracle_envelope_max_x" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="oracle_envelope_max_y" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="oracle_envelope_min_x" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="oracle_envelope_min_y" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="oracle_general_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="oracle_geom_column" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="oracle_mapinfo_symbology_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="oracle_mapinfo_symbology_style_column" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="oracle_search_envelope_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="oracle_spatial_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="oracle_sql_encoded" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="oracle_table_settings_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="oracle_where_clause_encoded" PARM_VALUE="&lt;quote&gt;STATUSOBJECT&lt;quote&gt;=300"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="hydroobject"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="18"
+#!   FEAT_GEOMTYPE="All"
+#!   POSITION="-3997.6893124931244 2545.8089375893755"
+#!   BOUNDING_RECT="-3997.6893124931244 2545.8089375893755 -1 -1"
+#!   ORDER="500000000000061.13"
+#!   COLLAPSED="true"
+#!   KEYWORD="GML2_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="0"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="code" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="naam" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="statusobjectcode" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="objectbegintijd" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="objecteindtijd" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hyperlink" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidstypecode" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidswaardelaag" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ruwheidswaardehoog" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="administratiefgebiedcode" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <WRITER_DATASETS>
+#! <DATASET 
+#!   NAME="GML2_1"
+#!   OVERRIDE="-GML2_1_DATASET"
+#!   DATASET="GML2_1/hydroobject.gml"
+#! />
+#! </WRITER_DATASETS>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI NAMED_DB_CONNECTION_ENCODED SourceDataset_ORACLE_SPATIAL_3 FMT:ORACLE_SPATIAL%FAMILY:Oracle Connection:"
+#!   DEFAULT_VALUE="Raadpleger_IRISPRD"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI FILENAME DestDataset_GML2 GML_Files(*.xml;*.gml;*.gz)|*.xml;*.gml;*.gz|GML_Files(*.xml)|*.xml|GML_Files(*.gml)|*.gml|Compressed_GML_Files(*.gz)|*.gz|All_Files|* Destination Geography Markup Language (GML) v2.1.2 File:"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)output\hydroobject.gml"
+#!   IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="93"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px;&quot;&gt;HDSR-deel: Inger de Groot:11-10-2018&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-7386.0500000000002 3288.5100000000002"
+#!   TOP_LEFT="-7386.0500000000002 3288.5100000000002"
+#!   BOTTOM_RIGHT="-5231.0500000000002 3224.5100000000002"
+#!   BOUNDING_RECT="-7386.0500000000002 3288.5100000000002 2155 64"
+#!   ORDER="500000000000000"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.78431372549019607,0.19215686274509805"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="113"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;In DAMO liggen al verschillende knips in de watergangen (samenkomst, duiker, sifon). Dit in tegenstelling tot de oude database. Voor ons zijn de knips t.h.v. de sifons niet gewenst, hier moeten de watergangen geplakt worden.&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Moet dat hier ook?&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-6226.6199999999999 1515.6500000000001"
+#!   TOP_LEFT="-6226.6199999999999 1515.6500000000001"
+#!   BOTTOM_RIGHT="-4741.5799999999999 1329.3980000000001"
+#!   BOUNDING_RECT="-6226.6199999999999 1515.6500000000001 1485.04 186.25200000000001"
+#!   ORDER="500000000000000"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.78431372549019607,0.19215686274509805"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="223"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;aaannames voor ruwheid.&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Laag: winter  (35/30)&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Hoog : zomer (25/15)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-4729.9624062240628 3257.1100000000001"
+#!   TOP_LEFT="-4729.9624062240628 3257.1100000000001"
+#!   BOTTOM_RIGHT="-4730.9624062240628 3258.1100000000001"
+#!   BOUNDING_RECT="-4729.9624062240628 3257.1100000000001 -1 -1"
+#!   ORDER="500000000000000"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.78431372549019607,0.19215686274509805"
+#!   SIZE_POLICY="8"
+#!   ANCHORED_NODE="217"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! <BOOKMARK
+#!   IDENTIFIER="182"
+#!   NAME="HDSR"
+#!   DESCRIPTION="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Inlezen hydro-objecten met status gerealiseerd/in bedrijf/... (statusobject =300) &lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Eventueel álle objecten inlezen (dus ook planvorming, dan codes netjes omzetten naar 1,2,3,4 volgens hydamo)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   TOP_LEFT="-7623.5523750237508 2812.5281252812529"
+#!   ORDER="500000000000000"
+#!   BOTTOM_RIGHT="-6559.8323750237505 2129.710437504375"
+#!   BOUNDING_RECT="-7623.5523750237508 2812.5281252812529 1063.72 682.81768777687785"
+#!   STICKY="true"
+#!   COLOUR="0.10196078431372549,0.36470588235294116,0.40392156862745099"
+#!   CONTENTS="144 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="202"
+#!   NAME="output gecontroleerd tegen xsd schema"
+#!   DESCRIPTION="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   TOP_LEFT="-4172.5199374993754 2783.1900000000001"
+#!   ORDER="500000000000008.13"
+#!   BOTTOM_RIGHT="-3360.9669374993755 2167.6790000000001"
+#!   BOUNDING_RECT="-4172.5199374993754 2783.1900000000001 811.553 615.51099999999997"
+#!   STICKY="true"
+#!   COLOUR="0.99215686274509807,0.47450980392156861,0.97647058823529409"
+#!   CONTENTS="18 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="198"
+#!   NAME="aanmaken velden Hydamo en vullen "
+#!   DESCRIPTION="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;LET op! Hier worden aannames voor ruwheid gedaan.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   TOP_LEFT="-5425.1524062240624 2783.1900000000001"
+#!   ORDER="500000000000000"
+#!   BOTTOM_RIGHT="-4264.1024062240622 2051.2060000000001"
+#!   BOUNDING_RECT="-5425.1524062240624 2783.1900000000001 1161.05 731.98400000000004"
+#!   STICKY="true"
+#!   COLOUR="0.97647058823529409,0.40000000000000002,0.25490196078431371"
+#!   CONTENTS="24 217 237 23 228 183 238 "
+#! >
+#! </BOOKMARK>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="183"
+#!   TYPE="AttributeKeeper"
+#!   VERSION="3"
+#!   POSITION="-5343.8970624706253 2630.6999999999998"
+#!   BOUNDING_RECT="-5343.8970624706253 2630.6999999999998 -1 -1"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18578"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="CODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="NAAM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="STATUSOBJECT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CATEGORIEOPPWATERLICHAAM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OBJECTBEGINTIJD" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OBJECTEINDTIJD" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="KEEP_ATTRS" PARM_VALUE="OBJECTEINDTIJD,STATUSOBJECT,OBJECTBEGINTIJD,NAAM,CATEGORIEOPPWATERLICHAAM,CODE"/>
+#!     <XFORM_PARM PARM_NAME="KEEP_LIST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeKeeper_3"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="217"
+#!   TYPE="AttributeCreator"
+#!   VERSION="8"
+#!   POSITION="-4729.9624062240628 2630.6999999999998"
+#!   BOUNDING_RECT="-4729.9624062240628 2630.6999999999998 -1 -1"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18578"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="hyperlink" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheidstypecode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheidswaardelaag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheidswaardehoog" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebiedcode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="naam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusobjectcode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="objectbegintijd" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="objecteindtijd" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CATEGORIEOPPWATERLICHAAM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; hyperlink SET_TO   ruwheidstypecode SET_TO 4  ruwheidswaardelaag SET_TO &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;30&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;CATEGORIEOPPWATERLICHAAM&lt;closeparen&gt; = 1&apos;35&apos;FME_NUM_CONDITIONS2___&quot;  ruwheidswaardehoog SET_TO &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;15&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;CATEGORIEOPPWATERLICHAAM&lt;closeparen&gt; = 1&apos;25&apos;FME_NUM_CONDITIONS2___&quot;  administratiefgebiedcode SET_TO 17"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_7"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="229"
+#!   TYPE="ArcSDEGridSnapper"
+#!   VERSION="2"
+#!   POSITION="-6498.4977187771892 2386.4004375043746"
+#!   BOUNDING_RECT="-6498.4977187771892 2386.4004375043746 -1 -1"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="17722"
+#! >
+#!     <OUTPUT_FEAT NAME="SNAPPED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="NAAM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="STATUSOBJECT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SOORTOPPWATERKWANTITEIT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CATEGORIEOPPWATERLICHAAM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PERSISTENTIE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_OND_DROOG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ONDH_NAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ONDH_BG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ZANDSLOOT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="DOSSIERMAP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_WATPEIL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_WATBRREFP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_WATDIEPTE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_INSTHGTEL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_PLASBTALL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_BRPLASBL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_PLASBH_DL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_TALUDL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_BODBR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_BODHO" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ONDERHOUDSMAAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ONDERHOUDSDIEPTE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_TALUDR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_PLASBH_DR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_BRPLASBR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_PLASBTALR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_INSTHGTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OBJECTBEGINTIJD" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OBJECTEINDTIJD" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="TIJDSTIPREGISTRATIE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="EINDREGISTRATIE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="NAAMSPACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LOKAALID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LVPUBLICATIEDATUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="DETAILNIVEAUGEOMETRIE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ONDH_VAAR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_SCHOUW" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_MODEL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OPMERKING" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_MAAI" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LENGTE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="VISMIGRATIE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SE_ANNO_CAD_DATA" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_ArcSDE_Duplicate{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_ArcSDE_Error" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="OUTPUT_INT" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PRECISION_DISPLAY" PARM_VALUE="High precision (53 bit)"/>
+#!     <XFORM_PARM PARM_NAME="SCALE" PARM_VALUE="100"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ArcSDEGridSnapper"/>
+#!     <XFORM_PARM PARM_NAME="XMIN" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="YMIN" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="ZMIN" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="ZSCALE" PARM_VALUE="1"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="228"
+#!   TYPE="AttributeRenamer"
+#!   VERSION="4"
+#!   POSITION="-5343.8970624706253 2328.148281482815"
+#!   BOUNDING_RECT="-5343.8970624706253 2328.148281482815 -1 -1"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="17722"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="naam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusobjectcode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="objectbegintijd" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="objecteindtijd" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CATEGORIEOPPWATERLICHAAM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="CODE code RENAME_SET_DEFAULT  NAAM naam RENAME_SET_DEFAULT  STATUSOBJECT statusobjectcode RENAME_SET_DEFAULT  OBJECTBEGINTIJD objectbegintijd RENAME_SET_DEFAULT  OBJECTEINDTIJD objecteindtijd RENAME_SET_DEFAULT "/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeRenamer_3"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="24"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="-4729.9624062240628 2328.148281482815"
+#!   BOUNDING_RECT="-4729.9624062240628 2328.148281482815 -1 -1"
+#!   ORDER="500000000000004"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18578"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="naam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusobjectcode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="objectbegintijd" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="objecteindtijd" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hyperlink" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheidstypecode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheidswaardelaag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheidswaardehoog" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebiedcode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="code code  NO_OP naam naam  NO_OP statusobjectcode statusobjectcode &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;&lt;at&gt;Evaluate&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;statusobjectcode&lt;closeparen&gt;&lt;solidus&gt;100&lt;closeparen&gt;&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusobjectcode&lt;closeparen&gt; = 9900&apos;98&apos;FME_NUM_CONDITIONS2___&quot; SET_TO objectbegintijd objectbegintijd  NO_OP objecteindtijd objecteindtijd  NO_OP hyperlink hyperlink  NO_OP ruwheidstypecode ruwheidstypecode  NO_OP ruwheidswaardelaag ruwheidswaardelaag  NO_OP ruwheidswaardehoog ruwheidswaardehoog  NO_OP administratiefgebiedcode administratiefgebiedcode  NO_OP CATEGORIEOPPWATERLICHAAM CATEGORIEOPPWATERLICHAAM  REMOVE"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="25"
+#!   TYPE="Inspector"
+#!   VERSION="5"
+#!   POSITION="-3997.6893124931244 1714.1178750787503"
+#!   BOUNDING_RECT="-3997.6893124931244 1714.1178750787503 -1 -1"
+#!   ORDER="500000000000005"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18578"
+#! >
+#!     <XFORM_PARM PARM_NAME="AREA_COLOR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PEN_COLOR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="POINTCLOUD_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RASTER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RASTER_NUM_COLS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_NUM_ROWS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_START_COL" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_START_ROW" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_VISUALIZATION_OPTION" PARM_VALUE="No Reduction"/>
+#!     <XFORM_PARM PARM_NAME="TACKATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="THINNER_INTERVAL" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="THINNER_MAX_NUM_POINTS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="THINNER_TYPE_DISPLAY" PARM_VALUE="No Thinning"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="VECTOR_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager_Output"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="22"
+#!   TYPE="Tester"
+#!   VERSION="2"
+#!   POSITION="-5953.1845318453197 2386.4004375043746"
+#!   BOUNDING_RECT="-5953.1845318453197 2386.4004375043746 -1 -1"
+#!   ORDER="500000000000055.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18578"
+#! >
+#!     <OUTPUT_FEAT NAME="PASSED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="NAAM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="STATUSOBJECT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SOORTOPPWATERKWANTITEIT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CATEGORIEOPPWATERLICHAAM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="PERSISTENTIE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_OND_DROOG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ONDH_NAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ONDH_BG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ZANDSLOOT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="DOSSIERMAP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_WATPEIL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_WATBRREFP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_WATDIEPTE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_INSTHGTEL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_PLASBTALL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_BRPLASBL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_PLASBH_DL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_TALUDL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_BODBR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_BODHO" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ONDERHOUDSMAAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ONDERHOUDSDIEPTE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_TALUDR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_PLASBH_DR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_BRPLASBR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_PLASBTALR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_INSTHGTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OBJECTBEGINTIJD" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OBJECTEINDTIJD" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="TIJDSTIPREGISTRATIE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="EINDREGISTRATIE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="NAAMSPACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LOKAALID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LVPUBLICATIEDATUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="DETAILNIVEAUGEOMETRIE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ONDH_VAAR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_SCHOUW" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_MODEL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="OPMERKING" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WS_MAAI" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LENGTE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="VISMIGRATIE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SE_ANNO_CAD_DATA" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_ArcSDE_Duplicate{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_ArcSDE_Error" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="FAILED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="CODE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="NAAM" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="STATUSOBJECT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="SOORTOPPWATERKWANTITEIT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="CATEGORIEOPPWATERLICHAAM" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="PERSISTENTIE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="WS_OND_DROOG" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ONDH_NAT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ONDH_BG" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ZANDSLOOT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="DOSSIERMAP" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_WATPEIL" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_WATBRREFP" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_WATDIEPTE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_INSTHGTEL" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_PLASBTALL" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_BRPLASBL" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_PLASBH_DL" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_TALUDL" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_BODBR" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_BODHO" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ONDERHOUDSMAAT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ONDERHOUDSDIEPTE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_TALUDR" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_PLASBH_DR" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_BRPLASBR" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_PLASBTALR" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IWS_W_INSTHGTER" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="OBJECTBEGINTIJD" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="OBJECTEINDTIJD" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="TIJDSTIPREGISTRATIE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="EINDREGISTRATIE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="NAAMSPACE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LOKAALID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LVPUBLICATIEDATUM" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="DETAILNIVEAUGEOMETRIE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="WS_ONDH_VAAR" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="WS_SCHOUW" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="WS_MODEL" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="OPMERKING" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="WS_MAAI" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LENGTE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="VISMIGRATIE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="SE_ANNO_CAD_DATA" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_ArcSDE_Duplicate{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_ArcSDE_Error" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="BOOL_OP" PARM_VALUE="OR"/>
+#!     <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST &lt;at&gt;Value&lt;openparen&gt;CATEGORIEOPPWATERLICHAAM&lt;closeparen&gt; NOT_= 99"/>
+#!     <XFORM_PARM PARM_NAME="TEST_CLAUSE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Tester"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="230"
+#!   SOURCE_NODE="144"
+#!   TARGET_NODE="229"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="28"
+#!   SOURCE_NODE="22"
+#!   TARGET_NODE="183"
+#!   SOURCE_PORT_DESC="fo 0 PASSED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="19"
+#!   SOURCE_NODE="24"
+#!   TARGET_NODE="18"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="26"
+#!   SOURCE_NODE="24"
+#!   TARGET_NODE="25"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="1"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="237"
+#!   SOURCE_NODE="183"
+#!   TARGET_NODE="228"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="23"
+#!   SOURCE_NODE="217"
+#!   TARGET_NODE="24"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="238"
+#!   SOURCE_NODE="228"
+#!   TARGET_NODE="217"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="27"
+#!   SOURCE_NODE="229"
+#!   TARGET_NODE="22"
+#!   SOURCE_PORT_DESC="fo 0 SNAPPED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+
+FME_PYTHON_VERSION 27
+GUI IGNORE SourceDataset_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_PERSISTENT_CONNECTION_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_SHOW_SYSTEM_TABLES_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_REMOVE_SCHEMA_QUALIFIER_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_READ_3D_POLYGON_AS_FACE_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_WHERE_CLAUSE_WWJD_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_EXPOSE_ATTRS_GROUP_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_MINX_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_MINY_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_MAXX_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_MAXY_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_CLIP_TO_ENVELOPE_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_INTERACTION_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_INTERACTION_RESULT_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_ORACLE_OBJECT_RDR_ADV_PARA_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_CHUNK_SIZE_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_BEGIN_SQL{0}_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_END_SQL{0}_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_HANDLE_MULTIPLE_SPATIAL_COLUMNS_ORACLE_SPATIAL_1,ORACLE_SPATIAL_IN_WORKSPACE_ORACLE_SPATIAL_1,DestDataset_GML2_1,_OUT_SCHEMA_MODE_GML2_1,GML2_OUT_ADVANCED_GML2_1,GML2_OUT_XSD_DOC_GML2_1,GML2_OUT_TARGET_NS_PREFIX_GML2_1,GML2_OUT_TARGET_NS_URI_GML2_1,GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL_GML2_1,GML2_OUT_OUTPUT_ENCODING_GML2_1,GML2_OUT_USE_WFS_FEATURE_COLLECTION_GML2_1,GML2_OUT_APPLY_STYLESHEET_GML2_1,GML2_OUT_STYLESHEET_RESULT_GML2_1,GML2_OUT_SUPPRESS_NULL_ATTRS_GML2_1,GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS_GML2_1,GML2_OUT_DOCUMENTS_TO_WRITE_GML2_1,GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR_GML2_1,GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES_GML2_1,GML2_OUT_MULTI_VALUE_SEPARATOR_GML2_1
+DEFAULT_MACRO SourceDataset_ORACLE_SPATIAL_3 Raadpleger_IRISPRD
+GUI NAMED_DB_CONNECTION_ENCODED SourceDataset_ORACLE_SPATIAL_3 FMT:ORACLE_SPATIAL%FAMILY:Oracle Connection:
+DEFAULT_MACRO DestDataset_GML2 $(FME_MF_DIR)output\hydroobject.gml
+GUI FILENAME DestDataset_GML2 GML_Files(*.xml;*.gml;*.gz)|*.xml;*.gml;*.gz|GML_Files(*.xml)|*.xml|GML_Files(*.gml)|*.gml|Compressed_GML_Files(*.gz)|*.gz|All_Files|* Destination Geography Markup Language (GML) v2.1.2 File:
+INCLUDE [ if {{$(SourceDataset_ORACLE_SPATIAL_3)} == {}} { puts_real {Parameter 'SourceDataset_ORACLE_SPATIAL_3' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(DestDataset_GML2)} == {}} { puts_real {Parameter 'DestDataset_GML2' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+MULTI_READER_TYPE{0} ORACLE_SPATIAL
+MULTI_READER_KEYWORD{0} ORACLE_SPATIAL_1
+MULTI_READER_GEN_DIRECTIVES{0} WORKSPACE,,USE_SEARCH_ENVELOPE,NO,FME_CONNECTION_GROUP,,NAMED_CONNECTION,RAADPLEGER<lt>at<gt>IRISPRD,INTERACTION_RESULT,<space>=<space><apos>TRUE<apos>,BEGIN_SQL<opencurly>0<closecurly>,,PERSISTENT_CONNECTION,YES,HANDLE_MULTIPLE_SPATIAL_COLUMNS,NO,MAPINFO_SYMBOLOGY_STYLE_COLUMN,,SERVER_TYPE,ORACLE8i,SEARCH_ENVELOPE_COORDINATE_SYSTEM,,QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,Yes,SEARCH_ENVELOPE_MAXX,0,CLIP_TO_ENVELOPE,NO,EXPOSE_ATTRS_GROUP,,TABLELIST,BHREG.HYDROOBJECT,READ_3D_POLYGON_AS_FACE,NO,_MERGE_SCHEMAS,YES,WHERE_CLAUSE_WWJD,,ORACLE_OBJECT_RDR_ADV_PARA,,USE_UNIFIED_DATE_ATTRS,YES,MAPINFO_SYMBOLOGY_INDEX_COLUMN,,SEARCH_ENVELOPE_MINY,0,END_SQL<opencurly>0<closecurly>,,SHOW_SYSTEM_TABLES,NO,SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MAXY,0,REMOVE_SCHEMA_QUALIFIER,NO,ORACLE_SPATIAL_EXPOSE_FORMAT_ATTRS,,INTERACTION,ANYINTERACT,PARSE_MAPINFO_SYMBOLOGY,NO,CHUNK_SIZE,200
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} GML2
+MULTI_WRITER_KEYWORD{0} GML2_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "ORACLE_SPATIAL_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER ORACLE_SPATIAL ORACLE_SPATIAL_1
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_ORACLE_SPATIAL_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER ORACLE_SPATIAL ORACLE_SPATIAL_1
+DEFAULT_MACRO SourceDataset_ORACLE_SPATIAL_1 $(SourceDataset_ORACLE_SPATIAL_3)
+GUI NAMED_DB_CONNECTION_ENCODED SourceDataset_ORACLE_SPATIAL_1 FMT:ORACLE_SPATIAL Connection:
+ORACLE_SPATIAL_1_SERVER_TYPE ORACLE8i
+DEFAULT_MACRO ORACLE_SPATIAL_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_ORACLE_SPATIAL_1 Yes
+ORACLE_SPATIAL_1_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS "$(ORACLE_SPATIAL_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_ORACLE_SPATIAL_1)"
+# ==============================================================================
+DEFAULT_MACRO ORACLE_SPATIAL_IN_WORKSPACE_ORACLE_SPATIAL_1 
+ORACLE_SPATIAL_1_WORKSPACE "$(ORACLE_SPATIAL_IN_WORKSPACE_ORACLE_SPATIAL_1)"
+DEFAULT_MACRO ORACLE_SPATIAL_IN_PERSISTENT_CONNECTION_ORACLE_SPATIAL_1 YES
+ORACLE_SPATIAL_1_PERSISTENT_CONNECTION "$(ORACLE_SPATIAL_IN_PERSISTENT_CONNECTION_ORACLE_SPATIAL_1)"
+GUI OPTIONAL CHECKBOX ORACLE_SPATIAL_IN_PERSISTENT_CONNECTION_ORACLE_SPATIAL_1 YES%NO Persistent Connection
+DEFAULT_MACRO ORACLE_SPATIAL_IN_SHOW_SYSTEM_TABLES_ORACLE_SPATIAL_1 NO
+ORACLE_SPATIAL_1_SHOW_SYSTEM_TABLES "$(ORACLE_SPATIAL_IN_SHOW_SYSTEM_TABLES_ORACLE_SPATIAL_1)"
+GUI OPTIONAL CHECKBOX ORACLE_SPATIAL_IN_SHOW_SYSTEM_TABLES_ORACLE_SPATIAL_1 YES%NO Include System Tables
+# ===========================================================================
+# ===========================================================================
+DEFAULT_MACRO ORACLE_SPATIAL_IN_REMOVE_SCHEMA_QUALIFIER_ORACLE_SPATIAL_1 NO
+ORACLE_SPATIAL_1_REMOVE_SCHEMA_QUALIFIER "$(ORACLE_SPATIAL_IN_REMOVE_SCHEMA_QUALIFIER_ORACLE_SPATIAL_1)"
+GUI OPTIONAL CHECKBOX ORACLE_SPATIAL_IN_REMOVE_SCHEMA_QUALIFIER_ORACLE_SPATIAL_1 YES%NO Remove Table Qualifier
+#-DEFAULT_VALUE HOMOGENEOUS_GEOMETRY YES
+#-GUI CHECKBOX HOMOGENEOUS_GEOMETRY YES%NO Homogeneous Geometry
+# ===========================================================================
+DEFAULT_MACRO ORACLE_SPATIAL_IN_READ_3D_POLYGON_AS_FACE_ORACLE_SPATIAL_1 NO
+ORACLE_SPATIAL_1_READ_3D_POLYGON_AS_FACE "$(ORACLE_SPATIAL_IN_READ_3D_POLYGON_AS_FACE_ORACLE_SPATIAL_1)"
+GUI OPTIONAL CHECKBOX ORACLE_SPATIAL_IN_READ_3D_POLYGON_AS_FACE_ORACLE_SPATIAL_1 YES%NO Read 3D Polygons as Faces
+# ===========================================================================
+DEFAULT_MACRO ORACLE_SPATIAL_IN_WHERE_CLAUSE_WWJD_ORACLE_SPATIAL_1 STATUSOBJECT<space>=<space>300
+ORACLE_SPATIAL_1_WHERE_CLAUSE_WWJD "$(ORACLE_SPATIAL_IN_WHERE_CLAUSE_WWJD_ORACLE_SPATIAL_1)"
+GUI OPTIONAL TEXT_EDIT_SQL_CFG ORACLE_SPATIAL_IN_WHERE_CLAUSE_WWJD_ORACLE_SPATIAL_1 MODE,WHERE;FORMAT,ORACLE_SPATIAL WHERE Clause:
+# ============================================================================
+DEFAULT_MACRO ORACLE_SPATIAL_IN_MAPINFO_SYMBOLOGY_STYLE_COLUMN_ORACLE_SPATIAL_1 
+ORACLE_SPATIAL_1_MAPINFO_SYMBOLOGY_STYLE_COLUMN "$(ORACLE_SPATIAL_IN_MAPINFO_SYMBOLOGY_STYLE_COLUMN_ORACLE_SPATIAL_1)"
+# ============================================================================
+DEFAULT_MACRO ORACLE_SPATIAL_IN_MAPINFO_SYMBOLOGY_INDEX_COLUMN_ORACLE_SPATIAL_1 
+ORACLE_SPATIAL_1_MAPINFO_SYMBOLOGY_INDEX_COLUMN "$(ORACLE_SPATIAL_IN_MAPINFO_SYMBOLOGY_INDEX_COLUMN_ORACLE_SPATIAL_1)"
+# ============================================================================
+# bounding box with optional clipping
+DEFAULT_MACRO ORACLE_SPATIAL_IN_EXPOSE_ATTRS_GROUP_ORACLE_SPATIAL_1 
+ORACLE_SPATIAL_1_EXPOSE_ATTRS_GROUP "$(ORACLE_SPATIAL_IN_EXPOSE_ATTRS_GROUP_ORACLE_SPATIAL_1)"
+GUI OPTIONAL DISCLOSUREGROUP ORACLE_SPATIAL_IN_EXPOSE_ATTRS_GROUP_ORACLE_SPATIAL_1 ORACLE_SPATIAL_IN_ORACLE_SPATIAL_EXPOSE_FORMAT_ATTRS Schema Attributes
+# Include this file in source setting section to add native search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_MINX_ORACLE_SPATIAL_1 0
+ORACLE_SPATIAL_1_SEARCH_ENVELOPE "$(ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_MINX_ORACLE_SPATIAL_1)"
+GUI OPTIONAL FLOAT ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_MINX_ORACLE_SPATIAL_1 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_MINY_ORACLE_SPATIAL_1 0
+ORACLE_SPATIAL_1_SEARCH_ENVELOPE "$(ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_MINY_ORACLE_SPATIAL_1)"
+GUI OPTIONAL FLOAT ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_MINY_ORACLE_SPATIAL_1 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_MAXX_ORACLE_SPATIAL_1 0
+ORACLE_SPATIAL_1_SEARCH_ENVELOPE "$(ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_MAXX_ORACLE_SPATIAL_1)"
+GUI OPTIONAL FLOAT ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_MAXX_ORACLE_SPATIAL_1 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_MAXY_ORACLE_SPATIAL_1 0
+ORACLE_SPATIAL_1_SEARCH_ENVELOPE "$(ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_MAXY_ORACLE_SPATIAL_1)"
+GUI OPTIONAL FLOAT ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_MAXY_ORACLE_SPATIAL_1 Maximum Y:
+# ===========================================================================
+DEFAULT_MACRO ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_ORACLE_SPATIAL_1 
+ORACLE_SPATIAL_1_SEARCH_ENVELOPE "$(ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_ORACLE_SPATIAL_1)"
+GUI OPTIONAL COORDSYS ORACLE_SPATIAL_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_ORACLE_SPATIAL_1 Search Envelope Coordinate System:
+# ===========================================================================
+DEFAULT_MACRO ORACLE_SPATIAL_IN_CLIP_TO_ENVELOPE_ORACLE_SPATIAL_1 NO
+ORACLE_SPATIAL_1_CLIP_TO_ENVELOPE "$(ORACLE_SPATIAL_IN_CLIP_TO_ENVELOPE_ORACLE_SPATIAL_1)"
+GUI OPTIONAL CHECKBOX ORACLE_SPATIAL_IN_CLIP_TO_ENVELOPE_ORACLE_SPATIAL_1 YES%NO Clip to Search Envelope
+DEFAULT_MACRO ORACLE_SPATIAL_IN_INTERACTION_ORACLE_SPATIAL_1 ANYINTERACT
+ORACLE_SPATIAL_1_INTERACTION "$(ORACLE_SPATIAL_IN_INTERACTION_ORACLE_SPATIAL_1)"
+GUI CHOICE ORACLE_SPATIAL_IN_INTERACTION_ORACLE_SPATIAL_1 ANYINTERACT%CONTAINS%COVEREDBY%COVERS%DISJOINT%EQUAL%INSIDE%OVERLAPBDYDISJOINT%OVERLAPBDYINTERSECT%TOUCH Relationship to Search Envelope
+DEFAULT_MACRO ORACLE_SPATIAL_IN_INTERACTION_RESULT_ORACLE_SPATIAL_1 = 'TRUE'
+ORACLE_SPATIAL_1_INTERACTION_RESULT "$(ORACLE_SPATIAL_IN_INTERACTION_RESULT_ORACLE_SPATIAL_1)"
+GUI TEXT ORACLE_SPATIAL_IN_INTERACTION_RESULT_ORACLE_SPATIAL_1 Relationship Result Test Clause
+DEFAULT_MACRO ORACLE_SPATIAL_IN_ORACLE_OBJECT_RDR_ADV_PARA_ORACLE_SPATIAL_1 
+GUI OPTIONAL DISCLOSUREGROUP ORACLE_SPATIAL_IN_ORACLE_OBJECT_RDR_ADV_PARA_ORACLE_SPATIAL_1 ORACLE_SPATIAL_IN_CHUNK_SIZE_ORACLE_SPATIAL_1%ORACLE_SPATIAL_IN_BEGIN_SQL{0}_ORACLE_SPATIAL_1%ORACLE_SPATIAL_IN_END_SQL{0}_ORACLE_SPATIAL_1%ORACLE_SPATIAL_IN_HANDLE_MULTIPLE_SPATIAL_COLUMNS_ORACLE_SPATIAL_1 Advanced
+# ========================================================================
+# The following defines how many rows of data are read from the database
+# at a time. You could prompt for it by uncommenting the relevant GUI
+# lines.
+DEFAULT_MACRO ORACLE_SPATIAL_IN_CHUNK_SIZE_ORACLE_SPATIAL_1 200
+ORACLE_SPATIAL_1_CHUNK_SIZE "$(ORACLE_SPATIAL_IN_CHUNK_SIZE_ORACLE_SPATIAL_1)"
+GUI INTEGER ORACLE_SPATIAL_IN_CHUNK_SIZE_ORACLE_SPATIAL_1 Bulk Read Size:
+# ============================================================================
+# The following specifies an SQL command to execute before opening the first
+# ORACLE table.
+DEFAULT_MACRO ORACLE_SPATIAL_IN_BEGIN_SQL{0}_ORACLE_SPATIAL_1 
+ORACLE_SPATIAL_1_BEGIN_SQL{0} "$(ORACLE_SPATIAL_IN_BEGIN_SQL{0}_ORACLE_SPATIAL_1)"
+GUI OPTIONAL TEXT_EDIT_SQL ORACLE_SPATIAL_IN_BEGIN_SQL{0}_ORACLE_SPATIAL_1 SQL To Run Before Read
+# ============================================================================
+# The following specifies an SQL command to execute after closing all the
+# ORACLE tables.
+DEFAULT_MACRO ORACLE_SPATIAL_IN_END_SQL{0}_ORACLE_SPATIAL_1 
+ORACLE_SPATIAL_1_END_SQL{0} "$(ORACLE_SPATIAL_IN_END_SQL{0}_ORACLE_SPATIAL_1)"
+GUI OPTIONAL TEXT_EDIT_SQL ORACLE_SPATIAL_IN_END_SQL{0}_ORACLE_SPATIAL_1 SQL To Run After Read
+# ============================================================================
+# The following specifies whether to maintain multiple geometries or not.
+# If set to YES, the Multiple Geometries will be read into an aggregate
+# If NO, the default behavior of selecting one geometry will occur
+DEFAULT_MACRO ORACLE_SPATIAL_IN_HANDLE_MULTIPLE_SPATIAL_COLUMNS_ORACLE_SPATIAL_1 NO
+ORACLE_SPATIAL_1_HANDLE_MULTIPLE_SPATIAL_COLUMNS "$(ORACLE_SPATIAL_IN_HANDLE_MULTIPLE_SPATIAL_COLUMNS_ORACLE_SPATIAL_1)"
+GUI CHOICE ORACLE_SPATIAL_IN_HANDLE_MULTIPLE_SPATIAL_COLUMNS_ORACLE_SPATIAL_1 YES%NO Handle Multiple Spatial Columns:
+# ========================================================================
+# The following specifies whether we want to use unified date attributes,
+# where the date and time are read into one attribute, or whether we want
+# to use split date attributes, where two attributes are produced, one with
+# only the date, and another with both the date and time.
+#
+# The default value of yes should not be changed.
+DEFAULT_MACRO ORACLE_SPATIAL_IN_USE_UNIFIED_DATE_ATTRS_ORACLE_SPATIAL_1 YES
+ORACLE_SPATIAL_1_USE_UNIFIED_DATE_ATTRS "$(ORACLE_SPATIAL_IN_USE_UNIFIED_DATE_ATTRS_ORACLE_SPATIAL_1)"
+# ===========================================================================
+DEFAULT_MACRO ORACLE_SPATIAL_IN_ATTRIBUTE_READING_ORACLE_SPATIAL_1 DEFLINE_ATTRS
+ORACLE_SPATIAL_1_ATTRIBUTE_READING "$(ORACLE_SPATIAL_IN_ATTRIBUTE_READING_ORACLE_SPATIAL_1)"
+# ========================================================================
+# The following states whether the Oracle reader should return geometry
+# in a way faithful to how it is encoded in the database. If it is set
+# to yes, the geometries returned will be much more complex, including
+# things like aggregates.
+#__
+#No longer needed in Rich Geometry
+#GUI CHOICE _ORACLE_SPATIAL_StructuredGeom yes%no Complex (Structured) Geometries:
+DEFAULT_MACRO _ORACLE_SPATIAL_StructuredGeom_ORACLE_SPATIAL_1 no
+ORACLE_SPATIAL_1_STRUCTURED_GEOMETRY $(_ORACLE_SPATIAL_StructuredGeom_ORACLE_SPATIAL_1)
+# ==============================================================================
+# The following specifies the name of the Oracle Workspace that we should go
+# to when reading tables. Redefining just the GUI line as we can't bring up the
+# Oracle workspace picker in non-Settings box contexts.
+GUI OPTIONAL TEXT ORACLE_SPATIAL_IN_WORKSPACE_ORACLE_SPATIAL_1 Oracle Workspace:
+ORACLE_SPATIAL_1_DATASET "$(SourceDataset_ORACLE_SPATIAL_1)"
+ORACLE_SPATIAL_1_GENERATE_FME_BUILD_NUM 17722
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GML2_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER GML2 GML2_1
+# ============================================================================
+# The following GUI lines prompt for a GML v2 file to be used as the
+# the destination of the data.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be written.
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_GML2_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER GML2 GML2_1
+DEFAULT_MACRO DestDataset_GML2_1 $(DestDataset_GML2)
+GUI FILENAME DestDataset_GML2_1 GML_Files(*.xml;*.gml;*.gz)|*.xml;*.gml;*.gz|GML_Files(*.xml)|*.xml|GML_Files(*.gml)|*.gml|Compressed_GML_Files(*.gz)|*.gz|All_Files|* Destination Geography Markup Language (GML) v2.1.2 File:
+# ============================================================================
+# The SCHEMA_MODE keyword sets the GML2 writer's mode. Valid values are
+# 'FIXED', 'CREATE', and 'SCAN'.
+#
+# FIXED: In this mode the writer outputs a GML v2 instance document
+# that corresponds to the FMEFeatures.xsd GML v2 Schema.
+#
+# CREATE: The writer outputs GML v2 Schema document and a
+# corresponding GML v2 instance document.
+# The GML v2 Schema document is determined by the GML DEF lines.
+#
+# SCAN: This mode is currently NOT implemented.
+DEFAULT_MACRO _OUT_SCHEMA_MODE_GML2_1 CREATE
+GUI CHOICE _OUT_SCHEMA_MODE_GML2_1 FIXED%CREATE GML2 Schema Mode:
+GML2_1_SCHEMA_MODE $(_OUT_SCHEMA_MODE_GML2_1)
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO GML2_OUT_DESTINATION_DATASETTYPE_VALIDATION_GML2_1 Yes
+GML2_1_DESTINATION_DATASETTYPE_VALIDATION "$(GML2_OUT_DESTINATION_DATASETTYPE_VALIDATION_GML2_1)"
+DEFAULT_MACRO GML2_OUT_COORDINATE_SYSTEM_GRANULARITY_GML2_1 DATASET
+GML2_1_COORDINATE_SYSTEM_GRANULARITY "$(GML2_OUT_COORDINATE_SYSTEM_GRANULARITY_GML2_1)"
+DEFAULT_MACRO GML2_OUT_ADVANCED_GML2_1 FME_DISCLOSURE_OPEN
+GUI OPTIONAL DISCLOSUREGROUP GML2_OUT_ADVANCED_GML2_1 GML2_OUT_XSD_DOC_GML2_1%GML2_OUT_TARGET_NS_PREFIX_GML2_1%GML2_OUT_TARGET_NS_URI_GML2_1%GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL_GML2_1%GML2_OUT_OUTPUT_ENCODING_GML2_1%GML2_OUT_USE_WFS_FEATURE_COLLECTION_GML2_1%GML2_OUT_APPLY_STYLESHEET_GML2_1%GML2_OUT_STYLESHEET_RESULT_GML2_1%GML2_OUT_SUPPRESS_NULL_ATTRS_GML2_1%GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS_GML2_1%GML2_OUT_DOCUMENTS_TO_WRITE_GML2_1%GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR_GML2_1%GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES_GML2_1%GML2_OUT_MULTI_VALUE_SEPARATOR_GML2_1 Advanced
+# ============================================================================
+# On FIXED schema: The XSD_DOC keyword is ignored.
+#
+# On CREATE schema: The XSD_DOC keyword is optional,
+# when it is not specified the .xsd file will be written
+# in the same folder as the output dataset and its
+# basename will be the same as the base name of the
+# GML output dataset. e.g., if the DATASET is data.xml,
+# then the GML v2 schema file that is produced will
+# be named data.xsd.
+#
+# On SCAN schema: The SCAN mode is currently NOT implemented.
+#
+# Default it to be the empty string.
+DEFAULT_MACRO GML2_OUT_XSD_DOC_GML2_1 $(FME_MF_DIR)XSD\schema\nhiFeatureTypes.xsd
+GML2_1_XSD_DOC "$(GML2_OUT_XSD_DOC_GML2_1)"
+GUI OPTIONAL FILENAME GML2_OUT_XSD_DOC_GML2_1 XML_Schema_File(*.xsd)|*.xsd|All_Files(*)|* XML Schema Document
+# ============================================================================
+# The TARGET_NS_PREFIX and TARGET_NS_URI keywords are used when the
+# GML2 writer is set on CREATE mode. They declare the namespace that
+# the output document should use.
+DEFAULT_MACRO GML2_OUT_TARGET_NS_PREFIX_GML2_1 nhi
+GML2_1_TARGET_NS_PREFIX "$(GML2_OUT_TARGET_NS_PREFIX_GML2_1)"
+GUI OPTIONAL TEXT GML2_OUT_TARGET_NS_PREFIX_GML2_1 Target Namespace Prefix
+DEFAULT_MACRO GML2_OUT_TARGET_NS_URI_GML2_1 http://www.nhi.nu/gml
+GML2_1_TARGET_NS_URI "$(GML2_OUT_TARGET_NS_URI_GML2_1)"
+GUI OPTIONAL TEXT GML2_OUT_TARGET_NS_URI_GML2_1 Target Namespace URI
+DEFAULT_MACRO GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL_GML2_1 nhiFeatureTypes.xsd
+GML2_1_TARGET_XSI_SCHEMALOCATION_URL "$(GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL_GML2_1)"
+GUI OPTIONAL TEXT GML2_OUT_TARGET_XSI_SCHEMALOCATION_URL_GML2_1 Target Schema Location URL
+# ============================================================================
+# The OUTPUT_ENCODING keyword is optional. If no value is specified
+# then the encoding defaults to UTF-8.
+#
+# All files output by the GML2 writer will be output with the
+# encoding.
+DEFAULT_MACRO GML2_OUT_OUTPUT_ENCODING_GML2_1 
+GML2_1_OUTPUT_ENCODING "$(GML2_OUT_OUTPUT_ENCODING_GML2_1)"
+GUI OPTIONAL TEXT GML2_OUT_OUTPUT_ENCODING_GML2_1 Output Dataset Encoding
+# ============================================================================
+# The writer will use the wfs:FeatureCollection as the root element of the
+# GML instance when this keyword is set to yes.
+DEFAULT_MACRO GML2_OUT_USE_WFS_FEATURE_COLLECTION_GML2_1 no
+GML2_1_USE_WFS_FEATURE_COLLECTION "$(GML2_OUT_USE_WFS_FEATURE_COLLECTION_GML2_1)"
+GUI CHOICE GML2_OUT_USE_WFS_FEATURE_COLLECTION_GML2_1 no%yes Use wfs:FeatureCollection
+# ============================================================================
+# APPLY_STYLESHEET
+# Specifies the XSLT stylesheet to be applied to the output document.
+DEFAULT_MACRO GML2_OUT_APPLY_STYLESHEET_GML2_1 
+GML2_1_APPLY_STYLESHEET "$(GML2_OUT_APPLY_STYLESHEET_GML2_1)"
+GUI OPTIONAL FILENAME_MUSTEXIST GML2_OUT_APPLY_STYLESHEET_GML2_1 XSLT_Stylesheet_Files(*.xslt)|*.xslt|All_Files(*)|* XSLT Stylesheet to Apply
+# ============================================================================
+# STYLESHEET_RESULT
+# The location and name of the resulting document after XSLT stylesheet
+# transformation. This is an optional keyword.
+DEFAULT_MACRO GML2_OUT_STYLESHEET_RESULT_GML2_1 
+GML2_1_STYLESHEET_RESULT "$(GML2_OUT_STYLESHEET_RESULT_GML2_1)"
+GUI OPTIONAL FILENAME GML2_OUT_STYLESHEET_RESULT_GML2_1 All_Files(*)|* Stylesheet File to Write
+# ============================================================================
+# SUPPRESS_NULL_ATTRS
+# This parameter defines whether the GML writer will suppress writing out
+# attributes that are specified on the DEF line, but that have no values on
+# the outgoing features.
+DEFAULT_MACRO GML2_OUT_SUPPRESS_NULL_ATTRS_GML2_1 yes
+GML2_1_SUPPRESS_NULL_ATTRS "$(GML2_OUT_SUPPRESS_NULL_ATTRS_GML2_1)"
+GUI OPTIONAL CHOICE GML2_OUT_SUPPRESS_NULL_ATTRS_GML2_1 yes%no Suppress Null Attributes
+# ============================================================================
+# WRITE_ALL_FEATURE_TYPE_DEFNS
+# This parameter defines whether the GML writer will write out the feature
+# definitions whether or not it has features.
+DEFAULT_MACRO GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS_GML2_1 no
+GML2_1_WRITE_ALL_FEATURE_TYPE_DEFNS "$(GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS_GML2_1)"
+GUI OPTIONAL CHOICE GML2_OUT_WRITE_ALL_FEATURE_TYPE_DEFNS_GML2_1 yes%no Write All Feature Types
+# ============================================================================
+# The GML application schema document will not be written when this keyword
+# is set to yes.
+DEFAULT_MACRO GML2_OUT_DOCUMENTS_TO_WRITE_GML2_1 GML_ONLY
+GML2_1_DOCUMENTS_TO_WRITE "$(GML2_OUT_DOCUMENTS_TO_WRITE_GML2_1)"
+GUI OPTIONAL LOOKUP_CHOICE GML2_OUT_DOCUMENTS_TO_WRITE_GML2_1 "\"Both\",BOTH"%"\"GML Only\",GML_ONLY"%"\"XSD Only\",XSD_ONLY" Documents To Write
+# ============================================================================
+# The xsi:schemaLocation is merely a hint to an XML processor for a set of
+# schema namespace/location pairs whose grammar would validate the XML instance
+# document, this keyword allows the suppression of the xsi:schemaLocation in
+# the output GML instance document.
+DEFAULT_MACRO GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR_GML2_1 no
+GML2_1_SUPPRESS_SCHEMA_LOCATION_ATTR "$(GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR_GML2_1)"
+GUI CHOICE GML2_OUT_SUPPRESS_SCHEMA_LOCATION_ATTR_GML2_1 no%yes Suppress xsi:schemaLocation Attribute
+# ============================================================================
+DEFAULT_MACRO GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES_GML2_1 yes
+GML2_1_LISTS_IN_MULTI_VALUE_ATTRIBUTES "$(GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES_GML2_1)"
+GUI CHOICE GML2_OUT_LISTS_IN_MULTI_VALUE_ATTRIBUTES_GML2_1 no%yes Lists in Multi-Value Attributes
+# ============================================================================
+DEFAULT_MACRO GML2_OUT_MULTI_VALUE_SEPARATOR_GML2_1 ,
+GML2_1_MULTI_VALUE_SEPARATOR "$(GML2_OUT_MULTI_VALUE_SEPARATOR_GML2_1)"
+GUI OPTIONAL TEXT GML2_OUT_MULTI_VALUE_SEPARATOR_GML2_1 Multi-Value Separator
+# ============================================================================
+# The FEATURE_ENCODING keyword is optional. If no value is specified
+# then the system's encoding is used.
+#
+# Tells the GML v2 writer which enconding the input FME features
+# are in.
+DEFAULT_MACRO _FEATURE_ENCODING_GML2_1
+GML2_1_FEATURE_ENCODING $(_FEATURE_ENCODING_GML2_1)
+# ============================================================================
+# The MAPPING_FILE_ENCODING enconding is optional. If no value is specified
+# then the system's encoding is used.
+#
+# Specifies the encoding used in the FME mapping file.
+DEFAULT_MACRO _MAPPING_FILE_ENCODING_GML2_1
+GML2_1_MAPPING_FILE_ENCODING $(_MAPPING_FILE_ENCODING_GML2_1)
+GML2_1_DATASET "$(DestDataset_GML2_1)"
+GML2_1_GENERATE_FME_BUILD_NUM 17722
+#! END_DEST_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)HDSR_Hydamo_HydroObject.log"
+LOG_APPEND NO
+LOG_FILTER_MASK -1
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+DEFAULT_MACRO DATASET_KEYWORD_ORACLE_SPATIAL_1 ORACLE_SPATIAL_1
+DEFAULT_MACRO DATASET_KEYWORD_GML2_1 GML2_1
+# -------------------------------------------------------------------------
+
+ORACLE_SPATIAL_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+GML2_1_COORDINATE_SYSTEM EPSG:28992
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME HDSR_Hydamo_HydroObject
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+INCLUDE [ if {[info exists env(FME_TEMP)] && [file isdirectory $env(FME_TEMP)]} {set gVisualizerTemp $env(FME_TEMP)}  elseif {[info exists env(TEMP)] && [file isdirectory $env(TEMP)]}  {set gVisualizerTemp $env(TEMP)}  elseif { $tcl_platform(platform) == "unix" } {set gVisualizerTemp "/tmp"} else {set gVisualizerTemp c:};  regsub -all {[ ,&]} {$(WORKSPACE_NAME)} {_} wsname; set gVisualizerTemp $gVisualizerTemp/${wsname}_[clock format [clock seconds] -format %H%M%S];  puts "MACRO WORKSPACE_TEMP_DIR $gVisualizerTemp"; 
+MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
+MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
+MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_ORACLE_SPATIAL_1)   INPUT FEATURE_TYPE *    ROUTE ORACLE_SPATIAL ORACLE_SPATIAL_1::BHREG.HYDROOBJECT multi_reader_keyword,$(DATASET_KEYWORD_ORACLE_SPATIAL_1) TO FME_GENERIC ::BHREG.HYDROOBJECT ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+ORACLE_SPATIAL_1_MERGE_DEF ORACLE_SPATIAL_1::BHREG.HYDROOBJECT EXACT BHREG.HYDROOBJECT DEFLINE oracle_where_clause_encoded,<lt>quote<gt>STATUSOBJECT<lt>quote<gt>=300,oracle_envelope_min_x,,oracle_envelope_min_y,,oracle_envelope_max_x,,oracle_envelope_max_y,,oracle_mapinfo_symbology_style_column,,OBJECTID,number<openparen>38<comma>0<closeparen>,CODE,varchar2<openparen>50<closeparen>,NAAM,varchar2<openparen>250<closeparen>,STATUSOBJECT,number<openparen>5<comma>0<closeparen>,SOORTOPPWATERKWANTITEIT,number<openparen>5<comma>0<closeparen>,CATEGORIEOPPWATERLICHAAM,number<openparen>5<comma>0<closeparen>,PERSISTENTIE,number<openparen>5<comma>0<closeparen>,WS_OND_DROOG,number<openparen>5<comma>0<closeparen>,WS_ONDH_NAT,number<openparen>5<comma>0<closeparen>,WS_ONDH_BG,number<openparen>5<comma>0<closeparen>,WS_ZANDSLOOT,varchar2<openparen>1<closeparen>,DOSSIERMAP,varchar2<openparen>15<closeparen>,IWS_W_WATPEIL,number<openparen>38<comma>8<closeparen>,IWS_W_WATBRREFP,number<openparen>38<comma>8<closeparen>,IWS_W_WATDIEPTE,number<openparen>38<comma>8<closeparen>,IWS_W_INSTHGTEL,number<openparen>38<comma>8<closeparen>,IWS_W_PLASBTALL,number<openparen>38<comma>8<closeparen>,IWS_W_BRPLASBL,number<openparen>38<comma>8<closeparen>,IWS_W_PLASBH_DL,number<openparen>38<comma>8<closeparen>,IWS_W_TALUDL,number<openparen>38<comma>8<closeparen>,IWS_W_BODBR,number<openparen>38<comma>8<closeparen>,IWS_W_BODHO,number<openparen>38<comma>8<closeparen>,WS_ONDERHOUDSMAAT,number<openparen>38<comma>8<closeparen>,WS_ONDERHOUDSDIEPTE,number<openparen>38<comma>8<closeparen>,IWS_W_TALUDR,number<openparen>38<comma>8<closeparen>,IWS_W_PLASBH_DR,number<openparen>38<comma>8<closeparen>,IWS_W_BRPLASBR,number<openparen>38<comma>8<closeparen>,IWS_W_PLASBTALR,number<openparen>38<comma>8<closeparen>,IWS_W_INSTHGTER,number<openparen>38<comma>8<closeparen>,OBJECTBEGINTIJD,date,OBJECTEINDTIJD,date,TIJDSTIPREGISTRATIE,date,EINDREGISTRATIE,date,NAAMSPACE,varchar2<openparen>50<closeparen>,LOKAALID,varchar2<openparen>50<closeparen>,LVPUBLICATIEDATUM,date,DETAILNIVEAUGEOMETRIE,number<openparen>38<comma>8<closeparen>,WS_ONDH_VAAR,varchar2<openparen>1<closeparen>,WS_SCHOUW,varchar2<openparen>1<closeparen>,WS_MODEL,varchar2<openparen>1<closeparen>,OPMERKING,varchar2<openparen>500<closeparen>,WS_MAAI,varchar2<openparen>1<closeparen>,LENGTE,number<openparen>38<comma>8<closeparen>,VISMIGRATIE,varchar2<openparen>1<closeparen>,SE_ANNO_CAD_DATA,blob
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "BHREG.HYDROOBJECT (ORACLE_SPATIAL_1) Splitter"    INPUT FEATURE_TYPE BHREG.HYDROOBJECT    OUTPUT FEATURE_TYPE BHREG.HYDROOBJECT_ORACLE_SPATIAL_1
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory    FACTORY_NAME ArcSDEGridSnapper    INPUT  FEATURE_TYPE BHREG.HYDROOBJECT_ORACLE_SPATIAL_1    OUTPUT FEATURE_TYPE ArcSDEGridSnapper_SNAPPED         @GridSnapper("0","0","100",No,"0","1",HIGH)
+# -------------------------------------------------------------------------
+FACTORY_DEF * TestFactory    FACTORY_NAME Tester    INPUT  FEATURE_TYPE ArcSDEGridSnapper_SNAPPED    TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>CATEGORIEOPPWATERLICHAAM<closeparen>,Tester) NOT_= 99 ENCODED    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE Tester_PASSED
+# -------------------------------------------------------------------------
+INCLUDE [    set macroLine "MACRO AttributeKeeper_3_4e37b5cf_340c_48e3_aa8b_eb1829cf88191_LIST_EXP ";    foreach attr [split ""] {       set attr [FME_DecodeText $attr];       set attr [regsub "{}$" $attr "{}.*"];       set attr [regsub -all "{}" $attr "\\{\[0-9\]+\\}"];       append macroLine ",^$attr$";    };    puts $macroLine; ]
+FACTORY_DEF {*} TeeFactory    FACTORY_NAME AttributeKeeper_3    INPUT  FEATURE_TYPE Tester_PASSED    OUTPUT { FEATURE_TYPE AttributeKeeper_3_OUTPUT        @KeepAttributes(fme_encoded,OBJECTEINDTIJD,STATUSOBJECT,OBJECTBEGINTIJD,NAAM,CATEGORIEOPPWATERLICHAAM,CODE,fme_pcre_match,"^fme_$(AttributeKeeper_3_4e37b5cf_340c_48e3_aa8b_eb1829cf88191_LIST_EXP)")         }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME AttributeRenamer_3    INPUT  FEATURE_TYPE AttributeKeeper_3_OUTPUT 	 ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV 	 ATTR_ACTION { "CODE" "code" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "NAAM" "naam" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "STATUSOBJECT" "statusobjectcode" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "OBJECTBEGINTIJD" "objectbegintijd" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "OBJECTEINDTIJD" "objecteindtijd" "RENAME_SET_DEFAULT" "" }    OUTPUT OUTPUT FEATURE_TYPE AttributeRenamer_3_OUTPUT
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME AttributeCreator_7    INPUT  FEATURE_TYPE AttributeRenamer_3_OUTPUT    MULTI_FEATURE_MODE NO    NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV     ATTR_ACTION { "" "hyperlink" "SET_TO" "" }      ATTR_ACTION { "" "ruwheidstypecode" "SET_TO" "4" }      ATTR_ACTION { "" "ruwheidswaardelaag" "SET_TO" "FME_CONDITIONAL:DEFAULT_VALUE'30'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>CATEGORIEOPPWATERLICHAAM<closeparen> = 1'35'FME_NUM_CONDITIONS2___" }      ATTR_ACTION { "" "ruwheidswaardehoog" "SET_TO" "FME_CONDITIONAL:DEFAULT_VALUE'15'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>CATEGORIEOPPWATERLICHAAM<closeparen> = 1'25'FME_NUM_CONDITIONS2___" }      ATTR_ACTION { "" "administratiefgebiedcode" "SET_TO" "17" }    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_7_OUTPUT
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME AttributeManager    INPUT  FEATURE_TYPE AttributeCreator_7_OUTPUT    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "statusobjectcode" "statusobjectcode" "FME_CONDITIONAL:DEFAULT_VALUE'<at>Evaluate<openparen><at>Value<openparen>statusobjectcode<closeparen><solidus>100<closeparen>'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusobjectcode<closeparen> = 9900'98'FME_NUM_CONDITIONS2___" "SET_TO" }      ATTR_ACTION { "CATEGORIEOPPWATERLICHAAM" "CATEGORIEOPPWATERLICHAAM" "" "REMOVE" }    OUTPUT OUTPUT FEATURE_TYPE AttributeManager_OUTPUT
+FACTORY_DEF * TeeFactory   FACTORY_NAME "AttributeManager OUTPUT Splitter"   INPUT FEATURE_TYPE AttributeManager_OUTPUT   OUTPUT FEATURE_TYPE AttributeManager_OUTPUT_0_qkWxPTSviNs=   OUTPUT FEATURE_TYPE AttributeManager_OUTPUT_1_qYvk7jiZJpI=
+# -------------------------------------------------------------------------
+# Assumption is that the workspace temp dir has been already set and created.  See controldefs.cpp - ControlDefs::writeVisualizerTempDir
+DEFAULT_MACRO WORKSPACE_TEMP_DIR
+INCLUDE [    set safeName "[regsub -all {[^a-zA-Z0-9]} {AttributeManager_Output} _]_[expr round(rand() * 1000000)]_[clock clicks  -milliseconds]";    puts "MACRO SAFE_FFS_NAME $safeName"; ]
+FACTORY_DEF {*} InspectorFactory    FACTORY_NAME AttributeManager_Output_Prepper    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE AttributeManager_OUTPUT_1_qYvk7jiZJpI=    GROUP_ATTRIBUTE __inspector_feature_type_attr__    GROUP_BY {  }    GROUP_ATTRIBUTE_PREFIX { AttributeManager_Output }    RASTER_REDUCTION NoReduction    POINT_CLOUD_REDUCTION NO_THINNING    OUTPUT RESULT FEATURE_TYPE __viewme__
+# Now route all the features into the recorder, changing their
+# feature type to the transformer name so that they view nicely
+DEFAULT_MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/$(SAFE_FFS_NAME).ffs
+DEFAULT_MACRO VISUALIZER_CREATE_SPATIAL_INDEX NO
+# [PR#45549] The Data Inspector will limit the maximum number of features
+# it reads on WIN32, so we will correspondingly limit the number of
+# features we record here using the MAX_FEATURES_TO_RECORD directive.
+FACTORY_DEF * RecorderFactory    FACTORY_NAME AttributeManager_Output_Recorder    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT FEATURE_TYPE __viewme__       _wb_termination_feature Yes       @FeatureType(TERMINATOR_@Value(_wb_termination_xformer))    INPUT FEATURE_TYPE __viewme__       @FeatureType(@Value(__inspector_feature_type_attr__))       @RemoveAttributes(__inspector_feature_type_attr__)    FEATURE_FILE "$(VISUALIZER_FEATURE_FILE)"    STORE_SCANNED_SCHEMA YES    CREATE_SPATIAL_INDEX "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    INSPECTOR "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    FSC_SCHEMA code,varchar<openparen>255<closeparen>,naam,varchar<openparen>255<closeparen>,statusobjectcode,varchar<openparen>255<closeparen>,objectbegintijd,varchar<openparen>255<closeparen>,objecteindtijd,varchar<openparen>255<closeparen>,hyperlink,varchar<openparen>255<closeparen>,ruwheidstypecode,varchar<openparen>255<closeparen>,ruwheidswaardelaag,varchar<openparen>255<closeparen>,ruwheidswaardehoog,varchar<openparen>255<closeparen>,administratiefgebiedcode,varchar<openparen>255<closeparen>    MODE RECORD    STORE_SCANNED_METADATA    RECORD_DIRECTLY_TO_DISK YES    MAX_FEATURES_TO_RECORD WIN32 2000000
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC AttributeManager_OUTPUT_0_qkWxPTSviNs= TO GML2 __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>hydroobject<closeparen> COORDINATE_SYSTEM EPSG:28992 GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * CreationFactory    FACTORY_NAME VisualizerProcessor   CREATE_AT_END   OUTPUT FEATURE_TYPE __NUKEME__   @TCL("if [file exists {$(WORKSPACE_TEMP_DIR)}] {set files [glob -nocomplain -directory  {$(WORKSPACE_TEMP_DIR)} -tails *.ffs];   if {[llength $files] == 1} {    set theFile {$(WORKSPACE_TEMP_DIR)/};   append theFile [lindex $files 0];   eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -f FFS \042$theFile\042 & \175;  } elseif { [llength $files] == 0 } {  catch { file delete -force {$(WORKSPACE_TEMP_DIR)} };  } else {  set filesNoExt {}; set lastfile {}; foreach {fileName} [lsort $files] { set fileNoExt [string trimright $fileName {.ffs}]; if [regexp {(.*)_[0-9]*$} $fileNoExt wholething fileNoExtBase] {  if { $fileNoExtBase == $lastfile } { continue } }; set lastfile $fileNoExt; lappend filesNoExt $fileNoExt };  eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -d {$(WORKSPACE_TEMP_DIR)} -a ffs -f FFS $filesNoExt & \175; }; }; ")
+FACTORY_DEF * TeeFactory    FACTORY_NAME VisualizerCleaner   INPUT FEATURE_TYPE __NUKEME__
+# -------------------------------------------------------------------------
+GML2_1_DEF hydroobject   xml_type                     All   code                         xml_char(200)   naam                         xml_char(200)   statusobjectcode             xml_char(200)   objectbegintijd              xml_char(200)   objecteindtijd               xml_char(200)   hyperlink                    xml_char(200)   ruwheidstypecode             xml_char(200)   ruwheidswaardelaag           xml_char(200)   ruwheidswaardehoog           xml_char(200)   administratiefgebiedcode     xml_char(200)
