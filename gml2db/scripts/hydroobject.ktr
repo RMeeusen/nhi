@@ -450,12 +450,12 @@
   <notepads>
   </notepads>
   <connection>
-    <name>hmdb</name>
-    <server>tl-pg043.xtr.deltares.nl</server>
+    <name>myconn</name>
+    <server>${db_server}</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
     <database>${db_naam}</database>
-    <port>5432</port>
+    <port>${db_port}</port>
     <username>${db_user}</username>
     <password>${db_pass}</password>
     <servername/>
@@ -476,7 +476,7 @@
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>5432</attribute>
+        <attribute>${db_port}</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
@@ -614,6 +614,7 @@
         <precision>-1</precision>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -651,6 +652,7 @@
         <name>err_desc</name>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -685,6 +687,7 @@
         <rightvalue/>
       </condition>
     </compare>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -935,6 +938,7 @@
     <rootUriNameFieldName/>
     <extensionFieldName/>
     <sizeFieldName/>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -959,7 +963,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>hmdb</connection>
+    <connection>myconn</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
@@ -999,6 +1003,7 @@ VALUES
         <name>LineString</name>
       </argument>
     </arguments>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1023,7 +1028,7 @@ VALUES
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>hmdb</connection>
+    <connection>myconn</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
@@ -1072,6 +1077,7 @@ VALUES
         <name>MultiLineString</name>
       </argument>
     </arguments>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1109,6 +1115,7 @@ VALUES
         <name>LineString</name>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1177,6 +1184,7 @@ VALUES
         <precision>-1</precision>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1215,6 +1223,7 @@ VALUES
         <is_unicode>no</is_unicode>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1257,4 +1266,5 @@ VALUES
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes/>
 </transformation>

@@ -12,11 +12,62 @@
   <modified_date>2017/08/17 11:29:30.436</modified_date>
   <parameters>
     <parameter>
-      <name>table_name</name>
-      <default_value>replace</default_value>
-      <description/>
+      <name>administratiefgebiedid</name>
+      <default_value/>
+      <description>DEZE PARAMETER HIER LEEG LATEN STAAN!!</description>
     </parameter>
   </parameters>
+  <connection>
+    <name>myconn</name>
+    <server>${db_server}</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>${db_naam}</database>
+    <port>${db_port}</port>
+    <username>${db_user}</username>
+    <password>${db_pass}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>${db_port}</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
   <slaveservers>
     </slaveservers>
   <job-log-table>
@@ -296,6 +347,7 @@
       <name>Set stuw variables</name>
       <description/>
       <type>SET_VARIABLES</type>
+      <attributes/>
       <replacevars>Y</replacevars>
       <filename/>
       <file_variable_type>JVM</file_variable_type>
@@ -321,11 +373,13 @@
       <nr>0</nr>
       <xloc>480</xloc>
       <yloc>480</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Set hydroobject variables</name>
       <description/>
       <type>SET_VARIABLES</type>
+      <attributes/>
       <replacevars>Y</replacevars>
       <filename/>
       <file_variable_type>CURRENT_JOB</file_variable_type>
@@ -351,11 +405,13 @@
       <nr>0</nr>
       <xloc>480</xloc>
       <yloc>64</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Set lateraleknoop variables</name>
       <description/>
       <type>SET_VARIABLES</type>
+      <attributes/>
       <replacevars>Y</replacevars>
       <filename/>
       <file_variable_type>CURRENT_JOB</file_variable_type>
@@ -381,11 +437,13 @@
       <nr>0</nr>
       <xloc>480</xloc>
       <yloc>144</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Set afvoergebied variables </name>
       <description/>
       <type>SET_VARIABLES</type>
+      <attributes/>
       <replacevars>Y</replacevars>
       <filename/>
       <file_variable_type>CURRENT_JOB</file_variable_type>
@@ -411,11 +469,13 @@
       <nr>0</nr>
       <xloc>480</xloc>
       <yloc>224</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Set dwarsprofiel variables</name>
       <description/>
       <type>SET_VARIABLES</type>
+      <attributes/>
       <replacevars>Y</replacevars>
       <filename/>
       <file_variable_type>CURRENT_JOB</file_variable_type>
@@ -441,11 +501,13 @@
       <nr>0</nr>
       <xloc>480</xloc>
       <yloc>304</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Set duikdersifonhevel variables</name>
       <description/>
       <type>SET_VARIABLES</type>
+      <attributes/>
       <replacevars>Y</replacevars>
       <filename/>
       <file_variable_type>CURRENT_JOB</file_variable_type>
@@ -471,11 +533,13 @@
       <nr>0</nr>
       <xloc>480</xloc>
       <yloc>384</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Set brug variables</name>
       <description/>
       <type>SET_VARIABLES</type>
+      <attributes/>
       <replacevars>Y</replacevars>
       <filename/>
       <file_variable_type>JVM</file_variable_type>
@@ -501,11 +565,13 @@
       <nr>0</nr>
       <xloc>480</xloc>
       <yloc>560</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Check if imput dir is empty</name>
       <description/>
       <type>FOLDER_IS_EMPTY</type>
+      <attributes/>
       <foldername>${import_dir}</foldername>
       <include_subfolders>N</include_subfolders>
       <specify_wildcard>Y</specify_wildcard>
@@ -515,11 +581,13 @@
       <nr>0</nr>
       <xloc>720</xloc>
       <yloc>224</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>START</name>
       <description/>
       <type>SPECIAL</type>
+      <attributes/>
       <start>Y</start>
       <dummy>N</dummy>
       <repeat>N</repeat>
@@ -535,11 +603,13 @@
       <nr>0</nr>
       <xloc>112</xloc>
       <yloc>288</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Delete Old Records</name>
       <description/>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
       <filename>${Internal.Entry.Current.Directory}/delete_old_records.ktr</filename>
@@ -571,11 +641,13 @@
       <nr>0</nr>
       <xloc>928</xloc>
       <yloc>224</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Read File Names</name>
       <description/>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
       <filename>${Internal.Entry.Current.Directory}/read-file-names.ktr</filename>
@@ -607,15 +679,18 @@
       <nr>0</nr>
       <xloc>1072</xloc>
       <yloc>224</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>For Each</name>
       <description/>
       <type>JOB</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <job_object_id/>
       <filename>${Internal.Entry.Current.Directory}/foreach.kjb</filename>
       <jobname/>
+      <directory/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>Y</exec_per_row>
@@ -641,21 +716,25 @@
       <nr>0</nr>
       <xloc>1184</xloc>
       <yloc>224</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Success</name>
       <description/>
       <type>SUCCESS</type>
+      <attributes/>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>1280</xloc>
       <yloc>224</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Write To Log</name>
       <description/>
       <type>WRITE_TO_LOG</type>
+      <attributes/>
       <logmessage>No ${file_name} files in directory ${import_dir}</logmessage>
       <loglevel>Basic</loglevel>
       <logsubject/>
@@ -664,11 +743,13 @@
       <nr>0</nr>
       <xloc>720</xloc>
       <yloc>320</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Set gemaal variables</name>
       <description/>
       <type>SET_VARIABLES</type>
+      <attributes/>
       <replacevars>Y</replacevars>
       <filename/>
       <file_variable_type>JVM</file_variable_type>
@@ -694,11 +775,13 @@
       <nr>0</nr>
       <xloc>480</xloc>
       <yloc>624</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Set pomp variables</name>
       <description/>
       <type>SET_VARIABLES</type>
+      <attributes/>
       <replacevars>Y</replacevars>
       <filename/>
       <file_variable_type>JVM</file_variable_type>
@@ -724,11 +807,13 @@
       <nr>0</nr>
       <xloc>480</xloc>
       <yloc>688</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Set bodemval variables</name>
       <description/>
       <type>SET_VARIABLES</type>
+      <attributes/>
       <replacevars>Y</replacevars>
       <filename/>
       <file_variable_type>JVM</file_variable_type>
@@ -754,11 +839,13 @@
       <nr>0</nr>
       <xloc>480</xloc>
       <yloc>768</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Set meetlocatie variables</name>
       <description/>
       <type>SET_VARIABLES</type>
+      <attributes/>
       <replacevars>Y</replacevars>
       <filename/>
       <file_variable_type>JVM</file_variable_type>
@@ -784,6 +871,27 @@
       <nr>0</nr>
       <xloc>496</xloc>
       <yloc>832</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>test</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>insert into test.test_result (adm_id, name) 
+select ${administratiefgebiedid} as adm_id, 'main_script' as name
+;</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>T</sendOneStatement>
+      <connection>myconn</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1104</xloc>
+      <yloc>352</yloc>
+      <attributes_kjc/>
     </entry>
   </entries>
   <hops>
@@ -1029,6 +1137,15 @@
       <enabled>Y</enabled>
       <evaluation>N</evaluation>
       <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Read File Names</from>
+      <to>test</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>N</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
     </hop>
   </hops>
   <notepads>
