@@ -531,9 +531,11 @@
       <schema_name/>
     </partitioning>
     <connection>myconn</connection>
-    <sql>select administratiefgebiedid as ag_id
+    <sql>-- selecteer actieve waterschappen:
+select administratiefgebiedid as ag_id
+, importdir as ag_importdir
 from public.administratiefgebied a 
-where importdir = '${regio}';</sql>
+where active = true;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>

@@ -16,6 +16,11 @@
       <default_value/>
       <description>DEZE PARAMETER HIER LEEG LATEN STAAN!!</description>
     </parameter>
+    <parameter>
+      <name>regio</name>
+      <default_value/>
+      <description>DEZE PARAMETER HIER LEEG LATEN STAAN!!</description>
+    </parameter>
   </parameters>
   <connection>
     <name>myconn</name>
@@ -372,7 +377,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>480</xloc>
-      <yloc>480</yloc>
+      <yloc>336</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -404,7 +409,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>480</xloc>
-      <yloc>64</yloc>
+      <yloc>16</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -436,7 +441,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>480</xloc>
-      <yloc>144</yloc>
+      <yloc>80</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -468,7 +473,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>480</xloc>
-      <yloc>224</yloc>
+      <yloc>144</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -500,7 +505,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>480</xloc>
-      <yloc>304</yloc>
+      <yloc>208</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -532,7 +537,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>480</xloc>
-      <yloc>384</yloc>
+      <yloc>272</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -564,11 +569,11 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>480</xloc>
-      <yloc>560</yloc>
+      <yloc>400</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Check if imput dir is empty</name>
+      <name>Check if input dir is empty</name>
       <description/>
       <type>FOLDER_IS_EMPTY</type>
       <attributes/>
@@ -581,28 +586,6 @@
       <nr>0</nr>
       <xloc>720</xloc>
       <yloc>224</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>START</name>
-      <description/>
-      <type>SPECIAL</type>
-      <attributes/>
-      <start>Y</start>
-      <dummy>N</dummy>
-      <repeat>N</repeat>
-      <schedulerType>0</schedulerType>
-      <intervalSeconds>0</intervalSeconds>
-      <intervalMinutes>60</intervalMinutes>
-      <hour>12</hour>
-      <minutes>0</minutes>
-      <weekDay>1</weekDay>
-      <DayOfMonth>1</DayOfMonth>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>112</xloc>
-      <yloc>288</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -639,7 +622,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>928</xloc>
+      <xloc>880</xloc>
       <yloc>224</yloc>
       <attributes_kjc/>
     </entry>
@@ -677,7 +660,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1072</xloc>
+      <xloc>1040</xloc>
       <yloc>224</yloc>
       <attributes_kjc/>
     </entry>
@@ -714,7 +697,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1184</xloc>
+      <xloc>1168</xloc>
       <yloc>224</yloc>
       <attributes_kjc/>
     </entry>
@@ -774,7 +757,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>480</xloc>
-      <yloc>624</yloc>
+      <yloc>464</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -806,7 +789,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>480</xloc>
-      <yloc>688</yloc>
+      <yloc>528</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -838,7 +821,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>480</xloc>
-      <yloc>768</yloc>
+      <yloc>592</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -869,8 +852,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>496</xloc>
-      <yloc>832</yloc>
+      <xloc>480</xloc>
+      <yloc>656</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -878,8 +861,8 @@
       <description/>
       <type>SQL</type>
       <attributes/>
-      <sql>insert into test.test_result (adm_id, name) 
-select ${administratiefgebiedid} as adm_id, 'main_script' as name
+      <sql>insert into test.test_result (adm_id, val1, val2) 
+select ${administratiefgebiedid} as adm_id, '${regio}' as val1, '${table_name}' as val2
 ;</sql>
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
@@ -889,15 +872,150 @@ select ${administratiefgebiedid} as adm_id, 'main_script' as name
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1104</xloc>
-      <yloc>352</yloc>
+      <xloc>832</xloc>
+      <yloc>112</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Set common variables</name>
+      <description/>
+      <type>SET_VARIABLES</type>
+      <attributes/>
+      <replacevars>Y</replacevars>
+      <filename/>
+      <file_variable_type>CURRENT_JOB</file_variable_type>
+      <fields>
+        <field>
+          <variable_name>import_dir</variable_name>
+          <variable_value>${main_data_dir}/${regio}/GML/</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>linepath</variable_name>
+          <variable_value>gml:lineStringProperty/gml:LineString</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>log_dir</variable_name>
+          <variable_value>${main_data_dir}/${regio}/LOGS/</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>multilinepath</variable_name>
+          <variable_value>gml:multiLineStringProperty/gml:MultiLineString</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>pointpath</variable_name>
+          <variable_value>gml:pointProperty/gml:Point</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>polygonpath</variable_name>
+          <variable_value>gml:surfaceProperty/gml:Surface</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>multipolygonpath</variable_name>
+          <variable_value>gml:multiSurfaceProperty/gml:MultiSurface</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>export_dir</variable_name>
+          <variable_value>${main_data_dir}/${regio}/GML_BK/</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+      </fields>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>112</xloc>
+      <yloc>224</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Dummy</name>
+      <description/>
+      <type>SPECIAL</type>
+      <attributes/>
+      <start>N</start>
+      <dummy>Y</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>256</xloc>
+      <yloc>224</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Start</name>
+      <description/>
+      <type>SPECIAL</type>
+      <attributes/>
+      <start>Y</start>
+      <dummy>N</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>112</xloc>
+      <yloc>112</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>test 2</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>insert into test.test_result (adm_id, val1, val2) 
+select ${administratiefgebiedid} as adm_id, '${regio}' as val1, '${main_data_dir}' as val2
+;
+
+insert into test.test_result (adm_id, val1, val2) 
+select ${administratiefgebiedid} as adm_id, '${regio}' as val1, '${import_dir}' as val2
+;
+
+insert into test.test_result (adm_id, val1, val2) 
+select ${administratiefgebiedid} as adm_id, '${regio}' as val1, '${log_dir}' as val2
+;
+
+insert into test.test_result (adm_id, val1, val2) 
+select ${administratiefgebiedid} as adm_id, '${regio}' as val1, '${export_dir}' as val2
+;
+
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>T</sendOneStatement>
+      <connection>myconn</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>176</xloc>
+      <yloc>320</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
   <hops>
     <hop>
       <from>Set hydroobject variables</from>
-      <to>Check if imput dir is empty</to>
+      <to>Check if input dir is empty</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -906,7 +1024,7 @@ select ${administratiefgebiedid} as adm_id, 'main_script' as name
     </hop>
     <hop>
       <from>Set lateraleknoop variables</from>
-      <to>Check if imput dir is empty</to>
+      <to>Check if input dir is empty</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -915,7 +1033,7 @@ select ${administratiefgebiedid} as adm_id, 'main_script' as name
     </hop>
     <hop>
       <from>Set afvoergebied variables </from>
-      <to>Check if imput dir is empty</to>
+      <to>Check if input dir is empty</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -924,7 +1042,7 @@ select ${administratiefgebiedid} as adm_id, 'main_script' as name
     </hop>
     <hop>
       <from>Set dwarsprofiel variables</from>
-      <to>Check if imput dir is empty</to>
+      <to>Check if input dir is empty</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -933,7 +1051,7 @@ select ${administratiefgebiedid} as adm_id, 'main_script' as name
     </hop>
     <hop>
       <from>Set duikdersifonhevel variables</from>
-      <to>Check if imput dir is empty</to>
+      <to>Check if input dir is empty</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -942,7 +1060,7 @@ select ${administratiefgebiedid} as adm_id, 'main_script' as name
     </hop>
     <hop>
       <from>Set stuw variables</from>
-      <to>Check if imput dir is empty</to>
+      <to>Check if input dir is empty</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -951,65 +1069,11 @@ select ${administratiefgebiedid} as adm_id, 'main_script' as name
     </hop>
     <hop>
       <from>Set brug variables</from>
-      <to>Check if imput dir is empty</to>
+      <to>Check if input dir is empty</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>N</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>START</from>
-      <to>Set hydroobject variables</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>START</from>
-      <to>Set lateraleknoop variables</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>START</from>
-      <to>Set afvoergebied variables </to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>START</from>
-      <to>Set duikdersifonhevel variables</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>START</from>
-      <to>Set stuw variables</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>START</from>
-      <to>Set brug variables</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
     </hop>
     <hop>
@@ -1040,16 +1104,7 @@ select ${administratiefgebiedid} as adm_id, 'main_script' as name
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>START</from>
-      <to>Set dwarsprofiel variables</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>Check if imput dir is empty</from>
+      <from>Check if input dir is empty</from>
       <to>Delete Old Records</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -1058,7 +1113,7 @@ select ${administratiefgebiedid} as adm_id, 'main_script' as name
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Check if imput dir is empty</from>
+      <from>Check if input dir is empty</from>
       <to>Write To Log</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -1068,7 +1123,7 @@ select ${administratiefgebiedid} as adm_id, 'main_script' as name
     </hop>
     <hop>
       <from>Set gemaal variables</from>
-      <to>Check if imput dir is empty</to>
+      <to>Check if input dir is empty</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1076,26 +1131,8 @@ select ${administratiefgebiedid} as adm_id, 'main_script' as name
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>START</from>
-      <to>Set gemaal variables</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>START</from>
-      <to>Set pomp variables</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
       <from>Set pomp variables</from>
-      <to>Check if imput dir is empty</to>
+      <to>Check if input dir is empty</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1104,7 +1141,7 @@ select ${administratiefgebiedid} as adm_id, 'main_script' as name
     </hop>
     <hop>
       <from>Set bodemval variables</from>
-      <to>Check if imput dir is empty</to>
+      <to>Check if input dir is empty</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1112,16 +1149,16 @@ select ${administratiefgebiedid} as adm_id, 'main_script' as name
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>START</from>
-      <to>Set bodemval variables</to>
+      <from>Set meetlocatie variables</from>
+      <to>Check if input dir is empty</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
+      <evaluation>N</evaluation>
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>START</from>
+      <from>Dummy</from>
       <to>Set meetlocatie variables</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -1130,22 +1167,139 @@ select ${administratiefgebiedid} as adm_id, 'main_script' as name
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>Set meetlocatie variables</from>
-      <to>Check if imput dir is empty</to>
+      <from>Dummy</from>
+      <to>Set hydroobject variables</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
-      <evaluation>N</evaluation>
+      <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>Read File Names</from>
+      <from>Dummy</from>
+      <to>Set lateraleknoop variables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Dummy</from>
+      <to>Set afvoergebied variables </to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Dummy</from>
+      <to>Set dwarsprofiel variables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Dummy</from>
+      <to>Set duikdersifonhevel variables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Dummy</from>
+      <to>Set stuw variables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Dummy</from>
+      <to>Set brug variables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Dummy</from>
+      <to>Set gemaal variables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Dummy</from>
+      <to>Set pomp variables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Dummy</from>
+      <to>Set bodemval variables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Start</from>
+      <to>Set common variables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Set common variables</from>
+      <to>Dummy</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check if input dir is empty</from>
       <to>test</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>N</enabled>
-      <evaluation>Y</evaluation>
+      <evaluation>N</evaluation>
       <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Set common variables</from>
+      <to>test 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>N</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>test 2</from>
+      <to>Dummy</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>N</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
     </hop>
   </hops>
   <notepads>
