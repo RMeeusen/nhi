@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>start_gml2db_test</name>
+  <name>start_gml2db</name>
   <description/>
   <extended_description/>
   <job_version/>
