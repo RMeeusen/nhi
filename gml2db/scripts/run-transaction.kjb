@@ -12,15 +12,66 @@
   <modified_date>2010/03/19 11:42:47.812</modified_date>
   <parameters>
     </parameters>
+  <connection>
+    <name>mylog</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>nhi_pentaho</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10bef2bfdd</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
   <slaveservers>
     </slaveservers>
   <job-log-table>
-    <connection/>
-    <schema/>
-    <table/>
+    <connection>mylog</connection>
+    <schema>log</schema>
+    <table>log_job</table>
     <size_limit_lines/>
     <interval/>
-    <timeout_days/>
+    <timeout_days>28</timeout_days>
     <field>
       <id>ID_JOB</id>
       <enabled>Y</enabled>
@@ -28,7 +79,7 @@
     </field>
     <field>
       <id>CHANNEL_ID</id>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
       <name>CHANNEL_ID</name>
     </field>
     <field>
@@ -128,10 +179,10 @@
     </field>
   </job-log-table>
   <jobentry-log-table>
-    <connection/>
-    <schema/>
-    <table/>
-    <timeout_days/>
+    <connection>mylog</connection>
+    <schema>log</schema>
+    <table>log_entry</table>
+    <timeout_days>28</timeout_days>
     <field>
       <id>ID_BATCH</id>
       <enabled>Y</enabled>
@@ -291,6 +342,7 @@
       <name>START</name>
       <description>Special entries</description>
       <type>SPECIAL</type>
+      <attributes/>
       <start>Y</start>
       <dummy>N</dummy>
       <repeat>N</repeat>
@@ -306,11 +358,13 @@
       <nr>0</nr>
       <xloc>64</xloc>
       <yloc>65</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Write To Log 1</name>
       <description>Write To Log</description>
       <type>WRITE_TO_LOG</type>
+      <attributes/>
       <logmessage/>
       <loglevel>Minimal</loglevel>
       <logsubject>Processing file: ${filename}</logsubject>
@@ -319,11 +373,13 @@
       <nr>0</nr>
       <xloc>165</xloc>
       <yloc>66</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>filename set?</name>
       <description>Simple evaluation</description>
       <type>SIMPLE_EVAL</type>
+      <attributes/>
       <valuetype>variable</valuetype>
       <fieldname/>
       <variablename>filename</variablename>
@@ -341,43 +397,51 @@
       <nr>0</nr>
       <xloc>279</xloc>
       <yloc>66</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>log fail</name>
       <description>Abort job</description>
       <type>ABORT</type>
+      <attributes/>
       <message>Failed to write to log o.O</message>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>164</xloc>
       <yloc>156</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>filename not set</name>
       <description>Abort job</description>
       <type>ABORT</type>
+      <attributes/>
       <message>${filename} not set o.O</message>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>279</xloc>
       <yloc>156</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Success 1</name>
       <description>Success</description>
       <type>SUCCESS</type>
+      <attributes/>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>592</xloc>
       <yloc>64</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>run transaction</name>
       <description>Transformation</description>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
       <filename>${Internal.Job.Filename.Directory}/${table_name}.ktr</filename>
@@ -409,6 +473,7 @@
       <nr>0</nr>
       <xloc>392</xloc>
       <yloc>67</yloc>
+      <attributes_kjc/>
     </entry>
   </entries>
   <hops>
