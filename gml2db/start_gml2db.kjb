@@ -402,7 +402,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <job_object_id/>
-      <filename>${Internal.Entry.Current.Directory}\scripts\main_script.kjb</filename>
+      <filename>${Internal.Entry.Current.Directory}/scripts/main_script.kjb</filename>
       <jobname/>
       <directory/>
       <arg_from_previous>N</arg_from_previous>
@@ -449,7 +449,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>${Internal.Entry.Current.Directory}\get_administratiefgebied.ktr</filename>
+      <filename>${Internal.Entry.Current.Directory}/get_administratiefgebied.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>Y</params_from_previous>
