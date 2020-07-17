@@ -578,11 +578,6 @@
       <enabled>N</enabled>
     </hop>
     <hop>
-      <from>Remove Z values</from>
-      <to>Filter rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Filter rows</from>
       <to>MultiLineError</to>
       <enabled>Y</enabled>
@@ -595,6 +590,16 @@
     <hop>
       <from>Get data from XML</from>
       <to>Remove Z values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Remove Z values</from>
+      <to>correct epsg label</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>correct epsg label</from>
+      <to>Filter rows</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -674,8 +679,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1040</xloc>
-      <yloc>624</yloc>
+      <xloc>992</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -712,8 +717,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>896</xloc>
-      <yloc>624</yloc>
+      <xloc>848</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -747,8 +752,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>656</yloc>
+      <xloc>528</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -998,8 +1003,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>288</xloc>
-      <yloc>656</yloc>
+      <xloc>96</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1063,8 +1068,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>544</yloc>
+      <xloc>672</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1137,8 +1142,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>656</yloc>
+      <xloc>672</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1175,8 +1180,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>528</yloc>
+      <xloc>528</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1244,8 +1249,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>432</yloc>
+      <xloc>528</xloc>
+      <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1283,8 +1288,59 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>432</xloc>
-      <yloc>656</yloc>
+      <xloc>240</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>correct epsg label</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>LineString</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>epsg</replace_string>
+        <replace_by_string>EPSG</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>yes</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>MultiLineString</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>epsg</replace_string>
+        <replace_by_string>EPSG</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>yes</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

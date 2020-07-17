@@ -38,12 +38,7 @@
     </parameter>
     <parameter>
       <name>main_data_dir</name>
-      <default_value>D:\nhi\testdata\</default_value>
-      <description/>
-    </parameter>
-    <parameter>
-      <name>table_name</name>
-      <default_value>replace</default_value>
+      <default_value>D:\nhi\testdata</default_value>
       <description/>
     </parameter>
   </parameters>
