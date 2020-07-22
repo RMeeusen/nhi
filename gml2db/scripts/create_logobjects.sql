@@ -124,3 +124,8 @@ CREATE TABLE log.log_step
 , LOG_FIELD TEXT
 )
 ;
+
+drop table if exists log.log_extra;
+create table log.log_extra (logid serial, logobject varchar, logitem varchar, logmelding varchar, startdate timestamp default now(), enddate timestamp);
+
+

@@ -41,6 +41,11 @@
       <default_value>D:\nhi\testdata</default_value>
       <description/>
     </parameter>
+    <parameter>
+      <name>objectpath</name>
+      <default_value>nhi:gemaal</default_value>
+      <description/>
+    </parameter>
   </parameters>
   <connection>
     <name>mylog</name>
@@ -378,8 +383,8 @@
       <repeat>N</repeat>
       <schedulerType>0</schedulerType>
       <intervalSeconds>0</intervalSeconds>
-      <intervalMinutes>60</intervalMinutes>
-      <hour>12</hour>
+      <intervalMinutes>3</intervalMinutes>
+      <hour>20</hour>
       <minutes>0</minutes>
       <weekDay>1</weekDay>
       <DayOfMonth>1</DayOfMonth>
@@ -471,7 +476,54 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>400</xloc>
+      <xloc>432</xloc>
+      <yloc>224</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>log_extra START</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>-- log start
+insert into log.log_extra (logobject, logitem) values ('${Internal.Job.Name}', 'START');
+
+-- log parameters
+insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.Job.Name}', 'db_naam', '${db_naam}');
+insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.Job.Name}', 'db_server', '${db_server}');
+insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.Job.Name}', 'main_data_dir', '${main_data_dir}');
+
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>T</sendOneStatement>
+      <connection>mylog</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>256</xloc>
+      <yloc>224</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>log_extra END</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>-- log end
+insert into log.log_extra (logobject, logitem) values ('${Internal.Job.Name}', 'END');
+
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>T</sendOneStatement>
+      <connection>mylog</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>784</xloc>
       <yloc>224</yloc>
       <attributes_kjc/>
     </entry>
@@ -488,12 +540,30 @@
     </hop>
     <hop>
       <from>START</from>
+      <to>log_extra START</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>log_extra START</from>
       <to>get administratiefgebied</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>main</from>
+      <to>log_extra END</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
     </hop>
   </hops>
   <notepads>

@@ -594,6 +594,11 @@
     </hop>
     <hop>
       <from>correct epsg label</from>
+      <to>Remove Z values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Remove Z values</from>
       <to>Database lookup gemaal code</to>
       <enabled>Y</enabled>
     </hop>
@@ -641,7 +646,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>416</xloc>
+      <xloc>560</xloc>
       <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
@@ -722,7 +727,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1024</xloc>
+      <xloc>1168</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -803,7 +808,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>752</xloc>
+      <xloc>896</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
@@ -841,7 +846,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>880</xloc>
+      <xloc>1024</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -879,7 +884,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>624</xloc>
+      <xloc>768</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
@@ -914,7 +919,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>464</xloc>
+      <xloc>608</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1166,7 +1171,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
+      <xloc>704</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1225,7 +1230,7 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>704</xloc>
+      <xloc>848</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1265,6 +1270,45 @@ VALUES
     </remotesteps>
     <GUI>
       <xloc>240</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Remove Z values</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>Point</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>(\d+\.?\d*),(\d+\.?\d*),(\-*\d+\.?\d*\s*|Nan)</replace_string>
+        <replace_by_string>$1,$2</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
       <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>

@@ -1157,6 +1157,57 @@
     </GUI>
   </step>
   <step>
+    <name>correct epsg label</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>polygon</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>epsg</replace_string>
+        <replace_by_string>EPSG</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>yes</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>multiPolygon</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>epsg</replace_string>
+        <replace_by_string>EPSG</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>yes</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>432</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>insert record: Multipolygon</name>
     <type>ExecSQL</type>
     <description/>
@@ -1175,7 +1226,7 @@
     <sql>INSERT INTO public.${table_name}
 (${table_name}id, code, naam, statusobjectid, hyperlink,  oppervlakte, lateraleknoopid, administratiefgebiedid, geometrievlak)
 VALUES
-(nextval('${table_name}_id_seq'),?, ?, ?, ?, ?, ?, ${administratiefgebiedid}, ST_GeomFromGML(?));</sql>
+(nextval('${table_name}_id_seq'),?, ?, ?, ?, ?, ?, ${administratiefgebiedid}, st_force2d(ST_GeomFromGML(?)));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1237,7 +1288,7 @@ VALUES
     <sql>INSERT INTO public.${table_name}
 (${table_name}id, code, naam, statusobjectid, hyperlink,  oppervlakte, lateraleknoopid, administratiefgebiedid, geometrievlak)
 VALUES
-(nextval('${table_name}_id_seq'),?, ?, ?, ?, ?, ?, ${administratiefgebiedid}, ST_Multi(ST_GeomFromGML(?)));</sql>
+(nextval('${table_name}_id_seq'),?, ?, ?, ?, ?, ?, ${administratiefgebiedid}, st_force2d(ST_Multi(ST_GeomFromGML(?))));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1277,57 +1328,6 @@ VALUES
     <GUI>
       <xloc>944</xloc>
       <yloc>416</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>correct epsg label</name>
-    <type>ReplaceString</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>polygon</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>epsg</replace_string>
-        <replace_by_string>EPSG</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>yes</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>multiPolygon</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>epsg</replace_string>
-        <replace_by_string>EPSG</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>yes</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>496</xloc>
-      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

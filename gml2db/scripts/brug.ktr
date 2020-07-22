@@ -1137,7 +1137,7 @@ VALUES
         <in_stream_name>Point</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>(\d+\.?\d*),(\d+\.?\d*),(\d+\.?\d*)</replace_string>
+        <replace_string>(\d+\.?\d*),(\d+\.?\d*),(\-*\d+\.?\d*\s*|Nan)</replace_string>
         <replace_by_string>$1,$2</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
