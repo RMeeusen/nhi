@@ -1,3 +1,5 @@
+--select * into public._backup_administratiefgebied from public.administratiefgebied a ;
+
 alter table public.administratiefgebied add if not exists importdir varchar;
 
 delete from public.administratiefgebied where administratiefgebiedid in (15,23);
@@ -30,5 +32,6 @@ update public.administratiefgebied set importdir = case
 
 alter table administratiefgebied add if not exists active bool;
 
-update administratiefgebied  set active = true where administratiefgebiedid in (1,5,11,14,17,20);
+update administratiefgebied  set active = true where administratiefgebiedid in (20);
+--update administratiefgebied  set active = true where administratiefgebiedid in (1,5,11,14,17,20);
 

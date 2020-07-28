@@ -1058,6 +1058,12 @@
         <mask/>
         <set_empty_string>N</set_empty_string>
       </field>
+      <field>
+        <name>soortstuwcode</name>
+        <value>99</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
