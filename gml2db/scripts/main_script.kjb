@@ -709,8 +709,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1008</xloc>
-      <yloc>352</yloc>
+      <xloc>1296</xloc>
+      <yloc>464</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -978,8 +978,8 @@ insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.J
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>112</xloc>
-      <yloc>128</yloc>
+      <xloc>256</xloc>
+      <yloc>16</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -1000,7 +1000,7 @@ insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.J
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>1168</xloc>
-      <yloc>352</yloc>
+      <yloc>464</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -1069,7 +1069,7 @@ insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.J
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>112</xloc>
-      <yloc>240</yloc>
+      <yloc>128</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -1102,6 +1102,54 @@ insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.J
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <set_append_logfile>N</set_append_logfile>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1168</xloc>
+      <yloc>352</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>sync_ftp 1</name>
+      <description/>
+      <type>SIMPLE_EVAL</type>
+      <attributes/>
+      <valuetype>variable</valuetype>
+      <fieldname/>
+      <variablename>sync_ftp</variablename>
+      <fieldtype>boolean</fieldtype>
+      <mask/>
+      <comparevalue/>
+      <minvalue/>
+      <maxvalue/>
+      <successcondition>equal</successcondition>
+      <successnumbercondition>equal</successnumbercondition>
+      <successbooleancondition>true</successbooleancondition>
+      <successwhenvarset>N</successwhenvarset>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>256</xloc>
+      <yloc>128</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>sync_ftp 2</name>
+      <description/>
+      <type>SIMPLE_EVAL</type>
+      <attributes/>
+      <valuetype>variable</valuetype>
+      <fieldname/>
+      <variablename>sync_ftp</variablename>
+      <fieldtype>boolean</fieldtype>
+      <mask/>
+      <comparevalue/>
+      <minvalue/>
+      <maxvalue/>
+      <successcondition>equal</successcondition>
+      <successnumbercondition>equal</successnumbercondition>
+      <successbooleancondition>true</successbooleancondition>
+      <successwhenvarset>N</successwhenvarset>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -1391,30 +1439,12 @@ insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.J
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>log_extra START</from>
-      <to>ftp_getfiles</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
       <from>ftp_getfiles</from>
       <to>Set common variables</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>For Each</from>
-      <to>ftp_putfiles</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
       <unconditional>Y</unconditional>
     </hop>
     <hop>
@@ -1425,6 +1455,60 @@ insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.J
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>log_extra START</from>
+      <to>sync_ftp 1</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>sync_ftp 1</from>
+      <to>ftp_getfiles</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>sync_ftp 1</from>
+      <to>Set common variables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>For Each</from>
+      <to>sync_ftp 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>sync_ftp 2</from>
+      <to>ftp_putfiles</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>sync_ftp 2</from>
+      <to>log_extra END</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
     </hop>
   </hops>
   <notepads>

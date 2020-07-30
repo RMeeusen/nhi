@@ -23,7 +23,7 @@
     </parameter>
     <parameter>
       <name>db_port</name>
-      <default_value>5432</default_value>
+      <default_value>5433</default_value>
       <description/>
     </parameter>
     <parameter>
@@ -39,6 +39,11 @@
     <parameter>
       <name>main_data_dir</name>
       <default_value>D:\nhi\testdata</default_value>
+      <description/>
+    </parameter>
+    <parameter>
+      <name>sync_ftp</name>
+      <default_value>false</default_value>
       <description/>
     </parameter>
   </parameters>
