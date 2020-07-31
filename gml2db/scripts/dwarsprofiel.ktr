@@ -563,36 +563,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Switch / Case</from>
-      <to>AAenMaas - convert point value</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Switch / Case</from>
-      <to>Insert record: point</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>AAenMaas - convert point value</from>
-      <to>Insert record: point</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Switch / Case PK</from>
-      <to>Make PK</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Switch / Case PK</from>
-      <to>Switch / Case</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Make PK</from>
-      <to>Switch / Case</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Get data from XML</from>
       <to>correct epsg label</to>
       <enabled>Y</enabled>
@@ -604,49 +574,10 @@
     </hop>
     <hop>
       <from>Handle Null Fields</from>
-      <to>Switch / Case PK</to>
+      <to>Insert record: point</to>
       <enabled>Y</enabled>
     </hop>
   </order>
-  <step>
-    <name>AAenMaas - convert point value</name>
-    <type>ReplaceString</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>Point</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>&lt;gml:pos>(\d+\.?\d*) (\d+\.?\d*) (-?\d+\.?\d*)&lt;/gml:pos></replace_string>
-        <replace_by_string>&lt;gml:coordinates>$1,$2,$3&lt;/gml:coordinates></replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1008</xloc>
-      <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
   <step>
     <name>Error log</name>
     <type>TextFileOutput</type>
@@ -723,8 +654,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1296</xloc>
-      <yloc>32</yloc>
+      <xloc>896</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -764,8 +695,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1184</xloc>
-      <yloc>32</yloc>
+      <xloc>784</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -794,12 +725,7 @@
     <rownum_field/>
     <encoding>UTF-8</encoding>
     <file>
-      <name>${filename}</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-      <name/>
+      <name>${import_dir}/${file_name}.gml</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -1088,169 +1014,7 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1008</xloc>
-      <yloc>32</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Make PK</name>
-    <type>ConcatFields</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <separator>_</separator>
-    <enclosure/>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>N</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding/>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>Y</create_parent_folder>
-    <file>
-      <name>file</name>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
-      <extention>txt</extention>
-      <append>N</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
-      <add_to_result_filenames>Y</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
-    </file>
-    <fields>
-      <field>
-        <name>profielcode</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>codevolgnummer</name>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <ConcatFields>
-      <targetFieldName>code</targetFieldName>
-      <targetFieldLength>0</targetFieldLength>
-      <removeSelectedFields>N</removeSelectedFields>
-    </ConcatFields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>640</xloc>
-      <yloc>16</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Switch / Case</name>
-    <type>SwitchCase</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fieldname>administratiefgebied</fieldname>
-    <use_contains>N</use_contains>
-    <case_value_type>Integer</case_value_type>
-    <case_value_format/>
-    <case_value_decimal/>
-    <case_value_group/>
-    <default_target_step>Insert record: point</default_target_step>
-    <cases>
-      <case>
-        <value>1</value>
-        <target_step>AAenMaas - convert point value</target_step>
-      </case>
-    </cases>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>800</xloc>
-      <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Switch / Case PK</name>
-    <type>SwitchCase</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fieldname>code</fieldname>
-    <use_contains>N</use_contains>
-    <case_value_type>String</case_value_type>
-    <case_value_format/>
-    <case_value_decimal/>
-    <case_value_group/>
-    <default_target_step>Switch / Case</default_target_step>
-    <cases>
-      <case>
-        <value/>
-        <target_step>Make PK</target_step>
-      </case>
-    </cases>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>512</xloc>
+      <xloc>608</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
