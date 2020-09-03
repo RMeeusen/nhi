@@ -411,12 +411,12 @@
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
+      <set_logfile>Y</set_logfile>
+      <logfile>${log_dir}${file_name}_runtransaction</logfile>
+      <logext>txt</logext>
       <add_date>N</add_date>
       <add_time>N</add_time>
-      <loglevel>Nothing</loglevel>
+      <loglevel>Basic</loglevel>
       <slave_server_name/>
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
@@ -436,19 +436,6 @@
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>set-filename-fail</name>
-      <description>Abort job</description>
-      <type>ABORT</type>
-      <attributes/>
-      <message>Failed to set variable</message>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>288</xloc>
-      <yloc>224</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
       <name>Success 1</name>
       <description>Success</description>
       <type>SUCCESS</type>
@@ -458,19 +445,6 @@
       <nr>0</nr>
       <xloc>960</xloc>
       <yloc>64</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>run-transaction-fail</name>
-      <description>Abort job</description>
-      <type>ABORT</type>
-      <attributes/>
-      <message>Failed to do stuff :(</message>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>448</xloc>
-      <yloc>224</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -565,26 +539,8 @@ insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.J
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>set-filename</from>
-      <to>set-filename-fail</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
       <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>run-transaction</from>
-      <to>run-transaction-fail</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
+      <unconditional>Y</unconditional>
     </hop>
     <hop>
       <from>run-transaction</from>
@@ -592,8 +548,8 @@ insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.J
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
     </hop>
     <hop>
       <from>START</from>

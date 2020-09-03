@@ -400,32 +400,6 @@
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>log fail</name>
-      <description>Abort job</description>
-      <type>ABORT</type>
-      <attributes/>
-      <message>Failed to write to log o.O</message>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>240</xloc>
-      <yloc>192</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>filename not set</name>
-      <description>Abort job</description>
-      <type>ABORT</type>
-      <attributes/>
-      <message>${filename} not set o.O</message>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>544</xloc>
-      <yloc>192</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
       <name>Success 1</name>
       <description>Success</description>
       <type>SUCCESS</type>
@@ -528,31 +502,13 @@ insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.J
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>Write To Log 1</from>
-      <to>log fail</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>filename set?</from>
-      <to>filename not set</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>filename set?</from>
       <to>run transaction</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
     </hop>
     <hop>
       <from>run transaction</from>
@@ -578,8 +534,8 @@ insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.J
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
     </hop>
     <hop>
       <from>log_extra START</from>

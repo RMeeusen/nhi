@@ -587,6 +587,11 @@
       <to>Remove unwanted values</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Get data from XML</from>
+      <to>Error reading gml log</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <step>
     <name>Error log</name>
@@ -613,7 +618,7 @@
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>${log_dir}${file_name}_err</name>
+      <name>${log_dir}${file_name}_insert_err</name>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>Y</do_not_open_new_file_init>
       <extention>txt</extention>
@@ -1129,6 +1134,104 @@
     </GUI>
   </step>
   <step>
+    <name>Handel Null Numbers by type</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <replaceAllByValue/>
+    <replaceAllMask/>
+    <selectFields>N</selectFields>
+    <selectValuesType>Y</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      <valuetype>
+        <name>Number</name>
+        <value>-9999</value>
+        <mask/>
+        <set_type_empty_string>N</set_type_empty_string>
+      </valuetype>
+      <valuetype>
+        <name>Date</name>
+        <value>17530101000000</value>
+        <mask/>
+        <set_type_empty_string>N</set_type_empty_string>
+      </valuetype>
+    </valuetypes>
+    <fields>
+      </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Handle Null Fields</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <replaceAllByValue/>
+    <replaceAllMask/>
+    <selectFields>Y</selectFields>
+    <selectValuesType>N</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>statusobjectcode</name>
+        <value>98</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>hyperlink</name>
+        <value/>
+        <mask/>
+        <set_empty_string>Y</set_empty_string>
+      </field>
+      <field>
+        <name>code</name>
+        <value/>
+        <mask/>
+        <set_empty_string>Y</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Insert record: line</name>
     <type>ExecSQL</type>
     <description/>
@@ -1243,97 +1346,6 @@ VALUES(nextval('${table_name}_id_seq'), st_force2d(ST_GeomFromGML(?)), ?, ?, ?
     </GUI>
   </step>
   <step>
-    <name>correct epsg label</name>
-    <type>ReplaceString</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>LineString</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>epsg</replace_string>
-        <replace_by_string>EPSG</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>yes</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>256</xloc>
-      <yloc>64</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Handle Null Fields</name>
-    <type>IfNull</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <replaceAllByValue/>
-    <replaceAllMask/>
-    <selectFields>Y</selectFields>
-    <selectValuesType>N</selectValuesType>
-    <setEmptyStringAll>N</setEmptyStringAll>
-    <valuetypes>
-      </valuetypes>
-    <fields>
-      <field>
-        <name>statusobjectcode</name>
-        <value>98</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>hyperlink</name>
-        <value/>
-        <mask/>
-        <set_empty_string>Y</set_empty_string>
-      </field>
-      <field>
-        <name>code</name>
-        <value/>
-        <mask/>
-        <set_empty_string>Y</set_empty_string>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>416</xloc>
-      <yloc>64</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Remove unwanted values</name>
     <type>ReplaceString</type>
     <description/>
@@ -1373,37 +1385,30 @@ VALUES(nextval('${table_name}_id_seq'), st_force2d(ST_GeomFromGML(?)), ?, ?, ?
     </GUI>
   </step>
   <step>
-    <name>Handel Null Numbers by type</name>
-    <type>IfNull</type>
+    <name>correct epsg label</name>
+    <type>ReplaceString</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <replaceAllByValue/>
-    <replaceAllMask/>
-    <selectFields>N</selectFields>
-    <selectValuesType>Y</selectValuesType>
-    <setEmptyStringAll>N</setEmptyStringAll>
-    <valuetypes>
-      <valuetype>
-        <name>Number</name>
-        <value>-9999</value>
-        <mask/>
-        <set_type_empty_string>N</set_type_empty_string>
-      </valuetype>
-      <valuetype>
-        <name>Date</name>
-        <value>17530101000000</value>
-        <mask/>
-        <set_type_empty_string>N</set_type_empty_string>
-      </valuetype>
-    </valuetypes>
     <fields>
-      </fields>
+      <field>
+        <in_stream_name>LineString</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>epsg</replace_string>
+        <replace_by_string>EPSG</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>yes</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+    </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -1413,12 +1418,105 @@ VALUES(nextval('${table_name}_id_seq'), st_force2d(ST_GeomFromGML(?)), ?, ?, ?
       </output>
     </remotesteps>
     <GUI>
-      <xloc>624</xloc>
+      <xloc>256</xloc>
       <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
+  <step>
+    <name>Error reading gml log</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>${log_dir}${file_name}_readgml_err</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
+      <extention>txt</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format>yyyyMMddHHmmss</date_time_format>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>err_description</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>err_code</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step_error_handling>
+    <error>
+      <source_step>Get data from XML</source_step>
+      <target_step>Error reading gml log</target_step>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename>err_description</descriptions_valuename>
+      <fields_valuename/>
+      <codes_valuename>err_code</codes_valuename>
+      <max_errors>5000</max_errors>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
     <error>
       <source_step>Insert record: line</source_step>
       <target_step>Error message</target_step>
