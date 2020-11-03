@@ -301,7 +301,7 @@
       <serverport>21</serverport>
       <username>${ftpuser}</username>
       <password>${ftppassword}</password>
-      <remoteDirectory>LOGS</remoteDirectory>
+      <remoteDirectory>${ftp_log_dir}</remoteDirectory>
       <localDirectory>${main_data_dir}\${regio}\LOGS</localDirectory>
       <wildcard/>
       <binary>N</binary>
@@ -390,7 +390,7 @@
       <serverport>21</serverport>
       <username>${ftpuser}</username>
       <password>${ftppassword}</password>
-      <remoteDirectory>GML_BK</remoteDirectory>
+      <remoteDirectory>${ftp_bk_dir}</remoteDirectory>
       <localDirectory>${main_data_dir}\${regio}\GML_BK</localDirectory>
       <wildcard/>
       <binary>N</binary>
@@ -435,7 +435,7 @@
       <to>Upload GML_BK to FTPS</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>

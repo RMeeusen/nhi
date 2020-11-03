@@ -301,7 +301,7 @@
       <servername>ftp.deltares.nl</servername>
       <username>${ftpuser}</username>
       <password>${ftppassword}</password>
-      <FTPSdirectory>GML</FTPSdirectory>
+      <FTPSdirectory>${ftp_input_dir}</FTPSdirectory>
       <targetdirectory>${main_data_dir}\${regio}\GML\</targetdirectory>
       <wildcard>.*\.gml</wildcard>
       <binary>Y</binary>

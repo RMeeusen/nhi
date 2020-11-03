@@ -32,6 +32,7 @@ update public.administratiefgebied set importdir = case
 
 alter table administratiefgebied add if not exists active bool;
 
-update administratiefgebied  set active = true where administratiefgebiedid in (20);
+--update administratiefgebied  set active = true where administratiefgebiedid in (20);
+update administratiefgebied set active =true where administratiefgebiedid in (1,12,14,20);
 --update administratiefgebied  set active = true where administratiefgebiedid in (1,5,11,14,17,20);
 
