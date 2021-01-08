@@ -1638,7 +1638,7 @@ VALUES
       <descriptions_valuename>err_desc</descriptions_valuename>
       <fields_valuename/>
       <codes_valuename/>
-      <max_errors>5000</max_errors>
+      <max_errors>1000</max_errors>
       <max_pct_errors/>
       <min_pct_rows/>
     </error>
@@ -1650,7 +1650,7 @@ VALUES
       <descriptions_valuename>err_desc</descriptions_valuename>
       <fields_valuename/>
       <codes_valuename/>
-      <max_errors>5000</max_errors>
+      <max_errors>1000</max_errors>
       <max_pct_errors/>
       <min_pct_rows/>
     </error>
