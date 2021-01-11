@@ -396,7 +396,7 @@ NHI Helpdesk</comment>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>800</xloc>
+      <xloc>912</xloc>
       <yloc>256</yloc>
       <attributes_kjc/>
     </entry>
@@ -430,7 +430,7 @@ NHI Helpdesk</comment>
       <type>WRITE_TO_LOG</type>
       <attributes/>
       <logmessage/>
-      <loglevel/>
+      <loglevel>Basic</loglevel>
       <logsubject>No email configured for ${regio}</logsubject>
       <parallel>N</parallel>
       <draw>Y</draw>
@@ -475,7 +475,7 @@ NHI Helpdesk</comment>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>272</xloc>
-      <yloc>352</yloc>
+      <yloc>384</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -496,7 +496,7 @@ NHI Helpdesk</comment>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>928</xloc>
+      <xloc>1040</xloc>
       <yloc>256</yloc>
       <attributes_kjc/>
     </entry>
@@ -506,12 +506,12 @@ NHI Helpdesk</comment>
       <type>WRITE_TO_LOG</type>
       <attributes/>
       <logmessage/>
-      <loglevel/>
+      <loglevel>Basic</loglevel>
       <logsubject>Email is being set to ${email} for ${regio}</logsubject>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>688</xloc>
+      <xloc>736</xloc>
       <yloc>256</yloc>
       <attributes_kjc/>
     </entry>

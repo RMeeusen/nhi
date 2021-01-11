@@ -1,0 +1,22 @@
+region (same as FTP folder);email (separated by spaces);name (separated by commas)
+aaenmaas;;
+amstelgooienvecht;;
+brabantsedelta;;
+dedommel;;
+delfland;;
+drentsoverijsselsedelta;;
+hollandsedelta;;
+hollandsnoorderkwartier;;
+hunzeenaas;;
+limburg;;
+noorderzijlvest;;
+rijnenijssel;;
+rijnland;;
+rivierenland;;
+scheldestromen;;
+schielandendekrimpenerwaard;;
+stichtserijnlanden;;
+valleienveluwe;;
+vechtstromen;;
+wetterskipfryslan;;
+zuiderzeeland;;

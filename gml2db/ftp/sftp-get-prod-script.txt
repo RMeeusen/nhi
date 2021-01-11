@@ -1,0 +1,17 @@
+#Open the connection
+
+open sftp://%1%:%2%@ftp.deltares.nl:2222/ -hostkey="ssh-rsa 2048 /vkIY1UQX3fbmaOSw3UgTDiSYyfEWqO9Pm0axXpM9fA=" -rawsettings FSProtocol=2
+
+#Get the files
+get  -transfer=binary ./GML/*.gml d:\nhi\prod\%3%\GML\
+#Clean backup folder
+rm ./GML_BK/*.*
+
+#Move the files to backup folder
+mv ./GML/*.* ./GML_BK/
+
+#Close the connection
+close
+
+#Goodbye
+exit

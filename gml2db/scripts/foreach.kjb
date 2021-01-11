@@ -431,7 +431,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>448</xloc>
+      <xloc>496</xloc>
       <yloc>64</yloc>
       <attributes_kjc/>
     </entry>
@@ -486,48 +486,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>576</xloc>
-      <yloc>64</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>log_extra START</name>
-      <description/>
-      <type>SQL</type>
-      <attributes/>
-      <sql>insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.Job.Name}', 'START', '${filename}');
-
-</sql>
-      <useVariableSubstitution>T</useVariableSubstitution>
-      <sqlfromfile>F</sqlfromfile>
-      <sqlfilename/>
-      <sendOneStatement>T</sendOneStatement>
-      <connection>mylog</connection>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>160</xloc>
-      <yloc>64</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>log_extra END</name>
-      <description/>
-      <type>SQL</type>
-      <attributes/>
-      <sql>
-insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.Job.Name}', 'END', '${filename}');
-
-</sql>
-      <useVariableSubstitution>T</useVariableSubstitution>
-      <sqlfromfile>F</sqlfromfile>
-      <sqlfilename/>
-      <sendOneStatement>T</sendOneStatement>
-      <connection>mylog</connection>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>784</xloc>
+      <xloc>688</xloc>
       <yloc>64</yloc>
       <attributes_kjc/>
     </entry>
@@ -553,15 +512,6 @@ insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.J
     </hop>
     <hop>
       <from>START</from>
-      <to>log_extra START</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>log_extra START</from>
       <to>set-filename</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -571,20 +521,11 @@ insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.J
     </hop>
     <hop>
       <from>Move Files</from>
-      <to>log_extra END</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>log_extra END</from>
       <to>Success 1</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
+      <evaluation>N</evaluation>
       <unconditional>Y</unconditional>
     </hop>
   </hops>

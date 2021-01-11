@@ -1,0 +1,11 @@
+#Open the connection
+open sftp://%1%:%2%@ftp.deltares.nl:2222/ -hostkey="ssh-rsa 2048 /vkIY1UQX3fbmaOSw3UgTDiSYyfEWqO9Pm0axXpM9fA=" -rawsettings FSProtocol=2
+
+#Upload the logs to ftp
+put -transfer=binary  d:\nhi\test\%3%\LOGS\*.* ./TEST_LOGS/
+
+#Close the connection
+close
+
+#Goodbye
+exit
