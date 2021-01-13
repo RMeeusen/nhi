@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by ICT (Stichting Deltares) -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" xmlns:nhi="http://www.nhi.nu/gml" targetNamespace="http://www.nhi.nu/gml" elementFormDefault="qualified" version="1.0">
+<?xml version="13.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" xmlns:nhi="http://www.nhi.nu/gml"  targetNamespace="http://www.nhi.nu/gml" elementFormDefault="qualified" version="1.0">
 	<import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/2.1.2/feature.xsd"/>
 	<complexType name="FeatureCollectionType">
 		<complexContent>
@@ -10,14 +9,14 @@
 	<simpleType name="administratiefgebiedWaterschappenSimpleType">
 		<restriction base="integer">
 			<enumeration value="1"/><!--aa en maas-->
-			<enumeration value="2"/>        <!--amstel gooi en vecht-->
-			<enumeration value="3"/>        <!--brabantse delta-->
-			<enumeration value="4"/>        <!--delfland-->
-			<enumeration value="5"/>        <!--dommel-->
-			<enumeration value="6"/>        <!--fryslan-->
-			<enumeration value="7"/>        <!--hollands noorderkwartier-->
-			<enumeration value="8"/>        <!--hollandse delta-->
-			<enumeration value="9"/>        <!--hunze en aas-->
+			<enumeration value="2"/><!--amstel gooi en vecht-->
+			<enumeration value="3"/><!--brabantse delta-->
+			<enumeration value="4"/><!--delfland-->
+			<enumeration value="5"/><!--dommel-->
+			<enumeration value="6"/><!--fryslan-->
+			<enumeration value="7"/><!--hollands noorderkwartier-->
+			<enumeration value="8"/><!--hollandse delta-->
+			<enumeration value="9"/><!--hunze en aas-->
 			<enumeration value="10"/> <!--noorderzijlvest-->
 			<enumeration value="11"/> <!--limburg-->
 			<enumeration value="12"/> <!--rijn en ijssel-->
@@ -31,6 +30,7 @@
 			<enumeration value="20"/> <!--vallei en veluwe-->
 			<enumeration value="21"/> <!--vechtstromen-->
 			<enumeration value="22"/> <!--drents overijsselse delta-->
+			<enumeration value="30" /> <!--rijkswaterstaat -->
 		</restriction>
 	</simpleType>
 	<simpleType name="administratiefgebiedSimpleType">
@@ -41,11 +41,16 @@
 			<pattern value="\d\d\d\d\d\d\d\d\d\d\d\d\d\d"/>
 		</restriction>
 	</simpleType>
+	<simpleType name="dayMonthSimpleType">
+		<restriction base="string">
+			<pattern value="\d\d\d\d"/>
+		</restriction>
+	</simpleType>
 	<simpleType name="jaNeeSimpleType">
 		<restriction base="integer">
 			<enumeration value="1" /><!--ja-->
 			<enumeration value="2"/><!--nee-->
-			<enumeration value="3"/><!--onbekend-->
+			<enumeration value="3"/><!--nvt-->
 		</restriction>
 	</simpleType>
 	<simpleType name="vormCodeSimpleType">
@@ -61,7 +66,14 @@
 			<enumeration value="9"/><!--muilprofiel-->
 			<enumeration value="10"/><!--langwerpig-->
 			<enumeration value="11"/><!--scherp-->
+			<enumeration value="98"/><!--overig-->
 			<enumeration value="99"/><!--onbekend-->
+		</restriction>
+	</simpleType>
+	<simpleType name="richtingSimpleType">
+		<restriction base="integer">
+			<enumeration value="1"/><!--positief, in stroomrichting-->
+			<enumeration value="2"/><!--negatief, tegengesteld aan stroomrichting-->
 		</restriction>
 	</simpleType>
 	<simpleType name="typeProfielCodeSimpleType">
@@ -72,12 +84,13 @@
 			<enumeration value="4"/> <!--waterloop-->
 		</restriction>
 	</simpleType>
-	<simpleType name="soortKokerVormigeConstructieCodeSimpleType">
+	<simpleType name="typeKruisingCodeSimpleType">
 		<restriction base="integer">
-			<enumeration value="1"/> <!--duiker-->
-			<enumeration value="2"/> <!--hevel-->
-			<enumeration value="3"/> <!--sifon-->
-			<enumeration value="4"/> <!--bypass-->
+			<enumeration value="3"/> <!--duiker-->
+			<enumeration value="4"/> <!--sifon-->
+			<enumeration value="5"/> <!--hevel-->
+			<enumeration value="6"/> <!--bypass-->
+			<enumeration value="98"/> <!--overig-->
 			<enumeration value="99"/> <!--onbekend-->
 		</restriction>
 	</simpleType>
@@ -88,7 +101,8 @@
 			<enumeration value="4"/> <!--buiten bedrijf-->
 			<enumeration value="5"/> <!--niet meer aanwezig-->
 			<enumeration value="7"/> <!--te verwijderen-->
-			<enumeration value="98"/> <!--onbekend-->
+			<enumeration value="98"/> <!--overig-->
+			<enumeration value="99"/> <!--onbekend-->
 		</restriction>
 	</simpleType>
 	<simpleType name="ruwheidsTypeCodeSimpleType">
@@ -99,6 +113,8 @@
 			<enumeration value="4"/> <!--stricklerks-->
 			<enumeration value="5"/> <!--white colebrook-->
 			<enumeration value="6"/> <!--bos en bijkerk-->
+			<enumeration value="98"/> <!--overig-->
+			<enumeration value="99"/> <!--onbekend-->
 		</restriction>
 	</simpleType>
 	<simpleType name="soortAfsluitmiddelCodeSimpleType">
@@ -109,7 +125,7 @@
 			<enumeration value="4"/> <!--schuif-->
 			<enumeration value="5"/> <!--terugslagklep-->
 			<enumeration value="6"/> <!--tolklep-->
-      <enumeration value="7"/> <!--stuwklep-->
+      		<enumeration value="7"/> <!--stuwklep-->
 			<enumeration value="97"/> <!--niet afsluitbaar-->
 			<enumeration value="98"/> <!--overig-->
 			<enumeration value="99"/> <!--onbekend-->
@@ -121,24 +137,42 @@
 			<enumeration value="2"/> <!--regelbaar, niet automatisch-->
 			<enumeration value="3"/> <!--regelbaar, automatisch-->
 			<enumeration value="4"/> <!--handmatig-->
-			<enumeration value="99"/> <!--overig-->
+			<enumeration value="98"/> <!--overig-->
+			<enumeration value="99"/> <!--onbekend-->
+		</restriction>
+	</simpleType>
+	<simpleType name="soortGebiedCodeSimpleType">
+		<restriction base="integer">
+			<enumeration value="1"/> <!--bemalingsgebied -->
+			<enumeration value="2"/> <!--afvoergebied -->
+			<enumeration value="3"/> <!--deelstroomgebied -->
+			<enumeration value="4"/> <!--afwateringsgebied -->
+			<enumeration value="5"/> <!--afwateringseenheid -->
+			<enumeration value="6"/> <!--aanvoergebied -->
+			<enumeration value="98"/> <!--overig-->
+			<enumeration value="99"/> <!--onbekend-->
 		</restriction>
 	</simpleType>
 	<simpleType name="typeHydraulischObjectCodeSimpleType">
 		<restriction base="integer">
-			<enumeration value="0"/> <!--vispassage-->
+<!--			<enumeration value="0"/> &lt;!&ndash;vispassage&ndash;&gt;-->
 			<enumeration value="1"/> <!--dood hout-->
 			<enumeration value="2"/> <!--beverdam-->
-			<enumeration value="3"/> <!--zandvang-->
+<!--			<enumeration value="3"/> &lt;!&ndash;zandvang&ndash;&gt;-->
 			<enumeration value="4"/> <!--watermolen-->
-			<enumeration value="5"/> <!--overig-->
+<!--			<enumeration value="5"/> &lt;!&ndash;overig&ndash;&gt;-->
+			<enumeration value="98"/> <!--overig-->
+			<enumeration value="99"/> <!--onbekend-->
 		</restriction>
 	</simpleType>
 	<simpleType name="typeRandvoorwaardeCodeSimpleType">
 		<restriction base="integer">
-			<enumeration value="0"/> <!--waterstand-->
-			<enumeration value="1"/> <!--debiet-->
-			<enumeration value="2"/> <!--qh-relatie-->
+			<enumeration value="1"/> <!--waterstand vaste waarde-->
+			<enumeration value="2"/> <!--debiet vaste waarde-->
+			<enumeration value="3"/> <!--qh-relatie-->
+			<enumeration value="4"/> <!--waterstand variabel -->
+			<enumeration value="5"/> <!--debiet variabel-->
+			<enumeration value="6"/> <!--waterstand getijdebeweging-->
 		</restriction>
 	</simpleType>
 	<simpleType name="sturingTypeCodeSimpleType">
@@ -147,11 +181,31 @@
 			<enumeration value="2"/> <!--discreet-->
 		</restriction>
 	</simpleType>
+	<simpleType name="prioriteitCodeSimpleType">
+		<restriction base="integer">
+			<enumeration value="1"/> <!--hoog-->
+			<enumeration value="2"/> <!--middel-->
+			<enumeration value="3"/> <!--laag-->
+			<enumeration value="4"/> <!--geen-->
+		</restriction>
+	</simpleType>
+	<simpleType name="controllerTypeCodeSimpleType">
+		<restriction base="integer">
+			<enumeration value="1"/> <!--interval-->
+			<enumeration value="2"/> <!--PID-->
+			<enumeration value="3"/> <!--hydraulic-->
+			<enumeration value="4"/> <!--time-->
+			<enumeration value="5"/> <!--nvt-->
+			<enumeration value="98"/> <!--overig-->
+			<enumeration value="99"/> <!--onbekend-->
+		</restriction>
+	</simpleType>
 	<simpleType name="stuurvariabeleCodeSimpleType">
 		<restriction base="integer">
-			<enumeration value="1"/> <!--kruinhoogte-->
-			<enumeration value="2"/> <!--schuifhoogte-->
-			<enumeration value="3"/> <!--pompcapaciteit-->
+			<enumeration value="1"/> <!--bovenkant afsluitmiddel-->
+			<enumeration value="2"/> <!--hoogte opening-->
+			<enumeration value="3"/> <!--pompdebiet-->
+			<enumeration value="4"/> <!--hydrologische randvoorwaarde-->
 		</restriction>
 	</simpleType>
 	<simpleType name="soortStuwCodeSimpleType">
@@ -176,43 +230,83 @@
 			<enumeration value="24"/> <!--brievenbusstuw-->
 			<enumeration value="25"/> <!--knijpstuw-->
 			<enumeration value="26"/> <!--conserveringstuw-->
+			<enumeration value="98"/> <!--overig-->
 			<enumeration value="99"/> <!--onbekend-->
+		</restriction>
+	</simpleType>
+	<simpleType name="soortStreefpeilCodeSimpleType">
+		<restriction base="integer">
+			<enumeration value="1"/> <!--vast-->
+			<enumeration value="2"/> <!--winter-->
+			<enumeration value="3"/> <!--zomer-->
+			<enumeration value="4"/> <!--dynamisch ondergrens-->
+			<enumeration value="5"/> <!--dynamisch bovengrens-->
+			<enumeration value="6"/> <!--dynamisch ondergrens zomer-->
+			<enumeration value="8"/> <!--dynamisch bovengrens zomer-->
+			<enumeration value="9"/> <!--dynamisch ondergrens winter-->
+			<enumeration value="10"/> <!--dynamisch bovengrens winter-->
+			<enumeration value="11"/> <!--schouw-->
+<!--			<enumeration value="98"/> &lt;!&ndash;overig&ndash;&gt;-->
+			<enumeration value="99"/> <!--onbekend-->
+		</restriction>
+	</simpleType>
+	<simpleType name="overlaatOnderlaatCodeSimpleType">
+		<restriction base="integer">
+			<enumeration value="1"/> <!-- overlaat -->
+			<enumeration value="2" /><!-- onderlaat -->
+			<enumeration value="3" /><!-- nvt -->
 		</restriction>
 	</simpleType>
 	<simpleType name="doelvariabeleCodeSimpleType">
 		<restriction base="integer">
 			<enumeration value="1"/> <!--waterstand-->
 			<enumeration value="2"/> <!--debiet-->
+			<enumeration value="3"/> <!--tijd-->
+			<enumeration value="4"/> <!--vaste waarde-->
+		</restriction>
+	</simpleType>
+	<simpleType name="eenheidCodeSimpleType">
+		<restriction base="integer">
+			<enumeration value="1"/> <!--m+NAP-->
+			<enumeration value="2"/> <!--m3/s-->
+			<enumeration value="3"/> <!--datumTijd-->
+		</restriction>
+	</simpleType>
+	<simpleType name="categorieOppervlaktewaterCodeSimpleType">
+		<restriction base="integer">
+			<enumeration value="1"/><!-- primair -->
+			<enumeration value="2"/><!-- secundair -->
+			<enumeration value="3"/><!-- tertiair -->
+			<enumeration value="98"/> <!--overig-->
+			<enumeration value="99"/> <!--onbekend-->
 		</restriction>
 	</simpleType>
 	<group name="ruwheid">
 		<sequence>
-			<element name="ruwheidstypecode" type="nhi:ruwheidsTypeCodeSimpleType"/>
-			<element name="ruwheidswaarde" type="decimal"/>
+			<element name="typeRuwheid" type="nhi:ruwheidsTypeCodeSimpleType"/>
+			<element name="ruwheid" type="decimal"/>
 		</sequence>
 	</group>
 	<group name="ruwheidsbereik">
 		<sequence>
-			<element name="ruwheidstypecode" type="nhi:ruwheidsTypeCodeSimpleType"/>
-			<element name="ruwheidswaardelaag" type="decimal"/>
-			<element name="ruwheidswaardehoog" type="decimal"/>
+			<element name="typeRuwheid" type="nhi:ruwheidsTypeCodeSimpleType"/>
+			<element name="ruwheidLaag" type="decimal"/>
+			<element name="ruwheidHoog" type="decimal"/>
 		</sequence>
 	</group>
 	<group name="general">
 		<sequence>
 			<element name="code" type="string"/>
-			<element name="statusobjectcode" type="nhi:statusObjectCodeSimpleType" minOccurs="0"/>
-			<element name="objectbegintijd" type="nhi:dateTimeSimpleType" minOccurs="0"/>
-			<element name="objecteindtijd" type="nhi:dateTimeSimpleType" minOccurs="0"/>
+			<element name="statusObject" type="nhi:statusObjectCodeSimpleType" minOccurs="0"/>
+			<element name="createdDate" type="dateTime" minOccurs="0"/>
+			<element name="lastEditedDate" type="dateTime" minOccurs="0"/>
+			<element name="administratiefgebied" type="nhi:administratiefgebiedSimpleType"/>
 		</sequence>
 	</group>
 	<group name="generalExtended">
 		<sequence>
-			<element name="code" type="string"/>
+			<group ref="nhi:general"/>
 			<element name="naam" type="string" minOccurs="0"/>
-			<element name="statusobjectcode" type="nhi:statusObjectCodeSimpleType" minOccurs="0"/>
-			<element name="objectbegintijd" type="nhi:dateTimeSimpleType" minOccurs="0"/>
-			<element name="objecteindtijd" type="nhi:dateTimeSimpleType" minOccurs="0"/>
 			<element name="hyperlink" type="string" minOccurs="0"/>
 		</sequence>
 	</group>
