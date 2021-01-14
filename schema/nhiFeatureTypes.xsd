@@ -655,13 +655,11 @@
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
 					<group ref="nhi:general"/>
-					<choice>
-						<element name="hydroobjectID" type="string"/>
-						<element name="grondwaterkoppellijnID" type="string"/>
-						<element name="brugID" type="string"/>
-						<element name="stuwID" type="string" />
-						<element name="bodemvalID" type="string" />
-					</choice>
+					<element name="hydroobjectID" type="string" minOccurs="0"/>
+					<element name="grondwaterkoppellijnID" type="string" minOccurs="0"/>
+					<element name="brugID" type="string" minOccurs="0"/>
+					<element name="stuwID" type="string" minOccurs="0"/>
+					<element name="bodemvalID" type="string" minOccurs="0"/>
 					<element name="soortProfiel" type="nhi:soortProfielCodeSimpleType"/>
 					<element ref="gml:lineStringProperty"/>
 				</sequence>
