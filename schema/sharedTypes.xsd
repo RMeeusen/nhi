@@ -4,7 +4,7 @@
 	<complexType name="FeatureCollectionType">
 		<complexContent>
 			<extension base="gml:AbstractFeatureCollectionType">
-				<attribute name="nhiVersion" type="nhi:nhiVersionSimpleType" use="required"/>
+				<attribute name="hydamoVersion" type="nhi:nhiVersionSimpleType" use="required"/>
 			</extension>
 		</complexContent>
 	</complexType>
