@@ -28,8 +28,8 @@
 	<element name="streefpeil" type="nhi:NhiStreefpeilFeatureType" substitutionGroup="gml:_Feature"/>
 	<element name="sturing" type="nhi:NhiSturingFeatureType" substitutionGroup="gml:_Feature"/>
 	<element name="stuw" type="nhi:NhiStuwFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="profielLijn" type="nhi:NhiMetingProfielLijnFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="profielPunt" type="nhi:NhiMetingProfielPuntFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="meetingprofielLijn" type="nhi:NhiMetingProfielLijnFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="meetingprofielPunt" type="nhi:NhiMetingProfielPuntFeatureType" substitutionGroup="gml:_Feature"/>
 	<complexType name="NhiAanAfvoerGebiedFeatureType">
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
@@ -146,16 +146,6 @@
 					<element name="bodemhoogteBovenstrooms" type="decimal">
 						<annotation><documentation>De maatgevende bodemhoogte van het object aan de bovenstroomse zijde. m + NAP</documentation></annotation>
 					</element>
-<!--					<element name="dwarsprofielbovenstroomscode" type="string">-->
-<!--						<annotation>-->
-<!--							<documentation>Verwijzing naar code van bovenstroomse profiel in object DwarsProfiel of NormGeparametriseerdProfiel.</documentation>-->
-<!--						</annotation>-->
-<!--					</element>-->
-<!--					<element name="dwarsprofielbenedenstroomscode" type="string">-->
-<!--						<annotation>-->
-<!--							<documentation>Verwijzing naar code van benedenstroomse profiel in object DwarsProfiel of NormGeparametriseerdProfiel.</documentation>-->
-<!--						</annotation>-->
-<!--					</element>-->
 					<element ref="gml:pointProperty"/>
 				</sequence>
 			</extension>
@@ -324,7 +314,7 @@
 					<element name="grondwaterkoppelpuntID" type="string">
 						<annotation><documentation>Een uniek identificerende code voor het bijbehorende GrondwaterKoppelPunt.</documentation></annotation>
 					</element>
-					<element name="begindPeriode" type="nhi:dayMonthSimpleType" minOccurs="0"/>
+					<element name="beginPeriode" type="nhi:dayMonthSimpleType" minOccurs="0"/>
 					<element name="eindPeriode" type="nhi:dayMonthSimpleType" minOccurs="0"/>
 					<element name="waterstand" type="decimal"/>
 				</sequence>
@@ -665,7 +655,6 @@
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
 					<group ref="nhi:general"/>
-					<element ref="gml:lineStringProperty"/>
 					<choice>
 						<element name="hydroobjectID" type="string"/>
 						<element name="grondwaterkoppellijnID" type="string"/>
@@ -674,6 +663,7 @@
 						<element name="bodemvalID" type="string" />
 					</choice>
 					<element name="soortProfiel" type="nhi:soortProfielCodeSimpleType"/>
+					<element ref="gml:lineStringProperty"/>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -683,7 +673,6 @@
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
 					<group ref="nhi:general"/>
-					<element ref="gml:pointProperty"/>
 					<element name="meetingProfielLijnID" type="string">
 						<annotation>
 							<documentation>Code van de MetingProfielLijn waartoe het gemeten profielpunt behoort.</documentation>
@@ -704,6 +693,7 @@
 					</element>
 					<element name="typeBodem" type="nhi:typeBodemCodeSimpleType"/>
 					<group ref="nhi:ruwheidsbereik" minOccurs="0"/>
+					<element ref="gml:pointProperty"/>
 				</sequence>
 			</extension>
 		</complexContent>
