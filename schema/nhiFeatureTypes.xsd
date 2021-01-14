@@ -1,4 +1,4 @@
-<?xml version="13.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" xmlns:nhi="http://www.nhi.nu/gml" targetNamespace="http://www.nhi.nu/gml" elementFormDefault="qualified" version="1.0">
 	<import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/2.1.2/feature.xsd"/>
 	<include schemaLocation="sharedTypes.xsd"/>
@@ -20,7 +20,7 @@
 	<element name="hydroobject" type="nhi:NhiHydroObjectFeatureType" substitutionGroup="gml:_Feature"/>
 	<element name="lateraleknoop" type="nhi:NhiLateraleKnoopFeatureType" substitutionGroup="gml:_Feature"/>
 	<element name="meetlocatie" type="nhi:NhiMeetlocatieFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="meetwaardeActiewaard" type="nhi:NhiMeetwaardeActiewaardeFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="meetwaardeActiewaarde" type="nhi:NhiMeetwaardeActiewaardeFeatureType" substitutionGroup="gml:_Feature"/>
 	<element name="normgeparametriseerdprofiel" type="nhi:NhiNormGeparametiseerdProfielFeatureType" substitutionGroup="gml:_Feature"/>
 	<element name="peilgebiedPraktijk" type="nhi:NhiPeilgebiedFeatureType" substitutionGroup="gml:_Feature"/>
 	<element name="peilafwijkingGebied" type="nhi:NhiPeilgebiedFeatureType" substitutionGroup="gml:_Feature"/>
@@ -28,12 +28,14 @@
 	<element name="streefpeil" type="nhi:NhiStreefpeilFeatureType" substitutionGroup="gml:_Feature"/>
 	<element name="sturing" type="nhi:NhiSturingFeatureType" substitutionGroup="gml:_Feature"/>
 	<element name="stuw" type="nhi:NhiStuwFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="profielLijn" type="nhi:NhiMetingProfielLijnFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="profielPunt" type="nhi:NhiMetingProfielPuntFeatureType" substitutionGroup="gml:_Feature"/>
 	<complexType name="NhiAanAfvoerGebiedFeatureType">
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
 					<group ref="nhi:generalExtended"/>
-					<element name="soortAfvoerAanvoergebied" type="nhi:soortGebiedsCodeSimpleType">
+					<element name="soortAfvoerAanvoergebied" type="nhi:soortGebiedCodeSimpleType">
 						<annotation><documentation>Een aanduiding voor het soort af-/aanvoergebied. </documentation></annotation>
 					</element>
 					<element name="ordeCode" type="string" minOccurs="0">
@@ -657,5 +659,53 @@
 					</sequence>
 				</extension>
 			</complexContent>
+	</complexType>
+	<complexType name="NhiMetingProfielLijnFeatureType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<group ref="nhi:general"/>
+					<element ref="gml:lineStringProperty"/>
+					<choice>
+						<element name="hydroobjectID" type="string"/>
+						<element name="grondwaterkoppellijnID" type="string"/>
+						<element name="brugID" type="string"/>
+						<element name="stuwID" type="string" />
+						<element name="bodemvalID" type="string" />
+					</choice>
+					<element name="soortProfiel" type="nhi:soortProfielCodeSimpleType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="NhiMetingProfielPuntFeatureType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<group ref="nhi:general"/>
+					<element ref="gml:pointProperty"/>
+					<element name="meetingProfielLijnID" type="string">
+						<annotation>
+							<documentation>Code van de MetingProfielLijn waartoe het gemeten profielpunt behoort.</documentation>
+						</annotation>
+					</element>
+					<element name="codeVolgnummer" type="integer">
+						<annotation>
+							<documentation>
+								Volgnummer - van links naar rechts kijkend in de getekende richting van de waterloop.
+								Minimaal 1 en elk opvolgend punt 1 volgnummer hoger.
+							</documentation>
+						</annotation>
+					</element>
+					<element name="soortMeetpunt" type="nhi:typeProfielCodeSimpleType" minOccurs="0">
+						 	<annotation>
+								<documentation>TODO: not shure this value needs to be set for each point</documentation>
+							</annotation>
+					</element>
+					<element name="typeBodem" type="nhi:typeBodemCodeSimpleType"/>
+					<group ref="nhi:ruwheidsbereik" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
 	</complexType>
 </schema>

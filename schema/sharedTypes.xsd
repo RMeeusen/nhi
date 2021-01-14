@@ -1,9 +1,11 @@
-<?xml version="13.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" xmlns:nhi="http://www.nhi.nu/gml"  targetNamespace="http://www.nhi.nu/gml" elementFormDefault="qualified" version="1.0">
 	<import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/2.1.2/feature.xsd"/>
 	<complexType name="FeatureCollectionType">
 		<complexContent>
-			<extension base="gml:AbstractFeatureCollectionType"/>
+			<extension base="gml:AbstractFeatureCollectionType">
+				<attribute name="nhiVersion" type="nhi:nhiVersionSimpleType" use="required"/>
+			</extension>
 		</complexContent>
 	</complexType>
 	<simpleType name="administratiefgebiedWaterschappenSimpleType">
@@ -35,6 +37,12 @@
 	</simpleType>
 	<simpleType name="administratiefgebiedSimpleType">
 		<union memberTypes="nhi:administratiefgebiedWaterschappenSimpleType"/>
+	</simpleType>
+	<simpleType name="nhiVersionSimpleType">
+		<restriction base="decimal">
+			<enumeration value="12"/>
+			<enumeration value="13"/>
+		</restriction>
 	</simpleType>
 	<simpleType name="dateTimeSimpleType">
 		<restriction base="string">
@@ -281,6 +289,26 @@
 			<enumeration value="99"/> <!--onbekend-->
 		</restriction>
 	</simpleType>
+	<simpleType name="typeBodemCodeSimpleType">
+		<restriction base="integer">
+			<enumeration value="1"/><!-- vaste bodem Z1 -->
+			<enumeration value="2"/><!-- bovenkant slib Z2 -->
+		</restriction>
+	</simpleType>
+	<simpleType name="soortProfielCodeSimpleType">
+		<restriction base="integer">
+			<enumeration value="1"/><!-- profiel oppervlaktewater -->
+			<enumeration value="2"/><!-- geotechnisch profiel -->
+			<enumeration value="3"/><!-- dwarsprofiel waterkering -->
+			<enumeration value="4"/><!-- lengteprofiel waterkering -->
+			<enumeration value="5"/><!-- dwarsprofiel oppervlaktewater -->
+			<enumeration value="6"/><!-- lengteprofiel oppervlaktewater -->
+			<enumeration value="7"/><!-- kruinprofiel stuw -->
+			<enumeration value="8"/><!-- profiel brug -->
+			<enumeration value="9"/><!-- dwarsprofiel bodemval -->
+			<enumeration value="10"/><!-- profiel bergingsgebied -->
+		</restriction>
+	</simpleType>
 	<group name="ruwheid">
 		<sequence>
 			<element name="typeRuwheid" type="nhi:ruwheidsTypeCodeSimpleType"/>
@@ -298,8 +326,8 @@
 		<sequence>
 			<element name="code" type="string"/>
 			<element name="statusObject" type="nhi:statusObjectCodeSimpleType" minOccurs="0"/>
-			<element name="createdDate" type="dateTime" minOccurs="0"/>
-			<element name="lastEditedDate" type="dateTime" minOccurs="0"/>
+			<element name="CREATED_DATE" type="dateTime" minOccurs="0"/>
+			<element name="LAST_EDITED_DATE" type="dateTime" minOccurs="0"/>
 			<element name="administratiefgebied" type="nhi:administratiefgebiedSimpleType"/>
 		</sequence>
 	</group>
