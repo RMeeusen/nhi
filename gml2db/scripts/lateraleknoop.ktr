@@ -956,7 +956,7 @@
     <replace_variables>Y</replace_variables>
     <quoteString>Y</quoteString>
     <sql>INSERT INTO public.${table_name}
-(${table_name}id, code, statusobjectid, geometriepunt)
+(${table_name}id, code, statusobjectid, administratiefgebiedid, geometriepunt)
 VALUES
 (nextval('${table_name}_id_seq'), ?, ?, ${administratiefgebiedid}, ST_GeomFromGML(?));</sql>
     <set_params>N</set_params>
