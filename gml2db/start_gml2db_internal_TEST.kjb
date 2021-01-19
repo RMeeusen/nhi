@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>start_gml2db</name>
+  <name>start_gml2db_INTERNAL-TEST</name>
   <description/>
   <extended_description/>
   <job_version/>
@@ -12,38 +12,8 @@
   <modified_date>2017/08/17 11:29:30.436</modified_date>
   <parameters>
     <parameter>
-      <name>db_naam</name>
-      <default_value>nhi_test</default_value>
-      <description/>
-    </parameter>
-    <parameter>
-      <name>db_pass</name>
-      <default_value>pg</default_value>
-      <description/>
-    </parameter>
-    <parameter>
-      <name>db_port</name>
-      <default_value>5433</default_value>
-      <description/>
-    </parameter>
-    <parameter>
-      <name>db_server</name>
-      <default_value>localhost</default_value>
-      <description/>
-    </parameter>
-    <parameter>
-      <name>db_user</name>
-      <default_value>postgres</default_value>
-      <description/>
-    </parameter>
-    <parameter>
-      <name>main_data_dir</name>
-      <default_value>D:\nhi\testdata</default_value>
-      <description/>
-    </parameter>
-    <parameter>
-      <name>sync_ftp</name>
-      <default_value>false</default_value>
+      <name>config_file</name>
+      <default_value>d:\nhi\gml2db\config\internal-test-config.properties</default_value>
       <description/>
     </parameter>
   </parameters>
@@ -391,7 +361,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>112</xloc>
+      <xloc>64</xloc>
       <yloc>224</yloc>
       <attributes_kjc/>
     </entry>
@@ -438,7 +408,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>640</xloc>
+      <xloc>704</xloc>
       <yloc>224</yloc>
       <attributes_kjc/>
     </entry>
@@ -476,89 +446,71 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>432</xloc>
+      <xloc>560</xloc>
       <yloc>224</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>log_extra START</name>
+      <name>set-variables-from-properties</name>
       <description/>
-      <type>SQL</type>
+      <type>TRANS</type>
       <attributes/>
-      <sql>-- log start
-insert into log.log_extra (logobject, logitem) values ('${Internal.Job.Name}', 'START');
-
--- log parameters
-insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.Job.Name}', 'db_naam', '${db_naam}');
-insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.Job.Name}', 'db_server', '${db_server}');
-insert into log.log_extra (logobject, logitem, logmelding) values ('${Internal.Job.Name}', 'main_data_dir', '${main_data_dir}');
-
-</sql>
-      <useVariableSubstitution>T</useVariableSubstitution>
-      <sqlfromfile>F</sqlfromfile>
-      <sqlfilename/>
-      <sendOneStatement>T</sendOneStatement>
-      <connection>mylog</connection>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>D:\nhi\gml2db\scripts\set-variables.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <run_configuration>Pentaho local</run_configuration>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>256</xloc>
-      <yloc>224</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>log_extra END</name>
-      <description/>
-      <type>SQL</type>
-      <attributes/>
-      <sql>-- log end
-insert into log.log_extra (logobject, logitem) values ('${Internal.Job.Name}', 'END');
-
-</sql>
-      <useVariableSubstitution>T</useVariableSubstitution>
-      <sqlfromfile>F</sqlfromfile>
-      <sqlfilename/>
-      <sendOneStatement>T</sendOneStatement>
-      <connection>mylog</connection>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>864</xloc>
+      <xloc>304</xloc>
       <yloc>224</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
   <hops>
     <hop>
-      <from>START</from>
-      <to>log_extra START</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>log_extra START</from>
-      <to>get administratiefgebied</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
       <from>get administratiefgebied</from>
       <to>main</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>main</from>
-      <to>log_extra END</to>
+      <from>START</from>
+      <to>set-variables-from-properties</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>set-variables-from-properties</from>
+      <to>get administratiefgebied</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>

@@ -871,33 +871,8 @@
           <variable_type>CURRENT_JOB</variable_type>
         </field>
         <field>
-          <variable_name>linepath</variable_name>
-          <variable_value>gml:lineStringProperty/gml:LineString</variable_value>
-          <variable_type>CURRENT_JOB</variable_type>
-        </field>
-        <field>
           <variable_name>log_dir</variable_name>
           <variable_value>${main_data_dir}/${regio}/LOGS/</variable_value>
-          <variable_type>CURRENT_JOB</variable_type>
-        </field>
-        <field>
-          <variable_name>multilinepath</variable_name>
-          <variable_value>gml:multiLineStringProperty/gml:MultiLineString</variable_value>
-          <variable_type>CURRENT_JOB</variable_type>
-        </field>
-        <field>
-          <variable_name>pointpath</variable_name>
-          <variable_value>gml:pointProperty/gml:Point</variable_value>
-          <variable_type>CURRENT_JOB</variable_type>
-        </field>
-        <field>
-          <variable_name>polygonpath</variable_name>
-          <variable_value>gml:surfaceProperty/gml:Surface</variable_value>
-          <variable_type>CURRENT_JOB</variable_type>
-        </field>
-        <field>
-          <variable_name>multipolygonpath</variable_name>
-          <variable_value>gml:multiSurfaceProperty/gml:MultiSurface</variable_value>
           <variable_type>CURRENT_JOB</variable_type>
         </field>
         <field>
