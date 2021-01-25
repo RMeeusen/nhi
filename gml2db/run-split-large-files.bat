@@ -3,7 +3,7 @@ echo arguments: %1 %2
 set status=test
 set version=v12
 set rootdir=d:\nhi_run_dir
-set maxbytesize=250000000
+set maxbytesize=100000000
 if %1 == prod set status=prod
 set version=%2
 echo parsed: status=%status% version=%version%
