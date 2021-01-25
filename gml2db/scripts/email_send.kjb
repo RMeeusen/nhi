@@ -305,7 +305,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>80</xloc>
+      <xloc>240</xloc>
       <yloc>256</yloc>
       <attributes_kjc/>
     </entry>
@@ -440,67 +440,6 @@ NHI Helpdesk</comment>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Simple evaluation</name>
-      <description/>
-      <type>SIMPLE_EVAL</type>
-      <attributes/>
-      <valuetype>variable</valuetype>
-      <fieldname>email_sent</fieldname>
-      <variablename>${email_sent}</variablename>
-      <fieldtype>boolean</fieldtype>
-      <mask/>
-      <comparevalue/>
-      <minvalue/>
-      <maxvalue/>
-      <successcondition>equal</successcondition>
-      <successnumbercondition>equal</successnumbercondition>
-      <successbooleancondition>false</successbooleancondition>
-      <successwhenvarset>N</successwhenvarset>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>272</xloc>
-      <yloc>256</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Email already sent</name>
-      <description/>
-      <type>WRITE_TO_LOG</type>
-      <attributes/>
-      <logmessage/>
-      <loglevel>Basic</loglevel>
-      <logsubject>Email already sent for ${regio}</logsubject>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>272</xloc>
-      <yloc>384</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Set sent info</name>
-      <description/>
-      <type>SET_VARIABLES</type>
-      <attributes/>
-      <replacevars>Y</replacevars>
-      <filename/>
-      <file_variable_type>JVM</file_variable_type>
-      <fields>
-        <field>
-          <variable_name>email_sent</variable_name>
-          <variable_value>true</variable_value>
-          <variable_type>PARENT_JOB</variable_type>
-        </field>
-      </fields>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>1040</xloc>
-      <yloc>256</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
       <name>Log email send info</name>
       <description/>
       <type>WRITE_TO_LOG</type>
@@ -536,42 +475,6 @@ NHI Helpdesk</comment>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Start</from>
-      <to>Simple evaluation</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>Simple evaluation</from>
-      <to>email_account</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Simple evaluation</from>
-      <to>Email already sent</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Mail</from>
-      <to>Set sent info</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
       <from>email check</from>
       <to>Log email send info</to>
       <from_nr>0</from_nr>
@@ -587,6 +490,15 @@ NHI Helpdesk</comment>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Start</from>
+      <to>email_account</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
     </hop>
   </hops>

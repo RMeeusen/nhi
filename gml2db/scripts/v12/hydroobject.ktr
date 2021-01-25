@@ -553,31 +553,6 @@
   </connection>
   <order>
     <hop>
-      <from>Insert record: line</from>
-      <to>Error message</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Error message</from>
-      <to>Error log</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows</from>
-      <to>Insert record: line</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows</from>
-      <to>Insert record: multi line</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
-      <from>Insert record: multi line</from>
-      <to>Error message</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
       <from>Filter rows</from>
       <to>MultiLineError</to>
       <enabled>Y</enabled>
@@ -588,24 +563,104 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>correct epsg label</from>
-      <to>Filter rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get data from XML</from>
-      <to>correct epsg label</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Get data from XML</from>
       <to>Error reading gml log</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Remove line feeds</from>
+      <to>Extract geom fields</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get data from XML</from>
+      <to>Filter rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>Remove line feeds</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Create geometry</from>
+      <to>Add sequence</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Add sequence</from>
+      <to>Bulk insert</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Extract geom fields</from>
+      <to>Remove Z</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Replace commas</from>
+      <to>Create geometry</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Remove Z</from>
+      <to>Replace commas</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Extract geom fields</from>
+      <to>Text file output 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Remove Z</from>
+      <to>Text file output 2 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Replace commas</from>
+      <to>Text file output</to>
+      <enabled>N</enabled>
+    </hop>
   </order>
   <step>
-    <name>Error log</name>
-    <type>TextFileOutput</type>
+    <name>Add sequence</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <valuename>id</valuename>
+    <use_database>Y</use_database>
+    <connection>myconn</connection>
+    <schema>public</schema>
+    <seqname>${table_name}_id_seq</seqname>
+    <use_counter>N</use_counter>
+    <counter_name>test</counter_name>
+    <start_at>1</start_at>
+    <increment_by>1</increment_by>
+    <max_value>999999999</max_value>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1056</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Bulk insert</name>
+    <type>PGBulkLoader</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -614,11 +669,94 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <separator>;</separator>
+    <connection>myconn</connection>
+    <schema>public</schema>
+    <table>${table_name}</table>
+    <load_action>INSERT</load_action>
+    <dbname_override/>
     <enclosure>"</enclosure>
+    <delimiter>;</delimiter>
+    <stop_on_error>N</stop_on_error>
+    <mapping>
+      <stream_name>hydroobjectid</stream_name>
+      <field_name>id</field_name>
+      <date_mask/>
+    </mapping>
+    <mapping>
+      <stream_name>code</stream_name>
+      <field_name>code</field_name>
+      <date_mask/>
+    </mapping>
+    <mapping>
+      <stream_name>naam</stream_name>
+      <field_name>naam</field_name>
+      <date_mask/>
+    </mapping>
+    <mapping>
+      <stream_name>statusobjectid</stream_name>
+      <field_name>statusobjectcode</field_name>
+      <date_mask/>
+    </mapping>
+    <mapping>
+      <stream_name>hyperlink</stream_name>
+      <field_name>hyperlink</field_name>
+      <date_mask/>
+    </mapping>
+    <mapping>
+      <stream_name>administratiefgebiedid</stream_name>
+      <field_name>administratiefgebied</field_name>
+      <date_mask/>
+    </mapping>
+    <mapping>
+      <stream_name>ruwheidstypeid</stream_name>
+      <field_name>ruwheidstypecode</field_name>
+      <date_mask/>
+    </mapping>
+    <mapping>
+      <stream_name>ruwheidswaardelaag</stream_name>
+      <field_name>ruwheidswaardelaag</field_name>
+      <date_mask/>
+    </mapping>
+    <mapping>
+      <stream_name>ruwheidswaardehoog</stream_name>
+      <field_name>ruwheidswaardehoog</field_name>
+      <date_mask/>
+    </mapping>
+    <mapping>
+      <stream_name>geometrielijn</stream_name>
+      <field_name>line_geom</field_name>
+      <date_mask/>
+    </mapping>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1200</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Create geometry</name>
+    <type>ConcatFields</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure/>
     <enclosure_forced>N</enclosure_forced>
     <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>Y</header>
+    <header>N</header>
     <footer>N</footer>
     <format>DOS</format>
     <compression>None</compression>
@@ -628,9 +766,9 @@
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>${log_dir}${file_name}_insert_err</name>
+      <name>file</name>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
       <extention>txt</extention>
       <append>N</append>
       <split>N</split>
@@ -638,16 +776,16 @@
       <add_date>N</add_date>
       <add_time>N</add_time>
       <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format>yyyyMMddHHmmss</date_time_format>
-      <add_to_result_filenames>N</add_to_result_filenames>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
       <pad>N</pad>
       <fast_dump>N</fast_dump>
       <splitevery>0</splitevery>
     </file>
     <fields>
       <field>
-        <name>code</name>
-        <type>String</type>
+        <name>srid</name>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -658,7 +796,7 @@
         <precision>-1</precision>
       </field>
       <field>
-        <name>err_desc</name>
+        <name>coords</name>
         <type>String</type>
         <format/>
         <currency/>
@@ -670,6 +808,11 @@
         <precision>-1</precision>
       </field>
     </fields>
+    <ConcatFields>
+      <targetFieldName>line_geom</targetFieldName>
+      <targetFieldLength>0</targetFieldLength>
+      <removeSelectedFields>N</removeSelectedFields>
+    </ConcatFields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -679,46 +822,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>992</xloc>
-      <yloc>336</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Error message</name>
-    <type>WriteToLog</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <loglevel>log_level_error</loglevel>
-    <displayHeader>Y</displayHeader>
-    <limitRows>N</limitRows>
-    <limitRowsNumber>0</limitRowsNumber>
-    <logmessage/>
-    <fields>
-      <field>
-        <name>code</name>
-      </field>
-      <field>
-        <name>err_desc</name>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>848</xloc>
-      <yloc>224</yloc>
+      <xloc>912</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -798,8 +903,59 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>288</xloc>
+      <xloc>96</xloc>
       <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Extract geom fields</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>line_cleaned</in_stream_name>
+        <out_stream_name>srid</out_stream_name>
+        <use_regex>yes</use_regex>
+        <replace_string>.*srsName="(.*):(.*)".*</replace_string>
+        <replace_by_string>SRID=$2</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>line_cleaned</in_stream_name>
+        <out_stream_name>coords</out_stream_name>
+        <use_regex>yes</use_regex>
+        <replace_string>.*&lt;gml:coordinates>(.*)&lt;\/gml:coordinates>.*</replace_string>
+        <replace_by_string>LINESTRING($1)</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>432</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -814,12 +970,12 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to>MultiLineError</send_true_to>
-    <send_false_to>Insert record: line</send_false_to>
+    <send_true_to>Remove line feeds</send_true_to>
+    <send_false_to>MultiLineError</send_false_to>
     <compare>
       <condition>
         <negated>Y</negated>
-        <leftvalue>MultiLineString</leftvalue>
+        <leftvalue>LineString</leftvalue>
         <function>IS NULL</function>
         <rightvalue/>
       </condition>
@@ -833,7 +989,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>528</xloc>
+      <xloc>224</xloc>
       <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
@@ -842,7 +998,7 @@
     <name>Get data from XML</name>
     <type>getXMLData</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -863,17 +1019,7 @@
     <rownum_field/>
     <encoding>UTF-8</encoding>
     <file>
-      <name>${import_dir}/${file_name}.gml</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-      <name/>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-      <name/>
+      <name>${filename}</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -901,6 +1047,21 @@
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>administratiefgebied</name>
+        <xpath>nhi:administratiefgebiedcode</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1090,145 +1251,6 @@
     </GUI>
   </step>
   <step>
-    <name>Insert record: line</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>myconn</connection>
-    <execute_each_row>Y</execute_each_row>
-    <single_statement>N</single_statement>
-    <replace_variables>Y</replace_variables>
-    <quoteString>Y</quoteString>
-    <sql>INSERT INTO public.${table_name}
-(${table_name}id, code, naam, statusobjectid, hyperlink, administratiefgebiedid, ruwheidstypeid, ruwheidswaardelaag, ruwheidswaardehoog, geometrielijn)
-VALUES
-(nextval('${table_name}_id_seq'), ?, ?, ?, ?,${administratiefgebiedid}, ?, ?, ?, st_force2d(ST_GeomFromGML(?)));</sql>
-    <set_params>N</set_params>
-    <insert_field>insertCount</insert_field>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-      <argument>
-        <name>code</name>
-      </argument>
-      <argument>
-        <name>naam</name>
-      </argument>
-      <argument>
-        <name>statusobjectcode</name>
-      </argument>
-      <argument>
-        <name>hyperlink</name>
-      </argument>
-      <argument>
-        <name>ruwheidstypecode</name>
-      </argument>
-      <argument>
-        <name>ruwheidswaardelaag</name>
-      </argument>
-      <argument>
-        <name>ruwheidswaardehoog</name>
-      </argument>
-      <argument>
-        <name>LineString</name>
-      </argument>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>672</xloc>
-      <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Insert record: multi line</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>myconn</connection>
-    <execute_each_row>Y</execute_each_row>
-    <single_statement>N</single_statement>
-    <replace_variables>Y</replace_variables>
-    <quoteString>Y</quoteString>
-    <sql>CREATE OR REPLACE FUNCTION CREATE_GEOMETRY(p_geom VARCHAR) RETURNS GEOMETRY AS '
-BEGIN
-  RETURN ST_LINEMERGE(ST_GeomFromGML(p_geom));
-END; '
-LANGUAGE plpgsql;
-
-INSERT INTO public.${table_name}
-(${table_name}id, code, naam, statusobjectid, hyperlink, administratiefgebiedid, ruwheidstypeid, ruwheidswaardelaag, ruwheidswaardehoog, geometrielijn)
-VALUES
-(nextval('${table_name}_id_seq'),?, ?, ?, ?, ?, ?, ?, ?, CREATE_GEOMETRY(?)));</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-      <argument>
-        <name>code</name>
-      </argument>
-      <argument>
-        <name>naam</name>
-      </argument>
-      <argument>
-        <name>statusobjectcode</name>
-      </argument>
-      <argument>
-        <name>hyperlink</name>
-      </argument>
-      <argument>
-        <name>administratiefgebied</name>
-      </argument>
-      <argument>
-        <name>ruwheidstypecode</name>
-      </argument>
-      <argument>
-        <name>ruwheidswaardelaag</name>
-      </argument>
-      <argument>
-        <name>ruwheidswaardehoog</name>
-      </argument>
-      <argument>
-        <name>MultiLineString</name>
-      </argument>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>672</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>MultiLineError</name>
     <type>WriteToLog</type>
     <description/>
@@ -1261,8 +1283,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>528</xloc>
-      <yloc>128</yloc>
+      <xloc>224</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1330,16 +1352,16 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>528</xloc>
-      <yloc>32</yloc>
+      <xloc>224</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>correct epsg label</name>
+    <name>Remove Z</name>
     <type>ReplaceString</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -1348,27 +1370,15 @@ VALUES
     </partitioning>
     <fields>
       <field>
-        <in_stream_name>LineString</in_stream_name>
+        <in_stream_name>coords</in_stream_name>
         <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>epsg</replace_string>
-        <replace_by_string>EPSG</replace_by_string>
+        <use_regex>yes</use_regex>
+        <replace_string>(\d+\.\d+),(\d+\.\d+),-?\d*\.?\d*([\s,)])</replace_string>
+        <replace_by_string>$1,$2$3</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
-        <case_sensitive>yes</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>MultiLineString</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>epsg</replace_string>
-        <replace_by_string>EPSG</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>yes</case_sensitive>
+        <case_sensitive>no</case_sensitive>
         <is_unicode>no</is_unicode>
       </field>
     </fields>
@@ -1381,8 +1391,319 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
+      <xloc>560</xloc>
       <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Remove line feeds</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <failIfNoFile>Y</failIfNoFile>
+    <calculation>
+      <field_name>line_cleaned</field_name>
+      <calc_type>REMOVE_CRLF</calc_type>
+      <field_a>LineString</field_a>
+      <field_b/>
+      <field_c/>
+      <value_type>None</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask/>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <currency_symbol/>
+    </calculation>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>320</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Replace commas</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>coords</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>,</replace_string>
+        <replace_by_string>;</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>coords</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string> </replace_string>
+        <replace_by_string>,</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>coords</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>;</replace_string>
+        <replace_by_string> </replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Text file output</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>${filename}-commas</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
+      <extention>csv</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields>
+      <field>
+        <name>coords</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Text file output 2</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>${filename}-extractgeom</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
+      <extention>csv</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields>
+      <field>
+        <name>coords</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>528</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Text file output 2 2</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>${filename}-removez</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
+      <extention>csv</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields>
+      <field>
+        <name>coords</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
+      <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1396,30 +1717,6 @@ VALUES
       <fields_valuename/>
       <codes_valuename>err_code</codes_valuename>
       <max_errors>5000</max_errors>
-      <max_pct_errors/>
-      <min_pct_rows/>
-    </error>
-    <error>
-      <source_step>Insert record: line</source_step>
-      <target_step>Error message</target_step>
-      <is_enabled>Y</is_enabled>
-      <nr_valuename/>
-      <descriptions_valuename>err_desc</descriptions_valuename>
-      <fields_valuename/>
-      <codes_valuename/>
-      <max_errors>1000</max_errors>
-      <max_pct_errors/>
-      <min_pct_rows/>
-    </error>
-    <error>
-      <source_step>Insert record: multi line</source_step>
-      <target_step>Error message</target_step>
-      <is_enabled>N</is_enabled>
-      <nr_valuename/>
-      <descriptions_valuename>err_desc</descriptions_valuename>
-      <fields_valuename/>
-      <codes_valuename/>
-      <max_errors/>
       <max_pct_errors/>
       <min_pct_rows/>
     </error>
