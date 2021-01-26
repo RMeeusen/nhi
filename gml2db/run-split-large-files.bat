@@ -22,10 +22,13 @@ echo importDir=%importDir% >> %logFile%
 setlocal enabledelayedexpansion
 for /D %%i in (%importDir%/*) do (
 
+   echo Checking directory %%i >> %logFile%
+
    set workDir=%%i\WORK\
    IF NOT EXIST !workDir! mkdir !workDir!
 
    set gmlDir=%%i\GML\
+   set bkDir=%%i\GML_BK\
    for %%j in (%%i\GML\*.gml) do (
 
        FOR /F "usebackq" %%A IN ('%%j') DO set size=%%~zA
@@ -40,7 +43,7 @@ for /D %%i in (%importDir%/*) do (
          move %%j !workDir!
          java -Xmx1024m -jar d:/nhi/gml2db/splitter/featurecollectionsplitter.jar !workDir!!file! !gmlDir! 25000
 	 echo finished splitting >> %logFile%
-         del !workDir!/!file!
+         move !workDir!!file! !bkDir!!file!_split
                    	  
        ) 
     )     

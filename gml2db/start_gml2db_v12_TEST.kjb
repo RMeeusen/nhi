@@ -13,7 +13,12 @@
   <parameters>
     <parameter>
       <name>config_file</name>
-      <default_value>d:\nhi\gml2db\config\test-config-v12.properties</default_value>
+      <default_value>d:\nhi_run_dir\gml2db\config\test-config-v12.properties</default_value>
+      <description/>
+    </parameter>
+    <parameter>
+      <name>system_name</name>
+      <default_value>TEST</default_value>
       <description/>
     </parameter>
   </parameters>

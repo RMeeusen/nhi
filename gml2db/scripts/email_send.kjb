@@ -359,13 +359,13 @@
       <destinationBCc>erik.derooij@deltares.nl</destinationBCc>
       <replyto>helpdesk.nhi@deltares.nl</replyto>
       <replytoname>NHI Data Portaal</replytoname>
-      <subject>NHI automated data import run completed for ${regio}</subject>
+      <subject>NHI automated data import run completed for ${regio} ${system_name} (${version})</subject>
       <include_date>N</include_date>
       <contact_person>Helpdesk NHI</contact_person>
       <contact_phone/>
       <comment>Dear ${name},
 
-The NHI automated import run completed for ${regio}. 
+The NHI automated import run completed for ${regio} ${system_name} (${version}). 
 Please check the log files in the LOG folder of your FTP 
 account (ftp.deltares.nl) for more details on the run.
 
