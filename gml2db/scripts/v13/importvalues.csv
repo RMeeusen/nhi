@@ -1,0 +1,28 @@
+"file_name";"table_name";"objectpath";"dependancies"
+aquaduct;aquaduct;nhi:aquaduct;
+bijzonderhydraulischeobject;bijzonderhydraulischeobject;nhi:bijzonderhydraulischeobject
+bodemval;bodemval;nhi:bodemval;
+brug;brug;nhi:brug;
+duikersifonhevel;duikersifonhevel;nhi:duikersifonhevel;
+gemaal;gemaal;nhi:gemaal;
+grondwaterkoppellijn;grondwaterkoppellijn;nhi:grondwaterkoppellijn;
+grondwaterinfolijn;grondwaterinfolijn;nhi:grondwaterinfolijn;grondwaterkoppellijn
+grondwaterkoppelpunt;grondwaterkoppelpunt;nhi:grondwaterkoppelpunt;
+grondwaterinfopunt;grondwaterinfopunt;nhi:grondwaterinfopunt;grondwaterkoppelpunt
+hydraulischerandvoorwaarde;hydraulischerandvoorwaarde;nhi:hydraulischerandvoorwaarde;
+hydroobject;hydroobject;nhi:hydroobject;
+lateraleknoop;lateraleknoop;nhi:lateraleknoop;
+meetlocatie;meetlocatie;nhi:meetlocatie;
+peilafwijkinggebied;peilgebied;nhi:peilafwijkingGebied;
+peilgebiedpraktijk;peilgebied;nhi:peilgebiedPraktijk;
+stuw;stuw;nhi:stuw;
+sturing;sturing;nhi:sturing;
+meetwaardeactiewaarde;meetwaardeactiewaarde;nhi:meetwaardeactiewaarde
+afvoeraanvoergebied;afvoeraanvoergebied;nhi:afvoerAanvoerGebied;
+doorstroomopening;doorstroomopening;nhi:doorstroomopening;brug,stuw,afsluitmiddel
+normgeparametriseerdprofiel;normgeparametriseerdprofiel;nhi:normgeparametriseerdprofiel; brug,hydroobject,stuw,grondwaterkoppellijm,bodemval
+metingprofiellijn;metingprofiellijn;nhi:metingprofielLijn;hydroobject,grondwaterkoppellijn,brug,stuw, bodemval
+metingprofielpunt;metingprofielpunt;nhi:metingprofielPunt;profiellijn
+pomp;pomp;nhi:pomp;gemaal
+streefpeil;streefpeil;nhi:streefpeil;peilgebied*
+afsluitmiddel;afsluitmiddel;nhi:afsluitmiddel;doorstroomopening,duikersifonhevel,gemaal,aquaduct
