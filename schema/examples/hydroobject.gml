@@ -39,4 +39,22 @@
 			</gml:lineStringProperty>
 		</nhi:hydroobject>
 	</gml:featureMember>
+	<gml:featureMember>
+		<nhi:hydroobject>
+			<nhi:code>ho3</nhi:code>
+			<nhi:statusObject>1</nhi:statusObject>
+			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
+			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
+			<nhi:administratiefgebied>1</nhi:administratiefgebied>
+			<nhi:naam>naam</nhi:naam>
+			<nhi:hyperlink>http://</nhi:hyperlink>
+			<nhi:typeRuwheid>1</nhi:typeRuwheid>
+			<nhi:ruwheidLaag>1.0</nhi:ruwheidLaag>
+			<nhi:ruwheidHoog>1.0</nhi:ruwheidHoog>
+			<nhi:categorieOppwaterlichaam>1</nhi:categorieOppwaterlichaam>
+			<gml:lineStringProperty>
+				<gml:LineString srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313,1.0 148816.766,424795.313,-0.9 148814.141,424787.125,-1 148822.375,424771.688,-1.5 148852.5,424718.656,0.5 148869,424690.5 148875.781,424679.844,1.4</gml:coordinates></gml:LineString>
+			</gml:lineStringProperty>
+		</nhi:hydroobject>
+	</gml:featureMember>
 </nhi:FeatureCollection>

@@ -4,32 +4,37 @@
 		<gml:null>unknown</gml:null>
 	</gml:boundedBy>
 	<gml:featureMember>
-		 <nhi:gemaal>
-			<nhi:code>g1</nhi:code>
+		 <nhi:bodemval>
+			<nhi:code>bv1</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>
 			<nhi:naam>naam</nhi:naam>
 			<nhi:hyperlink>http://nogwat</nhi:hyperlink>
+			<nhi:bodemhoogteBenedenstrooms>1.0</nhi:bodemhoogteBenedenstrooms>
+			<nhi:bodemhoogteBovenstrooms>1.0</nhi:bodemhoogteBovenstrooms>
 			<gml:pointProperty>
-				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313 148816.766,424795.313</gml:coordinates></gml:Point>
+				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313</gml:coordinates></gml:Point>
 			</gml:pointProperty>
-		</nhi:gemaal>
+		</nhi:bodemval>
 	</gml:featureMember>	
 	<gml:featureMember>
-		 <nhi:gemaal>
-			<nhi:code>g2</nhi:code>
+		 <nhi:bodemval>
+			<nhi:code>bv2</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>
 			<nhi:naam>naam</nhi:naam>
 			<nhi:hyperlink>http://nogwat</nhi:hyperlink>
+			<nhi:bodemhoogteBenedenstrooms>1.0</nhi:bodemhoogteBenedenstrooms>
+			<nhi:bodemhoogteBovenstrooms>1.0</nhi:bodemhoogteBovenstrooms>
 			<gml:pointProperty>
-				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313 148816.766,424795.313</gml:coordinates></gml:Point>
+				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313</gml:coordinates></gml:Point>
 			</gml:pointProperty>
-		</nhi:gemaal>
+		</nhi:bodemval>
 	</gml:featureMember>	
+
 	
 </nhi:FeatureCollection>

@@ -4,35 +4,28 @@
 		<gml:null>unknown</gml:null>
 	</gml:boundedBy>
 	<gml:featureMember>
-		 <nhi:bijzonderhydraulischeobject>
-			<nhi:code>bho1</nhi:code>
+		 <nhi:grondwaterkoppelpunt>
+			<nhi:code>gkp1</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>			
-			<nhi:naam>naam</nhi:naam>
-			<nhi:hyperlink>http://ergen.naar.toe</nhi:hyperlink>
-			<nhi:typeHydraulischObject>1</nhi:typeHydraulischObject>
-			<nhi:opmerking>tekst</nhi:opmerking>
 			<gml:pointProperty>
-				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313 148816.766,424795.313</gml:coordinates></gml:Point>
+				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313</gml:coordinates></gml:Point>
 			</gml:pointProperty>
-		</nhi:bijzonderhydraulischeobject>
+		</nhi:grondwaterkoppelpunt>
 	</gml:featureMember>	
 	<gml:featureMember>
-		 <nhi:bijzonderhydraulischeobject>
-			<nhi:code>bho2</nhi:code>
+		 <nhi:grondwaterkoppelpunt>
+			<nhi:code>gkp2</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>			
-			<nhi:naam>naam</nhi:naam>
-			<nhi:hyperlink>http://ergen.naar.toe</nhi:hyperlink>
-			<nhi:typeHydraulischObject>1</nhi:typeHydraulischObject>
-			<nhi:opmerking>tekst</nhi:opmerking>
 			<gml:pointProperty>
-				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313 148816.766,424795.313</gml:coordinates></gml:Point>
+				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313</gml:coordinates></gml:Point>
 			</gml:pointProperty>
-		</nhi:bijzonderhydraulischeobject>
-	</gml:featureMember>		
+		</nhi:grondwaterkoppelpunt>
+	</gml:featureMember>	
+	
 </nhi:FeatureCollection>

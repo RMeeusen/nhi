@@ -28,8 +28,8 @@
 	<element name="streefpeil" type="nhi:NhiStreefpeilFeatureType" substitutionGroup="gml:_Feature"/>
 	<element name="sturing" type="nhi:NhiSturingFeatureType" substitutionGroup="gml:_Feature"/>
 	<element name="stuw" type="nhi:NhiStuwFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="meetingprofielLijn" type="nhi:NhiMetingProfielLijnFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="meetingprofielPunt" type="nhi:NhiMetingProfielPuntFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="metingprofielLijn" type="nhi:NhiMetingProfielLijnFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="metingprofielPunt" type="nhi:NhiMetingProfielPuntFeatureType" substitutionGroup="gml:_Feature"/>
 	<complexType name="NhiAanAfvoerGebiedFeatureType">
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
@@ -671,7 +671,7 @@
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
 					<group ref="nhi:general"/>
-					<element name="meetingProfielLijnID" type="string">
+					<element name="metingProfielLijnID" type="string">
 						<annotation>
 							<documentation>Code van de MetingProfielLijn waartoe het gemeten profielpunt behoort.</documentation>
 						</annotation>

@@ -3,15 +3,15 @@
 	<gml:boundedBy>
 		<gml:null>unknown</gml:null>
 	</gml:boundedBy>
-	<!-- punten horende bij meetingprofiellijn 'pl1'-->
+	<!-- punten horende bij metingprofiellijn 'pl1'-->
 	<gml:featureMember>
-		<nhi:meetingprofielPunt>
+		<nhi:metingprofielPunt>
 			<nhi:code>pl1_pp1</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>
-			<nhi:meetingProfielLijnID>pl1</nhi:meetingProfielLijnID>
+			<nhi:metingProfielLijnID>pl1</nhi:metingProfielLijnID>
 			<nhi:codeVolgnummer>1</nhi:codeVolgnummer>
 			<nhi:soortMeetpunt>1</nhi:soortMeetpunt>
 			<nhi:typeBodem>1</nhi:typeBodem>
@@ -21,16 +21,16 @@
 			<gml:pointProperty>
 				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313,1.0</gml:coordinates></gml:Point>
 			</gml:pointProperty>
-		</nhi:meetingprofielPunt>		
+		</nhi:metingprofielPunt>		
 	</gml:featureMember>
 	<gml:featureMember>
-		<nhi:meetingprofielPunt>
+		<nhi:metingprofielPunt>
 			<nhi:code>pl1_pp2</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>
-			<nhi:meetingProfielLijnID>pl1</nhi:meetingProfielLijnID>
+			<nhi:metingProfielLijnID>pl1</nhi:metingProfielLijnID>
 			<nhi:codeVolgnummer>2</nhi:codeVolgnummer>
 			<nhi:soortMeetpunt>1</nhi:soortMeetpunt>
 			<nhi:typeBodem>1</nhi:typeBodem>
@@ -40,16 +40,16 @@
 			<gml:pointProperty>
 				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313,0.4</gml:coordinates></gml:Point>
 			</gml:pointProperty>
-		</nhi:meetingprofielPunt>		
+		</nhi:metingprofielPunt>		
 	</gml:featureMember>
 	<gml:featureMember>
-		<nhi:meetingprofielPunt>
+		<nhi:metingprofielPunt>
 			<nhi:code>pl1_pp3</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>
-			<nhi:meetingProfielLijnID>pl1</nhi:meetingProfielLijnID>
+			<nhi:metingProfielLijnID>pl1</nhi:metingProfielLijnID>
 			<nhi:codeVolgnummer>3</nhi:codeVolgnummer>
 			<nhi:soortMeetpunt>1</nhi:soortMeetpunt>
 			<nhi:typeBodem>1</nhi:typeBodem>
@@ -59,16 +59,16 @@
 			<gml:pointProperty>
 				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313,0.3</gml:coordinates></gml:Point>
 			</gml:pointProperty>
-		</nhi:meetingprofielPunt>		
+		</nhi:metingprofielPunt>		
 	</gml:featureMember>
 	<gml:featureMember>
-		<nhi:meetingprofielPunt>
+		<nhi:metingprofielPunt>
 			<nhi:code>pl1_pp4</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>
-			<nhi:meetingProfielLijnID>pl1</nhi:meetingProfielLijnID>
+			<nhi:metingProfielLijnID>pl1</nhi:metingProfielLijnID>
 			<nhi:codeVolgnummer>4</nhi:codeVolgnummer>
 			<nhi:soortMeetpunt>1</nhi:soortMeetpunt>
 			<nhi:typeBodem>1</nhi:typeBodem>
@@ -78,16 +78,16 @@
 			<gml:pointProperty>
 				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313,0.4</gml:coordinates></gml:Point>
 			</gml:pointProperty>
-		</nhi:meetingprofielPunt>		
+		</nhi:metingprofielPunt>		
 	</gml:featureMember>
 	<gml:featureMember>
-		<nhi:meetingprofielPunt>
+		<nhi:metingprofielPunt>
 			<nhi:code>pl1_pp5</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>
-			<nhi:meetingProfielLijnID>pl1</nhi:meetingProfielLijnID>
+			<nhi:metingProfielLijnID>pl1</nhi:metingProfielLijnID>
 			<nhi:codeVolgnummer>5</nhi:codeVolgnummer>
 			<nhi:soortMeetpunt>1</nhi:soortMeetpunt>
 			<nhi:typeBodem>1</nhi:typeBodem>
@@ -97,17 +97,17 @@
 			<gml:pointProperty>
 				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313,1.0</gml:coordinates></gml:Point>
 			</gml:pointProperty>
-		</nhi:meetingprofielPunt>		
+		</nhi:metingprofielPunt>		
 	</gml:featureMember>
-	<!-- punten horende bij meetingprofiellijn 'pl2'-->
+	<!-- punten horende bij metingprofiellijn 'pl2'-->
 	<gml:featureMember>
-		<nhi:meetingprofielPunt>
+		<nhi:metingprofielPunt>
 			<nhi:code>pl2_pp1</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>
-			<nhi:meetingProfielLijnID>pl2</nhi:meetingProfielLijnID>
+			<nhi:metingProfielLijnID>pl2</nhi:metingProfielLijnID>
 			<nhi:codeVolgnummer>1</nhi:codeVolgnummer>
 			<nhi:soortMeetpunt>1</nhi:soortMeetpunt>
 			<nhi:typeBodem>1</nhi:typeBodem>
@@ -117,16 +117,16 @@
 			<gml:pointProperty>
 				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313,1.0</gml:coordinates></gml:Point>
 			</gml:pointProperty>
-		</nhi:meetingprofielPunt>		
+		</nhi:metingprofielPunt>		
 	</gml:featureMember>
 	<gml:featureMember>
-		<nhi:meetingprofielPunt>
+		<nhi:metingprofielPunt>
 			<nhi:code>pl2_pp2</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>
-			<nhi:meetingProfielLijnID>pl2</nhi:meetingProfielLijnID>
+			<nhi:metingProfielLijnID>pl2</nhi:metingProfielLijnID>
 			<nhi:codeVolgnummer>2</nhi:codeVolgnummer>
 			<nhi:soortMeetpunt>1</nhi:soortMeetpunt>
 			<nhi:typeBodem>1</nhi:typeBodem>
@@ -136,16 +136,16 @@
 			<gml:pointProperty>
 				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313,0.4</gml:coordinates></gml:Point>
 			</gml:pointProperty>
-		</nhi:meetingprofielPunt>		
+		</nhi:metingprofielPunt>		
 	</gml:featureMember>
 	<gml:featureMember>
-		<nhi:meetingprofielPunt>
+		<nhi:metingprofielPunt>
 			<nhi:code>pl2_pp3</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>
-			<nhi:meetingProfielLijnID>pl2</nhi:meetingProfielLijnID>
+			<nhi:metingProfielLijnID>pl2</nhi:metingProfielLijnID>
 			<nhi:codeVolgnummer>3</nhi:codeVolgnummer>
 			<nhi:soortMeetpunt>1</nhi:soortMeetpunt>
 			<nhi:typeBodem>1</nhi:typeBodem>
@@ -155,16 +155,16 @@
 			<gml:pointProperty>
 				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313,0.3</gml:coordinates></gml:Point>
 			</gml:pointProperty>
-		</nhi:meetingprofielPunt>		
+		</nhi:metingprofielPunt>		
 	</gml:featureMember>
 	<gml:featureMember>
-		<nhi:meetingprofielPunt>
+		<nhi:metingprofielPunt>
 			<nhi:code>pl2_pp4</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>
-			<nhi:meetingProfielLijnID>pl2</nhi:meetingProfielLijnID>
+			<nhi:metingProfielLijnID>pl2</nhi:metingProfielLijnID>
 			<nhi:codeVolgnummer>4</nhi:codeVolgnummer>
 			<nhi:soortMeetpunt>1</nhi:soortMeetpunt>
 			<nhi:typeBodem>1</nhi:typeBodem>
@@ -174,16 +174,16 @@
 			<gml:pointProperty>
 				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313,0.4</gml:coordinates></gml:Point>
 			</gml:pointProperty>
-		</nhi:meetingprofielPunt>		
+		</nhi:metingprofielPunt>		
 	</gml:featureMember>
 	<gml:featureMember>
-		<nhi:meetingprofielPunt>
+		<nhi:metingprofielPunt>
 			<nhi:code>pl2_pp5</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>
-			<nhi:meetingProfielLijnID>pl2</nhi:meetingProfielLijnID>
+			<nhi:metingProfielLijnID>pl2</nhi:metingProfielLijnID>
 			<nhi:codeVolgnummer>5</nhi:codeVolgnummer>
 			<nhi:soortMeetpunt>1</nhi:soortMeetpunt>
 			<nhi:typeBodem>1</nhi:typeBodem>
@@ -193,7 +193,7 @@
 			<gml:pointProperty>
 				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313,1.0</gml:coordinates></gml:Point>
 			</gml:pointProperty>
-		</nhi:meetingprofielPunt>		
+		</nhi:metingprofielPunt>		
 	</gml:featureMember>	
 
 </nhi:FeatureCollection>

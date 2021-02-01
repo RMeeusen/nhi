@@ -24,7 +24,8 @@
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>
 			<nhi:sturingID>s2</nhi:sturingID>
-			<nhi:tijd>2001-12-17T09:30:47Z</nhi:tijd>
+			<nhi:meetwaarde>1.0</nhi:meetwaarde>
+			<nhi:meetwaardeEenheid>1</nhi:meetwaardeEenheid>
 			<nhi:actiewaarde>1.0</nhi:actiewaarde>
 			<nhi:actiewaardeEenheid>1</nhi:actiewaardeEenheid>
 		</nhi:meetwaardeActiewaarde>
