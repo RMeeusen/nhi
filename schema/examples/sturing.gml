@@ -52,7 +52,7 @@
 	<!-- Gekoppeld aan hydraulische randvoorwaarde -->
 	<gml:featureMember>
 		<nhi:sturing>
-			<nhi:code>s2</nhi:code>
+			<nhi:code>s3</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>

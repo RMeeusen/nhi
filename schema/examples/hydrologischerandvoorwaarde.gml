@@ -4,7 +4,7 @@
 		<gml:null>unknown</gml:null>
 	</gml:boundedBy>
 	<gml:featureMember>
-		<nhi:hydraulischerandvoorwaarde>
+		<nhi:hydrologischerandvoorwaarde>
 			<nhi:code>hr1</nhi:code>
 				<nhi:statusObject>1</nhi:statusObject>
 				<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
@@ -18,10 +18,10 @@
 				<gml:pointProperty>
 					<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313</gml:coordinates></gml:Point>
 				</gml:pointProperty>
-		</nhi:hydraulischerandvoorwaarde>
+		</nhi:hydrologischerandvoorwaarde>
 	</gml:featureMember>
 	<gml:featureMember>
-		<nhi:hydraulischerandvoorwaarde>
+		<nhi:hydrologischerandvoorwaarde>
 			<nhi:code>hr2</nhi:code>
 				<nhi:statusObject>1</nhi:statusObject>
 				<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
@@ -35,6 +35,6 @@
 				<gml:pointProperty>
 					<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313</gml:coordinates></gml:Point>
 				</gml:pointProperty>
-		</nhi:hydraulischerandvoorwaarde>
+		</nhi:hydrologischerandvoorwaarde>
 	</gml:featureMember>
 </nhi:FeatureCollection>

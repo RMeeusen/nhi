@@ -687,8 +687,8 @@
       <date_mask/>
     </mapping>
     <mapping>
-      <stream_name>meetingprofiellijncode</stream_name>
-      <field_name>meetingprofiellijncode</field_name>
+      <stream_name>metingprofiellijncode</stream_name>
+      <field_name>metingprofiellijncode</field_name>
       <date_mask/>
     </mapping>
     <mapping>
@@ -1069,8 +1069,8 @@
         <repeat>N</repeat>
       </field>
       <field>
-        <name>meetingprofiellijncode</name>
-        <xpath>nhi:meetingProfielLijnID</xpath>
+        <name>metingprofiellijncode</name>
+        <xpath>nhi:metingProfielLijnID</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -1734,6 +1734,111 @@
     </GUI>
   </step>
   <step>
+    <name>statusobject exists</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>lookup statusobject</send_true_to>
+    <send_false_to>typeruwheid exists</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>statusobjectid</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>352</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>typeprofiel exists</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>lookup type profiel</send_true_to>
+    <send_false_to>Remove line feeds</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>soortmeetpuntid</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>typeruwheid exists</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>lookup type ruwheid</send_true_to>
+    <send_false_to>lookup bodem</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>statusobjectid</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>write error 1</name>
     <type>TextFileOutput</type>
     <description/>
@@ -2195,111 +2300,6 @@
     <GUI>
       <xloc>752</xloc>
       <yloc>624</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>statusobject exists</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>lookup statusobject</send_true_to>
-    <send_false_to>typeruwheid exists</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>statusobjectid</leftvalue>
-        <function>IS NOT NULL</function>
-        <rightvalue/>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>352</xloc>
-      <yloc>320</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>typeprofiel exists</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>lookup type profiel</send_true_to>
-    <send_false_to>Remove line feeds</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>soortmeetpuntid</leftvalue>
-        <function>IS NOT NULL</function>
-        <rightvalue/>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>752</xloc>
-      <yloc>320</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>typeruwheid exists</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>lookup type ruwheid</send_true_to>
-    <send_false_to>lookup bodem</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>statusobjectid</leftvalue>
-        <function>IS NOT NULL</function>
-        <rightvalue/>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>480</xloc>
-      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

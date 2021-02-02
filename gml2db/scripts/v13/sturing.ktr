@@ -764,7 +764,7 @@
     </mapping>
     <mapping>
       <stream_name>indicatiecomplexesturingid</stream_name>
-      <field_name>indicatiecomplexesturing</field_name>
+      <field_name>indicatiecomplexesturingid</field_name>
       <date_mask/>
     </mapping>
     <mapping>
@@ -819,12 +819,17 @@
     </mapping>
     <mapping>
       <stream_name>prioriteitid</stream_name>
-      <field_name>prioriteit</field_name>
+      <field_name>prioriteitid</field_name>
       <date_mask/>
     </mapping>
     <mapping>
       <stream_name>meetlocatiecode</stream_name>
       <field_name>meetlocatiecode</field_name>
+      <date_mask/>
+    </mapping>
+    <mapping>
+      <stream_name>stuurvariabeleid</stream_name>
+      <field_name>stuurvariabeleid</field_name>
       <date_mask/>
     </mapping>
     <attributes/>
@@ -1378,6 +1383,108 @@
     </GUI>
   </step>
   <step>
+    <name>invalid doelvariabele</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>err_desc</name>
+        <value>invalid doelvariabele</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>544</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>invalid doelvariabele eenheid</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>err_desc</name>
+        <value>invalid doelvariabeleeenheid</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>688</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>invalid prioriteit</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>err_desc</name>
+        <value>invalid prioriteit</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1216</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>invalid statusobject</name>
     <type>SetValueConstant</type>
     <description/>
@@ -1408,6 +1515,108 @@
     <GUI>
       <xloc>400</xloc>
       <yloc>480</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>invalid stuurvariabele</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>err_desc</name>
+        <value>invalid stuurvariabele</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>invalid type controller</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>err_desc</name>
+        <value>invalid typecontroller</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>invalid type sturing</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>err_desc</name>
+        <value>invalid typesturing</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>976</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1454,6 +1663,132 @@
     </GUI>
   </step>
   <step>
+    <name>lookup doelvariabele</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>doelvariabele</table>
+      <orderby/>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>doelvariabeleid</name>
+        <field>doelvariabeleid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>544</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup doelvariabele eenheid</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>eenheid</table>
+      <orderby/>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>doelvariabeleeenheidid</name>
+        <field>eenheidid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>688</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup prioriteit</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>prioriteit</table>
+      <orderby/>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>prioriteitid</name>
+        <field>prioriteitid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1216</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>lookup statusobject</name>
     <type>DBLookup</type>
     <description/>
@@ -1492,6 +1827,132 @@
     <GUI>
       <xloc>400</xloc>
       <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup stuurvariabele</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>stuurvariabele</table>
+      <orderby/>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>stuurvariabeleid</name>
+        <field>stuurvariabeleid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup type controller</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>typecontroller</table>
+      <orderby/>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>typecontrollerid</name>
+        <field>typecontrollerid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup type sturing</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>sturingtype</table>
+      <orderby/>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>typesturingid</name>
+        <field>sturingtypeid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>976</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1717,82 +2178,6 @@
     </GUI>
   </step>
   <step>
-    <name>invalid doelvariabele</name>
-    <type>SetValueConstant</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <usevar>N</usevar>
-    <fields>
-      <field>
-        <name>err_desc</name>
-        <value>invalid doelvariabele</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>544</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>lookup doelvariabele</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>myconn</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>public</schema>
-      <table>doelvariabele</table>
-      <orderby/>
-      <fail_on_multiple>Y</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>doelvariabeleid</name>
-        <field>doelvariabeleid</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>544</xloc>
-      <yloc>272</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>write error 3</name>
     <type>TextFileOutput</type>
     <description/>
@@ -1882,82 +2267,6 @@
     <GUI>
       <xloc>544</xloc>
       <yloc>496</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>invalid doelvariabele eenheid</name>
-    <type>SetValueConstant</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <usevar>N</usevar>
-    <fields>
-      <field>
-        <name>err_desc</name>
-        <value>invalid doelvariabeleeenheid</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>688</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>lookup doelvariabele eenheid</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>myconn</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>public</schema>
-      <table>eenheid</table>
-      <orderby/>
-      <fail_on_multiple>Y</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>doelvariabeleeenheidid</name>
-        <field>eenheidid</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>688</xloc>
-      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2055,82 +2364,6 @@
     </GUI>
   </step>
   <step>
-    <name>invalid stuurvariabele</name>
-    <type>SetValueConstant</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <usevar>N</usevar>
-    <fields>
-      <field>
-        <name>err_desc</name>
-        <value>invalid stuurvariabele</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>832</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>lookup stuurvariabele</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>myconn</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>public</schema>
-      <table>stuurvariabele</table>
-      <orderby/>
-      <fail_on_multiple>Y</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>stuurvariabeleid</name>
-        <field>stuurvariabeleid</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>832</xloc>
-      <yloc>272</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>write error 5</name>
     <type>TextFileOutput</type>
     <description/>
@@ -2220,82 +2453,6 @@
     <GUI>
       <xloc>832</xloc>
       <yloc>496</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>invalid type sturing</name>
-    <type>SetValueConstant</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <usevar>N</usevar>
-    <fields>
-      <field>
-        <name>err_desc</name>
-        <value>invalid typesturing</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>976</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>lookup type sturing</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>myconn</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>public</schema>
-      <table>sturingtype</table>
-      <orderby/>
-      <fail_on_multiple>Y</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>typesturingid</name>
-        <field>sturingtypeid</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>976</xloc>
-      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2393,82 +2550,6 @@
     </GUI>
   </step>
   <step>
-    <name>invalid type controller</name>
-    <type>SetValueConstant</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <usevar>N</usevar>
-    <fields>
-      <field>
-        <name>err_desc</name>
-        <value>invalid typecontroller</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1088</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>lookup type controller</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>myconn</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>public</schema>
-      <table>typecontroller</table>
-      <orderby/>
-      <fail_on_multiple>Y</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>typecontrollerid</name>
-        <field>typecontrollerid</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1088</xloc>
-      <yloc>272</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>write error 7</name>
     <type>TextFileOutput</type>
     <description/>
@@ -2558,82 +2639,6 @@
     <GUI>
       <xloc>1088</xloc>
       <yloc>496</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>invalid prioriteit</name>
-    <type>SetValueConstant</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <usevar>N</usevar>
-    <fields>
-      <field>
-        <name>err_desc</name>
-        <value>invalid prioriteit</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1216</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>lookup prioriteit</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>myconn</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>public</schema>
-      <table>prioriteit</table>
-      <orderby/>
-      <fail_on_multiple>Y</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>prioriteitid</name>
-        <field>prioriteitid</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1216</xloc>
-      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2756,18 +2761,6 @@
       <min_pct_rows/>
     </error>
     <error>
-      <source_step>lookup statusobject</source_step>
-      <target_step>invalid statusobject</target_step>
-      <is_enabled>Y</is_enabled>
-      <nr_valuename/>
-      <descriptions_valuename>err_desc</descriptions_valuename>
-      <fields_valuename/>
-      <codes_valuename/>
-      <max_errors>1000</max_errors>
-      <max_pct_errors/>
-      <min_pct_rows/>
-    </error>
-    <error>
       <source_step>lookup doelvariabele</source_step>
       <target_step>invalid doelvariabele</target_step>
       <is_enabled>Y</is_enabled>
@@ -2792,8 +2785,8 @@
       <min_pct_rows/>
     </error>
     <error>
-      <source_step>lookup stuurvariabele</source_step>
-      <target_step>invalid stuurvariabele</target_step>
+      <source_step>lookup prioriteit</source_step>
+      <target_step>invalid prioriteit</target_step>
       <is_enabled>Y</is_enabled>
       <nr_valuename/>
       <descriptions_valuename>err_desc</descriptions_valuename>
@@ -2804,8 +2797,20 @@
       <min_pct_rows/>
     </error>
     <error>
-      <source_step>lookup type sturing</source_step>
-      <target_step>invalid type sturing</target_step>
+      <source_step>lookup statusobject</source_step>
+      <target_step>invalid statusobject</target_step>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename>err_desc</descriptions_valuename>
+      <fields_valuename/>
+      <codes_valuename/>
+      <max_errors>1000</max_errors>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
+    <error>
+      <source_step>lookup stuurvariabele</source_step>
+      <target_step>invalid stuurvariabele</target_step>
       <is_enabled>Y</is_enabled>
       <nr_valuename/>
       <descriptions_valuename>err_desc</descriptions_valuename>
@@ -2828,8 +2833,8 @@
       <min_pct_rows/>
     </error>
     <error>
-      <source_step>lookup prioriteit</source_step>
-      <target_step>invalid prioriteit</target_step>
+      <source_step>lookup type sturing</source_step>
+      <target_step>invalid type sturing</target_step>
       <is_enabled>Y</is_enabled>
       <nr_valuename/>
       <descriptions_valuename>err_desc</descriptions_valuename>

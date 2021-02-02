@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>peilgebiedpraktijk</name>
+    <name>normgeparametriseerdprofiel_validation</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -553,269 +553,89 @@
   </connection>
   <order>
     <hop>
-      <from>Filter Geometries</from>
-      <to>insert record: Multipolygon</to>
+      <from>Get bodemval code</from>
+      <to>lookup bodemval</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filter Geometries</from>
-      <to>insert record: Polygon</to>
+      <from>Get brug code</from>
+      <to>lookup brug</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Update XSD datetime</from>
-      <to>Filter Geometries</to>
+      <from>Get grondwaterkoppellijn Codes</from>
+      <to>Write to log</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Get grondwaterkoppellijn Codes</from>
+      <to>lookup grondwaterkoppellijn</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>insert record: Multipolygon</from>
-      <to>Error log</to>
+      <from>Get hydroobject Codes</from>
+      <to>lookup hydroobject</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>insert record: Polygon</from>
-      <to>Error log</to>
+      <from>Get stuw code</from>
+      <to>lookup stuw</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get data from XML</from>
-      <to>Error reading gml log</to>
+      <from>invalid bodemvalcode</from>
+      <to>write error 5</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>invalid admingebied</from>
+      <from>invalid brugcode</from>
+      <to>write error 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>invalid grondwaterkoppellijncode</from>
       <to>write error 1</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>invalid statusobject</from>
+      <from>invalid hydroobjectcode</from>
       <to>write error 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>lookup administratiefgebied</from>
-      <to>invalid admingebied</to>
+      <from>invalid stuwcode</from>
+      <to>write error 3</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>lookup administratiefgebied</from>
-      <to>statusobject exists</to>
+      <from>lookup bodemval</from>
+      <to>invalid bodemvalcode</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>lookup statusobject</from>
-      <to>invalid statusobject</to>
+      <from>lookup brug</from>
+      <to>invalid brugcode</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>statusobject exists</from>
-      <to>lookup statusobject</to>
+      <from>lookup grondwaterkoppellijn</from>
+      <to>invalid grondwaterkoppellijncode</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get data from XML</from>
-      <to>lookup administratiefgebied</to>
+      <from>lookup hydroobject</from>
+      <to>invalid hydroobjectcode</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>statusobject exists</from>
-      <to>Update XSD datetime</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>lookup statusobject</from>
-      <to>Update XSD datetime</to>
+      <from>lookup stuw</from>
+      <to>invalid stuwcode</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Error log</name>
-    <type>TextFileOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <separator>;</separator>
-    <enclosure>"</enclosure>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>Y</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding/>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>Y</create_parent_folder>
-    <file>
-      <name>${log_dir}${file_name}_insert_err</name>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
-      <extention>txt</extention>
-      <append>N</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format>yyyyMMddHHmmss</date_time_format>
-      <add_to_result_filenames>N</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
-    </file>
-    <fields>
-      <field>
-        <name>code</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>err_desc</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1104</xloc>
-      <yloc>192</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Error reading gml log</name>
-    <type>TextFileOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <separator>;</separator>
-    <enclosure>"</enclosure>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>Y</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding/>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>Y</create_parent_folder>
-    <file>
-      <name>${error_log_file}</name>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
-      <extention/>
-      <append>Y</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format>yyyyMMddHHmmss</date_time_format>
-      <add_to_result_filenames>N</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
-    </file>
-    <fields>
-      <field>
-        <name>err_description</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>80</xloc>
-      <yloc>320</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Filter Geometries</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>insert record: Multipolygon</send_true_to>
-    <send_false_to>insert record: Polygon</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>polygon</leftvalue>
-        <function>IS NULL</function>
-        <rightvalue/>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>768</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Get data from XML</name>
-    <type>getXMLData</type>
+    <name>Get bodemval code</name>
+    <type>TableInput</type>
     <description/>
     <distribute>N</distribute>
     <custom_distribution/>
@@ -824,207 +644,13 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <namespaceaware>N</namespaceaware>
-    <ignorecomments>N</ignorecomments>
-    <readurl>N</readurl>
-    <validating>N</validating>
-    <usetoken>N</usetoken>
-    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <rownum_field/>
-    <encoding>UTF-8</encoding>
-    <file>
-      <name>${filename}</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <fields>
-      <field>
-        <name>code</name>
-        <xpath>nhi:code</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>statusobjectid</name>
-        <xpath>nhi:statusObject</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>createddate</name>
-        <xpath>nhi:CREATED_DATE</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>lastediteddate</name>
-        <xpath>nhi:LAST_EDITED_DATE</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>administratiefgebiedid</name>
-        <xpath>nhi:administratiefgebied</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>naam</name>
-        <xpath>nhi:naam</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>hyperlink</name>
-        <xpath>nhi:hyperlink</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>voertafopcode</name>
-        <xpath>nhi:voertafop</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>bevatcode</name>
-        <xpath>nhi:bevat</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>multiPolygon</name>
-        <xpath>${multipolygonpath}</xpath>
-        <element_type>node</element_type>
-        <result_type>singlenode</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>polygon</name>
-        <xpath>${polygonpath}</xpath>
-        <element_type>node</element_type>
-        <result_type>singlenode</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-    </fields>
+    <connection>myconn</connection>
+    <sql>SELECT DISTINCT bodemvalcode, administratiefgebiedid FROM ${table_name} WHERE bodemvalcode &lt;&gt; '' AND administratiefgebiedid=${administratiefgebiedid}</sql>
     <limit>0</limit>
-    <loopxpath>/FeatureCollection/gml:featureMember/${objectpath}</loopxpath>
-    <IsInFields>N</IsInFields>
-    <IsAFile>N</IsAFile>
-    <XmlField/>
-    <prunePath/>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -1034,14 +660,142 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>80</xloc>
-      <yloc>208</yloc>
+      <xloc>928</xloc>
+      <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Update XSD datetime</name>
-    <type>ReplaceString</type>
+    <name>Get brug code</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <sql>SELECT DISTINCT brugcode, administratiefgebiedid FROM ${table_name} WHERE brugcode &lt;&gt; '' AND administratiefgebiedid=${administratiefgebiedid}</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Get grondwaterkoppellijn Codes</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <sql>SELECT DISTINCT grondwaterkoppellijncode, administratiefgebiedid FROM ${table_name} WHERE grondwaterkoppellijncode &lt;&gt; '' AND administratiefgebiedid=${administratiefgebiedid}</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>192</xloc>
+      <yloc>48</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Get hydroobject Codes</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <sql>SELECT DISTINCT hydroobjectcode, administratiefgebiedid FROM ${table_name} WHERE hydroobjectcode &lt;&gt; '' AND administratiefgebiedid=${administratiefgebiedid}</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Get stuw code</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <sql>SELECT DISTINCT stuwcode, administratiefgebiedid FROM ${table_name} WHERE stuwcode &lt;&gt; '' AND administratiefgebiedid=${administratiefgebiedid}</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>576</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Write to log</name>
+    <type>WriteToLog</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1050,30 +804,14 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <loglevel>log_level_basic</loglevel>
+    <displayHeader>Y</displayHeader>
+    <limitRows>N</limitRows>
+    <limitRowsNumber>0</limitRowsNumber>
+    <logmessage/>
     <fields>
       <field>
-        <in_stream_name>createddate</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>T</replace_string>
-        <replace_by_string> </replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>lastediteddate</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>T</replace_string>
-        <replace_by_string> </replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <name>doorstroomopeningcode</name>
       </field>
     </fields>
     <attributes/>
@@ -1085,159 +823,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>656</xloc>
-      <yloc>208</yloc>
+      <xloc>48</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>insert record: Multipolygon</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>myconn</connection>
-    <execute_each_row>Y</execute_each_row>
-    <single_statement>N</single_statement>
-    <replace_variables>Y</replace_variables>
-    <quoteString>Y</quoteString>
-    <sql>INSERT INTO public.${table_name}
-(code, naam, statusobjectid, createddate, lastediteddate, hyperlink, administratiefgebiedid
-, voertafop, bevat, geometrievlak)
-VALUES
-(?, ?, ?, TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), ?, ?
-,?,?, st_force2d(ST_GeomFromGML(?)));</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-      <argument>
-        <name>code</name>
-      </argument>
-      <argument>
-        <name>naam</name>
-      </argument>
-      <argument>
-        <name>statusobjectid</name>
-      </argument>
-      <argument>
-        <name>createddate</name>
-      </argument>
-      <argument>
-        <name>lastediteddate</name>
-      </argument>
-      <argument>
-        <name>hyperlink</name>
-      </argument>
-      <argument>
-        <name>administratiefgebiedid</name>
-      </argument>
-      <argument>
-        <name>voertafopcode</name>
-      </argument>
-      <argument>
-        <name>bevatcode</name>
-      </argument>
-      <argument>
-        <name>multiPolygon</name>
-      </argument>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>928</xloc>
-      <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>insert record: Polygon</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>myconn</connection>
-    <execute_each_row>Y</execute_each_row>
-    <single_statement>N</single_statement>
-    <replace_variables>Y</replace_variables>
-    <quoteString>Y</quoteString>
-    <sql>INSERT INTO public.${table_name}
-(code, naam, statusobjectid, createddate, lastediteddate, hyperlink, administratiefgebiedid
-, voertafop, bevat, geometrievlak)
-VALUES
-(?, ?, ?, TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), ?, ?
-,?,?,st_force2d(ST_Multi(ST_GeomFromGML(?))));</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-      <argument>
-        <name>code</name>
-      </argument>
-      <argument>
-        <name>naam</name>
-      </argument>
-      <argument>
-        <name>statusobjectid</name>
-      </argument>
-      <argument>
-        <name>createddate</name>
-      </argument>
-      <argument>
-        <name>lastediteddate</name>
-      </argument>
-      <argument>
-        <name>hyperlink</name>
-      </argument>
-      <argument>
-        <name>administratiefgebiedid</name>
-      </argument>
-      <argument>
-        <name>voertafopcode</name>
-      </argument>
-      <argument>
-        <name>bevatcode</name>
-      </argument>
-      <argument>
-        <name>polygon</name>
-      </argument>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>928</xloc>
-      <yloc>240</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>invalid admingebied</name>
+    <name>invalid bodemvalcode</name>
     <type>SetValueConstant</type>
     <description/>
     <distribute>Y</distribute>
@@ -1251,7 +843,7 @@ VALUES
     <fields>
       <field>
         <name>err_desc</name>
-        <value>invalid administratiefgebiedid</value>
+        <value>invalid bodemvalcode</value>
         <mask/>
         <set_empty_string>N</set_empty_string>
       </field>
@@ -1265,13 +857,13 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>112</yloc>
+      <xloc>928</xloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>invalid statusobject</name>
+    <name>invalid brugcode</name>
     <type>SetValueConstant</type>
     <description/>
     <distribute>Y</distribute>
@@ -1285,7 +877,75 @@ VALUES
     <fields>
       <field>
         <name>err_desc</name>
-        <value>invalid statusobjectid</value>
+        <value>invalid brugcode</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>invalid grondwaterkoppellijncode</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>err_desc</name>
+        <value>invalid grondwaterkoppellijncode</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>192</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>invalid hydroobjectcode</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>err_desc</name>
+        <value>invalid hydroobjectcode</value>
         <mask/>
         <set_empty_string>N</set_empty_string>
       </field>
@@ -1300,12 +960,46 @@ VALUES
     </remotesteps>
     <GUI>
       <xloc>384</xloc>
-      <yloc>432</yloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>lookup administratiefgebied</name>
+    <name>invalid stuwcode</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>err_desc</name>
+        <value>invalid stuwcode</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>576</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup bodemval</name>
     <type>DBLookup</type>
     <description/>
     <distribute>N</distribute>
@@ -1316,12 +1010,12 @@ VALUES
       <schema_name/>
     </partitioning>
     <connection>myconn</connection>
-    <cache>Y</cache>
+    <cache>N</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
     <lookup>
       <schema>public</schema>
-      <table>administratiefgebied</table>
+      <table>bodemval</table>
       <orderby/>
       <fail_on_multiple>Y</fail_on_multiple>
       <eat_row_on_failure>N</eat_row_on_failure>
@@ -1331,6 +1025,12 @@ VALUES
         <condition>=</condition>
         <name2/>
       </key>
+      <key>
+        <name>bodemvalcode</name>
+        <field>code</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
     </lookup>
     <attributes/>
     <cluster_schema/>
@@ -1341,13 +1041,13 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
+      <xloc>928</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>lookup statusobject</name>
+    <name>lookup brug</name>
     <type>DBLookup</type>
     <description/>
     <distribute>N</distribute>
@@ -1358,18 +1058,120 @@ VALUES
       <schema_name/>
     </partitioning>
     <connection>myconn</connection>
-    <cache>Y</cache>
+    <cache>N</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
     <lookup>
       <schema>public</schema>
-      <table>statusobject</table>
+      <table>brug</table>
       <orderby/>
       <fail_on_multiple>Y</fail_on_multiple>
       <eat_row_on_failure>N</eat_row_on_failure>
       <key>
-        <name>statusobjectid</name>
-        <field>statusobjectid</field>
+        <name>administratiefgebiedid</name>
+        <field>administratiefgebiedid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>brugcode</name>
+        <field>code</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup grondwaterkoppellijn</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <cache>N</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>grondwaterkoppellijn</table>
+      <orderby/>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>administratiefgebiedid</name>
+        <field>administratiefgebiedid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>grondwaterkoppellijncode</name>
+        <field>code</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>192</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup hydroobject</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <cache>N</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>hydroobject</table>
+      <orderby/>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>administratiefgebiedid</name>
+        <field>administratiefgebiedid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>hydroobjectcode</name>
+        <field>code</field>
         <condition>=</condition>
         <name2/>
       </key>
@@ -1384,31 +1186,44 @@ VALUES
     </remotesteps>
     <GUI>
       <xloc>384</xloc>
-      <yloc>336</yloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>statusobject exists</name>
-    <type>FilterRows</type>
+    <name>lookup stuw</name>
+    <type>DBLookup</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to>lookup statusobject</send_true_to>
-    <send_false_to>Update XSD datetime</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>statusobjectid</leftvalue>
-        <function>IS NOT NULL</function>
-        <rightvalue/>
-      </condition>
-    </compare>
+    <connection>myconn</connection>
+    <cache>N</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>stuw</table>
+      <orderby/>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>administratiefgebiedid</name>
+        <field>administratiefgebiedid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>stuwcode</name>
+        <field>code</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -1418,7 +1233,7 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
+      <xloc>576</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1466,19 +1281,7 @@ VALUES
     </file>
     <fields>
       <field>
-        <name>code</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>err_desc</name>
+        <name>grondwaterkoppellijncode</name>
         <type>String</type>
         <format/>
         <currency/>
@@ -1501,6 +1304,18 @@ VALUES
         <length>-1</length>
         <precision>-1</precision>
       </field>
+      <field>
+        <name>err_desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -1511,8 +1326,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>32</yloc>
+      <xloc>192</xloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1559,8 +1374,20 @@ VALUES
     </file>
     <fields>
       <field>
-        <name>code</name>
+        <name>hydroobjectcode</name>
         <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>administratiefgebiedid</name>
+        <type>Integer</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1582,9 +1409,90 @@ VALUES
         <length>-1</length>
         <precision>-1</precision>
       </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>write error 3</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>N</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields>
       <field>
-        <name>statusobjectid</name>
+        <name>stuwcode</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>administratiefgebiedid</name>
         <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>err_desc</name>
+        <type>String</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1604,69 +1512,255 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>528</yloc>
+      <xloc>576</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>write error 4</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>N</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields>
+      <field>
+        <name>brugcode</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>administratiefgebiedid</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>err_desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>write error 5</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>N</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields>
+      <field>
+        <name>bodemvalcode</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>administratiefgebiedid</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>err_desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step_error_handling>
     <error>
-      <source_step>Get data from XML</source_step>
-      <target_step>Error reading gml log</target_step>
+      <source_step>lookup bodemval</source_step>
+      <target_step>invalid bodemvalcode</target_step>
       <is_enabled>Y</is_enabled>
       <nr_valuename/>
-      <descriptions_valuename>err_description</descriptions_valuename>
-      <fields_valuename/>
-      <codes_valuename>err_code</codes_valuename>
-      <max_errors>5000</max_errors>
+      <descriptions_valuename/>
+      <fields_valuename>err_desc</fields_valuename>
+      <codes_valuename/>
+      <max_errors>500</max_errors>
       <max_pct_errors/>
       <min_pct_rows/>
     </error>
     <error>
-      <source_step>insert record: Multipolygon</source_step>
-      <target_step>Error log</target_step>
+      <source_step>lookup brug</source_step>
+      <target_step>invalid brugcode</target_step>
       <is_enabled>Y</is_enabled>
       <nr_valuename/>
-      <descriptions_valuename>err_desc</descriptions_valuename>
-      <fields_valuename/>
+      <descriptions_valuename/>
+      <fields_valuename>err_desc</fields_valuename>
       <codes_valuename/>
-      <max_errors/>
+      <max_errors>500</max_errors>
       <max_pct_errors/>
       <min_pct_rows/>
     </error>
     <error>
-      <source_step>insert record: Polygon</source_step>
-      <target_step>Error log</target_step>
+      <source_step>lookup grondwaterkoppellijn</source_step>
+      <target_step>invalid grondwaterkoppellijncode</target_step>
       <is_enabled>Y</is_enabled>
       <nr_valuename/>
-      <descriptions_valuename>err_desc</descriptions_valuename>
-      <fields_valuename/>
+      <descriptions_valuename/>
+      <fields_valuename>err_desc</fields_valuename>
       <codes_valuename/>
-      <max_errors/>
+      <max_errors>500</max_errors>
       <max_pct_errors/>
       <min_pct_rows/>
     </error>
     <error>
-      <source_step>lookup administratiefgebied</source_step>
-      <target_step>invalid admingebied</target_step>
+      <source_step>lookup hydroobject</source_step>
+      <target_step>invalid hydroobjectcode</target_step>
       <is_enabled>Y</is_enabled>
       <nr_valuename/>
-      <descriptions_valuename>err_desc</descriptions_valuename>
-      <fields_valuename/>
+      <descriptions_valuename/>
+      <fields_valuename>err_desc</fields_valuename>
       <codes_valuename/>
-      <max_errors>1000</max_errors>
+      <max_errors>500</max_errors>
       <max_pct_errors/>
       <min_pct_rows/>
     </error>
     <error>
-      <source_step>lookup statusobject</source_step>
-      <target_step>invalid statusobject</target_step>
+      <source_step>lookup stuw</source_step>
+      <target_step>invalid stuwcode</target_step>
       <is_enabled>Y</is_enabled>
       <nr_valuename/>
-      <descriptions_valuename>err_desc</descriptions_valuename>
-      <fields_valuename/>
+      <descriptions_valuename/>
+      <fields_valuename>err_desc</fields_valuename>
       <codes_valuename/>
-      <max_errors>1000</max_errors>
+      <max_errors>500</max_errors>
       <max_pct_errors/>
       <min_pct_rows/>
     </error>

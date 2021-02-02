@@ -563,16 +563,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Set peilgebied type</from>
-      <to>Write to log</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
-      <from>Set peilgebied type</from>
-      <to>Update XSD datetime</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Update XSD datetime</from>
       <to>Filter Geometries</to>
       <enabled>Y</enabled>
@@ -628,13 +618,13 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>statusobject exists</from>
-      <to>Set peilgebied type</to>
+      <from>lookup statusobject</from>
+      <to>Update XSD datetime</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>lookup statusobject</from>
-      <to>Set peilgebied type</to>
+      <from>statusobject exists</from>
+      <to>Update XSD datetime</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -716,6 +706,75 @@
     <GUI>
       <xloc>1152</xloc>
       <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Error reading gml log</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format>yyyyMMddHHmmss</date_time_format>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>err_description</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -981,45 +1040,6 @@
     </GUI>
   </step>
   <step>
-    <name>Set peilgebied type</name>
-    <type>Constant</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>peilgebiedtypeid</name>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>2</nullif>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>528</xloc>
-      <yloc>288</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Update XSD datetime</name>
     <type>ReplaceString</type>
     <description/>
@@ -1071,41 +1091,6 @@
     </GUI>
   </step>
   <step>
-    <name>Write to log</name>
-    <type>WriteToLog</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <loglevel>log_level_basic</loglevel>
-    <displayHeader>Y</displayHeader>
-    <limitRows>N</limitRows>
-    <limitRowsNumber>0</limitRowsNumber>
-    <logmessage>Peilgebiedparktijk</logmessage>
-    <fields>
-      <field>
-        <name>code</name>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>528</xloc>
-      <yloc>416</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>insert record: Multipolygon</name>
     <type>ExecSQL</type>
     <description/>
@@ -1123,10 +1108,10 @@
     <quoteString>Y</quoteString>
     <sql>INSERT INTO public.${table_name}
 (code, naam, statusobjectid, createddate, lastediteddate, hyperlink, administratiefgebiedid
-,peilgebiedtypeid, voertafop, bevat, geometrievlak)
+, voertafop, bevat, geometrievlak)
 VALUES
 (?, ?, ?, TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), ?, ?
-,?,?,?, st_force2d(ST_GeomFromGML(?)));</sql>
+,?,?, st_force2d(ST_GeomFromGML(?)));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1153,9 +1138,6 @@ VALUES
       </argument>
       <argument>
         <name>administratiefgebiedid</name>
-      </argument>
-      <argument>
-        <name>peilgebiedtypeid</name>
       </argument>
       <argument>
         <name>voertafopcode</name>
@@ -1199,10 +1181,10 @@ VALUES
     <quoteString>Y</quoteString>
     <sql>INSERT INTO public.${table_name}
 (code, naam, statusobjectid, createddate, lastediteddate, hyperlink, administratiefgebiedid
-,peilgebiedtypeid, voertafop, bevat, geometrievlak)
+, voertafop, bevat, geometrievlak)
 VALUES
 (?, ?, ?, TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), ?, ?
-,?,?,?,st_force2d(ST_Multi(ST_GeomFromGML(?))));</sql>
+,?,?,st_force2d(ST_Multi(ST_GeomFromGML(?))));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1231,9 +1213,6 @@ VALUES
         <name>administratiefgebiedid</name>
       </argument>
       <argument>
-        <name>peilgebiedtypeid</name>
-      </argument>
-      <argument>
         <name>voertafopcode</name>
       </argument>
       <argument>
@@ -1254,75 +1233,6 @@ VALUES
     <GUI>
       <xloc>976</xloc>
       <yloc>320</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Error reading gml log</name>
-    <type>TextFileOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <separator>;</separator>
-    <enclosure>"</enclosure>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>Y</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding/>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>Y</create_parent_folder>
-    <file>
-      <name>${error_log_file}</name>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
-      <extention/>
-      <append>Y</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format>yyyyMMddHHmmss</date_time_format>
-      <add_to_result_filenames>N</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
-    </file>
-    <fields>
-      <field>
-        <name>err_description</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>64</xloc>
-      <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1475,6 +1385,41 @@ VALUES
     <GUI>
       <xloc>368</xloc>
       <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>statusobject exists</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>lookup statusobject</send_true_to>
+    <send_false_to>Update XSD datetime</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>statusobjectid</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1661,41 +1606,6 @@ VALUES
     <GUI>
       <xloc>368</xloc>
       <yloc>608</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>statusobject exists</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>lookup statusobject</send_true_to>
-    <send_false_to>Set peilgebied type</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>statusobjectid</leftvalue>
-        <function>IS NOT NULL</function>
-        <rightvalue/>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>368</xloc>
-      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

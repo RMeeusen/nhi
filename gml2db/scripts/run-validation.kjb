@@ -1,74 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>foreach</name>
+  <name>run-validation</name>
   <description/>
   <extended_description/>
   <job_version/>
   <job_status>0</job_status>
   <directory>/</directory>
   <created_user>-</created_user>
-  <created_date>2010/03/19 11:25:36.797</created_date>
+  <created_date>2010/03/19 11:42:47.812</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2010/03/19 11:25:36.797</modified_date>
+  <modified_date>2010/03/19 11:42:47.812</modified_date>
   <parameters>
     </parameters>
-  <connection>
-    <name>mylog</name>
-    <server>localhost</server>
-    <type>POSTGRESQL</type>
-    <access>Native</access>
-    <database>nhi_pentaho</database>
-    <port>5432</port>
-    <username>postgres</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce10bef2bfdd</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>IS_CLUSTERED</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>PORT_NUMBER</code>
-        <attribute>5432</attribute>
-      </attribute>
-      <attribute>
-        <code>PRESERVE_RESERVED_WORD_CASE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>QUOTE_ALL_FIELDS</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>USE_POOLING</code>
-        <attribute>N</attribute>
-      </attribute>
-    </attributes>
-  </connection>
   <slaveservers>
     </slaveservers>
   <job-log-table>
-    <connection>mylog</connection>
-    <schema>log</schema>
-    <table>log_job</table>
+    <connection/>
+    <schema/>
+    <table/>
     <size_limit_lines/>
     <interval/>
     <timeout_days>28</timeout_days>
@@ -356,18 +305,30 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>48</xloc>
+      <xloc>176</xloc>
       <yloc>64</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>set-filename</name>
+      <name>Success 1</name>
+      <description>Success</description>
+      <type>SUCCESS</type>
+      <attributes/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>736</xloc>
+      <yloc>256</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>run validation</name>
       <description>Transformation</description>
       <type>TRANS</type>
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>${Internal.Entry.Current.Directory}/set-filename.ktr</filename>
+      <filename>${Internal.Job.Filename.Directory}/${version}/${file_name}_validation.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -375,7 +336,7 @@
       <clear_rows>N</clear_rows>
       <clear_files>N</clear_files>
       <set_logfile>N</set_logfile>
-      <logfile/>
+      <logfile>${log_dir}/${table_name}.log</logfile>
       <logext/>
       <add_date>N</add_date>
       <add_time>N</add_time>
@@ -394,64 +355,89 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
+      <xloc>736</xloc>
+      <yloc>64</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Validating file</name>
+      <description/>
+      <type>WRITE_TO_LOG</type>
+      <attributes/>
+      <logmessage>Validating file ${filename}</logmessage>
+      <loglevel>Basic</loglevel>
+      <logsubject/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>592</xloc>
+      <yloc>64</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Validation file exists</name>
+      <description/>
+      <type>FILE_EXISTS</type>
+      <attributes/>
+      <filename>${Internal.Job.Filename.Directory}/${version}/${file_name}_validation.ktr</filename>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>64</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Init Validation step</name>
+      <description/>
+      <type>WRITE_TO_FILE</type>
+      <attributes/>
+      <filename>${error_log_file}</filename>
+      <createParentFolder>N</createParentFolder>
+      <appendFile>Y</appendFile>
+      <content>**** Starting validation of codes ********
+code;administratiegebiedid;fout melding
+</content>
+      <encoding>UTF-8</encoding>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
       <xloc>288</xloc>
-      <yloc>64</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>run-transaction</name>
-      <description>Job</description>
-      <type>JOB</type>
-      <attributes/>
-      <specification_method>filename</specification_method>
-      <job_object_id/>
-      <filename>${Internal.Entry.Current.Directory}/run-transaction.kjb</filename>
-      <jobname/>
-      <directory/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <set_logfile>N</set_logfile>
-      <logfile>${log_dir}${file_name}_runtransaction</logfile>
-      <logext>txt</logext>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Minimal</loglevel>
-      <slave_server_name/>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <expand_remote_job>N</expand_remote_job>
-      <create_parent_folder>N</create_parent_folder>
-      <pass_export>N</pass_export>
-      <run_configuration>Pentaho local</run_configuration>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <set_append_logfile>N</set_append_logfile>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>496</xloc>
-      <yloc>64</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Success 1</name>
-      <description>Success</description>
-      <type>SUCCESS</type>
-      <attributes/>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>768</xloc>
       <yloc>64</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
   <hops>
     <hop>
-      <from>set-filename</from>
-      <to>run-transaction</to>
+      <from>Validating file</from>
+      <to>run validation</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Validation file exists</from>
+      <to>Validating file</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Validation file exists</from>
+      <to>Success 1</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>run validation</from>
+      <to>Success 1</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -460,7 +446,7 @@
     </hop>
     <hop>
       <from>START</from>
-      <to>set-filename</to>
+      <to>Init Validation step</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -468,12 +454,12 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>run-transaction</from>
-      <to>Success 1</to>
+      <from>Init Validation step</from>
+      <to>Validation file exists</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
-      <evaluation>N</evaluation>
+      <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
     </hop>
   </hops>

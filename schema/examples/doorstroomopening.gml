@@ -12,10 +12,10 @@
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>
 			<nhi:brugID>b1</nhi:brugID>
-			<nhi:laagsteDoostroombreedte>1.0</nhi:laagsteDoostroombreedte>
-			<nhi:hoogstDoostroombreedte>1.0</nhi:hoogstDoostroombreedte>
-			<nhi:laagsteDoostroomhoogte>1.0</nhi:laagsteDoostroomhoogte>
-			<nhi:hoogstDoostroomhoogte>1.0</nhi:hoogstDoostroomhoogte>
+			<nhi:laagsteDoorstroombreedte>1.0</nhi:laagsteDoorstroombreedte>
+			<nhi:hoogsteDoorstroombreedte>1.0</nhi:hoogsteDoorstroombreedte>
+			<nhi:laagsteDoorstroomhoogte>1.0</nhi:laagsteDoorstroomhoogte>
+			<nhi:hoogsteDoorstroomhoogte>1.0</nhi:hoogsteDoorstroomhoogte>
 			<nhi:doorstroomlengte>1.0</nhi:doorstroomlengte>
 			<nhi:vormOpening>1</nhi:vormOpening>
 			<nhi:afvoerCoefficient>1.0</nhi:afvoerCoefficient>
@@ -24,16 +24,16 @@
 	<!-- Koppeling met Stuw -->
 	<gml:featureMember>
 		 <nhi:doorstroomopening>
-			<nhi:code>dso1</nhi:code>
+			<nhi:code>dso2</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>
 			<nhi:stuwID>s1</nhi:stuwID>
-			<nhi:laagsteDoostroombreedte>1.0</nhi:laagsteDoostroombreedte>
-			<nhi:hoogstDoostroombreedte>1.0</nhi:hoogstDoostroombreedte>
-			<nhi:laagsteDoostroomhoogte>1.0</nhi:laagsteDoostroomhoogte>
-			<nhi:hoogstDoostroomhoogte>1.0</nhi:hoogstDoostroomhoogte>
+			<nhi:laagsteDoorstroombreedte>1.0</nhi:laagsteDoorstroombreedte>
+			<nhi:hoogsteDoorstroombreedte>1.0</nhi:hoogsteDoorstroombreedte>
+			<nhi:laagsteDoorstroomhoogte>1.0</nhi:laagsteDoorstroomhoogte>
+			<nhi:hoogsteDoorstroomhoogte>1.0</nhi:hoogsteDoorstroomhoogte>
 			<nhi:doorstroomlengte>1.0</nhi:doorstroomlengte>
 			<nhi:vormOpening>1</nhi:vormOpening>
 			<nhi:afvoerCoefficient>1.0</nhi:afvoerCoefficient>
@@ -42,16 +42,16 @@
 	<!-- Koppeling met Afsluitmiddel -->
 	<gml:featureMember>
 		 <nhi:doorstroomopening>
-			<nhi:code>dso1</nhi:code>
+			<nhi:code>dso3</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>
 			<nhi:afsluitmiddelID>asm1</nhi:afsluitmiddelID>			
-			<nhi:laagsteDoostroombreedte>1.0</nhi:laagsteDoostroombreedte>
-			<nhi:hoogstDoostroombreedte>1.0</nhi:hoogstDoostroombreedte>
-			<nhi:laagsteDoostroomhoogte>1.0</nhi:laagsteDoostroomhoogte>
-			<nhi:hoogstDoostroomhoogte>1.0</nhi:hoogstDoostroomhoogte>
+			<nhi:laagsteDoorstroombreedte>1.0</nhi:laagsteDoorstroombreedte>
+			<nhi:hoogsteDoorstroombreedte>1.0</nhi:hoogsteDoorstroombreedte>
+			<nhi:laagsteDoorstroomhoogte>1.0</nhi:laagsteDoorstroomhoogte>
+			<nhi:hoogsteDoorstroomhoogte>1.0</nhi:hoogsteDoorstroomhoogte>
 			<nhi:doorstroomlengte>1.0</nhi:doorstroomlengte>
 			<nhi:vormOpening>1</nhi:vormOpening>
 			<nhi:afvoerCoefficient>1.0</nhi:afvoerCoefficient>

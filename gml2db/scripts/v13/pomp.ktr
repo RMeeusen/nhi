@@ -628,11 +628,6 @@
       <date_mask/>
     </mapping>
     <mapping>
-      <stream_name>naam</stream_name>
-      <field_name>naam</field_name>
-      <date_mask/>
-    </mapping>
-    <mapping>
       <stream_name>statusobjectid</stream_name>
       <field_name>statusobjectid</field_name>
       <date_mask/>
@@ -648,28 +643,28 @@
       <date_mask>DATETIME</date_mask>
     </mapping>
     <mapping>
-      <stream_name>hyperlink</stream_name>
-      <field_name>hyperlink</field_name>
-      <date_mask/>
-    </mapping>
-    <mapping>
       <stream_name>administratiefgebiedid</stream_name>
       <field_name>administratiefgebiedid</field_name>
       <date_mask/>
     </mapping>
     <mapping>
-      <stream_name>bodemhoogtebovenstrooms</stream_name>
-      <field_name>bodemhoogtebovenstrooms</field_name>
+      <stream_name>gemaalcode</stream_name>
+      <field_name>gemaalcode</field_name>
       <date_mask/>
     </mapping>
     <mapping>
-      <stream_name>bodemhoogebenedenstrooms</stream_name>
-      <field_name>bodemhoogtebenedenstrooms</field_name>
+      <stream_name>maximalecapaciteit</stream_name>
+      <field_name>maxcap</field_name>
       <date_mask/>
     </mapping>
     <mapping>
-      <stream_name>geometriepunt</stream_name>
-      <field_name>point_geom</field_name>
+      <stream_name>pomprichtingid</stream_name>
+      <field_name>richtingid</field_name>
+      <date_mask/>
+    </mapping>
+    <mapping>
+      <stream_name>pompcurve</stream_name>
+      <field_name>pompcurve</field_name>
       <date_mask/>
     </mapping>
     <attributes/>
@@ -1116,6 +1111,41 @@
     </GUI>
   </step>
   <step>
+    <name>statusobject exists</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>lookup statusobject</send_true_to>
+    <send_false_to>Bulk insert</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>statusobjectid</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>write error 1</name>
     <type>TextFileOutput</type>
     <description/>
@@ -1298,41 +1328,6 @@
     <GUI>
       <xloc>400</xloc>
       <yloc>576</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>statusobject exists</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>lookup statusobject</send_true_to>
-    <send_false_to>Bulk insert</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>statusobjectid</leftvalue>
-        <function>IS NOT NULL</function>
-        <rightvalue/>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>400</xloc>
-      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

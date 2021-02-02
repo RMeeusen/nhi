@@ -16,7 +16,7 @@
 	<element name="grondwaterinfopunt" type="nhi:NhiGrondwaterInfoPuntFeatureType" substitutionGroup="gml:_Feature"/>
 	<element name="grondwaterkoppellijn" type="nhi:NhiGrondwaterKoppelLijnFeatureType" substitutionGroup="gml:_Feature"/>
 	<element name="grondwaterkoppelpunt" type="nhi:NhiGrondwaterKoppelPuntFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="hydraulischerandvoorwaarde" type="nhi:NhiHydraulischeRandvoorwaardeFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="hydrologischerandvoorwaarde" type="nhi:NhiHydrologischeRandvoorwaardeFeatureType" substitutionGroup="gml:_Feature"/>
 	<element name="hydroobject" type="nhi:NhiHydroObjectFeatureType" substitutionGroup="gml:_Feature"/>
 	<element name="lateraleknoop" type="nhi:NhiLateraleKnoopFeatureType" substitutionGroup="gml:_Feature"/>
 	<element name="meetlocatie" type="nhi:NhiMeetlocatieFeatureType" substitutionGroup="gml:_Feature"/>
@@ -204,16 +204,16 @@
 							</annotation>
 						</element>
 					</choice>
-					<element name="laagsteDoostroombreedte" type="decimal">
+					<element name="laagsteDoorstroombreedte" type="decimal">
 						<annotation><documentation>De doorstroombreedte op het niveau van de LaagsteDoorstroomHoogte bij driehoekig of trapezium vorm. Anders de maximale breedte.</documentation></annotation>
 					</element>
-					<element name="hoogstDoostroombreedte" type="decimal">
+					<element name="hoogsteDoorstroombreedte" type="decimal">
 						<annotation><documentation>De doorstroombreedte op het niveau van de HoogsteDoorstroomHoogte bij driehoekig of trapezium vorm. Anders de maximale breedte.</documentation></annotation>
 					</element>
-					<element name="laagsteDoostroomhoogte" type="decimal">
+					<element name="laagsteDoorstroomhoogte" type="decimal">
 						<annotation><documentation>De laagste doorstroomhoogte van de opening m+NAP. Hoger dan bodem ter plaatse</documentation></annotation>
 					</element>
-					<element name="hoogstDoostroomhoogte" type="decimal">
+					<element name="hoogsteDoorstroomhoogte" type="decimal">
 						<annotation><documentation>De hoogte doorstroomhoogte van de opening m+NAP. Hoger dan bodem ter plaatse</documentation></annotation>
 					</element>
 					<element name="doorstroomlengte" type="decimal" minOccurs="0">
@@ -341,7 +341,7 @@
 			</extension>
 		</complexContent>
 	</complexType>
-	<complexType name="NhiHydraulischeRandvoorwaardeFeatureType">
+	<complexType name="NhiHydrologischeRandvoorwaardeFeatureType">
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>

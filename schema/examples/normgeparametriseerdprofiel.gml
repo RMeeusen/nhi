@@ -70,7 +70,7 @@
 	<!-- Gekoppeld aan Stuw -->
 	<gml:featureMember>
 		<nhi:normgeparametriseerdprofiel>
-			<nhi:code>ngp2</nhi:code>
+			<nhi:code>ngp3</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
@@ -102,7 +102,7 @@
 	<!-- Gekoppeld aan Grondwaterkoppellijn -->
 	<gml:featureMember>
 		<nhi:normgeparametriseerdprofiel>
-			<nhi:code>ngp2</nhi:code>
+			<nhi:code>ngp4</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
@@ -134,7 +134,7 @@
 		<!-- Gekoppeld aan Bodemval -->
 	<gml:featureMember>
 		<nhi:normgeparametriseerdprofiel>
-			<nhi:code>ngp2</nhi:code>
+			<nhi:code>ngp5</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>

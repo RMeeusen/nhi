@@ -6,7 +6,7 @@
 	<gml:featureMember>
 		 <nhi:afvoerAanvoerGebied>
 			<nhi:code>aag1</nhi:code>
-<!--			<nhi:statusObject>1</nhi:statusObject> -->
+			<nhi:statusObject>1</nhi:statusObject> 
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>			
@@ -26,7 +26,7 @@
 	<gml:featureMember>
 		 <nhi:afvoerAanvoerGebied>
 			<nhi:code>aag2</nhi:code>
-<!--			<nhi:statusObject>1</nhi:statusObject> -->
+			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
 			<nhi:LAST_EDITED_DATE>2001-12-17T09:30:47Z</nhi:LAST_EDITED_DATE>
 			<nhi:administratiefgebied>1</nhi:administratiefgebied>			
