@@ -3,13 +3,13 @@
 open sftp://%1%:%2%@ftp.deltares.nl:2222/ -hostkey="ssh-rsa 2048 /vkIY1UQX3fbmaOSw3UgTDiSYyfEWqO9Pm0axXpM9fA=" -rawsettings FSProtocol=2
 
 #Get the files
-get -transfer=binary ./TEST_GML/*.gml %3%\GML\
+get  -transfer=binary %3%GML/*.gml %4%\GML\
 
 #Clean backup folder
-rm ./TEST_GML_BK/*.*
+rm %3%GML_BK/*.gml
 
 #Move the files to backup folder
-mv ./TEST_GML/*.* ./TEST_GML_BK/
+mv %3%GML/*.gml %3%GML_BK/
 
 #Close the connection
 close
