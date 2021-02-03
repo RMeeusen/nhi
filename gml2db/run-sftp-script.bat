@@ -36,7 +36,7 @@ set "datestamp=%YYYY%%MM%%DD%" & set "timestamp=%HH%%Min%%Sec%"
 
 set newname=sftp-%action%-%status%_%datestamp%_%timestamp%.log
 set logFile=%workdir%\%version%\logs\%newname%
-set script=%CD%\ftp\sftp-%action%-script.txt
+set script=%workdir%\ftp\sftp-%action%-script.txt
 
 setlocal enabledelayedexpansion
 for /F "tokens=1,2,3 delims=;" %%a in (%workdir%\gml2db\config\ftpaccounts.txt) do (    
