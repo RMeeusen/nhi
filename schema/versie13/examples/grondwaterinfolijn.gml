@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<nhi:FeatureCollection xmlns:nhi="http://www.nhi.nu/gml" xmlns:gml="http://www.opengis.net/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nhiVersion="13" xsi:schemaLocation="http://www.nhi.nu/gml ../nhiFeatureTypes.xsd">
+<nhi:FeatureCollection xmlns:nhi="http://www.nhi.nu/gml" xmlns:gml="http://www.opengis.net/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" hydamoVersion="13" xsi:schemaLocation="http://www.nhi.nu/gml ../nhiFeatureTypes.xsd">
 	<gml:boundedBy>
 		<gml:null>unknown</gml:null>
 	</gml:boundedBy>
 	<gml:featureMember>
-		 <nhi:grondwaterinfolijn>
+		 <nhi:GrondwaterInfoLijn>
 			<nhi:code>gil1</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
@@ -20,10 +20,10 @@
 			<nhi:bodemhoogteBovenstrooms>1.0</nhi:bodemhoogteBovenstrooms>
 			<nhi:bodemhoogteBenedenstrooms>1.0</nhi:bodemhoogteBenedenstrooms>
 			<nhi:flux>1.0</nhi:flux>
-		</nhi:grondwaterinfolijn>
+		</nhi:GrondwaterInfoLijn>
 	</gml:featureMember>	
 	<gml:featureMember>
-		 <nhi:grondwaterinfolijn>
+		 <nhi:GrondwaterInfoLijn>
 			<nhi:code>gil2</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
@@ -39,10 +39,10 @@
 			<nhi:bodemhoogteBovenstrooms>1.0</nhi:bodemhoogteBovenstrooms>
 			<nhi:bodemhoogteBenedenstrooms>1.0</nhi:bodemhoogteBenedenstrooms>
 			<nhi:flux>1.0</nhi:flux>
-		</nhi:grondwaterinfolijn>
+		</nhi:GrondwaterInfoLijn>
 	</gml:featureMember>	
 <gml:featureMember>
-		 <nhi:grondwaterinfolijn>
+		 <nhi:GrondwaterInfoLijn>
 			<nhi:code>gil3</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
@@ -58,6 +58,6 @@
 			<nhi:bodemhoogteBovenstrooms>1.0</nhi:bodemhoogteBovenstrooms>
 			<nhi:bodemhoogteBenedenstrooms>1.0</nhi:bodemhoogteBenedenstrooms>
 			<nhi:flux>1.0</nhi:flux>
-		</nhi:grondwaterinfolijn>
+		</nhi:GrondwaterInfoLijn>
 	</gml:featureMember>	
 </nhi:FeatureCollection>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<nhi:FeatureCollection xmlns:nhi="http://www.nhi.nu/gml" xmlns:gml="http://www.opengis.net/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nhiVersion="13" xsi:schemaLocation="http://www.nhi.nu/gml ../nhiFeatureTypes.xsd">
+<nhi:FeatureCollection xmlns:nhi="http://www.nhi.nu/gml" xmlns:gml="http://www.opengis.net/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" hydamoVersion="13" xsi:schemaLocation="http://www.nhi.nu/gml ../nhiFeatureTypes.xsd">
 	<gml:boundedBy>
 		<gml:null>unknown</gml:null>
 	</gml:boundedBy>
 	<!-- Gekoppeld aan Brug -->
 	<gml:featureMember>
-		<nhi:normgeparametriseerdprofiel>
+		<nhi:NormGeparamProfiel>
 			<nhi:code>ngp1</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
@@ -33,11 +33,11 @@
 			<gml:lineStringProperty>
 				<gml:LineString srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313 148816.766,424795.313 148814.141,424787.125 148822.375,424771.688 148852.5,424718.656 148869,424690.5 148875.781,424679.844</gml:coordinates></gml:LineString>
 			</gml:lineStringProperty>
-		</nhi:normgeparametriseerdprofiel>
+		</nhi:NormGeparamProfiel>
 	</gml:featureMember>
 	<!-- Gekoppeld aan Hydroobject -->
 	<gml:featureMember>
-		<nhi:normgeparametriseerdprofiel>
+		<nhi:NormGeparamProfiel>
 			<nhi:code>ngp2</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
@@ -65,11 +65,11 @@
 			<gml:lineStringProperty>
 				<gml:LineString srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313 148816.766,424795.313 148814.141,424787.125 148822.375,424771.688 148852.5,424718.656 148869,424690.5 148875.781,424679.844</gml:coordinates></gml:LineString>
 			</gml:lineStringProperty>
-		</nhi:normgeparametriseerdprofiel>
+		</nhi:NormGeparamProfiel>
 	</gml:featureMember>
 	<!-- Gekoppeld aan Stuw -->
 	<gml:featureMember>
-		<nhi:normgeparametriseerdprofiel>
+		<nhi:NormGeparamProfiel>
 			<nhi:code>ngp3</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
@@ -97,11 +97,11 @@
 			<gml:lineStringProperty>
 				<gml:LineString srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313 148816.766,424795.313 148814.141,424787.125 148822.375,424771.688 148852.5,424718.656 148869,424690.5 148875.781,424679.844</gml:coordinates></gml:LineString>
 			</gml:lineStringProperty>
-		</nhi:normgeparametriseerdprofiel>
+		</nhi:NormGeparamProfiel>
 	</gml:featureMember>	
 	<!-- Gekoppeld aan Grondwaterkoppellijn -->
 	<gml:featureMember>
-		<nhi:normgeparametriseerdprofiel>
+		<nhi:NormGeparamProfiel>
 			<nhi:code>ngp4</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
@@ -129,11 +129,11 @@
 			<gml:lineStringProperty>
 				<gml:LineString srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313 148816.766,424795.313 148814.141,424787.125 148822.375,424771.688 148852.5,424718.656 148869,424690.5 148875.781,424679.844</gml:coordinates></gml:LineString>
 			</gml:lineStringProperty>
-		</nhi:normgeparametriseerdprofiel>
+		</nhi:NormGeparamProfiel>
 	</gml:featureMember>		
 		<!-- Gekoppeld aan Bodemval -->
 	<gml:featureMember>
-		<nhi:normgeparametriseerdprofiel>
+		<nhi:NormGeparamProfiel>
 			<nhi:code>ngp5</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
@@ -161,6 +161,6 @@
 			<gml:lineStringProperty>
 				<gml:LineString srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313 148816.766,424795.313 148814.141,424787.125 148822.375,424771.688 148852.5,424718.656 148869,424690.5 148875.781,424679.844</gml:coordinates></gml:LineString>
 			</gml:lineStringProperty>
-		</nhi:normgeparametriseerdprofiel>
+		</nhi:NormGeparamProfiel>
 	</gml:featureMember>	
 </nhi:FeatureCollection>

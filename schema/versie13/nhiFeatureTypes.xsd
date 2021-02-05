@@ -3,48 +3,53 @@
 	<import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/2.1.2/feature.xsd"/>
 	<include schemaLocation="sharedTypes.xsd"/>
 	<element name="FeatureCollection" type="nhi:FeatureCollectionType" substitutionGroup="gml:_FeatureCollection"/>
-	<element name="afsluitmiddel" type="nhi:NhiAfsluitmiddelFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="afvoerAanvoerGebied" type="nhi:NhiAanAfvoerGebiedFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="aquaduct" type="nhi:NhiAquaductFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="bijzonderhydraulischeobject" type="nhi:NhiBijzondereHydraulischeObjectFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="bodemval" type="nhi:NhiBodemvalFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="brug" type="nhi:NhiBrugFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="doorstroomopening" type="nhi:NhiDoorstroomOpeningFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="duikersifonhevel" type="nhi:NhiDuikerHevelSifonFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="gemaal" type="nhi:NhiGemaalFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="grondwaterinfolijn" type="nhi:NhiGrondwaterInfoLijnFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="grondwaterinfopunt" type="nhi:NhiGrondwaterInfoPuntFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="grondwaterkoppellijn" type="nhi:NhiGrondwaterKoppelLijnFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="grondwaterkoppelpunt" type="nhi:NhiGrondwaterKoppelPuntFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="hydrologischerandvoorwaarde" type="nhi:NhiHydrologischeRandvoorwaardeFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="hydroobject" type="nhi:NhiHydroObjectFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="lateraleknoop" type="nhi:NhiLateraleKnoopFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="meetlocatie" type="nhi:NhiMeetlocatieFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="meetwaardeActiewaarde" type="nhi:NhiMeetwaardeActiewaardeFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="normgeparametriseerdprofiel" type="nhi:NhiNormGeparametiseerdProfielFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="peilgebiedPraktijk" type="nhi:NhiPeilgebiedFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="peilafwijkingGebied" type="nhi:NhiPeilgebiedFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="pomp" type="nhi:NhiPompFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="streefpeil" type="nhi:NhiStreefpeilFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="sturing" type="nhi:NhiSturingFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="stuw" type="nhi:NhiStuwFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="metingprofielLijn" type="nhi:NhiMetingProfielLijnFeatureType" substitutionGroup="gml:_Feature"/>
-	<element name="metingprofielPunt" type="nhi:NhiMetingProfielPuntFeatureType" substitutionGroup="gml:_Feature"/>
-	<complexType name="NhiAanAfvoerGebiedFeatureType">
+	<element name="Afsluitmiddel" type="nhi:NhiAfsluitmiddelFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="AfvoergebiedAanvoergebied" type="nhi:NhiAfvoergebiedAanvoergebiedFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="Aquaduct" type="nhi:NhiAquaductFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="BijzonderHydraulischObject" type="nhi:NhiBijzonderHydraulischObjectFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="Bodemval" type="nhi:NhiBodemvalFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="Brug" type="nhi:NhiBrugFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="Doorstroomopening" type="nhi:NhiDoorstroomopeningFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="DuikerSifonHevel" type="nhi:NhiDuikerSifonHevelFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="Gemaal" type="nhi:NhiGemaalFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="GrondwaterInfoLijn" type="nhi:NhiGrondwaterInfoLijnFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="GrondwaterInfoPunt" type="nhi:NhiGrondwaterInfoPuntFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="GrondwaterKoppelLijn" type="nhi:NhiGrondwaterKoppelLijnFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="GrondwaterKoppelPunt" type="nhi:NhiGrondwaterKoppelPuntFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="HydrologischeRandvoorwaarde" type="nhi:NhiHydrologischeRandvoorwaardeFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="HydroObject" type="nhi:NhiHydroObjectFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="LateraleKnoop" type="nhi:NhiLateraleKnoopFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="Meetlocatie" type="nhi:NhiMeetlocatieFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="MeetwaardeActiewaarde" type="nhi:NhiMeetwaardeActiewaardeFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="NormGeparamProfiel" type="nhi:NhiNormGeparamProfielFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="PeilgebiedPraktijk" type="nhi:NhiPeilgebiedFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="PeilafwijkingGebied" type="nhi:NhiPeilgebiedFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="Pomp" type="nhi:NhiPompFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="Streefpeil" type="nhi:NhiStreefpeilFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="Sturing" type="nhi:NhiSturingFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="Stuw" type="nhi:NhiStuwFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="MetingProfielLijn" type="nhi:NhiMetingProfielLijnFeatureType" substitutionGroup="gml:_Feature"/>
+	<element name="MetingProfielPunt" type="nhi:NhiMetingProfielPuntFeatureType" substitutionGroup="gml:_Feature"/>
+	<complexType name="NhiAfvoergebiedAanvoergebiedFeatureType">
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
 					<group ref="nhi:generalExtended"/>
 					<element name="soortAfvoerAanvoergebied" type="nhi:soortGebiedCodeSimpleType">
-						<annotation><documentation>Een aanduiding voor het soort af-/aanvoergebied. </documentation></annotation>
+						<annotation>
+							<documentation>Een aanduiding voor het soort af-/aanvoergebied. </documentation>
+						</annotation>
 					</element>
 					<element name="ordeCode" type="string" minOccurs="0">
-						<annotation><documentation>Getal (of code) waarmee de mate van aftakking/scheiding in een afwateringsgebied-systeem wordt weergegeven.</documentation></annotation>
+						<annotation>
+							<documentation>Getal (of code) waarmee de mate van aftakking/scheiding in een afwateringsgebied-systeem wordt weergegeven.</documentation>
+						</annotation>
 					</element>
-
 					<element name="oppervlakte" type="decimal"/>
 					<element name="lateraleknoopID" type="string">
-						<annotation><documentation>Code van de laterale knoop waarop de afvoer of waar vanuit de aanvoer plaatsvindt</documentation></annotation>
+						<annotation>
+							<documentation>Code van de laterale knoop waarop de afvoer of waar vanuit de aanvoer plaatsvindt</documentation>
+						</annotation>
 					</element>
 					<element ref="gml:polygonProperty"/>
 				</sequence>
@@ -71,26 +76,38 @@
 					<group ref="nhi:generalExtended"/>
 					<choice>
 						<element name="doorstroomopeningID" type="string">
-							<annotation><documentation>Een uniek identificerende code voor het object Doorstroomopening</documentation></annotation>
+							<annotation>
+								<documentation>Een uniek identificerende code voor het object Doorstroomopening</documentation>
+							</annotation>
 						</element>
 						<element name="duikersifonhevelID" type="string">
-							<annotation><documentation>Een uniek identificerende code voor het object DuikerSifonHevel</documentation></annotation>
+							<annotation>
+								<documentation>Een uniek identificerende code voor het object DuikerSifonHevel</documentation>
+							</annotation>
 						</element>
 						<element name="gemaalID" type="string">
-							<annotation><documentation>Een uniek identificerende code voor het object Gemaal</documentation></annotation>
+							<annotation>
+								<documentation>Een uniek identificerende code voor het object Gemaal</documentation>
+							</annotation>
 						</element>
 						<element name="aquaductID" type="string">
-							<annotation><documentation>Een uniek identificerende code voor het object Aquaduct</documentation></annotation>
+							<annotation>
+								<documentation>Een uniek identificerende code voor het object Aquaduct</documentation>
+							</annotation>
 						</element>
 					</choice>
 					<element name="soortAfsluitmiddel" type="nhi:soortAfsluitmiddelCodeSimpleType"/>
 					<element name="soortRegelbaarheid" type="nhi:soortRegelbaarheidCodeSimpleType" minOccurs="0"/>
 					<element name="overlaatOnderlaat" type="nhi:overlaatOnderlaatCodeSimpleType"/>
 					<element name="breedte" type="decimal">
-						<annotation><documentation>Effectieve breedte waar het water overheen of onderdoor kan stromen</documentation></annotation>
+						<annotation>
+							<documentation>Effectieve breedte waar het water overheen of onderdoor kan stromen</documentation>
+						</annotation>
 					</element>
 					<element name="hoogte" type="decimal">
-						<annotation><documentation>Hoogte van het afsluitmiddel</documentation></annotation>
+						<annotation>
+							<documentation>Hoogte van het afsluitmiddel</documentation>
+						</annotation>
 					</element>
 					<element name="minimaleHoogteBovenkant" type="decimal"/>
 					<element name="maximaleHoogteBovenkant" type="decimal"/>
@@ -106,13 +123,19 @@
 				<sequence>
 					<group ref="nhi:generalExtended"/>
 					<element name="bodemhoogteBenedenstrooms" type="decimal">
-						<annotation><documentation>De maatgevende bodemhoogte van het object aan de benedenstroomse zijde. m + NAP</documentation></annotation>
+						<annotation>
+							<documentation>De maatgevende bodemhoogte van het object aan de benedenstroomse zijde. m + NAP</documentation>
+						</annotation>
 					</element>
 					<element name="bodemhoogteBovenstrooms" type="decimal">
-						<annotation><documentation>De maatgevende bodemhoogte van het object aan de bovenstroomse zijde. m + NAP</documentation></annotation>
+						<annotation>
+							<documentation>De maatgevende bodemhoogte van het object aan de bovenstroomse zijde. m + NAP</documentation>
+						</annotation>
 					</element>
 					<element name="hoogteConstructie" type="decimal">
-						<annotation><documentation>De maatgevende hoogte van de constructie ten opzichte van NAP. m + NAP</documentation></annotation>
+						<annotation>
+							<documentation>De maatgevende hoogte van de constructie ten opzichte van NAP. m + NAP</documentation>
+						</annotation>
 					</element>
 					<group ref="nhi:ruwheid"/>
 					<element name="breedte" type="decimal"/>
@@ -121,13 +144,15 @@
 			</extension>
 		</complexContent>
 	</complexType>
-	<complexType name="NhiBijzondereHydraulischeObjectFeatureType">
+	<complexType name="NhiBijzonderHydraulischObjectFeatureType">
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
 					<group ref="nhi:generalExtended"/>
 					<element name="typeHydraulischObject" type="nhi:typeHydraulischObjectCodeSimpleType">
-						<annotation><documentation>Typering van het hydraulische object dat een aandachtspunt is voor de modellering. Bijvoorbeeld dood hout, beverdam, omgevallen boom, storingselement voor stromingsdynamiek e.d.</documentation></annotation>
+						<annotation>
+							<documentation>Typering van het hydraulische object dat een aandachtspunt is voor de modellering. Bijvoorbeeld dood hout, beverdam, omgevallen boom, storingselement voor stromingsdynamiek e.d.</documentation>
+						</annotation>
 					</element>
 					<element name="opmerking" type="string" minOccurs="0"/>
 					<element ref="gml:pointProperty"/>
@@ -140,11 +165,15 @@
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
 					<group ref="nhi:generalExtended"/>
-					<element name="bodemhoogteBenedenstrooms" type="decimal">
-						<annotation><documentation>De maatgevende bodemhoogte van het object aan de benedenstroomse zijde. m + NAP</documentation></annotation>
+					<element name="bodemhoogteBenedenstrooms" type="decimal" minOccurs="0">
+						<annotation>
+							<documentation>De maatgevende bodemhoogte van het object aan de benedenstroomse zijde. m + NAP</documentation>
+						</annotation>
 					</element>
-					<element name="bodemhoogteBovenstrooms" type="decimal">
-						<annotation><documentation>De maatgevende bodemhoogte van het object aan de bovenstroomse zijde. m + NAP</documentation></annotation>
+					<element name="bodemhoogteBovenstrooms" type="decimal" minOccurs="0">
+						<annotation>
+							<documentation>De maatgevende bodemhoogte van het object aan de bovenstroomse zijde. m + NAP</documentation>
+						</annotation>
 					</element>
 					<element ref="gml:pointProperty"/>
 				</sequence>
@@ -166,11 +195,11 @@
 							<documentation>Hoogte van de bovenzijde van de brug waar het water in extreme omstandigheden overheen kan stromen. m + NAP</documentation>
 						</annotation>
 					</element>
-<!--					<element name="dwarsprofielcode" type="string">-->
-<!--						<annotation>-->
-<!--							<documentation>Verwijzing naar code van profiel in object DwarsProfiel of NormGeparametriseerdProfiel.</documentation>-->
-<!--						</annotation>-->
-<!--					</element>-->
+					<!--					<element name="dwarsprofielcode" type="string">-->
+					<!--						<annotation>-->
+					<!--							<documentation>Verwijzing naar code van profiel in object DwarsProfiel of NormGeparametriseerdProfiel.</documentation>-->
+					<!--						</annotation>-->
+					<!--					</element>-->
 					<element name="lengte" type="decimal"/>
 					<group ref="nhi:ruwheid"/>
 					<element name="intreeverlies" type="decimal"/>
@@ -180,21 +209,25 @@
 			</extension>
 		</complexContent>
 	</complexType>
-	<complexType name="NhiDoorstroomOpeningFeatureType">
+	<complexType name="NhiDoorstroomopeningFeatureType">
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
 					<group ref="nhi:general"/>
 					<choice>
 						<element name="brugID" type="string">
-							<annotation><documentation>Een uniek identificerende code voor het object Brug</documentation></annotation>
+							<annotation>
+								<documentation>Een uniek identificerende code voor het object Brug</documentation>
+							</annotation>
 						</element>
 						<element name="stuwID" type="string">
-							<annotation><documentation>Een uniek identificerende code voor het object Stuw</documentation></annotation>
+							<annotation>
+								<documentation>Een uniek identificerende code voor het object Stuw</documentation>
+							</annotation>
 						</element>
 						<element name="afsluitmiddelID" type="string">
 							<annotation>
-							<documentation>Een uniek identificerende code voor het object Afsluitmiddel.
+								<documentation>Een uniek identificerende code voor het object Afsluitmiddel.
 								circulaire referenctie met afsluitmiddel: verklaring hiervoor is de specifieke situatie
 								waarin er in je afsluitmiddel (bijvoorbeeld een stuwschuif of schotbalk) nog een gat zit.
 								Zo kan een doorstroomopening dus in een stuw zitten, maar ook in een afsluitmiddel.
@@ -205,50 +238,72 @@
 						</element>
 					</choice>
 					<element name="laagsteDoorstroombreedte" type="decimal">
-						<annotation><documentation>De doorstroombreedte op het niveau van de LaagsteDoorstroomHoogte bij driehoekig of trapezium vorm. Anders de maximale breedte.</documentation></annotation>
+						<annotation>
+							<documentation>De doorstroombreedte op het niveau van de LaagsteDoorstroomHoogte bij driehoekig of trapezium vorm. Anders de maximale breedte.</documentation>
+						</annotation>
 					</element>
 					<element name="hoogsteDoorstroombreedte" type="decimal">
-						<annotation><documentation>De doorstroombreedte op het niveau van de HoogsteDoorstroomHoogte bij driehoekig of trapezium vorm. Anders de maximale breedte.</documentation></annotation>
+						<annotation>
+							<documentation>De doorstroombreedte op het niveau van de HoogsteDoorstroomHoogte bij driehoekig of trapezium vorm. Anders de maximale breedte.</documentation>
+						</annotation>
 					</element>
 					<element name="laagsteDoorstroomhoogte" type="decimal">
-						<annotation><documentation>De laagste doorstroomhoogte van de opening m+NAP. Hoger dan bodem ter plaatse</documentation></annotation>
+						<annotation>
+							<documentation>De laagste doorstroomhoogte van de opening m+NAP. Hoger dan bodem ter plaatse</documentation>
+						</annotation>
 					</element>
 					<element name="hoogsteDoorstroomhoogte" type="decimal">
-						<annotation><documentation>De hoogte doorstroomhoogte van de opening m+NAP. Hoger dan bodem ter plaatse</documentation></annotation>
+						<annotation>
+							<documentation>De hoogte doorstroomhoogte van de opening m+NAP. Hoger dan bodem ter plaatse</documentation>
+						</annotation>
 					</element>
 					<element name="doorstroomlengte" type="decimal" minOccurs="0">
-						<annotation><documentation>Lengte van de doorstroomopening in de stromingsrichting</documentation></annotation>
+						<annotation>
+							<documentation>Lengte van de doorstroomopening in de stromingsrichting</documentation>
+						</annotation>
 					</element>
-<!--					<element name="breedte" type="decimal"/>-->
-<!--					<element name="hoogte" type="decimal"/>-->
+					<!--					<element name="breedte" type="decimal"/>-->
+					<!--					<element name="hoogte" type="decimal"/>-->
 					<element name="vormOpening" type="nhi:vormCodeSimpleType"/>
 					<element name="afvoerCoefficient" type="decimal"/>
 				</sequence>
 			</extension>
 		</complexContent>
 	</complexType>
-	<complexType name="NhiDuikerHevelSifonFeatureType">
+	<complexType name="NhiDuikerSifonHevelFeatureType">
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
 					<group ref="nhi:generalExtended"/>
 					<element name="indPeilRegulPeilScheidend" type="nhi:jaNeeSimpleType" minOccurs="0">
-						<annotation><documentation>Indicatie of de duiker een peilregulerende of peilscheidende functie heeft. Toelichting: Dit is van toepassing op duikers zonder afsluitmiddel die door hun ligging of afmeting een peilregulerende of peilscheidende functie hebben. Duikers met een afsluitmiddel zijn peilregulerend/peilscheidend vanwege hun relatie met het afsluitmiddel.</documentation></annotation>
+						<annotation>
+							<documentation>Indicatie of de duiker een peilregulerende of peilscheidende functie heeft. Toelichting: Dit is van toepassing op duikers zonder afsluitmiddel die door hun ligging of afmeting een peilregulerende of peilscheidende functie hebben. Duikers met een afsluitmiddel zijn peilregulerend/peilscheidend vanwege hun relatie met het afsluitmiddel.</documentation>
+						</annotation>
 					</element>
 					<element name="lengte" type="decimal">
-						<annotation><documentation>De maatgevende lengte van het object in de as van het Hydro-object. m</documentation></annotation>
+						<annotation>
+							<documentation>De maatgevende lengte van het object in de as van het Hydro-object. m</documentation>
+						</annotation>
 					</element>
 					<element name="hoogteOpening" type="decimal">
-						<annotation><documentation>De maatgevende (inwendige) hoogte van de opening van het object. m</documentation></annotation>
+						<annotation>
+							<documentation>De maatgevende (inwendige) hoogte van de opening van het object. m</documentation>
+						</annotation>
 					</element>
 					<element name="breedteOpening" type="decimal">
-						<annotation><documentation>De maatgevende (inwendige) breedte van de opening van het object. m</documentation></annotation>
+						<annotation>
+							<documentation>De maatgevende (inwendige) breedte van de opening van het object. m</documentation>
+						</annotation>
 					</element>
 					<element name="hoogteBinnenOnderkantBene" type="decimal">
-						<annotation><documentation>De maatgevende bodemhoogte van het object aan de benedenstroomse zijde. m + NAP</documentation></annotation>
+						<annotation>
+							<documentation>De maatgevende bodemhoogte van het object aan de benedenstroomse zijde. m + NAP</documentation>
+						</annotation>
 					</element>
 					<element name="hoogteBinnenOnderkantBove" type="decimal">
-						<annotation><documentation>De maatgevende bodemhoogte van het object aan de bovenstroomse zijde. m + NAP</documentation></annotation>
+						<annotation>
+							<documentation>De maatgevende bodemhoogte van het object aan de bovenstroomse zijde. m + NAP</documentation>
+						</annotation>
 					</element>
 					<element name="vormKoker" type="nhi:vormCodeSimpleType"/>
 					<element name="typeKruising" type="nhi:typeKruisingCodeSimpleType"/>
@@ -277,30 +332,46 @@
 				<sequence>
 					<group ref="nhi:general"/>
 					<element name="grondwaterkoppellijnID" type="string">
-						<annotation><documentation>Een uniek identificerende code voor de bijgehorende GrondwaterKoppelLijn</documentation></annotation>
+						<annotation>
+							<documentation>Een uniek identificerende code voor de bijgehorende GrondwaterKoppelLijn</documentation>
+						</annotation>
 					</element>
 					<element name="beginPeriode" type="nhi:dayMonthSimpleType" minOccurs="0"/>
 					<element name="eindPeriode" type="nhi:dayMonthSimpleType" minOccurs="0"/>
 					<element name="natteOmtrek" type="decimal">
-						<annotation><documentation>Berekende natte omtrek. m</documentation></annotation>
+						<annotation>
+							<documentation>Berekende natte omtrek. m</documentation>
+						</annotation>
 					</element>
 					<element name="bodemweerstand" type="decimal" minOccurs="0">
-						<annotation><documentation>Bodemweerstand voor de drainerende werking van een watergang, uitgedrukt in dagen.</documentation></annotation>
+						<annotation>
+							<documentation>Bodemweerstand voor de drainerende werking van een watergang, uitgedrukt in dagen.</documentation>
+						</annotation>
 					</element>
 					<element name="infiltratiefactor" type="decimal" minOccurs="0">
-						<annotation><documentation>Een factor tussen 0 en 1 om de infiltrerende werking van een watergang te duiden als factor van de bodemweerstand. 0=geen infiltratie mogelijk 1=bodemweerstand voor drainerende werking gelijk aan infiltrerende werking.</documentation></annotation>
+						<annotation>
+							<documentation>Een factor tussen 0 en 1 om de infiltrerende werking van een watergang te duiden als factor van de bodemweerstand. 0=geen infiltratie mogelijk 1=bodemweerstand voor drainerende werking gelijk aan infiltrerende werking.</documentation>
+						</annotation>
 					</element>
 					<element name="bodemBreedte" type="decimal">
-						<annotation><documentation>Bodembreedte. m</documentation></annotation>
+						<annotation>
+							<documentation>Bodembreedte. m</documentation>
+						</annotation>
 					</element>
-					<element name="bodemhoogteBovenstrooms" type="decimal">
-						<annotation><documentation>Bodemhoogte bovenstrooms. Deze wordt verondersteld lineair te verlopen naar de bodemhoogte benedenstrooms. m + NAP</documentation></annotation>
+					<element name="bodemhoogteBovenstrooms" type="decimal" minOccurs="0">
+						<annotation>
+							<documentation>Bodemhoogte bovenstrooms. Deze wordt verondersteld lineair te verlopen naar de bodemhoogte benedenstrooms. m + NAP</documentation>
+						</annotation>
 					</element>
-					<element name="bodemhoogteBenedenstrooms" type="decimal">
-						<annotation><documentation>Bodemhoogte benedenstrooms. m + NAP</documentation></annotation>
+					<element name="bodemhoogteBenedenstrooms" type="decimal" minOccurs="0">
+						<annotation>
+							<documentation>Bodemhoogte benedenstrooms. m + NAP</documentation>
+						</annotation>
 					</element>
 					<element name="flux" type="decimal" minOccurs="0">
-						<annotation><documentation>Veelal met grondwatermodel berekende flux per lengte eenheid van de waterloop naar het oppervlaktewater. Positieve waarden betekenen stroming van grond- naar oppervlaktewater. m2/s</documentation></annotation>
+						<annotation>
+							<documentation>Veelal met grondwatermodel berekende flux per lengte eenheid van de waterloop naar het oppervlaktewater. Positieve waarden betekenen stroming van grond- naar oppervlaktewater. m2/s</documentation>
+						</annotation>
 					</element>
 				</sequence>
 			</extension>
@@ -312,7 +383,9 @@
 				<sequence>
 					<group ref="nhi:general"/>
 					<element name="grondwaterkoppelpuntID" type="string">
-						<annotation><documentation>Een uniek identificerende code voor het bijbehorende GrondwaterKoppelPunt.</documentation></annotation>
+						<annotation>
+							<documentation>Een uniek identificerende code voor het bijbehorende GrondwaterKoppelPunt.</documentation>
+						</annotation>
 					</element>
 					<element name="beginPeriode" type="nhi:dayMonthSimpleType" minOccurs="0"/>
 					<element name="eindPeriode" type="nhi:dayMonthSimpleType" minOccurs="0"/>
@@ -352,10 +425,14 @@
 						</annotation>
 					</element>
 					<element name="waterstand" type="decimal" minOccurs="0">
-						<annotation><documentation>Waterstand als vaste randvoorwaarde, optioneel via sturing regelbaar. m + NAP</documentation></annotation>
+						<annotation>
+							<documentation>Waterstand als vaste randvoorwaarde, optioneel via sturing regelbaar. m + NAP</documentation>
+						</annotation>
 					</element>
 					<element name="debiet" type="decimal" minOccurs="0">
-						<annotation><documentation>Debiet als vaste randvoorwaarde, optioneel via sturing regelbaar</documentation></annotation>
+						<annotation>
+							<documentation>Debiet als vaste randvoorwaarde, optioneel via sturing regelbaar</documentation>
+						</annotation>
 					</element>
 					<element ref="gml:pointProperty"/>
 				</sequence>
@@ -369,10 +446,12 @@
 					<group ref="nhi:generalExtended"/>
 					<group ref="nhi:ruwheidsbereik"/>
 					<element name="categorieOppwaterlichaam" type="nhi:categorieOppervlaktewaterCodeSimpleType">
-						<annotation><documentation>Een indeling naar de grootte van de afvoer en/of oppervlakte zoals bepaald bij wet/verordening. Hiermee wordt de indeling van oppervlaktewaterlichamen bedoeld naar primair, secundair tertiair en overig:
+						<annotation>
+							<documentation>Een indeling naar de grootte van de afvoer en/of oppervlakte zoals bepaald bij wet/verordening. Hiermee wordt de indeling van oppervlaktewaterlichamen bedoeld naar primair, secundair tertiair en overig:
 							• ‘Primair’ voor wateren met een belangrijk functie in de wateraan- en afvoer en waterberging
 							• ‘Secundair’ voor wateren die een functie hebben in de wateraan- en afvoer en waterberging van percelen van meerdere gerechtigden - met uitzondering van primaire wateren.
-							• ‘Tertiair’ voor wateren die alleen een functie hebben in de wateraan- en afvoer van en naar terreinen waarvan de onderhoudsplichtige zelf gerechtigde is en die in directe of indirecte verbinding staan met secundaire of primaire wateren.</documentation></annotation>
+							• ‘Tertiair’ voor wateren die alleen een functie hebben in de wateraan- en afvoer van en naar terreinen waarvan de onderhoudsplichtige zelf gerechtigde is en die in directe of indirecte verbinding staan met secundaire of primaire wateren.</documentation>
+						</annotation>
 					</element>
 					<element ref="gml:lineStringProperty"/>
 				</sequence>
@@ -404,7 +483,7 @@
 			</extension>
 		</complexContent>
 	</complexType>
-	<complexType name="NhiNormGeparametiseerdProfielFeatureType">
+	<complexType name="NhiNormGeparamProfielFeatureType">
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
@@ -413,20 +492,30 @@
 					<choice>
 						<sequence>
 							<element name="hydroobjectID" type="string" minOccurs="0">
-								<annotation><documentation>Een uniek identificerende code voor het object "HydroObject" waarvoor het profiel geldig is.</documentation></annotation>
+								<annotation>
+									<documentation>Een uniek identificerende code voor het object "HydroObject" waarvoor het profiel geldig is.</documentation>
+								</annotation>
 							</element>
 							<element name="grondwaterkoppellijnID" type="string" minOccurs="0">
-								<annotation><documentation>Een uniek identificerende code voor het object "GrondwaterkoppelLijn" waarvoor het profiel geldig is.</documentation></annotation>
+								<annotation>
+									<documentation>Een uniek identificerende code voor het object "GrondwaterkoppelLijn" waarvoor het profiel geldig is.</documentation>
+								</annotation>
 							</element>
 						</sequence>
 						<element name="brugID" type="string">
-							<annotation><documentation>Een uniek identificerende code voor het object "Brug" waarvoor het profiel geldig is.</documentation></annotation>
+							<annotation>
+								<documentation>Een uniek identificerende code voor het object "Brug" waarvoor het profiel geldig is.</documentation>
+							</annotation>
 						</element>
 						<element name="stuwID" type="string">
-							<annotation><documentation>Een uniek identificerende code voor het object "Stuw" waarvoor het profiel geldig is.</documentation></annotation>
+							<annotation>
+								<documentation>Een uniek identificerende code voor het object "Stuw" waarvoor het profiel geldig is.</documentation>
+							</annotation>
 						</element>
 						<element name="bodemvalID" type="string">
-							<annotation><documentation>Een uniek identificerende code voor het object "Bodemval" waarvoor het profiel geldig is.</documentation></annotation>
+							<annotation>
+								<documentation>Een uniek identificerende code voor het object "Bodemval" waarvoor het profiel geldig is.</documentation>
+							</annotation>
 						</element>
 					</choice>
 					<element name="bodemhoogtebenedenstrooms" type="decimal"/>
@@ -442,7 +531,7 @@
 					<element name="taludhellingplasbermrechterzijde" type="decimal" minOccurs="0"/>
 					<element name="hoogteinsteeklinkerzijde" type="decimal"/>
 					<element name="hoogteinsteekrechterzijde" type="decimal"/>
-					<group ref="nhi:ruwheidsbereik"/>
+					<group ref="nhi:ruwheidsbereik" minOccurs="0"/>
 					<element ref="gml:lineStringProperty"/>
 				</sequence>
 			</extension>
@@ -455,16 +544,24 @@
 					<!--- Algemeen -->
 					<group ref="nhi:general"/>
 					<element name="gemaalID" type="string" minOccurs="0">
-						<annotation><documentation>Een uniek identificerende code voor het object Gemaal waarin de pomp is geplaatst</documentation></annotation>
+						<annotation>
+							<documentation>Een uniek identificerende code voor het object Gemaal waarin de pomp is geplaatst</documentation>
+						</annotation>
 					</element>
 					<element name="maximaleCapaciteit" type="decimal">
-						<annotation><documentation>De maximaal per tijdseenheid te verpompen hoeveelheid water m3/min</documentation></annotation>
+						<annotation>
+							<documentation>De maximaal per tijdseenheid te verpompen hoeveelheid water m3/min</documentation>
+						</annotation>
 					</element>
 					<element name="pompcurve" type="string" minOccurs="0">
-						<annotation><documentation>Reductiecurve van pomp, wordt via een hyperlink gekoppeld</documentation></annotation>
+						<annotation>
+							<documentation>Reductiecurve van pomp, wordt via een hyperlink gekoppeld</documentation>
+						</annotation>
 					</element>
 					<element name="pomprichting" type="nhi:richtingSimpleType">
-						<annotation><documentation>Wordt er in de stromingsrichting van het hydroobject gepompt (pos) of er tegenin (neg).</documentation></annotation>
+						<annotation>
+							<documentation>Wordt er in de stromingsrichting van het hydroobject gepompt (pos) of er tegenin (neg).</documentation>
+						</annotation>
 					</element>
 				</sequence>
 			</extension>
@@ -478,58 +575,88 @@
 					<group ref="nhi:generalExtended"/>
 					<choice minOccurs="0">
 						<element name="afsluitmiddelID" type="string">
-							<annotation><documentation>Een uniek identificerende code voor het object Afsluitmiddel</documentation></annotation>
+							<annotation>
+								<documentation>Een uniek identificerende code voor het object Afsluitmiddel</documentation>
+							</annotation>
 						</element>
 						<element name="pompID" type="string">
-							<annotation><documentation>Een uniek identificerende code voor het object Pomp</documentation></annotation>
+							<annotation>
+								<documentation>Een uniek identificerende code voor het object Pomp</documentation>
+							</annotation>
 						</element>
 						<element name="hydrologischerandvoorwaardeID" type="string">
-							<annotation><documentation>Een uniek identificerende code voor het object Hydrorandvoorwaarde</documentation></annotation>
+							<annotation>
+								<documentation>Een uniek identificerende code voor het object Hydrorandvoorwaarde</documentation>
+							</annotation>
 						</element>
 					</choice>
 					<element name="indicatieComplexeSturing" type="nhi:jaNeeSimpleType">
-						<annotation><documentation>Indien de sturing complex is (JA), wordt met een hyperlink verwezen naar informatie over de sturing. Bij niet complexe sturing voldoet eenvoudige schematisatie zoals met overige attributen kan worden vastgelegd.</documentation></annotation>
+						<annotation>
+							<documentation>Indien de sturing complex is (JA), wordt met een hyperlink verwezen naar informatie over de sturing. Bij niet complexe sturing voldoet eenvoudige schematisatie zoals met overige attributen kan worden vastgelegd.</documentation>
+						</annotation>
 					</element>
 					<element name="beginPeriode" type="nhi:dayMonthSimpleType" minOccurs="0">
-						<annotation><documentation>Beginperiode (dag en maand) van de sturingsregel. Het object is bedoeld om de gemiddelde variatie in het jaar op te slaan en niet zozeer een tijdreeks over een lange periode. Bijvoorbeeld een periode vanaf 1 apr = 0104
-							(defaultwaarde is 0101)</documentation></annotation>
+						<annotation>
+							<documentation>Beginperiode (dag en maand) van de sturingsregel. Het object is bedoeld om de gemiddelde variatie in het jaar op te slaan en niet zozeer een tijdreeks over een lange periode. Bijvoorbeeld een periode vanaf 1 apr = 0104
+							(defaultwaarde is 0101)</documentation>
+						</annotation>
 					</element>
 					<element name="eindPeriode" type="nhi:dayMonthSimpleType" minOccurs="0">
-						<annotation><documentation>Eindperiode (dag en maand) van de sturingsregel. Het object is bedoeld om de gemiddelde variatie in het jaar op te slaan en niet zozeer een tijdreeks over een lange periode. Bijvoorbeeld een periode vanaf 1 apr = 0104
-							(defaultwaarde is 0101)</documentation></annotation>
+						<annotation>
+							<documentation>Eindperiode (dag en maand) van de sturingsregel. Het object is bedoeld om de gemiddelde variatie in het jaar op te slaan en niet zozeer een tijdreeks over een lange periode. Bijvoorbeeld een periode vanaf 1 apr = 0104
+							(defaultwaarde is 0101)</documentation>
+						</annotation>
 					</element>
 					<element name="doelvariabele" type="nhi:doelvariabeleCodeSimpleType">
-						<annotation><documentation>Variabele waarop wordt gestuurd: waterstand, debiet, tijd of vaste waarde</documentation></annotation>
+						<annotation>
+							<documentation>Variabele waarop wordt gestuurd: waterstand, debiet, tijd of vaste waarde</documentation>
+						</annotation>
 					</element>
 					<element name="doelvariabeleEenheid" type="nhi:eenheidCodeSimpleType"/>
 					<element name="stuurvariabele" type="nhi:stuurvariabeleCodeSimpleType">
-						<annotation><documentation>Variabele die gestuurd wordt: 1: bovenkant klep, -schotbalk of -schuif bij overlaten 2: hoogte opening bij schuif of klep als deze als onderlaat functioneert 3: pompdebiet of 4:hydrologische randvoorwaarde</documentation></annotation>
+						<annotation>
+							<documentation>Variabele die gestuurd wordt: 1: bovenkant klep, -schotbalk of -schuif bij overlaten 2: hoogte opening bij schuif of klep als deze als onderlaat functioneert 3: pompdebiet of 4:hydrologische randvoorwaarde</documentation>
+						</annotation>
 					</element>
 					<element name="vasteWaarde" type="decimal" minOccurs="0">
 						<annotation>
 							<documentation>Indien de doelvariabele een "vaste waarde" betreft, wordt deze hier ingevuld. m+NAP of m3/s</documentation>
 						</annotation>
 					</element>
-					<element name="streefWaarde" type="decimal" minOccurs="0">
-						<annotation><documentation>Indien de typeController "interval" of "PID" betreft, wordt hier de streefwaarde ingevuld en bij "bovengrens" en "ondergrens" de bijbehorende grenswaarden. m+NAP of m3/s</documentation></annotation>
+					<element name="streefwaarde" type="decimal" minOccurs="0">
+						<annotation>
+							<documentation>Indien de typeController "interval" of "PID" betreft, wordt hier de streefwaarde ingevuld en bij "bovengrens" en "ondergrens" de bijbehorende grenswaarden. m+NAP of m3/s</documentation>
+						</annotation>
 					</element>
 					<element name="bovengrens" type="decimal" minOccurs="0">
-						<annotation><documentation>De bovengrenswaarde waaronder geen aanpassing van de sturing plaatsvindt.</documentation></annotation>
+						<annotation>
+							<documentation>De bovengrenswaarde waaronder geen aanpassing van de sturing plaatsvindt.</documentation>
+						</annotation>
 					</element>
 					<element name="ondergrens" type="decimal" minOccurs="0">
-						<annotation><documentation>De ondergrenswaarde waarboven geen aanpassing van de sturing plaatsvindt.</documentation></annotation>
+						<annotation>
+							<documentation>De ondergrenswaarde waarboven geen aanpassing van de sturing plaatsvindt.</documentation>
+						</annotation>
 					</element>
 					<element name="typeSturing" type="nhi:sturingTypeCodeSimpleType">
-						<annotation><documentation>Bepaling of de stuurvariabele (klep, pomp, schuif, etc) continu of discreet regelbaar is. Bij een continue sturing is er sprake van een lineair verloop, bij een discrete sturing is er sprake van een getrapt verloop (type: constant-until-next).</documentation></annotation>
+						<annotation>
+							<documentation>Bepaling of de stuurvariabele (klep, pomp, schuif, etc) continu of discreet regelbaar is. Bij een continue sturing is er sprake van een lineair verloop, bij een discrete sturing is er sprake van een getrapt verloop (type: constant-until-next).</documentation>
+						</annotation>
 					</element>
 					<element name="typeController" type="nhi:controllerTypeCodeSimpleType">
-						<annotation><documentation>Hiermee wordt bepaald welke sturingsmethode van toepassing is: sturing op basis van een streefwaarde met bandbreedte (interval of PID), of op basis van een tabel met meetwaarde-actiewaarde (hydraulic of time), of op basis van een vaste waarde (nvt).</documentation></annotation>
+						<annotation>
+							<documentation>Hiermee wordt bepaald welke sturingsmethode van toepassing is: sturing op basis van een streefwaarde met bandbreedte (interval of PID), of op basis van een tabel met meetwaarde-actiewaarde (hydraulic of time), of op basis van een vaste waarde (nvt).</documentation>
+						</annotation>
 					</element>
 					<element name="meetlocatieID" type="string" minOccurs="0">
-						<annotation><documentation>De code van de meetlocatie die eventueel gebruikt wordt voor de sturing. Deze is van toepassing bij typeController = "interval", "PID" of "hydraulic".</documentation></annotation>
+						<annotation>
+							<documentation>De code van de meetlocatie die eventueel gebruikt wordt voor de sturing. Deze is van toepassing bij typeController = "interval", "PID" of "hydraulic".</documentation>
+						</annotation>
 					</element>
 					<element name="prioriteit" type="nhi:prioriteitCodeSimpleType">
-						<annotation><documentation>De prioriteit van de sturing in het geval er meerdere sturingen van toepassing zijn. Prioriteit "hoog" overrulet prioriteit "midden" etc. Prioriteit "geen" wordt altijd overrulet.</documentation></annotation>
+						<annotation>
+							<documentation>De prioriteit van de sturing in het geval er meerdere sturingen van toepassing zijn. Prioriteit "hoog" overrulet prioriteit "midden" etc. Prioriteit "geen" wordt altijd overrulet.</documentation>
+						</annotation>
 					</element>
 				</sequence>
 			</extension>
@@ -545,7 +672,7 @@
 					<element name="soortRegelbaarheid" type="nhi:soortRegelbaarheidCodeSimpleType"/>
 					<!-- <element name="laagstedoorstroombreedte" type="decimal"/> -->
 					<!-- <element name="hoogstedoorstroombreedte" type="decimal"/> -->
-					<element name="hoogteConstructie" type="decimal" >
+					<element name="hoogteConstructie" type="decimal">
 						<annotation>
 							<documentation>m +NAP</documentation>
 						</annotation>
@@ -580,23 +707,31 @@
 					<!--- Algemeen -->
 					<group ref="nhi:general"/>
 					<element name="sturingID" type="string">
-						<annotation><documentation>Een uniek identificerende code voor het object Sturing waarvoor de reeks geldig is.</documentation></annotation>
+						<annotation>
+							<documentation>Een uniek identificerende code voor het object Sturing waarvoor de reeks geldig is.</documentation>
+						</annotation>
 					</element>
 					<choice>
-						<element name="tijd" type="dateTime" >
-							<annotation><documentation>Het moment vanaf wanneer de actiewaarde geldig is. Invullen als de doelvariabele van het object Sturing gelijk is aan "tijd".</documentation></annotation>
+						<element name="tijd" type="dateTime">
+							<annotation>
+								<documentation>Het moment vanaf wanneer de actiewaarde geldig is. Invullen als de doelvariabele van het object Sturing gelijk is aan "tijd".</documentation>
+							</annotation>
 						</element>
 						<sequence>
-							<element name="meetwaarde" type="decimal" >
-								<annotation><documentation>De meetwaarde is de gemeten waarde van de doelvariabele binnen het object Sturing (waterstand of debiet) op de meetlocatie in een eenheid afhankelijk van de doelvariabele. m+NAP of m3/s</documentation></annotation>
+							<element name="meetwaarde" type="decimal">
+								<annotation>
+									<documentation>De meetwaarde is de gemeten waarde van de doelvariabele binnen het object Sturing (waterstand of debiet) op de meetlocatie in een eenheid afhankelijk van de doelvariabele. m+NAP of m3/s</documentation>
+								</annotation>
 							</element>
-							<element name="meetwaardeEenheid" type="nhi:eenheidCodeSimpleType" />
+							<element name="meetwaardeEenheid" type="nhi:eenheidCodeSimpleType"/>
 						</sequence>
 					</choice>
 					<element name="actiewaarde" type="decimal">
-						<annotation><documentation>De actiewaarde is de waarde die meegegeven wordt aan de stuurvariabele binnen het object Sturing in een eenheid die afhankelijk is van de stuurvariabele.</documentation></annotation>
+						<annotation>
+							<documentation>De actiewaarde is de waarde die meegegeven wordt aan de stuurvariabele binnen het object Sturing in een eenheid die afhankelijk is van de stuurvariabele.</documentation>
+						</annotation>
 					</element>
-					<element name="actiewaardeEenheid" type="nhi:eenheidCodeSimpleType" />
+					<element name="actiewaardeEenheid" type="nhi:eenheidCodeSimpleType"/>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -608,10 +743,14 @@
 					<!--- Algemeen -->
 					<group ref="nhi:generalExtended"/>
 					<element name="voertAfOp" type="string" minOccurs="0">
-						<annotation><documentation>code van het PeilgebiedPraktijk of PeilafwijkingGebied waar het onderhavig PeilgebiedPraktijk op afvoert.</documentation></annotation>
+						<annotation>
+							<documentation>code van het PeilgebiedPraktijk of PeilafwijkingGebied waar het onderhavig PeilgebiedPraktijk op afvoert.</documentation>
+						</annotation>
 					</element>
 					<element name="bevat" type="string" minOccurs="0">
-						<annotation><documentation>code van het PeilgebiedPraktijk of PeilafwijkingGebied dat afvoert op onderhavig PeilgebiedPraktijk.</documentation></annotation>
+						<annotation>
+							<documentation>code van het PeilgebiedPraktijk of PeilafwijkingGebied dat afvoert op onderhavig PeilgebiedPraktijk.</documentation>
+						</annotation>
 					</element>
 					<choice>
 						<element ref="gml:polygonProperty"/>
@@ -621,34 +760,42 @@
 			</extension>
 		</complexContent>
 	</complexType>
-		<complexType name="NhiStreefpeilFeatureType">
-			<complexContent>
-				<extension base="gml:AbstractFeatureType">
-					<sequence>
-						<!--- Algemeen -->
-						<group ref="nhi:general"/>
-						<element name="soortStreefpeil" type="nhi:soortStreefpeilCodeSimpleType">
-							<annotation><documentation>Een aanduiding van het soort streefpeil gebaseerd op de in het peilbesluit opgenomen peilen.
-								Typische soorten streefpeilen zijn: zomerpeil, winterpeil, vast peil, flexibel peil, afwijkend peil.</documentation></annotation>
-						</element>
-						<element name="waterhoogte" type="decimal">
-							<annotation><documentation>De waterstand van het streefpeil. m+NAP</documentation></annotation>
-						</element>
-						<element name="beginPeriode" type="nhi:dayMonthSimpleType" minOccurs="0">
-							<!-- todo: under discussion-->
-							<annotation><documentation>Begin van de periode waarop een streefpeil regime van toepassing is als het niet voor het hele jaar geldig is.
-								De datum wordt weergegeven in dag en maand. bijv voorbeeld bij een winterpeil 0110 (1 oktober)</documentation></annotation>
-						</element>
-						<element name="eindPeriode" type="nhi:dayMonthSimpleType" minOccurs="0">
-							<!-- todo: under discussion-->
-							<annotation><documentation>Eind van de periode waarop een streefpeil regime van toepassing is als het niet voor het hele jaar geldig is.
-								De datum wordt weergegeven in dag en maand. bijv voorbeeld bij een winterpeil 3103 (31 maart)</documentation></annotation>
-						</element>
-						<element name="peilgebiedpraktijkID" type="string" minOccurs="0" />
-						<element name="peilafwijkinggebiedID" type="string" minOccurs="0" />
-					</sequence>
-				</extension>
-			</complexContent>
+	<complexType name="NhiStreefpeilFeatureType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<!--- Algemeen -->
+					<group ref="nhi:general"/>
+					<element name="soortStreefpeil" type="nhi:soortStreefpeilCodeSimpleType">
+						<annotation>
+							<documentation>Een aanduiding van het soort streefpeil gebaseerd op de in het peilbesluit opgenomen peilen.
+								Typische soorten streefpeilen zijn: zomerpeil, winterpeil, vast peil, flexibel peil, afwijkend peil.</documentation>
+						</annotation>
+					</element>
+					<element name="waterhoogte" type="decimal">
+						<annotation>
+							<documentation>De waterstand van het streefpeil. m+NAP</documentation>
+						</annotation>
+					</element>
+					<element name="beginPeriode" type="nhi:dayMonthSimpleType" minOccurs="0">
+						<annotation>
+							<documentation>Begin van de periode waarop een streefpeil regime van toepassing is als het niet voor het hele jaar geldig is.
+								De datum wordt weergegeven in dag en maand. bijv voorbeeld bij een winterpeil 0110 (1 oktober)</documentation>
+						</annotation>
+						<!-- todo: under discussion-->
+					</element>
+					<element name="eindPeriode" type="nhi:dayMonthSimpleType" minOccurs="0">
+						<annotation>
+							<documentation>Eind van de periode waarop een streefpeil regime van toepassing is als het niet voor het hele jaar geldig is.
+								De datum wordt weergegeven in dag en maand. bijv voorbeeld bij een winterpeil 3103 (31 maart)</documentation>
+						</annotation>
+						<!-- todo: under discussion-->
+					</element>
+					<element name="peilgebiedpraktijkID" type="string" minOccurs="0"/>
+					<element name="peilafwijkinggebiedID" type="string" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
 	</complexType>
 	<complexType name="NhiMetingProfielLijnFeatureType">
 		<complexContent>
@@ -685,9 +832,9 @@
 						</annotation>
 					</element>
 					<element name="soortMeetpunt" type="nhi:typeProfielCodeSimpleType" minOccurs="0">
-						 	<annotation>
-								<documentation>TODO: not shure this value needs to be set for each point</documentation>
-							</annotation>
+						<annotation>
+							<documentation>TODO: not shure this value needs to be set for each point</documentation>
+						</annotation>
 					</element>
 					<element name="typeBodem" type="nhi:typeBodemCodeSimpleType"/>
 					<group ref="nhi:ruwheidsbereik" minOccurs="0"/>

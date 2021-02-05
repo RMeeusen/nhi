@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<nhi:FeatureCollection xmlns:nhi="http://www.nhi.nu/gml" xmlns:gml="http://www.opengis.net/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nhiVersion="13" xsi:schemaLocation="http://www.nhi.nu/gml ../nhiFeatureTypes.xsd">
+<nhi:FeatureCollection xmlns:nhi="http://www.nhi.nu/gml" xmlns:gml="http://www.opengis.net/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" hydamoVersion="13" xsi:schemaLocation="http://www.nhi.nu/gml ../nhiFeatureTypes.xsd">
 	<gml:boundedBy>
 		<gml:null>unknown</gml:null>
 	</gml:boundedBy>
 	<gml:featureMember>
-		<nhi:meetwaardeActiewaarde>
+		<nhi:MeetwaardeActiewaarde>
 			<nhi:code>mwaw1</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
@@ -14,10 +14,10 @@
 			<nhi:tijd>2001-12-17T09:30:47Z</nhi:tijd>
 			<nhi:actiewaarde>1.0</nhi:actiewaarde>
 			<nhi:actiewaardeEenheid>1</nhi:actiewaardeEenheid>
-		</nhi:meetwaardeActiewaarde>
+		</nhi:MeetwaardeActiewaarde>
 	</gml:featureMember>
 	<gml:featureMember>
-		<nhi:meetwaardeActiewaarde>
+		<nhi:MeetwaardeActiewaarde>
 			<nhi:code>mwaw2</nhi:code>
 			<nhi:statusObject>1</nhi:statusObject>
 			<nhi:CREATED_DATE>2001-12-17T09:30:47Z</nhi:CREATED_DATE>
@@ -28,6 +28,6 @@
 			<nhi:meetwaardeEenheid>1</nhi:meetwaardeEenheid>
 			<nhi:actiewaarde>1.0</nhi:actiewaarde>
 			<nhi:actiewaardeEenheid>1</nhi:actiewaardeEenheid>
-		</nhi:meetwaardeActiewaarde>
+		</nhi:MeetwaardeActiewaarde>
 	</gml:featureMember>
 </nhi:FeatureCollection>
