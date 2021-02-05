@@ -1216,7 +1216,7 @@
       </field>
       <field>
         <name>streefwaarde</name>
-        <xpath>nhi:streefWaarde</xpath>
+        <xpath>nhi:streefwaarde</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>Number</type>

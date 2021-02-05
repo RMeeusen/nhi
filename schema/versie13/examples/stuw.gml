@@ -19,7 +19,7 @@
 			<nhi:richting>1</nhi:richting>
 			<nhi:afvoerCoefficient>1.0</nhi:afvoerCoefficient>
 			<gml:pointProperty>
-				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313 148816.766,424795.313</gml:coordinates></gml:Point>
+				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313</gml:coordinates></gml:Point>
 			</gml:pointProperty>
 		</nhi:Stuw>
 	</gml:featureMember>
@@ -39,7 +39,7 @@
 			<nhi:richting>1</nhi:richting>
 			<nhi:afvoerCoefficient>1.0</nhi:afvoerCoefficient>
 			<gml:pointProperty>
-				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313 148816.766,424795.313</gml:coordinates></gml:Point>
+				<gml:Point srsName="EPSG:28992"><gml:coordinates>148838.172,424868.313</gml:coordinates></gml:Point>
 			</gml:pointProperty>
 		</nhi:Stuw>
 	</gml:featureMember>

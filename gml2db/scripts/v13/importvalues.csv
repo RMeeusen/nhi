@@ -18,9 +18,9 @@ peilgebiedpraktijk;peilgebiedpraktijk;nhi:PeilgebiedPraktijk;
 stuw;stuw;nhi:Stuw;
 sturing;sturing;nhi:Sturing;
 meetwaardeactiewaarde;meetwaardeactiewaarde;nhi:MeetwaardeActiewaarde
-afvoeraanvoergebied;afvoeraanvoergebied;nhi:AfvoergebiedAanvoergebied;
+afvoergebiedaanvoergebied;afvoergebiedaanvoergebied;nhi:AfvoergebiedAanvoergebied;
 doorstroomopening;doorstroomopening;nhi:Doorstroomopening;
-normgeparametriseerdprofiel;normgeparametriseerdprofiel;nhi:NormGeparamProfiel;
+normgeparamprofiel;normgeparamprofiel;nhi:NormGeparamProfiel;
 metingprofiellijn;metingprofiellijn;nhi:MetingProfielLijn;
 metingprofielpunt;metingprofielpunt;nhi:MetingProfielPunt;
 pomp;pomp;nhi:Pomp;
