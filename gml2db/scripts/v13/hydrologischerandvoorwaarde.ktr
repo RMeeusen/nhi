@@ -953,7 +953,7 @@
         <xpath>nhi:CREATED_DATE</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>Timestamp</type>
+        <type>String</type>
         <format>yyyy-mm-dd'T'hh:mm:ss</format>
         <currency/>
         <decimal/>
@@ -968,7 +968,7 @@
         <xpath>nhi:LAST_EDITED_DATE</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>Timestamp</type>
+        <type>String</type>
         <format>yyyy-mm-dd'T'hh:mm:ss</format>
         <currency/>
         <decimal/>
@@ -1128,7 +1128,7 @@
         <in_stream_name>coords</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>(\d+\.\d+),(\d+\.\d+),-?\d*\.?\d*([\s)])</replace_string>
+        <replace_string>(\d+\.?\d+),(\d+\.?\d+),-?\d*\.?\d*([\s)])</replace_string>
         <replace_by_string>$1,$2$3</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>

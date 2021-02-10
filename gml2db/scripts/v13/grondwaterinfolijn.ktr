@@ -796,7 +796,7 @@
         <xpath>nhi:CREATED_DATE</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>Timestamp</type>
+        <type>String</type>
         <format>yyyy-mm-dd'T'hh:mm:ss</format>
         <currency/>
         <decimal/>
@@ -811,7 +811,7 @@
         <xpath>nhi:LAST_EDITED_DATE</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>Timestamp</type>
+        <type>String</type>
         <format>yyyy-mm-dd'T'hh:mm:ss</format>
         <currency/>
         <decimal/>
@@ -1168,6 +1168,41 @@
     </GUI>
   </step>
   <step>
+    <name>statusobject exists</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>lookup statusobject</send_true_to>
+    <send_false_to>Bulk insert</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>statusobjectid</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>write error 1</name>
     <type>TextFileOutput</type>
     <description/>
@@ -1350,41 +1385,6 @@
     <GUI>
       <xloc>672</xloc>
       <yloc>656</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>statusobject exists</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>lookup statusobject</send_true_to>
-    <send_false_to>Bulk insert</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>statusobjectid</leftvalue>
-        <function>IS NOT NULL</function>
-        <rightvalue/>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>672</xloc>
-      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

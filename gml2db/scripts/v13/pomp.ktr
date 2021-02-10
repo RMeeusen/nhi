@@ -829,7 +829,7 @@
         <xpath>nhi:CREATED_DATE</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>Timestamp</type>
+        <type>String</type>
         <format>yyyy-mm-dd'T'hh:mm:ss</format>
         <currency/>
         <decimal/>
@@ -844,7 +844,7 @@
         <xpath>nhi:LAST_EDITED_DATE</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>Timestamp</type>
+        <type>String</type>
         <format>yyyy-mm-dd'T'hh:mm:ss</format>
         <currency/>
         <decimal/>

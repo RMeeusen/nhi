@@ -936,16 +936,6 @@
       <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
-      <name/>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-      <name/>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
     </file>
     <fields>
       <field>
@@ -983,7 +973,7 @@
         <xpath>nhi:CREATED_DATE</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>Timestamp</type>
+        <type>String</type>
         <format>yyyy-mm-dd'T'hh:mm:ss</format>
         <currency/>
         <decimal/>
@@ -998,7 +988,7 @@
         <xpath>nhi:LAST_EDITED_DATE</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
-        <type>Timestamp</type>
+        <type>String</type>
         <format>yyyy-mm-dd'T'hh:mm:ss</format>
         <currency/>
         <decimal/>
@@ -1218,7 +1208,7 @@
         <in_stream_name>coords</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>(\d+\.\d+),(\d+\.\d+),-?\d*\.?\d*([\s)])</replace_string>
+        <replace_string>(\d+\.?\d+),(\d+\.?\d+),-?\d*\.?\d*([\s)])</replace_string>
         <replace_by_string>$1,$2$3</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
@@ -1550,6 +1540,41 @@
     </GUI>
   </step>
   <step>
+    <name>statusobject exists</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>lookup statusobject</send_true_to>
+    <send_false_to>lookup type ruwheid</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>statusobjectid</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>352</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>write error 1</name>
     <type>TextFileOutput</type>
     <description/>
@@ -1825,41 +1850,6 @@
     <GUI>
       <xloc>496</xloc>
       <yloc>320</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>statusobject exists</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>lookup statusobject</send_true_to>
-    <send_false_to>lookup type ruwheid</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>statusobjectid</leftvalue>
-        <function>IS NOT NULL</function>
-        <rightvalue/>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>352</xloc>
-      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
