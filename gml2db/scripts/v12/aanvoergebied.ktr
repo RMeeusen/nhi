@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>pomp</name>
+    <name>aanvoergebied</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -553,23 +553,33 @@
   </connection>
   <order>
     <hop>
-      <from>Insert record: point</from>
-      <to>Error message</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Error message</from>
+      <from>Error Message</from>
       <to>Error log</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>If value type is null</from>
-      <to>Insert record: point</to>
+      <from>insert record: Multipolygon</from>
+      <to>Error Message</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>insert record: Polygon</from>
+      <to>Error Message</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>insert record: Multipolygon</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>insert record: Polygon</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>correct epsg label</from>
-      <to>Remove Z values</to>
+      <to>Filter rows</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -614,47 +624,42 @@
     </hop>
     <hop>
       <from>statusobject exists</from>
-      <to>gemaalcode exists</to>
+      <to>lateraleknoop exists</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>lookup statusobject</from>
-      <to>gemaalcode exists</to>
+      <to>lateraleknoop exists</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>gemaalcode exists</from>
-      <to>Database lookup gemaal code</to>
+      <from>lateraleknoop exists</from>
+      <to>lookup lateraleknoop</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>gemaalcode exists</from>
+      <from>lateraleknoop exists</from>
       <to>correct epsg label</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Database lookup gemaal code</from>
-      <to>correct epsg label</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Remove Z values</from>
-      <to>If value type is null</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>invalid gemaalcode</from>
+      <from>invalid lateraleknoop</from>
       <to>write error 3</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Database lookup gemaal code</from>
-      <to>invalid gemaalcode</to>
+      <from>lookup lateraleknoop</from>
+      <to>invalid lateraleknoop</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup lateraleknoop</from>
+      <to>correct epsg label</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Database lookup gemaal code</name>
+    <name>lookup lateraleknoop</name>
     <type>DBLookup</type>
     <description/>
     <distribute>N</distribute>
@@ -665,21 +670,27 @@
       <schema_name/>
     </partitioning>
     <connection>myconn</connection>
-    <cache>N</cache>
+    <cache>Y</cache>
     <cache_load_all>N</cache_load_all>
-    <cache_size>1000</cache_size>
+    <cache_size>5000</cache_size>
     <lookup>
       <schema>public</schema>
-      <table>gemaal</table>
+      <table>lateraleknoop</table>
       <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
       <key>
-        <name>gemaalcode</name>
+        <name>lateraleknoopcode</name>
         <field>code</field>
         <condition>=</condition>
         <name2/>
       </key>
+      <value>
+        <name>lateraleknoopid</name>
+        <rename>lateraleknoopid</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
     </lookup>
     <attributes/>
     <cluster_schema/>
@@ -690,8 +701,49 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
-      <yloc>496</yloc>
+      <xloc>528</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Error Message</name>
+    <type>WriteToLog</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <loglevel>log_level_error</loglevel>
+    <displayHeader>Y</displayHeader>
+    <limitRows>N</limitRows>
+    <limitRowsNumber>0</limitRowsNumber>
+    <logmessage>Failed to generate geometries.</logmessage>
+    <fields>
+      <field>
+        <name>code</name>
+      </field>
+      <field>
+        <name>err_desc</name>
+      </field>
+      <field>
+        <name>administratiefgebied</name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1248</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -771,51 +823,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1456</xloc>
-      <yloc>384</yloc>
+      <xloc>1344</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Error message</name>
-    <type>WriteToLog</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <loglevel>log_level_error</loglevel>
-    <displayHeader>Y</displayHeader>
-    <limitRows>N</limitRows>
-    <limitRowsNumber>0</limitRowsNumber>
-    <logmessage/>
-    <fields>
-      <field>
-        <name>code</name>
-      </field>
-      <field>
-        <name>err_desc</name>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1312</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>gemaalcode exists</name>
+    <name>Filter rows</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -825,13 +839,13 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to>Database lookup gemaal code</send_true_to>
-    <send_false_to>correct epsg label</send_false_to>
+    <send_true_to>insert record: Multipolygon</send_true_to>
+    <send_false_to>insert record: Polygon</send_false_to>
     <compare>
       <condition>
         <negated>N</negated>
-        <leftvalue>gemaalcode</leftvalue>
-        <function>IS NOT NULL</function>
+        <leftvalue>polygon</leftvalue>
+        <function>IS NULL</function>
         <rightvalue/>
       </condition>
     </compare>
@@ -844,8 +858,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
-      <yloc>384</yloc>
+      <xloc>848</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -879,13 +893,18 @@
       <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
     </file>
     <fields>
       <field>
-        <name>Point</name>
-        <xpath>${pointpath}</xpath>
+        <name>code</name>
+        <xpath>nhi:code</xpath>
         <element_type>node</element_type>
-        <result_type>singlenode</result_type>
+        <result_type>valueof</result_type>
         <type>String</type>
         <format/>
         <currency/>
@@ -897,8 +916,8 @@
         <repeat>N</repeat>
       </field>
       <field>
-        <name>code</name>
-        <xpath>nhi:code</xpath>
+        <name>naam</name>
+        <xpath>nhi:naam</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -957,6 +976,21 @@
         <repeat>N</repeat>
       </field>
       <field>
+        <name>hyperlink</name>
+        <xpath>nhi:hyperlink</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
         <name>administratiefgebied</name>
         <xpath>nhi:administratiefgebied</xpath>
         <element_type>node</element_type>
@@ -972,23 +1006,8 @@
         <repeat>N</repeat>
       </field>
       <field>
-        <name>gemaalcode</name>
-        <xpath>nhi:codegerelateerdobject</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>maxcap</name>
-        <xpath>nhi:maximalecapaciteit</xpath>
+        <name>oppervlakte</name>
+        <xpath>nhi:oppervlakte</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>Number</type>
@@ -1002,10 +1021,40 @@
         <repeat>N</repeat>
       </field>
       <field>
-        <name>pompcurve</name>
-        <xpath>nhi:pompcurve</xpath>
+        <name>lateraleknoopcode</name>
+        <xpath>nhi:lateraleknoopcode</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>multiPolygon</name>
+        <xpath>${multipolygonpath}</xpath>
+        <element_type>node</element_type>
+        <result_type>singlenode</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>polygon</name>
+        <xpath>${polygonpath}</xpath>
+        <element_type>node</element_type>
+        <result_type>singlenode</result_type>
         <type>String</type>
         <format/>
         <currency/>
@@ -1030,7 +1079,7 @@
     <uriNameFieldName/>
     <rootUriNameFieldName/>
     <extensionFieldName/>
-    <sizeFieldName/>
+    <sizeFieldName>size</sizeFieldName>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -1040,152 +1089,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>If value type is null</name>
-    <type>IfNull</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <replaceAllByValue/>
-    <replaceAllMask/>
-    <selectFields>N</selectFields>
-    <selectValuesType>Y</selectValuesType>
-    <setEmptyStringAll>N</setEmptyStringAll>
-    <valuetypes>
-      <valuetype>
-        <name>Number</name>
-        <value>-9999</value>
-        <mask/>
-        <set_type_empty_string>N</set_type_empty_string>
-      </valuetype>
-      <valuetype>
-        <name>Integer</name>
-        <value>-9999</value>
-        <mask/>
-        <set_type_empty_string>N</set_type_empty_string>
-      </valuetype>
-    </valuetypes>
-    <fields>
-      </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>992</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Insert record: point</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>myconn</connection>
-    <execute_each_row>Y</execute_each_row>
-    <single_statement>N</single_statement>
-    <replace_variables>Y</replace_variables>
-    <quoteString>Y</quoteString>
-    <sql>INSERT INTO public.${table_name}
-(${table_name}id, code, codegerelateerdobject, statusobjectid, maximalecapaciteit, pompcurve, administratiefgebiedid, geometriepunt)
-VALUES
-(nextval('${table_name}_id_seq'), ?, ?, ?, ?, ?, ${administratiefgebiedid}, ST_GeomFromGML(?));</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-      <argument>
-        <name>code</name>
-      </argument>
-      <argument>
-        <name>gemaalcode</name>
-      </argument>
-      <argument>
-        <name>statusobjectcode</name>
-      </argument>
-      <argument>
-        <name>maxcap</name>
-      </argument>
-      <argument>
-        <name>pompcurve</name>
-      </argument>
-      <argument>
-        <name>Point</name>
-      </argument>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1136</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Remove Z values</name>
-    <type>ReplaceString</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>Point</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>(\d+\.?\d*),(\d+\.?\d*),(\-*\d+\.?\d*\s*|Nan)</replace_string>
-        <replace_by_string>$1,$2</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>864</xloc>
-      <yloc>400</yloc>
+      <xloc>64</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1202,7 +1107,19 @@ VALUES
     </partitioning>
     <fields>
       <field>
-        <in_stream_name>Point</in_stream_name>
+        <in_stream_name>polygon</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>epsg</replace_string>
+        <replace_by_string>EPSG</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>yes</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>multiPolygon</in_stream_name>
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>epsg</replace_string>
@@ -1223,8 +1140,132 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>400</yloc>
+      <xloc>688</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>insert record: Multipolygon</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <execute_each_row>Y</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>Y</replace_variables>
+    <quoteString>Y</quoteString>
+    <sql>INSERT INTO public.${table_name}
+(${table_name}id, code, naam, statusobjectid, hyperlink,  oppervlakte, lateraleknoopid, administratiefgebiedid, geometrievlak)
+VALUES
+(nextval('${table_name}_id_seq'),?, ?, ?, ?, ?, ?, ${administratiefgebiedid}, st_force2d(ST_GeomFromGML(?)));</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+      <argument>
+        <name>code</name>
+      </argument>
+      <argument>
+        <name>naam</name>
+      </argument>
+      <argument>
+        <name>statusobjectcode</name>
+      </argument>
+      <argument>
+        <name>hyperlink</name>
+      </argument>
+      <argument>
+        <name>oppervlakte</name>
+      </argument>
+      <argument>
+        <name>lateraleknoopid</name>
+      </argument>
+      <argument>
+        <name>multiPolygon</name>
+      </argument>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1120</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>insert record: Polygon</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <execute_each_row>Y</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>Y</replace_variables>
+    <quoteString>Y</quoteString>
+    <sql>INSERT INTO public.${table_name}
+(${table_name}id, code, naam, statusobjectid, hyperlink,  oppervlakte, lateraleknoopid, administratiefgebiedid, geometrievlak)
+VALUES
+(nextval('${table_name}_id_seq'),?, ?, ?, ?, ?, ?, ${administratiefgebiedid}, st_force2d(ST_Multi(ST_GeomFromGML(?))));</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+      <argument>
+        <name>code</name>
+      </argument>
+      <argument>
+        <name>naam</name>
+      </argument>
+      <argument>
+        <name>statusobjectcode</name>
+      </argument>
+      <argument>
+        <name>hyperlink</name>
+      </argument>
+      <argument>
+        <name>oppervlakte</name>
+      </argument>
+      <argument>
+        <name>lateraleknoopid</name>
+      </argument>
+      <argument>
+        <name>polygon</name>
+      </argument>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1120</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1292,8 +1333,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>512</yloc>
+      <xloc>64</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1326,8 +1367,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>288</yloc>
+      <xloc>208</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1360,8 +1401,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>592</yloc>
+      <xloc>352</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1402,8 +1443,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>384</yloc>
+      <xloc>208</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1444,8 +1485,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>496</yloc>
+      <xloc>352</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1461,7 +1502,7 @@ VALUES
       <schema_name/>
     </partitioning>
     <send_true_to>lookup statusobject</send_true_to>
-    <send_false_to>gemaalcode exists</send_false_to>
+    <send_false_to>lateraleknoop exists</send_false_to>
     <compare>
       <condition>
         <negated>N</negated>
@@ -1479,8 +1520,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>384</yloc>
+      <xloc>352</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1572,8 +1613,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
-      <yloc>208</yloc>
+      <xloc>192</xloc>
+      <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1665,13 +1706,48 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>688</yloc>
+      <xloc>352</xloc>
+      <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>invalid gemaalcode</name>
+    <name>lateraleknoop exists</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>lookup lateraleknoop</send_true_to>
+    <send_false_to>correct epsg label</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>lateraleknoopcode</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>528</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>invalid lateraleknoop</name>
     <type>SetValueConstant</type>
     <description/>
     <distribute>Y</distribute>
@@ -1685,7 +1761,7 @@ VALUES
     <fields>
       <field>
         <name>err_desc</name>
-        <value>invalid gemaalcode</value>
+        <value>invalid lateraleknoopcode</value>
         <mask/>
         <set_empty_string>N</set_empty_string>
       </field>
@@ -1699,8 +1775,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
-      <yloc>608</yloc>
+      <xloc>528</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1771,8 +1847,8 @@ VALUES
         <precision>-1</precision>
       </field>
       <field>
-        <name>gemaalcode</name>
-        <type>Integer</type>
+        <name>lateraleknoopcode</name>
+        <type>String</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1792,15 +1868,15 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
-      <yloc>704</yloc>
+      <xloc>528</xloc>
+      <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step_error_handling>
     <error>
-      <source_step>Database lookup gemaal code</source_step>
-      <target_step>invalid gemaalcode</target_step>
+      <source_step>lookup lateraleknoop</source_step>
+      <target_step>invalid lateraleknoop</target_step>
       <is_enabled>Y</is_enabled>
       <nr_valuename/>
       <descriptions_valuename>err_desc</descriptions_valuename>
@@ -1823,14 +1899,26 @@ VALUES
       <min_pct_rows/>
     </error>
     <error>
-      <source_step>Insert record: point</source_step>
-      <target_step>Error message</target_step>
+      <source_step>insert record: Multipolygon</source_step>
+      <target_step>Error Message</target_step>
       <is_enabled>Y</is_enabled>
       <nr_valuename/>
       <descriptions_valuename>err_desc</descriptions_valuename>
       <fields_valuename/>
       <codes_valuename/>
-      <max_errors>1000</max_errors>
+      <max_errors/>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
+    <error>
+      <source_step>insert record: Polygon</source_step>
+      <target_step>Error Message</target_step>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename>err_desc</descriptions_valuename>
+      <fields_valuename/>
+      <codes_valuename/>
+      <max_errors/>
       <max_pct_errors/>
       <min_pct_rows/>
     </error>
@@ -1842,7 +1930,7 @@ VALUES
       <descriptions_valuename>err_desc</descriptions_valuename>
       <fields_valuename/>
       <codes_valuename/>
-      <max_errors/>
+      <max_errors>1000</max_errors>
       <max_pct_errors/>
       <min_pct_rows/>
     </error>

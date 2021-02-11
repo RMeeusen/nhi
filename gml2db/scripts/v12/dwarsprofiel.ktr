@@ -553,11 +553,6 @@
   </connection>
   <order>
     <hop>
-      <from>Get data from XML</from>
-      <to>Error reading gml log</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Handle Null Fields</from>
       <to>Add sequence</to>
       <enabled>Y</enabled>
@@ -565,11 +560,6 @@
     <hop>
       <from>Add sequence</from>
       <to>Bulk insert</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get data from XML</from>
-      <to>Remove line feeds</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -596,6 +586,96 @@
       <from>Add sequence</from>
       <to>Text file output</to>
       <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>invalid admingebied</from>
+      <to>write error 1</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>invalid statusobject</from>
+      <to>write error 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>invalid type</from>
+      <to>write error 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup administratiefgebied</from>
+      <to>invalid admingebied</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup administratiefgebied</from>
+      <to>statusobject exists</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup statusobject</from>
+      <to>invalid statusobject</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup statusobject</from>
+      <to>lookup type ruwheid</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup type ruwheid</from>
+      <to>invalid type</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>statusobject exists</from>
+      <to>lookup statusobject</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>statusobject exists</from>
+      <to>lookup type ruwheid</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get data from XML</from>
+      <to>lookup administratiefgebied</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>invalid profiel</from>
+      <to>write error 5</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup type profiel</from>
+      <to>invalid profiel</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>typeprofiel exists</from>
+      <to>lookup type profiel</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup type ruwheid</from>
+      <to>typeprofiel exists</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>typeprofiel exists</from>
+      <to>Remove line feeds</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup type profiel</from>
+      <to>Remove line feeds</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get data from XML</from>
+      <to>Error reading gml log</to>
+      <enabled>Y</enabled>
     </hop>
   </order>
   <step>
@@ -628,8 +708,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>864</xloc>
-      <yloc>144</yloc>
+      <xloc>1616</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -716,8 +796,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>992</xloc>
-      <yloc>144</yloc>
+      <xloc>1744</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -802,89 +882,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Error reading gml log</name>
-    <type>TextFileOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <separator>;</separator>
-    <enclosure>"</enclosure>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>Y</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding/>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>Y</create_parent_folder>
-    <file>
-      <name>${log_dir}${filename}_readgml_err</name>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
-      <extention>txt</extention>
-      <append>N</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format>yyyyMMddHHmmss</date_time_format>
-      <add_to_result_filenames>N</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
-    </file>
-    <fields>
-      <field>
-        <name>err_description</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>err_code</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>184</xloc>
-      <yloc>253</yloc>
+      <xloc>1328</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -934,8 +933,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>352</xloc>
-      <yloc>144</yloc>
+      <xloc>1104</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1146,7 +1145,7 @@
     </remotesteps>
     <GUI>
       <xloc>80</xloc>
-      <yloc>144</yloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1185,8 +1184,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>144</yloc>
+      <xloc>1472</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1226,8 +1225,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>144</yloc>
+      <xloc>992</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1265,8 +1264,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>464</xloc>
-      <yloc>144</yloc>
+      <xloc>1216</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1346,8 +1345,823 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1024</xloc>
-      <yloc>272</yloc>
+      <xloc>1776</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>invalid admingebied</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>err_desc</name>
+        <value>invalid administratiefgebiedid</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>208</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>invalid profiel</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>err_desc</name>
+        <value>invalid typeprofielcode</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>496</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>invalid statusobject</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>err_desc</name>
+        <value>invalid statusobjectid</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>352</xloc>
+      <yloc>496</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>invalid type</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>err_desc</name>
+        <value>invalid ruwheid</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup administratiefgebied</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>administratiefgebied</table>
+      <orderby/>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>administratiefgebied</name>
+        <field>administratiefgebiedid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>208</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup statusobject</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>statusobject</table>
+      <orderby/>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>statusobjectcode</name>
+        <field>statusobjectid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>352</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup type profiel</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>typeprofiel</table>
+      <orderby/>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>typeprofielcode</name>
+        <field>typeprofielid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup type ruwheid</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>ruwheidstype</table>
+      <orderby/>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>ruwheidstypecode</name>
+        <field>ruwheidstypeid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>statusobject exists</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>lookup statusobject</send_true_to>
+    <send_false_to>lookup type ruwheid</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>statusobjectcode</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>352</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>typeprofiel exists</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>lookup type profiel</send_true_to>
+    <send_false_to>Remove line feeds</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>typeprofielcode</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>write error 1</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>N</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields>
+      <field>
+        <name>code</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>err_desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>administratiefgebied</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>192</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>write error 2</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>N</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields>
+      <field>
+        <name>code</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>err_desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>statusobjectcode</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>352</xloc>
+      <yloc>592</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>write error 3</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>N</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields>
+      <field>
+        <name>code</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>err_desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>ruwheidstypecode</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>write error 5</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>N</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields>
+      <field>
+        <name>code</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>err_desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>typeprofielcode</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>592</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Error reading gml log</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format>yyyyMMddHHmmss</date_time_format>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>err_description</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1361,6 +2175,54 @@
       <fields_valuename/>
       <codes_valuename>err_code</codes_valuename>
       <max_errors>5000</max_errors>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
+    <error>
+      <source_step>lookup administratiefgebied</source_step>
+      <target_step>invalid admingebied</target_step>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename>err_desc</descriptions_valuename>
+      <fields_valuename/>
+      <codes_valuename/>
+      <max_errors>1000</max_errors>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
+    <error>
+      <source_step>lookup statusobject</source_step>
+      <target_step>invalid statusobject</target_step>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename>err_desc</descriptions_valuename>
+      <fields_valuename/>
+      <codes_valuename/>
+      <max_errors>1000</max_errors>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
+    <error>
+      <source_step>lookup type profiel</source_step>
+      <target_step>invalid profiel</target_step>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename>err_desc</descriptions_valuename>
+      <fields_valuename/>
+      <codes_valuename/>
+      <max_errors>1000</max_errors>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
+    <error>
+      <source_step>lookup type ruwheid</source_step>
+      <target_step>invalid type</target_step>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename>err_desc</descriptions_valuename>
+      <fields_valuename/>
+      <codes_valuename/>
+      <max_errors>1000</max_errors>
       <max_pct_errors/>
       <min_pct_rows/>
     </error>

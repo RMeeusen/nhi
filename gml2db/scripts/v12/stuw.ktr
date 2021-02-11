@@ -578,11 +578,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get data from XML</from>
-      <to>correct epsg label</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>correct epsg label</from>
       <to>If field value is null</to>
       <enabled>Y</enabled>
@@ -590,6 +585,81 @@
     <hop>
       <from>Get data from XML</from>
       <to>Error reading gml log</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>invalid admingebied</from>
+      <to>write error 1</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>invalid statusobject</from>
+      <to>write error 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup administratiefgebied</from>
+      <to>invalid admingebied</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup administratiefgebied</from>
+      <to>statusobject exists</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup statusobject</from>
+      <to>invalid statusobject</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>statusobject exists</from>
+      <to>lookup statusobject</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get data from XML</from>
+      <to>lookup administratiefgebied</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup soortstuw</from>
+      <to>invalid soortstuwcode</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>invalid soortstuwcode</from>
+      <to>write error 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>statusobject exists</from>
+      <to>lookup soortstuw</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup statusobject</from>
+      <to>lookup soortstuw</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup soortregelbaarheid</from>
+      <to>invalid soortregelbaarheid</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>invalid soortregelbaarheid</from>
+      <to>write error 3 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup soortstuw</from>
+      <to>lookup soortregelbaarheid</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup soortregelbaarheid</from>
+      <to>correct epsg label</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -669,8 +739,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1264</xloc>
-      <yloc>80</yloc>
+      <xloc>1792</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -707,89 +777,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1120</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Error reading gml log</name>
-    <type>TextFileOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <separator>;</separator>
-    <enclosure>"</enclosure>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>Y</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding/>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>Y</create_parent_folder>
-    <file>
-      <name>${log_dir}${file_name}_readgml_err</name>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
-      <extention>txt</extention>
-      <append>N</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format>yyyyMMddHHmmss</date_time_format>
-      <add_to_result_filenames>N</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
-    </file>
-    <fields>
-      <field>
-        <name>err_description</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>err_code</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>252</xloc>
-      <yloc>273</yloc>
+      <xloc>1648</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -797,7 +786,7 @@
     <name>Get data from XML</name>
     <type>getXMLData</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -818,7 +807,7 @@
     <rownum_field/>
     <encoding>UTF-8</encoding>
     <file>
-      <name>${import_dir}/${file_name}.gml</name>
+      <name>${filename}</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -1114,8 +1103,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>128</xloc>
-      <yloc>80</yloc>
+      <xloc>160</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1160,8 +1149,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>512</xloc>
-      <yloc>80</yloc>
+      <xloc>1040</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1206,8 +1195,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>80</yloc>
+      <xloc>1200</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1286,8 +1275,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>944</xloc>
-      <yloc>80</yloc>
+      <xloc>1472</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1325,8 +1314,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>816</xloc>
-      <yloc>80</yloc>
+      <xloc>1344</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1364,8 +1353,788 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>352</xloc>
-      <yloc>80</yloc>
+      <xloc>896</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Error reading gml log</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format>yyyyMMddHHmmss</date_time_format>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>err_description</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>160</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>invalid admingebied</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>err_desc</name>
+        <value>invalid administratiefgebiedid</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>304</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>invalid statusobject</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>err_desc</name>
+        <value>invalid statusobjectid</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>608</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup administratiefgebied</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>administratiefgebied</table>
+      <orderby/>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>administratiefgebied</name>
+        <field>administratiefgebiedid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>304</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup statusobject</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>statusobject</table>
+      <orderby/>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>statusobjectcode</name>
+        <field>statusobjectid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>statusobject exists</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>lookup statusobject</send_true_to>
+    <send_false_to>lookup soortstuw</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>statusobjectcode</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>write error 1</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>N</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields>
+      <field>
+        <name>code</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>err_desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>administratiefgebied</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>write error 2</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>N</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields>
+      <field>
+        <name>code</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>err_desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>statusobjectcode</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>704</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup soortstuw</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>1000</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>soortstuw</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>soortstuwcode</name>
+        <field>soortstuwid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>invalid soortstuwcode</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>err_desc</name>
+        <value>invalid soortstuwcode</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>write error 3</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>N</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields>
+      <field>
+        <name>code</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>err_desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>soortstuwcode</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>608</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lookup soortregelbaarheid</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>1000</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>soortregelbaarheid</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>soortregelbaarheidcode</name>
+        <field>soortregelbaarheidid</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>invalid soortregelbaarheid</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>err_desc</name>
+        <value>invalid soortregelbaarheidcode</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>write error 3 2</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>N</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields>
+      <field>
+        <name>code</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>err_desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>soortregelbaarheidcode</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1391,6 +2160,54 @@ VALUES
       <fields_valuename/>
       <codes_valuename/>
       <max_errors>1000</max_errors>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
+    <error>
+      <source_step>lookup administratiefgebied</source_step>
+      <target_step>invalid admingebied</target_step>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename>err_desc</descriptions_valuename>
+      <fields_valuename/>
+      <codes_valuename/>
+      <max_errors>1000</max_errors>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
+    <error>
+      <source_step>lookup statusobject</source_step>
+      <target_step>invalid statusobject</target_step>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename>err_desc</descriptions_valuename>
+      <fields_valuename/>
+      <codes_valuename/>
+      <max_errors>1000</max_errors>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
+    <error>
+      <source_step>lookup soortstuw</source_step>
+      <target_step>invalid soortstuwcode</target_step>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename>err_desc</descriptions_valuename>
+      <fields_valuename/>
+      <codes_valuename/>
+      <max_errors/>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
+    <error>
+      <source_step>lookup soortregelbaarheid</source_step>
+      <target_step>invalid soortregelbaarheid</target_step>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename>err_desc</descriptions_valuename>
+      <fields_valuename/>
+      <codes_valuename/>
+      <max_errors/>
       <max_pct_errors/>
       <min_pct_rows/>
     </error>
