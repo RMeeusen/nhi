@@ -6,10 +6,10 @@ open sftp://%1%:%2%@ftp.deltares.nl:2222/ -hostkey="ssh-rsa 2048 /vkIY1UQX3fbmaO
 get  -transfer=binary %3%GML/*.gml %4%\GML\
 
 #Clean backup folder
-rm %3%GML_BK/*.gml
+#rm %3%GML_BK/*.gml
 
 #Move the files to backup folder
-mv %3%GML/*.gml %3%GML_BK/
+#mv %3%GML/*.gml %3%GML_BK/
 
 #Close the connection
 close

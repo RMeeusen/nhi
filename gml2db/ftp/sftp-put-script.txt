@@ -1,8 +1,13 @@
 #Open the connection
 open sftp://%1%:%2%@ftp.deltares.nl:2222/ -hostkey="ssh-rsa 2048 /vkIY1UQX3fbmaOSw3UgTDiSYyfEWqO9Pm0axXpM9fA=" -rawsettings FSProtocol=2
 
+#Clean backup folder
+rm %3%GML_BK/*.*
+
 #Upload the logs to ftp
 put -transfer=binary %4%\LOGS\*.* %3%LOGS/
+#Uplaod the processed gmls to ftp
+put -transfer=binary %4%\GML_BK\*.* %3%GML_BK/
 
 #Close the connection
 close
