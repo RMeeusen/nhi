@@ -18,3 +18,7 @@ set newname=%status%_%datestamp%_%timestamp%.log
 set oldname=%workdir%\%version%\logs\%status%.log
 echo renaming %oldname% to %newname%
 ren  %oldname% %newname%
+
+echo delete files older than 10 days
+set logdir=%workdir%\%version%\logs\
+forfiles /p %logdir% /m *.* /D -10 /C "cmd /c del @file"
