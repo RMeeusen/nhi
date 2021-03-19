@@ -479,6 +479,14 @@
         <attribute>N</attribute>
       </attribute>
       <attribute>
+        <code>POOLING_removeAbandoned</code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>POOLING_removeAbandonedTimeout</code>
+        <attribute>300</attribute>
+      </attribute>
+      <attribute>
         <code>PORT_NUMBER</code>
         <attribute>${db_port}</attribute>
       </attribute>
@@ -500,7 +508,7 @@
       </attribute>
       <attribute>
         <code>USE_POOLING</code>
-        <attribute>N</attribute>
+        <attribute>Y</attribute>
       </attribute>
     </attributes>
   </connection>
@@ -583,7 +591,7 @@
     <hop>
       <from>Create geometry</from>
       <to>Bulk insert</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>lookup administratiefgebied</from>
@@ -613,7 +621,7 @@
     <hop>
       <from>Create geometry</from>
       <to>insert record</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Replace commas</from>

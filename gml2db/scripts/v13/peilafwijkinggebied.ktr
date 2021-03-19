@@ -479,6 +479,14 @@
         <attribute>N</attribute>
       </attribute>
       <attribute>
+        <code>POOLING_removeAbandoned</code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>POOLING_removeAbandonedTimeout</code>
+        <attribute>300</attribute>
+      </attribute>
+      <attribute>
         <code>PORT_NUMBER</code>
         <attribute>${db_port}</attribute>
       </attribute>
@@ -500,7 +508,7 @@
       </attribute>
       <attribute>
         <code>USE_POOLING</code>
-        <attribute>N</attribute>
+        <attribute>Y</attribute>
       </attribute>
     </attributes>
   </connection>

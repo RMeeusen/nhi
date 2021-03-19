@@ -479,6 +479,14 @@
         <attribute>N</attribute>
       </attribute>
       <attribute>
+        <code>POOLING_removeAbandoned</code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>POOLING_removeAbandonedTimeout</code>
+        <attribute>300</attribute>
+      </attribute>
+      <attribute>
         <code>PORT_NUMBER</code>
         <attribute>${db_port}</attribute>
       </attribute>
@@ -500,7 +508,7 @@
       </attribute>
       <attribute>
         <code>USE_POOLING</code>
-        <attribute>N</attribute>
+        <attribute>Y</attribute>
       </attribute>
     </attributes>
   </connection>
@@ -534,11 +542,6 @@
       <from>Replace commas</from>
       <to>Replace commas 2</to>
       <enabled>N</enabled>
-    </hop>
-    <hop>
-      <from>Replace commas</from>
-      <to>Create geometry</to>
-      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>lookup statusobject</from>
@@ -638,7 +641,7 @@
     <hop>
       <from>Create geometry</from>
       <to>Bulk insert</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>lookup administratiefgebied</from>
@@ -653,6 +656,26 @@
     <hop>
       <from>statusobject exists</from>
       <to>lookup statusobject</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Replace commas</from>
+      <to>Update XSD datetime</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Update XSD datetime</from>
+      <to>Create geometry</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Insert Record</from>
+      <to>write error 7</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Create geometry</from>
+      <to>Insert Record</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -789,8 +812,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1888</xloc>
-      <yloc>304</yloc>
+      <xloc>1808</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -875,7 +898,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1712</xloc>
+      <xloc>1728</xloc>
       <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1652,7 +1675,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1536</xloc>
+      <xloc>1504</xloc>
       <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2775,6 +2798,244 @@
       <draw>Y</draw>
     </GUI>
   </step>
+  <step>
+    <name>Update XSD datetime</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>createddate</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>T</replace_string>
+        <replace_by_string> </replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>lastediteddate</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>T</replace_string>
+        <replace_by_string> </replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1616</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert Record</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <execute_each_row>Y</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>Y</replace_variables>
+    <quoteString>Y</quoteString>
+    <sql>INSERT INTO public.${table_name}
+(code, naam, statusobjectid, createddate, lastediteddate,hyperlink, administratiefgebiedid, indpeilregulpeilscheidendid, lengte, hoogteopening, breedteopening, hoogtebinnenonderkantbenedenstrooms, hoogtebinnenonderkantbovenstrooms,
+vormkokerid, typekruisingid, ruwheidstypeid, ruwheid, intreeverlies, uittreeverlies, bochtenknikverlies, geometrielijn)
+VALUES 
+(?,?,?,TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'),?,?,?,?,?,?,?,?,
+?,?,?,?,?,?,?,?);</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+      <argument>
+        <name>code</name>
+      </argument>
+      <argument>
+        <name>naam</name>
+      </argument>
+      <argument>
+        <name>statusobjectid</name>
+      </argument>
+      <argument>
+        <name>createddate</name>
+      </argument>
+      <argument>
+        <name>lastediteddate</name>
+      </argument>
+      <argument>
+        <name>hyperlink</name>
+      </argument>
+      <argument>
+        <name>administratiefgebiedid</name>
+      </argument>
+      <argument>
+        <name>indpeilregulpeilscheidendid</name>
+      </argument>
+      <argument>
+        <name>lengte</name>
+      </argument>
+      <argument>
+        <name>hoogteopening</name>
+      </argument>
+      <argument>
+        <name>breedteopening</name>
+      </argument>
+      <argument>
+        <name>hoogtebinnenonderkantbenedenstrooms</name>
+      </argument>
+      <argument>
+        <name>hoogtebinnenonderkantbovenstrooms</name>
+      </argument>
+      <argument>
+        <name>vormkokerid</name>
+      </argument>
+      <argument>
+        <name>typekruisingid</name>
+      </argument>
+      <argument>
+        <name>typeruwheidid</name>
+      </argument>
+      <argument>
+        <name>ruwheid</name>
+      </argument>
+      <argument>
+        <name>intreeverlies</name>
+      </argument>
+      <argument>
+        <name>uittreeverlies</name>
+      </argument>
+      <argument>
+        <name>bochtenknikverlies</name>
+      </argument>
+      <argument>
+        <name>line_geom</name>
+      </argument>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1872</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>write error 7</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>N</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields>
+      <field>
+        <name>code</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>err</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1984</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step_error_handling>
     <error>
       <source_step>Get data from XML</source_step>
@@ -2858,6 +3119,18 @@
       <codes_valuename/>
       <max_errors>1000</max_errors>
       <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
+    <error>
+      <source_step>Insert Record</source_step>
+      <target_step>write error 7</target_step>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename>err</descriptions_valuename>
+      <fields_valuename/>
+      <codes_valuename/>
+      <max_errors/>
+      <max_pct_errors>1000</max_pct_errors>
       <min_pct_rows/>
     </error>
   </step_error_handling>
