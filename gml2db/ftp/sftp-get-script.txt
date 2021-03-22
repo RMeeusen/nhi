@@ -3,7 +3,8 @@
 open sftp://%1%:%2%@ftp.deltares.nl:2222/ -hostkey="ssh-rsa 2048 /vkIY1UQX3fbmaOSw3UgTDiSYyfEWqO9Pm0axXpM9fA=" -rawsettings FSProtocol=2
 
 #Get the files
-get  -delete -transfer=binary %3%GML/*.gml %4%\GML\
+#get  -delete -transfer=binary %3%GML/*.gml %4%\GML\
+synchronize local -transfer=binary -delete %4%\GML\ %3%GML/
 
 #Clean backup folder
 #rm %3%GML_BK/*.gml
