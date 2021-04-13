@@ -654,11 +654,6 @@
       <enabled>N</enabled>
     </hop>
     <hop>
-      <from>Update XSD datetime</from>
-      <to>insert record</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>insert record</from>
       <to>Error log</to>
       <enabled>Y</enabled>
@@ -666,6 +661,16 @@
     <hop>
       <from>lookup prioriteit</from>
       <to>Update XSD datetime</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Update XSD datetime</from>
+      <to>Convert Missings</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Convert Missings</from>
+      <to>insert record</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -819,6 +824,87 @@
     <GUI>
       <xloc>1232</xloc>
       <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Error log</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>N</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format>yyyyMMddHHmmss</date_time_format>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>code</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>err_desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1616</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1320,6 +1406,172 @@
     </remotesteps>
     <GUI>
       <xloc>112</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update XSD datetime</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>createddate</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>T</replace_string>
+        <replace_by_string> </replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>lastediteddate</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>T</replace_string>
+        <replace_by_string> </replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1328</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>insert record</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <execute_each_row>Y</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>Y</replace_variables>
+    <quoteString>Y</quoteString>
+    <sql>INSERT INTO public.${table_name}
+(code, naam, statusobjectid, createddate, lastediteddate, hyperlink, administratiefgebiedid
+,afsluitmiddelcode, pompcode, hydrologischerandvoorwaardecode, indicatiecomplexesturingid, beginperiode, eindperiode, doelvariabeleid, doelvariabeleeenheidid, stuurvariabeleid, vastewaarde, streefwaarde, bovengrens, ondergrens, typesturingid, typecontrollerid, meetlocatiecode, prioriteitid)
+VALUES
+(?, ?, ?,TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), ?,?,
+?,?,?,?,?,?,?,?,?,NULLIF(?, -999),NULLIF(?, -999),NULLIF(?, -999),NULLIF(?, -999),?,?,?,?);</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+      <argument>
+        <name>code</name>
+      </argument>
+      <argument>
+        <name>naam</name>
+      </argument>
+      <argument>
+        <name>statusobjectid</name>
+      </argument>
+      <argument>
+        <name>createddate</name>
+      </argument>
+      <argument>
+        <name>lastediteddate</name>
+      </argument>
+      <argument>
+        <name>hyperlink</name>
+      </argument>
+      <argument>
+        <name>administratiefgebiedid</name>
+      </argument>
+      <argument>
+        <name>afsluitmiddelcode</name>
+      </argument>
+      <argument>
+        <name>pompcode</name>
+      </argument>
+      <argument>
+        <name>hydrologischerandvoorwaardecode</name>
+      </argument>
+      <argument>
+        <name>indicatiecomplexesturingid</name>
+      </argument>
+      <argument>
+        <name>beginperiode</name>
+      </argument>
+      <argument>
+        <name>eindperiode</name>
+      </argument>
+      <argument>
+        <name>doelvariabeleid</name>
+      </argument>
+      <argument>
+        <name>doelvariabeleeenheidid</name>
+      </argument>
+      <argument>
+        <name>stuurvariabeleid</name>
+      </argument>
+      <argument>
+        <name>vastewaarde</name>
+      </argument>
+      <argument>
+        <name>streefwaarde</name>
+      </argument>
+      <argument>
+        <name>bovengrens</name>
+      </argument>
+      <argument>
+        <name>ondergrens</name>
+      </argument>
+      <argument>
+        <name>typesturingid</name>
+      </argument>
+      <argument>
+        <name>typecontrollerid</name>
+      </argument>
+      <argument>
+        <name>meetlocatiecode</name>
+      </argument>
+      <argument>
+        <name>prioriteitid</name>
+      </argument>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1520</xloc>
       <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2712,8 +2964,8 @@
     </GUI>
   </step>
   <step>
-    <name>Error log</name>
-    <type>TextFileOutput</type>
+    <name>Convert Missings</name>
+    <type>IfNull</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -2722,228 +2974,21 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <separator>;</separator>
-    <enclosure>"</enclosure>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>Y</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding/>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>N</create_parent_folder>
-    <file>
-      <name>${error_log_file}</name>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
-      <extention/>
-      <append>Y</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format>yyyyMMddHHmmss</date_time_format>
-      <add_to_result_filenames>N</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
-    </file>
+    <replaceAllByValue/>
+    <replaceAllMask/>
+    <selectFields>N</selectFields>
+    <selectValuesType>Y</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      <valuetype>
+        <name>Number</name>
+        <value>-999</value>
+        <mask/>
+        <set_type_empty_string>N</set_type_empty_string>
+      </valuetype>
+    </valuetypes>
     <fields>
-      <field>
-        <name>code</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>err_desc</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1520</xloc>
-      <yloc>272</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Update XSD datetime</name>
-    <type>ReplaceString</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>createddate</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>T</replace_string>
-        <replace_by_string> </replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>lastediteddate</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>T</replace_string>
-        <replace_by_string> </replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1328</xloc>
-      <yloc>272</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>insert record</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>myconn</connection>
-    <execute_each_row>Y</execute_each_row>
-    <single_statement>N</single_statement>
-    <replace_variables>Y</replace_variables>
-    <quoteString>Y</quoteString>
-    <sql>INSERT INTO public.${table_name}
-(code, naam, statusobjectid, createddate, lastediteddate, hyperlink, administratiefgebiedid
-,afsluitmiddelcode, pompcode, hydrologischerandvoorwaardecode, indicatiecomplexesturingid, beginperiode, eindperiode, doelvariabeleid, doelvariabeleeenheidid, stuurvariabeleid, vastewaarde, streefwaarde, bovengrens, ondergrens, typesturingid, typecontrollerid, meetlocatiecode, prioriteitid)
-VALUES
-(?, ?, ?,TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), ?,?,
-?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-      <argument>
-        <name>code</name>
-      </argument>
-      <argument>
-        <name>naam</name>
-      </argument>
-      <argument>
-        <name>statusobjectid</name>
-      </argument>
-      <argument>
-        <name>createddate</name>
-      </argument>
-      <argument>
-        <name>lastediteddate</name>
-      </argument>
-      <argument>
-        <name>hyperlink</name>
-      </argument>
-      <argument>
-        <name>administratiefgebiedid</name>
-      </argument>
-      <argument>
-        <name>afsluitmiddelcode</name>
-      </argument>
-      <argument>
-        <name>pompcode</name>
-      </argument>
-      <argument>
-        <name>hydrologischerandvoorwaardecode</name>
-      </argument>
-      <argument>
-        <name>indicatiecomplexesturingid</name>
-      </argument>
-      <argument>
-        <name>beginperiode</name>
-      </argument>
-      <argument>
-        <name>eindperiode</name>
-      </argument>
-      <argument>
-        <name>doelvariabeleid</name>
-      </argument>
-      <argument>
-        <name>doelvariabeleeenheidid</name>
-      </argument>
-      <argument>
-        <name>stuurvariabeleid</name>
-      </argument>
-      <argument>
-        <name>vastewaarde</name>
-      </argument>
-      <argument>
-        <name>streefwaarde</name>
-      </argument>
-      <argument>
-        <name>bovengrens</name>
-      </argument>
-      <argument>
-        <name>ondergrens</name>
-      </argument>
-      <argument>
-        <name>typesturingid</name>
-      </argument>
-      <argument>
-        <name>typecontrollerid</name>
-      </argument>
-      <argument>
-        <name>meetlocatiecode</name>
-      </argument>
-      <argument>
-        <name>prioriteitid</name>
-      </argument>
-    </arguments>
+      </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -2968,6 +3013,18 @@ VALUES
       <fields_valuename/>
       <codes_valuename>err_code</codes_valuename>
       <max_errors>5000</max_errors>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
+    <error>
+      <source_step>insert record</source_step>
+      <target_step>Error log</target_step>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename>err_desc</descriptions_valuename>
+      <fields_valuename/>
+      <codes_valuename/>
+      <max_errors>1000</max_errors>
       <max_pct_errors/>
       <min_pct_rows/>
     </error>
@@ -3058,18 +3115,6 @@ VALUES
     <error>
       <source_step>lookup type sturing</source_step>
       <target_step>invalid type sturing</target_step>
-      <is_enabled>Y</is_enabled>
-      <nr_valuename/>
-      <descriptions_valuename>err_desc</descriptions_valuename>
-      <fields_valuename/>
-      <codes_valuename/>
-      <max_errors>1000</max_errors>
-      <max_pct_errors/>
-      <min_pct_rows/>
-    </error>
-    <error>
-      <source_step>insert record</source_step>
-      <target_step>Error log</target_step>
       <is_enabled>Y</is_enabled>
       <nr_valuename/>
       <descriptions_valuename>err_desc</descriptions_valuename>

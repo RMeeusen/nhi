@@ -524,11 +524,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Remove line feeds</from>
-      <to>Extract geom fields</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Create geometry</from>
       <to>Bulk insert</to>
       <enabled>N</enabled>
@@ -601,6 +596,16 @@
     <hop>
       <from>Create geometry</from>
       <to>insert record</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Remove line feeds</from>
+      <to>Convert Missings</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Convert Missings</from>
+      <to>Extract geom fields</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -777,7 +782,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1040</xloc>
+      <xloc>1168</xloc>
       <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
@@ -863,7 +868,88 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1136</xloc>
+      <xloc>1264</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Error log</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>N</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format>yyyyMMddHHmmss</date_time_format>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>code</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>err_desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1488</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -983,7 +1069,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>656</xloc>
+      <xloc>784</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1518,7 +1604,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>784</xloc>
+      <xloc>912</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1622,7 +1708,190 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>928</xloc>
+      <xloc>1024</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update XSD datetime</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>createddate</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>T</replace_string>
+        <replace_by_string> </replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>lastediteddate</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>T</replace_string>
+        <replace_by_string> </replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1152</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>insert record</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <execute_each_row>Y</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>Y</replace_variables>
+    <quoteString>Y</quoteString>
+    <sql>INSERT INTO public.${table_name}
+(code, naam, statusobjectid, createddate, lastediteddate, hyperlink, administratiefgebiedid
+,hydroobjectcode, grondwaterkoppellijncode, brugcode, stuwcode, bodemvalcode, bodemhoogtebenedenstrooms, bodemhoogtebovenstrooms, bodembreedte, 
+taludhellinglinkerzijde, taludhellingrechterzijde,hoogteplasbermlinkerzijde, hoogteplasbermrechterzijde, breedteplasbermlinkerzijde, breedteplasbermrechterzijde,taludhellingplasbermlinkerzijde, taludhellingplasbermrechterzijde,
+hoogteinsteeklinkerzijde, hoogteinsteekrechterzijde,ruwheidstypeid, ruwheidswaardelaag, ruwheidswaardehoog,geometrielijn)
+VALUES
+(?, ?, ?, TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), ?, ?
+,?,?,?,?,?,NULLIF(?, -999),NULLIF(?, -999),NULLIF(?, -999), NULLIF(?, -999),NULLIF(?, -999),NULLIF(?, -999),NULLIF(?, -999),NULLIF(?, -999),NULLIF(?, -999),NULLIF(?, -999),NULLIF(?, -999),NULLIF(?, -999),NULLIF(?, -999),?,NULLIF(?, -999),NULLIF(?, -999),?);</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+      <argument>
+        <name>code</name>
+      </argument>
+      <argument>
+        <name>naam</name>
+      </argument>
+      <argument>
+        <name>statusobjectid</name>
+      </argument>
+      <argument>
+        <name>createddate</name>
+      </argument>
+      <argument>
+        <name>lastediteddate</name>
+      </argument>
+      <argument>
+        <name>hyperlink</name>
+      </argument>
+      <argument>
+        <name>administratiefgebiedid</name>
+      </argument>
+      <argument>
+        <name>hydroobjectcode</name>
+      </argument>
+      <argument>
+        <name>grondwaterkoppellijncode</name>
+      </argument>
+      <argument>
+        <name>brugcode</name>
+      </argument>
+      <argument>
+        <name>stuwcode</name>
+      </argument>
+      <argument>
+        <name>bodemvalcode</name>
+      </argument>
+      <argument>
+        <name>bodemhoogtebenedenstrooms</name>
+      </argument>
+      <argument>
+        <name>bodemhoogtebovenstrooms</name>
+      </argument>
+      <argument>
+        <name>bodembreedte</name>
+      </argument>
+      <argument>
+        <name>taludhellinglinkerzijde</name>
+      </argument>
+      <argument>
+        <name>taludhellingrechterzijde</name>
+      </argument>
+      <argument>
+        <name>hoogteplasbermlinkerzijde</name>
+      </argument>
+      <argument>
+        <name>hoogteplasbermrechterzijde</name>
+      </argument>
+      <argument>
+        <name>breedteplasbermlinkerzijde</name>
+      </argument>
+      <argument>
+        <name>breedteplasbermrechterzijde</name>
+      </argument>
+      <argument>
+        <name>taludhellingplasbermlinkerzijde</name>
+      </argument>
+      <argument>
+        <name>taludhellingplasbermrechterzijde</name>
+      </argument>
+      <argument>
+        <name>hoogteinsteeklinkerzijde</name>
+      </argument>
+      <argument>
+        <name>hoogteinsteekrechterzijde</name>
+      </argument>
+      <argument>
+        <name>typeruwheidid</name>
+      </argument>
+      <argument>
+        <name>ruwheidlaag</name>
+      </argument>
+      <argument>
+        <name>ruwheidhoog</name>
+      </argument>
+      <argument>
+        <name>line_geom</name>
+      </argument>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1392</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2001,8 +2270,8 @@
     </GUI>
   </step>
   <step>
-    <name>Error log</name>
-    <type>TextFileOutput</type>
+    <name>Convert Missings</name>
+    <type>IfNull</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -2011,62 +2280,21 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <separator>;</separator>
-    <enclosure>"</enclosure>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>Y</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding/>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>N</create_parent_folder>
-    <file>
-      <name>${error_log_file}</name>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
-      <extention/>
-      <append>Y</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format>yyyyMMddHHmmss</date_time_format>
-      <add_to_result_filenames>N</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
-    </file>
+    <replaceAllByValue/>
+    <replaceAllMask/>
+    <selectFields>N</selectFields>
+    <selectValuesType>Y</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      <valuetype>
+        <name>Number</name>
+        <value>-999</value>
+        <mask/>
+        <set_type_empty_string>N</set_type_empty_string>
+      </valuetype>
+    </valuetypes>
     <fields>
-      <field>
-        <name>code</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>err_desc</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
+      </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -2076,190 +2304,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1360</xloc>
-      <yloc>224</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Update XSD datetime</name>
-    <type>ReplaceString</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>createddate</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>T</replace_string>
-        <replace_by_string> </replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>lastediteddate</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>T</replace_string>
-        <replace_by_string> </replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1024</xloc>
-      <yloc>224</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>insert record</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>myconn</connection>
-    <execute_each_row>Y</execute_each_row>
-    <single_statement>N</single_statement>
-    <replace_variables>Y</replace_variables>
-    <quoteString>Y</quoteString>
-    <sql>INSERT INTO public.${table_name}
-(code, naam, statusobjectid, createddate, lastediteddate, hyperlink, administratiefgebiedid
-,hydroobjectcode, grondwaterkoppellijncode, brugcode, stuwcode, bodemvalcode, bodemhoogtebenedenstrooms, bodemhoogtebovenstrooms, bodembreedte, 
-taludhellinglinkerzijde, taludhellingrechterzijde,hoogteplasbermlinkerzijde, hoogteplasbermrechterzijde, breedteplasbermlinkerzijde, breedteplasbermrechterzijde,taludhellingplasbermlinkerzijde, taludhellingplasbermrechterzijde,
-hoogteinsteeklinkerzijde, hoogteinsteekrechterzijde,ruwheidstypeid, ruwheidswaardelaag, ruwheidswaardehoog,geometrielijn)
-VALUES
-(?, ?, ?, TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), ?, ?
-,?,?,?,?,?,?,?,?, ?,?,?,?,?,?,?,?, ?,?,?,?,?,?);</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-      <argument>
-        <name>code</name>
-      </argument>
-      <argument>
-        <name>naam</name>
-      </argument>
-      <argument>
-        <name>statusobjectid</name>
-      </argument>
-      <argument>
-        <name>createddate</name>
-      </argument>
-      <argument>
-        <name>lastediteddate</name>
-      </argument>
-      <argument>
-        <name>hyperlink</name>
-      </argument>
-      <argument>
-        <name>administratiefgebiedid</name>
-      </argument>
-      <argument>
-        <name>hydroobjectcode</name>
-      </argument>
-      <argument>
-        <name>grondwaterkoppellijncode</name>
-      </argument>
-      <argument>
-        <name>brugcode</name>
-      </argument>
-      <argument>
-        <name>stuwcode</name>
-      </argument>
-      <argument>
-        <name>bodemvalcode</name>
-      </argument>
-      <argument>
-        <name>bodemhoogtebenedenstrooms</name>
-      </argument>
-      <argument>
-        <name>bodemhoogtebovenstrooms</name>
-      </argument>
-      <argument>
-        <name>bodembreedte</name>
-      </argument>
-      <argument>
-        <name>taludhellinglinkerzijde</name>
-      </argument>
-      <argument>
-        <name>taludhellingrechterzijde</name>
-      </argument>
-      <argument>
-        <name>hoogteplasbermlinkerzijde</name>
-      </argument>
-      <argument>
-        <name>hoogteplasbermrechterzijde</name>
-      </argument>
-      <argument>
-        <name>breedteplasbermlinkerzijde</name>
-      </argument>
-      <argument>
-        <name>breedteplasbermrechterzijde</name>
-      </argument>
-      <argument>
-        <name>taludhellingplasbermlinkerzijde</name>
-      </argument>
-      <argument>
-        <name>taludhellingplasbermrechterzijde</name>
-      </argument>
-      <argument>
-        <name>hoogteinsteeklinkerzijde</name>
-      </argument>
-      <argument>
-        <name>hoogteinsteekrechterzijde</name>
-      </argument>
-      <argument>
-        <name>typeruwheidid</name>
-      </argument>
-      <argument>
-        <name>ruwheidlaag</name>
-      </argument>
-      <argument>
-        <name>ruwheidhoog</name>
-      </argument>
-      <argument>
-        <name>line_geom</name>
-      </argument>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1264</xloc>
+      <xloc>656</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2278,6 +2323,18 @@ VALUES
       <min_pct_rows/>
     </error>
     <error>
+      <source_step>insert record</source_step>
+      <target_step>Error log</target_step>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename>err_desc</descriptions_valuename>
+      <fields_valuename/>
+      <codes_valuename/>
+      <max_errors>1000</max_errors>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
+    <error>
       <source_step>lookup administratiefgebied</source_step>
       <target_step>invalid admingebied</target_step>
       <is_enabled>Y</is_enabled>
@@ -2292,18 +2349,6 @@ VALUES
     <error>
       <source_step>lookup statusobject</source_step>
       <target_step>invalid statusobject</target_step>
-      <is_enabled>Y</is_enabled>
-      <nr_valuename/>
-      <descriptions_valuename>err_desc</descriptions_valuename>
-      <fields_valuename/>
-      <codes_valuename/>
-      <max_errors>1000</max_errors>
-      <max_pct_errors/>
-      <min_pct_rows/>
-    </error>
-    <error>
-      <source_step>insert record</source_step>
-      <target_step>Error log</target_step>
       <is_enabled>Y</is_enabled>
       <nr_valuename/>
       <descriptions_valuename>err_desc</descriptions_valuename>

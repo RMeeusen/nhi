@@ -524,11 +524,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Remove line feeds</from>
-      <to>Extract geom fields</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Get data from XML</from>
       <to>Error reading gml log</to>
       <enabled>Y</enabled>
@@ -607,6 +602,16 @@
       <from>Create geometry</from>
       <to>Write to log</to>
       <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Remove line feeds</from>
+      <to>Convert Missings</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Convert Missings</from>
+      <to>Extract geom fields</to>
+      <enabled>Y</enabled>
     </hop>
   </order>
   <step>
@@ -707,7 +712,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1408</xloc>
+      <xloc>1488</xloc>
       <yloc>592</yloc>
       <draw>Y</draw>
     </GUI>
@@ -793,7 +798,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1264</xloc>
+      <xloc>1344</xloc>
       <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
@@ -925,7 +930,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>832</xloc>
+      <xloc>912</xloc>
       <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1229,7 +1234,7 @@
     <quoteString>Y</quoteString>
     <sql>INSERT INTO public.${table_name}
 (code, naam, statusobjectid, createddate, lastediteddate,hyperlink, administratiefgebiedid, soortstuwid, soortregelbaarheidid, hoogteconstructie, kruinbreedte, richtingid, afvoercoefficient,geometriepunt)
-VALUES (?,?,?,TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'),?,?,?,?,?,?,?,?,?);</sql>
+VALUES (?,?,?,TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'),?,?,?,?,NULLIF(?, -999),NULLIF(?, -999),?,NULLIF(?, -999),?);</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1327,7 +1332,7 @@ VALUES (?,?,?,TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM
       </output>
     </remotesteps>
     <GUI>
-      <xloc>928</xloc>
+      <xloc>1008</xloc>
       <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1407,7 +1412,7 @@ VALUES (?,?,?,TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1040</xloc>
+      <xloc>1120</xloc>
       <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1458,7 +1463,7 @@ VALUES (?,?,?,TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1152</xloc>
+      <xloc>1232</xloc>
       <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1532,7 +1537,7 @@ VALUES (?,?,?,TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1392</xloc>
+      <xloc>1472</xloc>
       <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1988,6 +1993,46 @@ VALUES (?,?,?,TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM
     <GUI>
       <xloc>1520</xloc>
       <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Convert Missings</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <replaceAllByValue/>
+    <replaceAllMask/>
+    <selectFields>N</selectFields>
+    <selectValuesType>Y</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      <valuetype>
+        <name>Number</name>
+        <value>-999</value>
+        <mask/>
+        <set_type_empty_string>N</set_type_empty_string>
+      </valuetype>
+    </valuetypes>
+    <fields>
+      </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
