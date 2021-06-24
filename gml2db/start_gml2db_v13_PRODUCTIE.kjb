@@ -411,7 +411,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>D:\nhi\gml2db\scripts\set-variables.ktr</filename>
+      <filename>${Internal.Entry.Current.Directory}\scripts\set-variables.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
