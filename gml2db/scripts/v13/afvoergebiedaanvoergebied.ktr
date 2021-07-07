@@ -584,11 +584,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Update XSD datetime</from>
-      <to>Remove line feeds</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Remove line feeds</from>
       <to>Filter Geometries</to>
       <enabled>Y</enabled>
@@ -616,6 +611,16 @@
     <hop>
       <from>Filter Geometries</from>
       <to>insert record: Multipolygon</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Update XSD datetime</from>
+      <to>Convert Missings</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Convert Missings</from>
+      <to>Remove line feeds</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1273,7 +1278,7 @@
 ,soortafvoeraanvoergebiedid, ordecode, oppervlakte, lateraleknoopcode, geometrievlak)
 VALUES
 (?, ?, ?, TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), ?, ?
-,?,?,?,?, st_force2d(ST_GeomFromGML(?)));</sql>
+,?,?,NULLIF(?, -999),?, st_force2d(ST_GeomFromGML(?)));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1352,7 +1357,7 @@ VALUES
 ,soortafvoeraanvoergebiedid, ordecode, oppervlakte, lateraleknoopcode,geometrievlak)
 VALUES
 (?, ?, ?, TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), ?, ?
-,?,?,?,?,st_force2d(ST_Multi(ST_GeomFromGML(?))));</sql>
+,?,?,NULLIF(?, -999),?,st_force2d(ST_Multi(ST_GeomFromGML(?))));</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1949,6 +1954,52 @@ VALUES
     <GUI>
       <xloc>448</xloc>
       <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Convert Missings</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <replaceAllByValue/>
+    <replaceAllMask/>
+    <selectFields>N</selectFields>
+    <selectValuesType>Y</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      <valuetype>
+        <name>Number</name>
+        <value>-999</value>
+        <mask/>
+        <set_type_empty_string>N</set_type_empty_string>
+      </valuetype>
+      <valuetype>
+        <name>Integer</name>
+        <value>-999</value>
+        <mask/>
+        <set_type_empty_string>N</set_type_empty_string>
+      </valuetype>
+    </valuetypes>
+    <fields>
+      </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

@@ -623,6 +623,11 @@
       <to>Extract geom fields</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Create geometry</from>
+      <to>Write to log 2</to>
+      <enabled>N</enabled>
+    </hop>
   </order>
   <step>
     <name>Bulk insert</name>
@@ -1460,7 +1465,7 @@
     </remotesteps>
     <GUI>
       <xloc>1072</xloc>
-      <yloc>96</yloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1512,6 +1517,41 @@
     <GUI>
       <xloc>1168</xloc>
       <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Write to log 2</name>
+    <type>WriteToLog</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <loglevel>log_level_error</loglevel>
+    <displayHeader>Y</displayHeader>
+    <limitRows>N</limitRows>
+    <limitRowsNumber>0</limitRowsNumber>
+    <logmessage/>
+    <fields>
+      <field>
+        <name>point_geom</name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1388</xloc>
+      <yloc>264</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

@@ -564,11 +564,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Update XSD datetime</from>
-      <to>statusobject exists</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>insert record</from>
       <to>Error log</to>
       <enabled>Y</enabled>
@@ -581,6 +576,16 @@
     <hop>
       <from>lookup statusobject</from>
       <to>insert record</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Update XSD datetime</from>
+      <to>Convert Missings</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Convert Missings</from>
+      <to>statusobject exists</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1090,7 +1095,7 @@
     <sql>INSERT INTO public.${table_name}
 (code, statusobjectid, createddate, lastediteddate, administratiefgebiedid,gemaalcode, maximalecapaciteit, pompcurve, pomprichtingid)
 VALUES
-(?, ?, TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), ?, ?,?,?,?);</sql>
+(?, ?, TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), ?, ?,NULLIF(?, -999),?,?);</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1509,6 +1514,52 @@ VALUES
     <GUI>
       <xloc>640</xloc>
       <yloc>592</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Convert Missings</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <replaceAllByValue/>
+    <replaceAllMask/>
+    <selectFields>N</selectFields>
+    <selectValuesType>Y</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      <valuetype>
+        <name>Number</name>
+        <value>-999</value>
+        <mask/>
+        <set_type_empty_string>N</set_type_empty_string>
+      </valuetype>
+      <valuetype>
+        <name>Integer</name>
+        <value>-999</value>
+        <mask/>
+        <set_type_empty_string>N</set_type_empty_string>
+      </valuetype>
+    </valuetypes>
+    <fields>
+      </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>544</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

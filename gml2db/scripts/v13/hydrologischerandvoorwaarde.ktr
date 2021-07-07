@@ -713,6 +713,46 @@
     </GUI>
   </step>
   <step>
+    <name>Convert Missings</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <replaceAllByValue/>
+    <replaceAllMask/>
+    <selectFields>N</selectFields>
+    <selectValuesType>Y</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      <valuetype>
+        <name>Number</name>
+        <value>-999</value>
+        <mask/>
+        <set_type_empty_string>N</set_type_empty_string>
+      </valuetype>
+    </valuetypes>
+    <fields>
+      </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Create geometry</name>
     <type>ConcatFields</type>
     <description/>
@@ -1409,7 +1449,7 @@
     <connection>myconn</connection>
     <execute_each_row>Y</execute_each_row>
     <single_statement>N</single_statement>
-    <replace_variables>N</replace_variables>
+    <replace_variables>Y</replace_variables>
     <quoteString>Y</quoteString>
     <sql>INSERT INTO public.${table_name}
 (code, naam, statusobjectid, createddate, lastediteddate, hyperlink, administratiefgebiedid
@@ -2010,46 +2050,6 @@ VALUES
     <GUI>
       <xloc>528</xloc>
       <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Convert Missings</name>
-    <type>IfNull</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <replaceAllByValue/>
-    <replaceAllMask/>
-    <selectFields>N</selectFields>
-    <selectValuesType>Y</selectValuesType>
-    <setEmptyStringAll>N</setEmptyStringAll>
-    <valuetypes>
-      <valuetype>
-        <name>Number</name>
-        <value>-999</value>
-        <mask/>
-        <set_type_empty_string>N</set_type_empty_string>
-      </valuetype>
-    </valuetypes>
-    <fields>
-      </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>752</xloc>
-      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

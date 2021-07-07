@@ -13,7 +13,7 @@
   <parameters>
     <parameter>
       <name>config_file</name>
-      <default_value>d:\nhi\gml2db\config\internal-test-config-v12.properties</default_value>
+      <default_value>d:\nhi\gml2db\config\internal-test-config-v13.properties</default_value>
       <description/>
     </parameter>
     <parameter>

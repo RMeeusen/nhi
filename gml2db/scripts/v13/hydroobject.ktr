@@ -514,11 +514,6 @@
   </connection>
   <order>
     <hop>
-      <from>Remove line feeds</from>
-      <to>Extract geom fields</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Extract geom fields</from>
       <to>Remove Z</to>
       <enabled>Y</enabled>
@@ -656,6 +651,16 @@
     <hop>
       <from>invalid geometry</from>
       <to>MultilineLog</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Remove line feeds</from>
+      <to>Convert Missings</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Convert Missings</from>
+      <to>Extract geom fields</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1486,7 +1491,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>976</xloc>
+      <xloc>896</xloc>
       <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1626,7 +1631,7 @@
 ,ruwheidstypeid, ruwheidlaag, ruwheidhoog, categorieoppwaterlichaam, geometrielijn)
 VALUES
 (?, ?, ?, TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), ?, ?
-,?,?,?,?,?);</sql>
+,?,NULLIF(?, -999),NULLIF(?, -999),?,?);</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1713,7 +1718,7 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
+      <xloc>464</xloc>
       <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1747,7 +1752,7 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>880</xloc>
+      <xloc>800</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1815,7 +1820,7 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>656</xloc>
+      <xloc>576</xloc>
       <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1849,7 +1854,7 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>768</xloc>
+      <xloc>688</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1891,7 +1896,7 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
+      <xloc>464</xloc>
       <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1933,7 +1938,7 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>880</xloc>
+      <xloc>800</xloc>
       <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1975,7 +1980,7 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>656</xloc>
+      <xloc>576</xloc>
       <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2017,7 +2022,7 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>768</xloc>
+      <xloc>688</xloc>
       <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2334,7 +2339,7 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>656</xloc>
+      <xloc>576</xloc>
       <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2427,7 +2432,7 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
+      <xloc>464</xloc>
       <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2520,7 +2525,7 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>656</xloc>
+      <xloc>576</xloc>
       <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2613,7 +2618,7 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>768</xloc>
+      <xloc>688</xloc>
       <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2706,8 +2711,54 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>880</xloc>
+      <xloc>800</xloc>
       <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Convert Missings</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <replaceAllByValue/>
+    <replaceAllMask/>
+    <selectFields>N</selectFields>
+    <selectValuesType>Y</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      <valuetype>
+        <name>Number</name>
+        <value>-999</value>
+        <mask/>
+        <set_type_empty_string>N</set_type_empty_string>
+      </valuetype>
+      <valuetype>
+        <name>Integer</name>
+        <value>-999</value>
+        <mask/>
+        <set_type_empty_string>N</set_type_empty_string>
+      </valuetype>
+    </valuetypes>
+    <fields>
+      </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>992</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
