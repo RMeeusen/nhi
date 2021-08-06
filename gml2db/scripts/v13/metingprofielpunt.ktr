@@ -586,7 +586,7 @@
     <hop>
       <from>lookup type profiel</from>
       <to>Remove line feeds</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Create geometry</from>
@@ -611,7 +611,7 @@
     <hop>
       <from>lookup bodem</from>
       <to>typeprofiel exists</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>typeprofiel exists</from>
@@ -621,7 +621,7 @@
     <hop>
       <from>typeprofiel exists</from>
       <to>Remove line feeds</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>statusobject exists</from>
@@ -671,6 +671,11 @@
     <hop>
       <from>Convert Missings</from>
       <to>Replace commas</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lookup bodem</from>
+      <to>Remove line feeds</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -769,6 +774,52 @@
     <GUI>
       <xloc>1232</xloc>
       <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Convert Missings</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <replaceAllByValue/>
+    <replaceAllMask/>
+    <selectFields>N</selectFields>
+    <selectValuesType>Y</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      <valuetype>
+        <name>Number</name>
+        <value>-999</value>
+        <mask/>
+        <set_type_empty_string>N</set_type_empty_string>
+      </valuetype>
+      <valuetype>
+        <name>Integer</name>
+        <value>-999</value>
+        <mask/>
+        <set_type_empty_string>N</set_type_empty_string>
+      </valuetype>
+    </valuetypes>
+    <fields>
+      </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1040</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1054,7 +1105,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1008</xloc>
+      <xloc>912</xloc>
       <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1351,7 +1402,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>896</xloc>
+      <xloc>800</xloc>
       <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1537,7 +1588,7 @@
 (code, statusobjectid, createddate, lastediteddate, administratiefgebiedid
 ,metingprofiellijncode, codevolgnummer, soortmeetpuntid, typebodemid, ruwheidstypeid, ruwheidswaardelaag, ruwheidswaardehoog, geometriepunt)
 VALUES
-(?, ?, TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), ?, ?,?,?,?,?,NULLIF(?, -999),NULLIF(?, -999),?);</sql>
+(?, ?, TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), ?, ?,?,NULLIF(?, -999),?,?,NULLIF(?, -999),NULLIF(?, -999),?);</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1696,7 +1747,7 @@ VALUES
     </remotesteps>
     <GUI>
       <xloc>752</xloc>
-      <yloc>528</yloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1932,7 +1983,7 @@ VALUES
     </remotesteps>
     <GUI>
       <xloc>752</xloc>
-      <yloc>448</yloc>
+      <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2044,7 +2095,7 @@ VALUES
     </remotesteps>
     <GUI>
       <xloc>752</xloc>
-      <yloc>320</yloc>
+      <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2544,47 +2595,7 @@ VALUES
     </remotesteps>
     <GUI>
       <xloc>752</xloc>
-      <yloc>624</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Convert Missings</name>
-    <type>IfNull</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <replaceAllByValue/>
-    <replaceAllMask/>
-    <selectFields>N</selectFields>
-    <selectValuesType>Y</selectValuesType>
-    <setEmptyStringAll>N</setEmptyStringAll>
-    <valuetypes>
-      <valuetype>
-        <name>Number</name>
-        <value>-999</value>
-        <mask/>
-        <set_type_empty_string>N</set_type_empty_string>
-      </valuetype>
-    </valuetypes>
-    <fields>
-      </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1088</xloc>
-      <yloc>320</yloc>
+      <yloc>800</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

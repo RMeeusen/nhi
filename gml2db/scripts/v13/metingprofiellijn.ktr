@@ -564,11 +564,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get data from XML</from>
-      <to>lookup administratiefgebied</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>lookup soortprofiel</from>
       <to>Remove line feeds</to>
       <enabled>Y</enabled>
@@ -616,6 +611,26 @@
     <hop>
       <from>Create geometry</from>
       <to>insert record</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>invalid geometry</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>invalid geometry</from>
+      <to>MultilineLog</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get data from XML</from>
+      <to>Filter rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>lookup administratiefgebied</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -795,6 +810,87 @@
     <GUI>
       <xloc>1184</xloc>
       <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Error log</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>N</create_parent_folder>
+    <file>
+      <name>${error_log_file}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format>yyyyMMddHHmmss</date_time_format>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>code</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>err_desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1376</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1130,6 +1226,21 @@
         <trim_type>none</trim_type>
         <repeat>N</repeat>
       </field>
+      <field>
+        <name>MultiLineString</name>
+        <xpath>${multilinepath}</xpath>
+        <element_type>node</element_type>
+        <result_type>singlenode</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
     </fields>
     <limit>0</limit>
     <loopxpath>/FeatureCollection/gml:featureMember/${objectpath}</loopxpath>
@@ -1264,6 +1375,57 @@
     </GUI>
   </step>
   <step>
+    <name>Update XSD datetime</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>createddate</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>T</replace_string>
+        <replace_by_string> </replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>lastediteddate</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>T</replace_string>
+        <replace_by_string> </replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Write to log</name>
     <type>WriteToLog</type>
     <description/>
@@ -1328,6 +1490,84 @@
     <GUI>
       <xloc>1120</xloc>
       <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>insert record</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>myconn</connection>
+    <execute_each_row>Y</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>Y</replace_variables>
+    <quoteString>Y</quoteString>
+    <sql>INSERT INTO public.${table_name}
+(code, statusobjectid, createddate, lastediteddate, administratiefgebiedid
+,hydroobjectcode, grondwaterkoppellijncode, brugcode, stuwcode, bodemvalcode, soortprofielid, geometrielijn)
+VALUES
+(?, ?, TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), ?, ?,?,?,?,?,?,?);</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+      <argument>
+        <name>code</name>
+      </argument>
+      <argument>
+        <name>statusobjectid</name>
+      </argument>
+      <argument>
+        <name>createddate</name>
+      </argument>
+      <argument>
+        <name>lastediteddate</name>
+      </argument>
+      <argument>
+        <name>administratiefgebiedid</name>
+      </argument>
+      <argument>
+        <name>hydroobjectcode</name>
+      </argument>
+      <argument>
+        <name>grondwaterkoppellijncode</name>
+      </argument>
+      <argument>
+        <name>brugcode</name>
+      </argument>
+      <argument>
+        <name>stuwcode</name>
+      </argument>
+      <argument>
+        <name>bodemvalcode</name>
+      </argument>
+      <argument>
+        <name>soortprofielid</name>
+      </argument>
+      <argument>
+        <name>line_geom</name>
+      </argument>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1280</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1492,13 +1732,13 @@
     <cache_size>0</cache_size>
     <lookup>
       <schema>public</schema>
-      <table>typeprofiel</table>
+      <table>soortprofiel</table>
       <orderby/>
       <fail_on_multiple>Y</fail_on_multiple>
       <eat_row_on_failure>N</eat_row_on_failure>
       <key>
         <name>soortprofielid</name>
-        <field>typeprofielid</field>
+        <field>soortprofielid</field>
         <condition>=</condition>
         <name2/>
       </key>
@@ -1874,8 +2114,8 @@
     </GUI>
   </step>
   <step>
-    <name>Update XSD datetime</name>
-    <type>ReplaceString</type>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1884,32 +2124,16 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>createddate</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>T</replace_string>
-        <replace_by_string> </replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>lastediteddate</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>T</replace_string>
-        <replace_by_string> </replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-    </fields>
+    <send_true_to>lookup administratiefgebied</send_true_to>
+    <send_false_to>invalid geometry</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>LineString</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -1919,13 +2143,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1088</xloc>
+      <xloc>176</xloc>
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Error log</name>
+    <name>MultilineLog</name>
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1979,7 +2203,7 @@
         <precision>-1</precision>
       </field>
       <field>
-        <name>err_desc</name>
+        <name>MultiLineString</name>
         <type>String</type>
         <format/>
         <currency/>
@@ -2000,14 +2224,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1376</xloc>
-      <yloc>240</yloc>
+      <xloc>176</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>insert record</name>
-    <type>ExecSQL</type>
+    <name>invalid geometry</name>
+    <type>SetValueConstant</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -2016,59 +2240,15 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>myconn</connection>
-    <execute_each_row>Y</execute_each_row>
-    <single_statement>N</single_statement>
-    <replace_variables>Y</replace_variables>
-    <quoteString>Y</quoteString>
-    <sql>INSERT INTO public.${table_name}
-(code, statusobjectid, createddate, lastediteddate, administratiefgebiedid
-,hydroobjectcode, grondwaterkoppellijncode, brugcode, stuwcode, bodemvalcode, soortprofielid, geometrielijn)
-VALUES
-(?, ?, TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY-MM-DD HH24:MI:SS'), ?, ?,?,?,?,?,?,?);</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-      <argument>
-        <name>code</name>
-      </argument>
-      <argument>
-        <name>statusobjectid</name>
-      </argument>
-      <argument>
-        <name>createddate</name>
-      </argument>
-      <argument>
-        <name>lastediteddate</name>
-      </argument>
-      <argument>
-        <name>administratiefgebiedid</name>
-      </argument>
-      <argument>
-        <name>hydroobjectcode</name>
-      </argument>
-      <argument>
-        <name>grondwaterkoppellijncode</name>
-      </argument>
-      <argument>
-        <name>brugcode</name>
-      </argument>
-      <argument>
-        <name>stuwcode</name>
-      </argument>
-      <argument>
-        <name>bodemvalcode</name>
-      </argument>
-      <argument>
-        <name>soortprofielid</name>
-      </argument>
-      <argument>
-        <name>line_geom</name>
-      </argument>
-    </arguments>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>MultiLineString</name>
+        <value>multilinestring not supported</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -2078,8 +2258,8 @@ VALUES
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1280</xloc>
-      <yloc>240</yloc>
+      <xloc>176</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2093,6 +2273,18 @@ VALUES
       <fields_valuename/>
       <codes_valuename>err_code</codes_valuename>
       <max_errors>5000</max_errors>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
+    <error>
+      <source_step>insert record</source_step>
+      <target_step>Error log</target_step>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename>err_desc</descriptions_valuename>
+      <fields_valuename/>
+      <codes_valuename/>
+      <max_errors>1000</max_errors>
       <max_pct_errors/>
       <min_pct_rows/>
     </error>
@@ -2123,18 +2315,6 @@ VALUES
     <error>
       <source_step>lookup statusobject</source_step>
       <target_step>invalid statusobject</target_step>
-      <is_enabled>Y</is_enabled>
-      <nr_valuename/>
-      <descriptions_valuename>err_desc</descriptions_valuename>
-      <fields_valuename/>
-      <codes_valuename/>
-      <max_errors>1000</max_errors>
-      <max_pct_errors/>
-      <min_pct_rows/>
-    </error>
-    <error>
-      <source_step>insert record</source_step>
-      <target_step>Error log</target_step>
       <is_enabled>Y</is_enabled>
       <nr_valuename/>
       <descriptions_valuename>err_desc</descriptions_valuename>
