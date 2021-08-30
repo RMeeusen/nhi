@@ -479,8 +479,44 @@
         <attribute>N</attribute>
       </attribute>
       <attribute>
+        <code>INITIAL_POOL_SIZE</code>
+        <attribute>5</attribute>
+      </attribute>
+      <attribute>
         <code>IS_CLUSTERED</code>
         <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>MAXIMUM_POOL_SIZE</code>
+        <attribute>10</attribute>
+      </attribute>
+      <attribute>
+        <code>POOLING_poolPreparedStatements</code>
+        <attribute>false</attribute>
+      </attribute>
+      <attribute>
+        <code>POOLING_removeAbandoned</code>
+        <attribute>false</attribute>
+      </attribute>
+      <attribute>
+        <code>POOLING_removeAbandonedTimeout</code>
+        <attribute>300</attribute>
+      </attribute>
+      <attribute>
+        <code>POOLING_testOnBorrow</code>
+        <attribute>true</attribute>
+      </attribute>
+      <attribute>
+        <code>POOLING_testWhileIdle</code>
+        <attribute>false</attribute>
+      </attribute>
+      <attribute>
+        <code>POOLING_timeBetweenEvictionRunsMillis</code>
+        <attribute>60000</attribute>
+      </attribute>
+      <attribute>
+        <code>POOLING_validationQuery</code>
+        <attribute>SELECT 1</attribute>
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
@@ -504,7 +540,7 @@
       </attribute>
       <attribute>
         <code>USE_POOLING</code>
-        <attribute>N</attribute>
+        <attribute>Y</attribute>
       </attribute>
     </attributes>
   </connection>
