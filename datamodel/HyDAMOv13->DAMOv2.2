@@ -1,0 +1,19 @@
+We zitten in de overgangsfase van het NHI datamodel HyDAMOv13 naar het Waterschapshuis (hWh) datamodel DAMOv2.2.
+HyDAMO wordt dus opgenomen in DAMO. Data conform DAMOv2.2 zullen in het eerste kwartaal van 2022 vanuit de waterschappen aan het CDL aangeleverd kunnen worden via de DAMO Connector.
+Dat kan nu al voor v2.1, maar vanaf v2.2 zitten alle objecten en attributen van HyDAMOv13 erin.
+
+Er zijn in die overgang van HyDAMOv13 naar DAMOv2.2 nog enkele wijzigingen doorgevoerd die van belang zijn.
+De belangrijkste zijn deze:
+
++ Het object Afsluitmiddel binnen HyDAMOv13 zal binnen DAMOv2.2 als nieuw object opgevoerd worden (naast het al bestaande object Afsluitmiddel binnen DAMOv1.5) onder de naam: Regelmiddel.
++ Het object Doorstroomopening binnen HyDAMOv13 zal binnen DAMOv2.2 als nieuw object opgevoerd worden (naast het al bestaande object Doorstroomopening binnen DAMOv1.5) onder de naam: KunstwerkOpening.
++ Relaties tussen objecten verlopen in HyDAMOv13 via het attribuut Code. Dat zal binnen DAMOv2.2 via het attribuut GlobalID verlopen.
++ NormGeparamProfiel is in HyDAMOv13 één object terwijl dat binnen DAMOv2.2 is opgedeeld in twee tabellen: NormGeparamProfiel en NormGeparamProfielWaarde.
+
+Er komen eind november 2021 twee datamodel formaten beschikbaar van DAMOv2.2:
+1 JSON schema - een platgeslagen format zonder gedefinieerde relaties en waarin de keuzedomeinen bestaan uit de Descriptions (tekst) en niet uit de Code (int).
+2 ESRI XML Workspace - een complete versie van het datamodel inclusief Relationship Classes en Coded Value Domains die binnen ArcGIS geimporteerd kan worden.
+
+We zullen ze via deze Github repos delen, zodat de opbouw van het datamodel DAMOv2.2 eenduidig kan worden uitgewisseld.
+
+1 nov 2021, Gerry Roelofs (g.roelofs@wrij.nl)
