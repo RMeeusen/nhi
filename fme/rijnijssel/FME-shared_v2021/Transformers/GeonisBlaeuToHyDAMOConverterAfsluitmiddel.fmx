@@ -1,0 +1,1386 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <TRANSFORMER
+# TRANSFORMER_BEGIN GeonisBlaeuToHyDAMOConverterAfsluitmiddel,1,,9b3c7a8b-1b4a-4fb4-82e7-0257f0d1c17e,"Linked by Default",No,NO_PARALLELISM,,No,21326,YES,No,38,No,
+# <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Custom Transformer om data van afsluiters van Geonis Blaeu format om te zetten naar Hydamo v13 format. </p>
+# <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
+#     <br/>
+# </p>
+# <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Opgesteld in 2020 door Sweco - Tessa Andringa (tessa.andringa@sweco.nl) </p>
+# 
+# TRANSFORMER_END
+#!   ARCGIS_COMPATIBILITY="ARCGIS_AUTO"
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BLOCKED_LOOPING="No"
+#!   CATEGORY=""
+#!   DESCRIPTION="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Custom Transformer om data van afsluiters van Geonis Blaeu format om te zetten naar Hydamo v13 format. &lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Opgesteld in 2020 door Sweco - Tessa Andringa (tessa.andringa@sweco.nl) &lt;/p&gt;&#10;"
+#!   DOC_EXTENTS="8042.46 1223.01"
+#!   DOC_TOP_LEFT="-2212.52 -982.384"
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="21326"
+#!   FME_DOCUMENT_GUID="9b3c7a8b-1b4a-4fb4-82e7-0257f0d1c17e"
+#!   FME_DOCUMENT_PRIORGUID="7f37f806-db08-420c-85cc-dcd7ff901f89,7be121fe-17d1-4df3-921b-f4919f18d119,5c434024-ee98-44c4-9d00-f2778ab391a8,ab0907df-20e4-4cf9-9b9c-58821f91170c,10c61165-e953-40fb-8883-2b9ab08dfb22,817a7e64-3998-4196-96bf-bf37e33ebac8,185492d1-11ae-479e-81b9-e4cfef375beb,31a1090b-d425-453f-988c-bcfbb46adf97,c53d6aa7-5a67-4984-9bda-da1b2f6bed5a,3e1179cd-e5f0-4b1a-b261-84f0c4c8c415,f1ec4c8c-6a7d-47fd-b086-4d0eb67c08b0,d44fcd8f-0687-4b10-8391-2556e97d0e99,524a1498-3678-4b4a-860f-cc85e5ef5d51,84bfb97a-3f86-45ad-865a-1758b03cc32b,ec0df361-3bb3-41e3-8419-2bda4d71aa49,64b46e1d-3f7d-440e-903b-f30e9b5f65f4,a4b03d3a-2f4f-48ef-9a5c-addc3ede83cf,f68d3d47-be1e-46ed-af07-32f7fd9b764c,0db3e895-ab2f-4ec9-aaab-b2e08224580f,0bc3c97e-1bd1-41ff-97c1-48e98acaca42"
+#!   FME_LINKED_TRANSFORMER_VERSION="1"
+#!   FME_NAMES_ENCODING="windows-1252"
+#!   FME_PROCESS_COUNT="NO_PARALLELISM"
+#!   FME_PROCESS_GROUPS_ORDERED="No"
+#!   FME_PROCESS_GROUP_BY=""
+#!   FME_PROCESS_PRESERVE_GROUP_ATTR="No"
+#!   FME_SERVER_SERVICES=""
+#!   FMX_ATTRIBUTE_PROPOGATION_MODE="AUTO"
+#!   FMX_INSERT_MODE="Linked by Default"
+#!   HISTORY=""
+#!   ITERATION_COUNT_ATTR=""
+#!   LAST_SAVE_BUILD="FME(R) 2021.0.3.0 (20210528 - Build 21326 - WIN64)"
+#!   LAST_SAVE_DATE="2021-09-01T13:48:23"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOOP_ITERATIONS=""
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="38"
+#!   REPLACED_BY=""
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   TITLE="GeonisBlaeuToHyDAMOConverterAfsluitmiddel"
+#!   USAGE=""
+#!   USE_MARKDOWN="NO"
+#!   VIEW_POSITION="1337.51 384.379"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   XFORM_DEPRECATED="No"
+#!   ZOOM_SCALE="100"
+#! >
+#! <DATASETS>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI STRING_OR_ATTR code_af code afsluitmiddel (KWKIDENT)"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL STRING_OR_ATTR globalID_AKN globalID afsluitmiddel (GLOBALID_AKN)"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL STRING_OR_ATTR duikersifonhevelID duikersifonhevelID"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR statusObject statusObject (KWKSTATU):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL STRING_OR_ATTR CREATED_DATE CREATED_DATE (CREATED_DATE)"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR LAST_EDITED_DATE LAST_EDITED_DATE (LAST EDITED DATE):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR soortAfsluitmiddel soortAfsluitmiddel (KWKAFSL1):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR soortRegelbaarheid soortRegelbaarheid (WRIJ_TYPE_REGELBAARHEID):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR breedte breedte:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR hoogte hoogte:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR minimaleHoogteBovenkant minimaleHoogteBovenkant:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL STRING_OR_ATTR maximaleHoogteBovenkant maximaleHoogteBovenkant"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR afvoerCoefficient afvoerCoefficient:"
+#!   DEFAULT_VALUE="1"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI LOOKUP_CHOICE_OR_ATTR administratiefgebied 1&lt;space&gt;-&lt;space&gt;aa&lt;space&gt;en&lt;space&gt;maas,1%2&lt;space&gt;-&lt;space&gt;amstel&lt;space&gt;gooi&lt;space&gt;en&lt;space&gt;vecht,2%3&lt;space&gt;-&lt;space&gt;brabantse&lt;space&gt;delta,3%4&lt;space&gt;-&lt;space&gt;delfland,4%5&lt;space&gt;-&lt;space&gt;dommel,5%6&lt;space&gt;-&lt;space&gt;fryslan,6%7&lt;space&gt;-&lt;space&gt;hollands&lt;space&gt;noorderkwartier,7%8&lt;space&gt;-&lt;space&gt;hollandse&lt;space&gt;delta,8%9&lt;space&gt;-&lt;space&gt;hunze&lt;space&gt;en&lt;space&gt;aas,9%10&lt;space&gt;-&lt;space&gt;noorderzijlvest,10%11&lt;space&gt;-&lt;space&gt;limburg,11%12&lt;space&gt;-&lt;space&gt;rijn&lt;space&gt;en&lt;space&gt;ijssel,12%13&lt;space&gt;-&lt;space&gt;rijnland,13%14&lt;space&gt;-&lt;space&gt;rivierenland,14%16&lt;space&gt;-&lt;space&gt;schieland&lt;space&gt;en&lt;space&gt;krimpenerwaard,16%17&lt;space&gt;-&lt;space&gt;stichtse&lt;space&gt;rijnlanden,17%18&lt;space&gt;-&lt;space&gt;zuiderzeeland,18%19&lt;space&gt;-&lt;space&gt;scheldestromen,19%20&lt;space&gt;-&lt;space&gt;vallei&lt;space&gt;en&lt;space&gt;veluwe,20%21&lt;space&gt;-&lt;space&gt;vechtstromen,21%22&lt;space&gt;-&lt;space&gt;drents&lt;space&gt;overijsselse&lt;space&gt;delta,22%20&lt;space&gt;-&lt;space&gt;rijkswaterstaat,30 administratiefgebied:"
+#!   DEFAULT_VALUE="12"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI STRING_OR_ATTR code_d code duiker(KDUIDENT)"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL STRING_OR_ATTR globalID_KDU globalID duiker (GLOBALID_KDU)"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR breedte_d breedte duiker (KDUBREED):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR hoogte_d hoogte duiker (KDUHGA1):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR hoogtebinnenonderkantbov_d hoogtebinnenonderkantbov duiker (KDUBOKBO):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI FLOAT_OR_ATTR zoek_afstand Zoekafstand voor matchende duiker (m):"
+#!   DEFAULT_VALUE="1"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR overlaatOnderlaat overlaatOnderlaat:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR hoogtebinnenonderkantben_d hoogtebinnenonderkantben duiker (KDUBOKBE):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR vorm_duiker vorm_duiker (KDUVORM):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <USER_PARAMETERS
+#!   FORM="eyJwYXJhbWV0ZXJzIjpbeyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiY29kZV9hZiIsInByb21wdCI6ImNvZGUgYWZzbHVpdG1pZGRlbCAoS1dLSURFTlQpIiwicmVxdWlyZWQiOnRydWUsInNob3dFZGl0QnV0dG9uIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiZ2xvYmFsSURfQUtOIiwicHJvbXB0IjoiZ2xvYmFsSUQgYWZzbHVpdG1pZGRlbCAoR0xPQkFMSURfQUtOKSIsInJlcXVpcmVkIjpmYWxzZSwic2hvd0VkaXRCdXR0b24iOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJkdWlrZXJzaWZvbmhldmVsSUQiLCJwcm9tcHQiOiJkdWlrZXJzaWZvbmhldmVsSUQiLCJyZXF1aXJlZCI6ZmFsc2UsInNob3dFZGl0QnV0dG9uIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoic3RhdHVzT2JqZWN0IiwicHJvbXB0Ijoic3RhdHVzT2JqZWN0IChLV0tTVEFUVSk6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJDUkVBVEVEX0RBVEUiLCJwcm9tcHQiOiJDUkVBVEVEX0RBVEUgKENSRUFURURfREFURSkiLCJyZXF1aXJlZCI6ZmFsc2UsInNob3dFZGl0QnV0dG9uIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiTEFTVF9FRElURURfREFURSIsInByb21wdCI6IkxBU1RfRURJVEVEX0RBVEUgKExBU1QgRURJVEVEIERBVEUpOiIsInJlcXVpcmVkIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoic29vcnRBZnNsdWl0bWlkZGVsIiwicHJvbXB0Ijoic29vcnRBZnNsdWl0bWlkZGVsIChLV0tBRlNMMSk6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6InNvb3J0UmVnZWxiYWFyaGVpZCIsInByb21wdCI6InNvb3J0UmVnZWxiYWFyaGVpZCAoV1JJSl9UWVBFX1JFR0VMQkFBUkhFSUQpOiIsInJlcXVpcmVkIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiYnJlZWR0ZSIsInByb21wdCI6ImJyZWVkdGU6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJob29ndGUiLCJwcm9tcHQiOiJob29ndGU6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJtaW5pbWFsZUhvb2d0ZUJvdmVua2FudCIsInByb21wdCI6Im1pbmltYWxlSG9vZ3RlQm92ZW5rYW50OiIsInJlcXVpcmVkIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoibWF4aW1hbGVIb29ndGVCb3ZlbmthbnQiLCJwcm9tcHQiOiJtYXhpbWFsZUhvb2d0ZUJvdmVua2FudCIsInJlcXVpcmVkIjpmYWxzZSwic2hvd0VkaXRCdXR0b24iOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImRlZmF1bHRWYWx1ZSI6IjEiLCJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiYWZ2b2VyQ29lZmZpY2llbnQiLCJwcm9tcHQiOiJhZnZvZXJDb2VmZmljaWVudDoiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJjaG9pY2VzIjpbeyJkaXNwbGF5IjoiMSAtIGFhIGVuIG1hYXMiLCJ2YWx1ZSI6IjEifSx7ImRpc3BsYXkiOiIyIC0gYW1zdGVsIGdvb2kgZW4gdmVjaHQiLCJ2YWx1ZSI6IjIifSx7ImRpc3BsYXkiOiIzIC0gYnJhYmFudHNlIGRlbHRhIiwidmFsdWUiOiIzIn0seyJkaXNwbGF5IjoiNCAtIGRlbGZsYW5kIiwidmFsdWUiOiI0In0seyJkaXNwbGF5IjoiNSAtIGRvbW1lbCIsInZhbHVlIjoiNSJ9LHsiZGlzcGxheSI6IjYgLSBmcnlzbGFuIiwidmFsdWUiOiI2In0seyJkaXNwbGF5IjoiNyAtIGhvbGxhbmRzIG5vb3JkZXJrd2FydGllciIsInZhbHVlIjoiNyJ9LHsiZGlzcGxheSI6IjggLSBob2xsYW5kc2UgZGVsdGEiLCJ2YWx1ZSI6IjgifSx7ImRpc3BsYXkiOiI5IC0gaHVuemUgZW4gYWFzIiwidmFsdWUiOiI5In0seyJkaXNwbGF5IjoiMTAgLSBub29yZGVyemlqbHZlc3QiLCJ2YWx1ZSI6IjEwIn0seyJkaXNwbGF5IjoiMTEgLSBsaW1idXJnIiwidmFsdWUiOiIxMSJ9LHsiZGlzcGxheSI6IjEyIC0gcmlqbiBlbiBpanNzZWwiLCJ2YWx1ZSI6IjEyIn0seyJkaXNwbGF5IjoiMTMgLSByaWpubGFuZCIsInZhbHVlIjoiMTMifSx7ImRpc3BsYXkiOiIxNCAtIHJpdmllcmVubGFuZCIsInZhbHVlIjoiMTQifSx7ImRpc3BsYXkiOiIxNiAtIHNjaGllbGFuZCBlbiBrcmltcGVuZXJ3YWFyZCIsInZhbHVlIjoiMTYifSx7ImRpc3BsYXkiOiIxNyAtIHN0aWNodHNlIHJpam5sYW5kZW4iLCJ2YWx1ZSI6IjE3In0seyJkaXNwbGF5IjoiMTggLSB6dWlkZXJ6ZWVsYW5kIiwidmFsdWUiOiIxOCJ9LHsiZGlzcGxheSI6IjE5IC0gc2NoZWxkZXN0cm9tZW4iLCJ2YWx1ZSI6IjE5In0seyJkaXNwbGF5IjoiMjAgLSB2YWxsZWkgZW4gdmVsdXdlIiwidmFsdWUiOiIyMCJ9LHsiZGlzcGxheSI6IjIxIC0gdmVjaHRzdHJvbWVuIiwidmFsdWUiOiIyMSJ9LHsiZGlzcGxheSI6IjIyIC0gZHJlbnRzIG92ZXJpanNzZWxzZSBkZWx0YSIsInZhbHVlIjoiMjIifSx7ImRpc3BsYXkiOiIyMCAtIHJpamtzd2F0ZXJzdGFhdCIsInZhbHVlIjoiMzAifV0sImRlZmF1bHRWYWx1ZSI6IjEyIiwibmFtZSI6ImFkbWluaXN0cmF0aWVmZ2ViaWVkIiwicHJvbXB0IjoiYWRtaW5pc3RyYXRpZWZnZWJpZWQ6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoiZHJvcGRvd24iLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJjb2RlX2QiLCJwcm9tcHQiOiJjb2RlIGR1aWtlcihLRFVJREVOVCkiLCJyZXF1aXJlZCI6dHJ1ZSwic2hvd0VkaXRCdXR0b24iOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJnbG9iYWxJRF9LRFUiLCJwcm9tcHQiOiJnbG9iYWxJRCBkdWlrZXIgKEdMT0JBTElEX0tEVSkiLCJyZXF1aXJlZCI6ZmFsc2UsInNob3dFZGl0QnV0dG9uIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiYnJlZWR0ZV9kIiwicHJvbXB0IjoiYnJlZWR0ZSBkdWlrZXIgKEtEVUJSRUVEKToiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiaG9vZ3RlX2QiLCJwcm9tcHQiOiJob29ndGUgZHVpa2VyIChLRFVIR0ExKToiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiaG9vZ3RlYmlubmVub25kZXJrYW50Ym92X2QiLCJwcm9tcHQiOiJob29ndGViaW5uZW5vbmRlcmthbnRib3YgZHVpa2VyIChLRFVCT0tCTyk6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZGVmYXVsdFZhbHVlIjoiMSIsIm5hbWUiOiJ6b2VrX2Fmc3RhbmQiLCJwcm9tcHQiOiJab2VrYWZzdGFuZCB2b29yIG1hdGNoZW5kZSBkdWlrZXIgKG0pOiIsInJlcXVpcmVkIjp0cnVlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6Im51bWJlciIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6Im92ZXJsYWF0T25kZXJsYWF0IiwicHJvbXB0Ijoib3ZlcmxhYXRPbmRlcmxhYXQ6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJob29ndGViaW5uZW5vbmRlcmthbnRiZW5fZCIsInByb21wdCI6Imhvb2d0ZWJpbm5lbm9uZGVya2FudGJlbiBkdWlrZXIgKEtEVUJPS0JFKToiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoidm9ybV9kdWlrZXIiLCJwcm9tcHQiOiJ2b3JtX2R1aWtlciAoS0RVVk9STSk6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifV19"
+#! >
+#! <PARAMETER_INFO>
+#!     <INFO NAME="CREATED_DATE" IS_STAND_ALONE="true" />
+#!     <INFO NAME="LAST_EDITED_DATE" IS_STAND_ALONE="true" />
+#!     <INFO NAME="administratiefgebied" IS_STAND_ALONE="true" />
+#!     <INFO NAME="afvoerCoefficient" IS_STAND_ALONE="true" />
+#!     <INFO NAME="breedte" IS_STAND_ALONE="true" />
+#!     <INFO NAME="breedte_d" IS_STAND_ALONE="true" />
+#!     <INFO NAME="code_af" IS_STAND_ALONE="true" />
+#!     <INFO NAME="code_d" IS_STAND_ALONE="true" />
+#!     <INFO NAME="duikersifonhevelID" IS_STAND_ALONE="true" />
+#!     <INFO NAME="globalID_AKN" IS_STAND_ALONE="true" />
+#!     <INFO NAME="globalID_KDU" IS_STAND_ALONE="true" />
+#!     <INFO NAME="hoogte" IS_STAND_ALONE="true" />
+#!     <INFO NAME="hoogte_d" IS_STAND_ALONE="true" />
+#!     <INFO NAME="hoogtebinnenonderkantben_d" IS_STAND_ALONE="true" />
+#!     <INFO NAME="hoogtebinnenonderkantbov_d" IS_STAND_ALONE="true" />
+#!     <INFO NAME="maximaleHoogteBovenkant" IS_STAND_ALONE="true" />
+#!     <INFO NAME="minimaleHoogteBovenkant" IS_STAND_ALONE="true" />
+#!     <INFO NAME="overlaatOnderlaat" IS_STAND_ALONE="true" />
+#!     <INFO NAME="soortAfsluitmiddel" IS_STAND_ALONE="true" />
+#!     <INFO NAME="soortRegelbaarheid" IS_STAND_ALONE="true" />
+#!     <INFO NAME="statusObject" IS_STAND_ALONE="true" />
+#!     <INFO NAME="vorm_duiker" IS_STAND_ALONE="true" />
+#!     <INFO NAME="zoek_afstand" IS_STAND_ALONE="false" />
+#! </PARAMETER_INFO>
+#! </USER_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="27"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Relateren aan duiker indien exact 1 match&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="2287.4814481478147 58.12253122531223"
+#!   TOP_LEFT="2287.4814481478147 58.12253122531223"
+#!   BOTTOM_RIGHT="2717.4814481478147 59.12253122531223"
+#!   BOUNDING_RECT="2287.4814481478147 58.12253122531223 430 -1"
+#!   ORDER="500000000000010"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="1,1,0.95686274509803926,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="21"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="44"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;maak punt aan op startvertex&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-506.75468754687552 -250.62815628156284"
+#!   TOP_LEFT="-506.75468754687552 -250.62815628156284"
+#!   BOTTOM_RIGHT="-44.753619289146059 -251.62815628156284"
+#!   BOUNDING_RECT="-506.75468754687552 -250.62815628156284 462.00106825772946 1"
+#!   ORDER="500000000000018"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="1,1,0.95686274509803926,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="35"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="45"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;maak punt aan op eindvertex&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-474.75361928914606 -733.8832311095324"
+#!   TOP_LEFT="-474.75361928914606 -733.8832311095324"
+#!   BOTTOM_RIGHT="-44.753619289146059 -734.8832311095324"
+#!   BOUNDING_RECT="-474.75361928914606 -733.8832311095324 430 1"
+#!   ORDER="500000000000019"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="1,1,0.95686274509803926,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="37"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="5"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="615.63224638677048 240.62840628406283"
+#!   BOUNDING_RECT="615.63224638677048 240.62840628406283 431 71"
+#!   ORDER="500000000000001"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21326"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="duikersifonhevelID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="soortAfsluitmiddel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="soortRegelbaarheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="minimaleHoogteBovenkant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="maximaleHoogteBovenkant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="afvoerCoefficient" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="overlaatOnderlaat" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; code $(code_af) SET_TO  duikersifonhevelID $(duikersifonhevelID) SET_TO  statusObject $(statusObject) SET_TO  CREATED_DATE $(CREATED_DATE) SET_TO  LAST_EDITED_DATE $(LAST_EDITED_DATE) SET_TO  soortAfsluitmiddel $(soortAfsluitmiddel) SET_TO  soortRegelbaarheid $(soortRegelbaarheid) SET_TO  breedte $(breedte) SET_TO  hoogte $(hoogte) SET_TO  minimaleHoogteBovenkant $(minimaleHoogteBovenkant) SET_TO  maximaleHoogteBovenkant $(maximaleHoogteBovenkant) SET_TO  afvoerCoefficient $(afvoerCoefficient) SET_TO  administratiefgebied $(administratiefgebied) SET_TO  overlaatOnderlaat $(overlaatOnderlaat) SET_TO  globalID $(globalID_AKN) SET_TO"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager_3"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="8"
+#!   TYPE="AttributeKeeper"
+#!   VERSION="3"
+#!   POSITION="4246.917469174693 -223.12903129031292"
+#!   BOUNDING_RECT="4246.917469174693 -223.12903129031292 431 71"
+#!   ORDER="500000000000002"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21326"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="duikersifonhevelID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="soortAfsluitmiddel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="soortRegelbaarheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="minimaleHoogteBovenkant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="maximaleHoogteBovenkant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="afvoerCoefficient" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="overlaatOnderlaat" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="CREATE_BULK_MODE_FEATURES" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="KEEP_ATTRS" PARM_VALUE="administratiefgebied,breedte,afvoerCoefficient,code,maximaleHoogteBovenkant,statusObject,soortAfsluitmiddel,soortRegelbaarheid,minimaleHoogteBovenkant,hoogte,LAST_EDITED_DATE,CREATED_DATE,duikersifonhevelID,overlaatOnderlaat,globalID"/>
+#!     <XFORM_PARM PARM_NAME="KEEP_LIST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_ON_ATTRIBUTE_CHANGE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeKeeper"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="12"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="2943.779437794376 -168.75468754687549"
+#!   BOUNDING_RECT="2943.779437794376 -168.75468754687549 431 71"
+#!   ORDER="500000000000004"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21326"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="duikersifonhevelID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="soortAfsluitmiddel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="soortRegelbaarheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="minimaleHoogteBovenkant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="maximaleHoogteBovenkant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="afvoerCoefficient" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="code_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_related_candidates" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="overlaatOnderlaat" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_bov" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_ben" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vorm_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID_afsluiter" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="index index  NO_OP code code  NO_OP duikersifonhevelID duikersifonhevelID &lt;at&gt;Value&lt;openparen&gt;code_duiker&lt;closeparen&gt; SET_TO statusObject statusObject  NO_OP CREATED_DATE CREATED_DATE  NO_OP soortAfsluitmiddel soortAfsluitmiddel  NO_OP soortRegelbaarheid soortRegelbaarheid  NO_OP breedte breedte &lt;at&gt;Value&lt;openparen&gt;breedte_duiker&lt;closeparen&gt; SET_TO hoogte hoogte &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;&lt;at&gt;Value&lt;openparen&gt;hoogte_duiker&lt;closeparen&gt;&apos;BOOL_OP;AND;COMPOSITE_TEST;1 AND 2;TEST &lt;at&gt;Value&lt;openparen&gt;vorm_duiker&lt;closeparen&gt; = 1;TEST hoogte_duiker ATTRIBUTE_VALUE_NULL _FME_BLANK_STRING_&apos;&lt;at&gt;Value&lt;openparen&gt;breedte_duiker&lt;closeparen&gt;&apos;FME_NUM_CONDITIONS2___&quot; SET_TO minimaleHoogteBovenkant minimaleHoogteBovenkant &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;&lt;at&gt;Evaluate&lt;openparen&gt;&lt;at&gt;Evaluate&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;hoogte&lt;closeparen&gt;+&lt;at&gt;Value&lt;openparen&gt;bok_duiker_bov&lt;closeparen&gt;&lt;closeparen&gt;&lt;closeparen&gt;&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST &lt;at&gt;Value&lt;openparen&gt;index&lt;closeparen&gt; = 0&apos;&lt;at&gt;Evaluate&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;hoogte&lt;closeparen&gt;+&lt;at&gt;Value&lt;openparen&gt;bok_duiker_bov&lt;closeparen&gt;&lt;closeparen&gt;&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST &lt;at&gt;Value&lt;openparen&gt;index&lt;closeparen&gt; = -1&apos;&lt;at&gt;Evaluate&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;hoogte&lt;closeparen&gt;+&lt;at&gt;Value&lt;openparen&gt;bok_duiker_ben&lt;closeparen&gt;&lt;closeparen&gt;&apos;FME_NUM_CONDITIONS3___&quot; SET_TO maximaleHoogteBovenkant maximaleHoogteBovenkant &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;&lt;at&gt;Evaluate&lt;openparen&gt;&lt;at&gt;Evaluate&lt;openparen&gt;2*&lt;at&gt;Value&lt;openparen&gt;hoogte&lt;closeparen&gt;+&lt;at&gt;Value&lt;openparen&gt;bok_duiker_bov&lt;closeparen&gt;&lt;closeparen&gt;&lt;closeparen&gt;&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST &lt;at&gt;Value&lt;openparen&gt;index&lt;closeparen&gt; = 0&apos;&lt;at&gt;Evaluate&lt;openparen&gt;2*&lt;at&gt;Value&lt;openparen&gt;hoogte&lt;closeparen&gt;+&lt;at&gt;Value&lt;openparen&gt;bok_duiker_bov&lt;closeparen&gt;&lt;closeparen&gt;&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST &lt;at&gt;Value&lt;openparen&gt;index&lt;closeparen&gt; = -1&apos;&lt;at&gt;Evaluate&lt;openparen&gt;2*&lt;at&gt;Value&lt;openparen&gt;hoogte&lt;closeparen&gt;+&lt;at&gt;Value&lt;openparen&gt;bok_duiker_ben&lt;closeparen&gt;&lt;closeparen&gt;&apos;FME_NUM_CONDITIONS3___&quot; SET_TO afvoerCoefficient afvoerCoefficient  NO_OP administratiefgebied administratiefgebied  NO_OP code_duiker code_duiker  NO_OP breedte_duiker breedte_duiker  NO_OP hoogte_duiker hoogte_duiker  NO_OP _related_candidates _related_candidates  NO_OP LAST_EDITED_DATE LAST_EDITED_DATE  NO_OP overlaatOnderlaat overlaatOnderlaat  NO_OP bok_duiker_bov bok_duiker_bov  NO_OP bok_duiker_ben bok_duiker_ben  NO_OP vorm_duiker vorm_duiker  NO_OP globalID_afsluiter globalID_afsluiter  NO_OP globalID_duiker globalID_duiker  NO_OP"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="15"
+#!   TYPE="Bufferer"
+#!   VERSION="14"
+#!   POSITION="1040.6354063540634 -437.50437504375043"
+#!   BOUNDING_RECT="1040.6354063540634 -437.50437504375043 431 71"
+#!   ORDER="500000000000006"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18586"
+#! >
+#!     <OUTPUT_FEAT NAME="BUFFERED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="code_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_bov" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_ben" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vorm_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="index" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="code_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_bov" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_ben" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="breedte_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="vorm_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ANGLE" PARM_VALUE="22.5"/>
+#!     <XFORM_PARM PARM_NAME="AREA_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="CAP_STYLE" PARM_VALUE="Round"/>
+#!     <XFORM_PARM PARM_NAME="CORNER_STYLE" PARM_VALUE="Round"/>
+#!     <XFORM_PARM PARM_NAME="FME_PROCESS_COUNTDISP" PARM_VALUE="No Parallelism"/>
+#!     <XFORM_PARM PARM_NAME="FME_PROCESS_GROUPS_ORDERED" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="GENERATE_LIST_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS_TO_INCLUDE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS_TO_INCLUDE_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MITER_LIMIT" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MODE" PARM_VALUE="AREA"/>
+#!     <XFORM_PARM PARM_NAME="OFFSET" PARM_VALUE="$(zoek_afstand)"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SOLID_GROUP" PARM_VALUE="FME_DISCLOSURE_CLOSED"/>
+#!     <XFORM_PARM PARM_NAME="SPHERE_DIVISIONS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Bufferer"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="16"
+#!   TYPE="SpatialRelator"
+#!   VERSION="10"
+#!   POSITION="1712.5171251712518 -138.1287812878129"
+#!   BOUNDING_RECT="1712.5171251712518 -138.1287812878129 431 71"
+#!   ORDER="500000000000007"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18586"
+#! >
+#!     <OUTPUT_FEAT NAME="Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="duikersifonhevelID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="soortAfsluitmiddel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="soortRegelbaarheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="minimaleHoogteBovenkant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="maximaleHoogteBovenkant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="afvoerCoefficient" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="overlaatOnderlaat" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="code_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_bov" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_ben" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vorm_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_related_candidates" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;Rejected&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="duikersifonhevelID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="soortAfsluitmiddel" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="soortRegelbaarheid" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="breedte" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="minimaleHoogteBovenkant" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="maximaleHoogteBovenkant" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="afvoerCoefficient" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="overlaatOnderlaat" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="index" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="code_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_bov" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_ben" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="breedte_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="vorm_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="AGGREGATE_HANDLING" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_ACCUM_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_ACCUM_MODE" PARM_VALUE="Merge Supplier"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_CONFLICT_RES" PARM_VALUE="Use Requestor"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_PREFIX" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="CALC_CARD" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="CURVE_BOUNDARY_RULE_PARAM" PARM_VALUE="Default Rule"/>
+#!     <XFORM_PARM PARM_NAME="DIFFATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FME_PROCESS_COUNTDISP" PARM_VALUE="No Parallelism"/>
+#!     <XFORM_PARM PARM_NAME="FME_PROCESS_GROUPS_ORDERED" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="GENERATE_LIST_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS_TO_INCLUDE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS_TO_INCLUDE_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MERGE_ATTR_GROUP" PARM_VALUE="YES"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PREDICATES" PARM_VALUE="WITHIN"/>
+#!     <XFORM_PARM PARM_NAME="SUCCESS_ATTR" PARM_VALUE="_related_candidates"/>
+#!     <XFORM_PARM PARM_NAME="TESTS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SpatialRelator"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="21"
+#!   TYPE="Tester"
+#!   VERSION="2"
+#!   POSITION="2311.4814481478147 -163.12903129031292"
+#!   BOUNDING_RECT="2311.4814481478147 -163.12903129031292 431 71"
+#!   ORDER="500000000000008"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20238"
+#! >
+#!     <OUTPUT_FEAT NAME="PASSED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="duikersifonhevelID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="soortAfsluitmiddel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="soortRegelbaarheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="minimaleHoogteBovenkant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="maximaleHoogteBovenkant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="afvoerCoefficient" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="overlaatOnderlaat" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="code_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_bov" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_ben" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vorm_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_related_candidates" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="FAILED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="duikersifonhevelID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="soortAfsluitmiddel" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="soortRegelbaarheid" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="breedte" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="minimaleHoogteBovenkant" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="maximaleHoogteBovenkant" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="afvoerCoefficient" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="overlaatOnderlaat" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="index" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="code_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_bov" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_ben" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="breedte_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="vorm_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_related_candidates" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="BOOL_OP" PARM_VALUE="OR"/>
+#!     <XFORM_PARM PARM_NAME="COMPOSITE_MSG" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="1"/>
+#!     <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST &lt;at&gt;Value&lt;openparen&gt;_related_candidates&lt;closeparen&gt; = 1"/>
+#!     <XFORM_PARM PARM_NAME="TEST_CLAUSE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="TEST"/>
+#!     <XFORM_PARM PARM_NAME="TEST_PREVIEW_GROUP" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Tester"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="19"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="-1309.3870038057314 -462.50462504625051"
+#!   BOUNDING_RECT="-1309.3870038057314 -462.50462504625051 431 71"
+#!   ORDER="500000000000009"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21326"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_bov" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_ben" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vorm_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; code_duiker $(code_d) SET_TO  bok_duiker_bov $(hoogtebinnenonderkantbov_d) SET_TO  bok_duiker_ben $(hoogtebinnenonderkantben_d) SET_TO  breedte_duiker $(breedte_d) SET_TO  hoogte_duiker $(hoogte_d) SET_TO  vorm_duiker $(vorm_duiker) SET_TO  globalID $(globalID_KDU) SET_TO"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="26"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="3537.5353753537529 -225.00225002250022"
+#!   BOUNDING_RECT="3537.5353753537529 -225.00225002250022 431 71"
+#!   ORDER="500000000000004"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21326"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="duikersifonhevelID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="soortAfsluitmiddel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="soortRegelbaarheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="minimaleHoogteBovenkant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="maximaleHoogteBovenkant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="afvoerCoefficient" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="code_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_related_candidates" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="overlaatOnderlaat" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_bov" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_ben" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vorm_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID_afsluiter" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="code code  NO_OP duikersifonhevelID duikersifonhevelID  NO_OP statusObject statusObject &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;99&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 100&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 300&apos;3&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 400&apos;4&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 500&apos;5&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 201&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 202&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 203&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 204&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 9900&apos;98&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 9800&apos;99&apos;FME_NUM_CONDITIONS11___&quot; SET_TO CREATED_DATE CREATED_DATE  NO_OP soortAfsluitmiddel soortAfsluitmiddel &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;99&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;soortAfsluitmiddel&lt;closeparen&gt; = 1&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;soortAfsluitmiddel&lt;closeparen&gt; = 2&apos;2&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;soortAfsluitmiddel&lt;closeparen&gt; = 3&apos;3&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;soortAfsluitmiddel&lt;closeparen&gt; = 4&apos;4&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;soortAfsluitmiddel&lt;closeparen&gt; = 5&apos;5&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;soortAfsluitmiddel&lt;closeparen&gt; = 6&apos;6&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;soortAfsluitmiddel&lt;closeparen&gt; = 7&apos;4&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST &lt;at&gt;Value&lt;openparen&gt;soortAfsluitmiddel&lt;closeparen&gt; = 70&apos;7&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;soortAfsluitmiddel&lt;closeparen&gt; = 71&apos;98&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;soortAfsluitmiddel&lt;closeparen&gt; = 50&apos;97&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;soortAfsluitmiddel&lt;closeparen&gt; = 99&apos;98&apos;FME_NUM_CONDITIONS12___&quot; SET_TO soortRegelbaarheid soortRegelbaarheid &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;99&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;soortRegelbaarheid&lt;closeparen&gt; = 1&apos;4&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;soortRegelbaarheid&lt;closeparen&gt; = 2&apos;3&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;soortRegelbaarheid&lt;closeparen&gt; = 3&apos;2&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;soortRegelbaarheid&lt;closeparen&gt; = 4&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;soortRegelbaarheid&lt;closeparen&gt; = 98&apos;99&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;soortRegelbaarheid&lt;closeparen&gt; = 99&apos;98&apos;FME_NUM_CONDITIONS7___&quot; SET_TO breedte breedte  NO_OP hoogte hoogte  NO_OP minimaleHoogteBovenkant minimaleHoogteBovenkant  NO_OP maximaleHoogteBovenkant maximaleHoogteBovenkant  NO_OP afvoerCoefficient afvoerCoefficient  NO_OP administratiefgebied administratiefgebied  NO_OP code_duiker code_duiker  NO_OP breedte_duiker breedte_duiker  NO_OP hoogte_duiker hoogte_duiker  NO_OP _related_candidates _related_candidates  NO_OP LAST_EDITED_DATE LAST_EDITED_DATE  NO_OP overlaatOnderlaat overlaatOnderlaat &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;3&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST &lt;at&gt;Value&lt;openparen&gt;soortAfsluitmiddel&lt;closeparen&gt; IN 1&lt;comma&gt;2&lt;comma&gt;3&lt;comma&gt;6&lt;comma&gt;7&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST &lt;at&gt;Value&lt;openparen&gt;soortAfsluitmiddel&lt;closeparen&gt; IN 4&lt;comma&gt;5&apos;2&apos;FME_NUM_CONDITIONS3___&quot; SET_TO index index  NO_OP bok_duiker_bov bok_duiker_bov  NO_OP bok_duiker_ben bok_duiker_ben  NO_OP vorm_duiker vorm_duiker  NO_OP globalID_afsluiter globalID_afsluiter  NO_OP globalID_duiker globalID_duiker  NO_OP"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager_4"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="25"
+#!   TYPE="FeatureWriter"
+#!   VERSION="0"
+#!   POSITION="1784.3928439284393 -609.38109381093784"
+#!   BOUNDING_RECT="1784.3928439284393 -609.38109381093784 430 71"
+#!   ORDER="500000000000013"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21326"
+#! >
+#!     <OUTPUT_FEAT NAME="SUMMARY"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_dataset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_total_features_written" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE="EPSG:28992"/>
+#!     <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="G:&lt;backslash&gt;GIS&lt;space&gt;WATERSYSTEEM&lt;backslash&gt;HyDAMO&lt;backslash&gt;FME&lt;backslash&gt;output_v2021&lt;backslash&gt;testDHS&lt;backslash&gt;test_bufferer.gdb"/>
+#!     <XFORM_PARM PARM_NAME="DATASET_ATTR" PARM_VALUE="_dataset"/>
+#!     <XFORM_PARM PARM_NAME="DYNGROUP_0" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FEATURE_TYPES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FEATURE_TYPE_LIST_ATTR" PARM_VALUE="_feature_type"/>
+#!     <XFORM_PARM PARM_NAME="FILEGDB_ADVANCED" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FILEGDB_BEGIN_SQL" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FILEGDB_COORDINATE_SYSTEM_GRANULARITY" PARM_VALUE="FEATURE_TYPE"/>
+#!     <XFORM_PARM PARM_NAME="FILEGDB_DATASET_TEMPLATE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FILEGDB_DESTINATION_DATASETTYPE_VALIDATION" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="FILEGDB_END_SQL" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FILEGDB_OVERWRITE_GEODB" PARM_VALUE="YES"/>
+#!     <XFORM_PARM PARM_NAME="FILEGDB_WRITE_UNZONED_UTC" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="FILEGDB"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT_DIRECTIVES" PARM_VALUE="RUNTIME_MACROS,OVERWRITE_GEODB&lt;comma&gt;YES&lt;comma&gt;DATASET_TEMPLATE&lt;comma&gt;&lt;comma&gt;WRITE_UNZONED_UTC&lt;comma&gt;No&lt;comma&gt;DESTINATION_DATASETTYPE_VALIDATION&lt;comma&gt;Yes&lt;comma&gt;COORDINATE_SYSTEM_GRANULARITY&lt;comma&gt;FEATURE_TYPE&lt;comma&gt;ADVANCED&lt;comma&gt;&lt;comma&gt;BEGIN_SQL&lt;comma&gt;&lt;comma&gt;END_SQL&lt;comma&gt;,METAFILE,FILEGDB"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="FILEGDB_COORDINATE_SYSTEM_GRANULARITY,&quot;OPTIONAL NO_EDIT TEXT&quot;,FILEGDB&lt;space&gt;,FILEGDB_WRITE_UNZONED_UTC,&quot;OPTIONAL NO_EDIT TEXT&quot;,FILEGDB&lt;space&gt;,FILEGDB_BEGIN_SQL,&quot;OPTIONAL TEXT_EDIT_SQL_CFG_ENCODED MODE,SQL;FORMAT,FILEGDB&quot;,FILEGDB&lt;space&gt;SQL&lt;space&gt;To&lt;space&gt;Run&lt;space&gt;Before&lt;space&gt;Write,FILEGDB_DATASET_TEMPLATE,&quot;OPTIONAL SOURCE_GEODATABASE_CFG SWIZZLER:NO&quot;,FILEGDB&lt;space&gt;Template&lt;space&gt;File&lt;space&gt;Geodatabase:,FILEGDB_OVERWRITE_GEODB,&quot;OPTIONAL ACTIVECHECK YES%NO,DATASET_TEMPLATE&quot;,FILEGDB&lt;space&gt;Overwrite&lt;space&gt;Existing&lt;space&gt;Geodatabase:,FILEGDB_DESTINATION_DATASETTYPE_VALIDATION,&quot;OPTIONAL NO_EDIT TEXT&quot;,FILEGDB&lt;space&gt;,FILEGDB_ADVANCED,&quot;OPTIONAL DISCLOSUREGROUP BEGIN_SQL%END_SQL&quot;,FILEGDB&lt;space&gt;Advanced,FILEGDB_END_SQL,&quot;OPTIONAL TEXT_EDIT_SQL_CFG_ENCODED MODE,SQL;FORMAT,FILEGDB&quot;,FILEGDB&lt;space&gt;SQL&lt;space&gt;To&lt;space&gt;Run&lt;space&gt;After&lt;space&gt;Write"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_PROCESSING_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="MORE_SUMMARY_ATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NO_OUTPUT_PORTS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OUTPUTPORTS_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_PORTS" PARM_VALUE="&quot;&quot;"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_PORTS_MODE" PARM_VALUE="NO_OUTPUT_PORTS"/>
+#!     <XFORM_PARM PARM_NAME="PER_EACH_INPUT" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SELECTED_PORTS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="SUMMARY_ATTRS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TOTAL_FEATURES_WRITTEN_ATTR" PARM_VALUE="_total_features_written"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="WRITER_DIRECTIVES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="WRITER_FEATURE_TYPE_PARAMS" PARM_VALUE="Bufferer:Chopped,ftp_feature_type_name,Bufferer,ftp_writer,FILEGDB,ftp_geometry,geodb_polygon,ftp_dynamic_schema,no,ftp_dynamic_feature_type_name_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_geometry_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_schema_def_name_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_schema_sources,&lt;lt&gt;lt&lt;gt&gt;Unused&lt;lt&gt;gt&lt;gt&gt;,ftp_attribute_source,0,ftp_user_attributes,index&lt;comma&gt;text&lt;lt&gt;openparen&lt;gt&gt;200&lt;lt&gt;closeparen&lt;gt&gt;&lt;comma&gt;code_duiker&lt;comma&gt;text&lt;lt&gt;openparen&lt;gt&gt;200&lt;lt&gt;closeparen&lt;gt&gt;&lt;comma&gt;bok_duiker_bov&lt;comma&gt;text&lt;lt&gt;openparen&lt;gt&gt;200&lt;lt&gt;closeparen&lt;gt&gt;&lt;comma&gt;bok_duiker_ben&lt;comma&gt;text&lt;lt&gt;openparen&lt;gt&gt;200&lt;lt&gt;closeparen&lt;gt&gt;&lt;comma&gt;breedte_duiker&lt;comma&gt;text&lt;lt&gt;openparen&lt;gt&gt;200&lt;lt&gt;closeparen&lt;gt&gt;&lt;comma&gt;hoogte_duiker&lt;comma&gt;text&lt;lt&gt;openparen&lt;gt&gt;200&lt;lt&gt;closeparen&lt;gt&gt;&lt;comma&gt;vorm_duiker&lt;comma&gt;text&lt;lt&gt;openparen&lt;gt&gt;200&lt;lt&gt;closeparen&lt;gt&gt;,ftp_user_attribute_values,&lt;comma&gt;&lt;comma&gt;&lt;comma&gt;&lt;comma&gt;&lt;comma&gt;&lt;comma&gt;,ftp_format_parameters,fme_configuration_group&lt;comma&gt;&lt;comma&gt;fme_configuration_common_group&lt;comma&gt;&lt;comma&gt;fme_feature_operation&lt;comma&gt;INSERT&lt;comma&gt;fme_table_handling&lt;comma&gt;CREATE_IF_MISSING&lt;comma&gt;fme_update_geometry&lt;comma&gt;&lt;lt&gt;lt&lt;gt&gt;Unused&lt;lt&gt;gt&lt;gt&gt;&lt;comma&gt;fme_selection_group&lt;comma&gt;&lt;comma&gt;fme_selection_method&lt;comma&gt;&lt;lt&gt;lt&lt;gt&gt;Unused&lt;lt&gt;gt&lt;gt&gt;&lt;comma&gt;fme_match_columns&lt;comma&gt;&lt;lt&gt;lt&lt;gt&gt;Unused&lt;lt&gt;gt&lt;gt&gt;&lt;comma&gt;fme_where_builder_clause&lt;comma&gt;&lt;lt&gt;lt&lt;gt&gt;Unused&lt;lt&gt;gt&lt;gt&gt;&lt;comma&gt;fme_table_creation_group&lt;comma&gt;&lt;comma&gt;filegdb_object_id_field&lt;comma&gt;OBJECTID&lt;comma&gt;filegdb_object_id_alias&lt;comma&gt;OBJECTID&lt;comma&gt;filegdb_shape_field&lt;comma&gt;SHAPE&lt;comma&gt;filegdb_shape_alias&lt;comma&gt;SHAPE&lt;comma&gt;filegdb_config_keyword&lt;comma&gt;DEFAULTS&lt;comma&gt;filegdb_xy_tolerance&lt;comma&gt;&lt;comma&gt;filegdb_z_tolerance&lt;comma&gt;0.001&lt;comma&gt;filegdb_m_tolerance&lt;comma&gt;0.001"/>
+#!     <XFORM_PARM PARM_NAME="WRITER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="WRITER_METAFILE" PARM_VALUE="ATTRIBUTE_CASE,ANY_FIRST_NONNUMERIC,ATTRIBUTE_INVALID_CHARS,&lt;backslash&gt;&lt;backslash&gt;&lt;quote&gt;:&lt;dollar&gt;?*&lt;closeparen&gt;&lt;openparen&gt;&lt;lt&gt;&lt;gt&gt;|&lt;openbracket&gt;%#&lt;space&gt;&lt;apos&gt;&lt;amp&gt;+-&lt;closebracket&gt;.^&lt;backslash&gt;&lt;opencurly&gt;&lt;backslash&gt;&lt;closecurly&gt;~&lt;comma&gt;&lt;solidus&gt;,ATTRIBUTE_LENGTH,64,ATTR_TYPE_MAP,text&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;fme_varchar&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;text&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;fme_char&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;text&lt;openparen&gt;2048&lt;closeparen&gt;&lt;comma&gt;fme_buffer&lt;comma&gt;text&lt;openparen&gt;2048&lt;closeparen&gt;&lt;comma&gt;fme_xml&lt;comma&gt;text&lt;openparen&gt;2048&lt;closeparen&gt;&lt;comma&gt;fme_json&lt;comma&gt;blob&lt;comma&gt;fme_binarybuffer&lt;comma&gt;blob&lt;comma&gt;fme_varbinary&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;blob&lt;comma&gt;fme_binary&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;date&lt;comma&gt;fme_datetime&lt;comma&gt;date&lt;comma&gt;fme_date&lt;comma&gt;date&lt;comma&gt;fme_time&lt;comma&gt;single&lt;comma&gt;fme_real32&lt;comma&gt;double&lt;comma&gt;fme_real64&lt;comma&gt;double&lt;comma&gt;&lt;quote&gt;fme_decimal&lt;openparen&gt;width&lt;comma&gt;decimal&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;int&lt;comma&gt;fme_int32&lt;comma&gt;double&lt;comma&gt;fme_uint32&lt;comma&gt;text&lt;openparen&gt;20&lt;closeparen&gt;&lt;comma&gt;fme_int64&lt;comma&gt;text&lt;openparen&gt;20&lt;closeparen&gt;&lt;comma&gt;fme_uint64&lt;comma&gt;smallint&lt;comma&gt;fme_int16&lt;comma&gt;int&lt;comma&gt;fme_uint16&lt;comma&gt;smallint&lt;comma&gt;fme_int8&lt;comma&gt;smallint&lt;comma&gt;fme_uint8&lt;comma&gt;smallint&lt;comma&gt;fme_boolean&lt;comma&gt;objectid&lt;comma&gt;fme_int32&lt;comma&gt;guid&lt;comma&gt;fme_buffer&lt;comma&gt;globalid&lt;comma&gt;fme_buffer,DEST_ILLEGAL_ATTR_LIST,,FEATURE_TYPE_CASE,ANY_FIRST_NONNUMERIC,FEATURE_TYPE_INVALID_CHARS,&lt;backslash&gt;&lt;backslash&gt;&lt;quote&gt;:&lt;dollar&gt;?*&lt;closeparen&gt;&lt;openparen&gt;&lt;lt&gt;&lt;gt&gt;|&lt;openbracket&gt;%#&lt;space&gt;&lt;apos&gt;&lt;amp&gt;+-&lt;closebracket&gt;.^&lt;backslash&gt;&lt;opencurly&gt;&lt;backslash&gt;&lt;closecurly&gt;~&lt;comma&gt;,FEATURE_TYPE_LENGTH,0,FEATURE_TYPE_LENGTH_INCLUDES_PREFIX,false,FEATURE_TYPE_RESERVED_WORDS,,FORMAT_METAFILE,$(FME_HOME_ENCODED)metafile&lt;backslash&gt;FILEGDB.fmf,FORMAT_NAME,FILEGDB,GEOM_MAP,geodb_point&lt;comma&gt;fme_point&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_polygon&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_rounded_rectangle&lt;comma&gt;geodb_polyline&lt;comma&gt;fme_line&lt;comma&gt;geodb_multipoint&lt;comma&gt;fme_point&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_rectangle&lt;comma&gt;geodb_point&lt;comma&gt;fme_text&lt;comma&gt;geodb_polyline&lt;comma&gt;fme_arc&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_ellipse&lt;comma&gt;geodb_no_geom&lt;comma&gt;fme_no_geom&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_raster&lt;comma&gt;geodb_polyline&lt;comma&gt;fme_surface&lt;comma&gt;geodb_polyline&lt;comma&gt;fme_solid&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_point_cloud&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_voxel_grid&lt;comma&gt;geodb_no_geom&lt;comma&gt;fme_feature_table&lt;comma&gt;geodb_no_geom&lt;comma&gt;fme_collection,READER_ATTR_INDEX_TYPES,Indexed,READER_USES_DEF,yes,SOURCE,no,SUPPORTS_FEAT_TYPE_FANOUT,yes,SUPPORTS_MULTI_GEOM,no,WORKBENCH_CANNED_SCHEMA,,WRITER,FILEGDB,WRITER_ATTR_INDEX_TYPES,Indexed,WRITER_DEFLINE_PARMS,&lt;quote&gt;GUI&lt;space&gt;NAMEDGROUP&lt;space&gt;fme_configuration_group&lt;space&gt;fme_configuration_common_group%fme_spatial_group%fme_advanced_group%oracle_advanced_group&lt;space&gt;Table&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;NAMEDGROUP&lt;space&gt;fme_configuration_common_group&lt;space&gt;fme_feature_operation%fme_table_handling%mie_pack%oracle_model%fme_update_geometry%fme_selection_group%fme_table_creation_group&lt;space&gt;General&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;ACTIVECHOICE_LOOKUP&lt;space&gt;fme_feature_operation&lt;space&gt;Insert&lt;comma&gt;INSERT&lt;comma&gt;fme_update_geometry&lt;comma&gt;fme_selection_group&lt;comma&gt;mie_pack%Update&lt;comma&gt;UPDATE&lt;comma&gt;++fme_table_handling+USE_EXISTING&lt;comma&gt;++fme_selection_group+FME_DISCLOSURE_OPEN%Delete&lt;comma&gt;DELETE&lt;comma&gt;++fme_table_handling+USE_EXISTING&lt;comma&gt;fme_update_geometry&lt;comma&gt;++fme_selection_group+FME_DISCLOSURE_OPEN&lt;comma&gt;fme_spatial_group&lt;comma&gt;fme_advanced_group&lt;comma&gt;oracle_sequenced_cols%&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;fme_db_operation&lt;lt&gt;closeparen&lt;gt&gt;&lt;comma&gt;MULTIPLE&lt;comma&gt;++fme_table_handling+USE_EXISTING&lt;comma&gt;++fme_selection_group+FME_DISCLOSURE_OPEN&lt;space&gt;Feature&lt;space&gt;Operation&lt;quote&gt;&lt;comma&gt;INSERT&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;ACTIVECHOICE_LOOKUP&lt;space&gt;fme_table_handling&lt;space&gt;Use&lt;lt&gt;space&lt;gt&gt;Existing&lt;comma&gt;USE_EXISTING&lt;comma&gt;fme_table_creation_group%Create&lt;lt&gt;space&lt;gt&gt;If&lt;lt&gt;space&lt;gt&gt;Needed&lt;comma&gt;CREATE_IF_MISSING%Drop&lt;lt&gt;space&lt;gt&gt;and&lt;lt&gt;space&lt;gt&gt;Create&lt;comma&gt;DROP_CREATE%Truncate&lt;lt&gt;space&lt;gt&gt;Existing&lt;comma&gt;TRUNCATE_EXISTING&lt;comma&gt;fme_table_creation_group&lt;space&gt;Table&lt;space&gt;Handling&lt;quote&gt;&lt;comma&gt;CREATE_IF_MISSING&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;WHOLE_LINE&lt;space&gt;LOOKUP_CHOICE&lt;space&gt;fme_update_geometry&lt;space&gt;Yes&lt;comma&gt;YES%No&lt;comma&gt;NO&lt;space&gt;Update&lt;space&gt;Spatial&lt;space&gt;Column&lt;openparen&gt;s&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;YES&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;DISCLOSUREGROUP&lt;space&gt;fme_selection_group&lt;space&gt;fme_selection_method&lt;space&gt;Row&lt;space&gt;Selection&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;WHOLE_LINE&lt;space&gt;RADIOPARAMETERGROUP&lt;space&gt;fme_selection_method&lt;space&gt;fme_match_columns&lt;comma&gt;MATCH_COLUMNS%fme_where_builder_clause&lt;comma&gt;BUILDER&lt;space&gt;Row&lt;space&gt;Selection&lt;space&gt;Method&lt;quote&gt;&lt;comma&gt;MATCH_COLUMNS&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;WHOLE_LINE&lt;space&gt;ATTRLIST_COMMAS&lt;space&gt;fme_match_columns&lt;space&gt;Match&lt;space&gt;Columns&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;WHOLE_LINE&lt;space&gt;TEXT_EDIT_SQL_CFG_OR_ATTR&lt;space&gt;fme_where_builder_clause&lt;space&gt;MODE&lt;comma&gt;WHERE&lt;space&gt;WHERE&lt;space&gt;Clause&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;DISCLOSUREGROUP&lt;space&gt;fme_table_creation_group&lt;space&gt;filegdb_object_id_field%filegdb_object_id_alias%filegdb_shape_field%filegdb_shape_alias%filegdb_config_keyword%filegdb_xy_tolerance%filegdb_z_tolerance%filegdb_m_tolerance&lt;space&gt;Table&lt;space&gt;Creation&lt;space&gt;Parameters&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;TEXT&lt;space&gt;filegdb_object_id_field&lt;space&gt;Object&lt;space&gt;ID&lt;space&gt;Field&lt;quote&gt;&lt;comma&gt;OBJECTID&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;TEXT&lt;space&gt;filegdb_object_id_alias&lt;space&gt;Object&lt;space&gt;ID&lt;space&gt;Alias&lt;quote&gt;&lt;comma&gt;OBJECTID&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;TEXT&lt;space&gt;filegdb_shape_field&lt;space&gt;Shape&lt;space&gt;Field&lt;quote&gt;&lt;comma&gt;SHAPE&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;TEXT&lt;space&gt;filegdb_shape_alias&lt;space&gt;Shape&lt;space&gt;Alias&lt;quote&gt;&lt;comma&gt;SHAPE&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;TEXT&lt;space&gt;filegdb_config_keyword&lt;space&gt;Configuration&lt;space&gt;Keyword&lt;quote&gt;&lt;comma&gt;DEFAULTS&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;OPTIONAL&lt;space&gt;FLOAT&lt;space&gt;filegdb_xy_tolerance&lt;space&gt;XY&lt;space&gt;Tolerance&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;FLOAT&lt;space&gt;filegdb_z_tolerance&lt;space&gt;Z&lt;space&gt;Tolerance&lt;quote&gt;&lt;comma&gt;0.001&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;FLOAT&lt;space&gt;filegdb_m_tolerance&lt;space&gt;M&lt;space&gt;Tolerance&lt;quote&gt;&lt;comma&gt;0.001,WRITER_DEF_LINE_TEMPLATE,&lt;opencurly&gt;FME_GEN_GROUP_NAME&lt;closecurly&gt;&lt;comma&gt;filegdb_type&lt;comma&gt;&lt;opencurly&gt;FME_GEN_GEOMETRY&lt;closecurly&gt;&lt;comma&gt;filegdb_drop_table&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;filegdb_truncate_table&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;fme_feature_operation&lt;comma&gt;INSERT&lt;comma&gt;fme_table_handling&lt;comma&gt;CREATE_IF_MISSING&lt;comma&gt;fme_selection_method&lt;comma&gt;MATCH_COLUMNS&lt;comma&gt;fme_match_columns&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;fme_where_builder_clause&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;fme_update_geometry&lt;comma&gt;YES&lt;comma&gt;filegdb_object_id_field&lt;comma&gt;OBJECTID&lt;comma&gt;filegdb_object_id_alias&lt;comma&gt;OBJECTID&lt;comma&gt;filegdb_shape_field&lt;comma&gt;SHAPE&lt;comma&gt;filegdb_shape_alias&lt;comma&gt;SHAPE&lt;comma&gt;filegdb_config_keyword&lt;comma&gt;DEFAULTS&lt;comma&gt;filegdb_xy_tolerance&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;filegdb_z_tolerance&lt;comma&gt;0.001&lt;comma&gt;filegdb_m_tolerance&lt;comma&gt;0.001,WRITER_FORMAT_PARAMETER,DATASET_NAME&lt;comma&gt;&lt;quote&gt;gdb&lt;space&gt;file&lt;quote&gt;&lt;comma&gt;FEATURE_TYPE_NAME&lt;comma&gt;&lt;quote&gt;Feature&lt;space&gt;Class&lt;space&gt;or&lt;space&gt;Table&lt;quote&gt;&lt;comma&gt;FEATURE_TYPE_DEFAULT_NAME&lt;comma&gt;FeatureClass1&lt;comma&gt;READER_DATASET_HINT&lt;comma&gt;&lt;quote&gt;Select&lt;space&gt;the&lt;space&gt;File&lt;space&gt;Geodatabase&lt;space&gt;folder&lt;quote&gt;&lt;comma&gt;WRITER_DATASET_HINT&lt;comma&gt;&lt;quote&gt;Specify&lt;space&gt;File&lt;space&gt;Geodatabase&lt;space&gt;folder&lt;quote&gt;&lt;comma&gt;ATTRIBUTE_READING&lt;comma&gt;DEFLINE&lt;comma&gt;ATTRIBUTE_READING_HISTORIC&lt;comma&gt;ALL&lt;comma&gt;ADVANCED_PARMS&lt;comma&gt;&lt;quote&gt;FILEGDB_IN_BEGIN_SQL&lt;space&gt;FILEGDB_IN_END_SQL&lt;space&gt;FILEGDB_OUT_BEGIN_SQL&lt;space&gt;FILEGDB_OUT_END_SQL&lt;quote&gt;,WRITER_HAS_DEFLINE_ATTRS,yes,WRITER_USES_DEF,yes"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureWriter"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="34"
+#!   TYPE="FeatureWriter"
+#!   VERSION="0"
+#!   POSITION="1156.8876370453163 -911.38435612078251"
+#!   BOUNDING_RECT="1156.8876370453163 -911.38435612078251 430 71"
+#!   ORDER="500000000000013"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21326"
+#! >
+#!     <OUTPUT_FEAT NAME="SUMMARY"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_feature_type{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_dataset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_total_features_written" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE="EPSG:28992"/>
+#!     <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="G:&lt;backslash&gt;GIS&lt;space&gt;WATERSYSTEEM&lt;backslash&gt;HyDAMO&lt;backslash&gt;FME&lt;backslash&gt;output_v2021&lt;backslash&gt;testDHS&lt;backslash&gt;test_snipper_point.gdb"/>
+#!     <XFORM_PARM PARM_NAME="DATASET_ATTR" PARM_VALUE="_dataset"/>
+#!     <XFORM_PARM PARM_NAME="DYNGROUP_0" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FEATURE_TYPES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FEATURE_TYPE_LIST_ATTR" PARM_VALUE="_feature_type"/>
+#!     <XFORM_PARM PARM_NAME="FILEGDB_ADVANCED" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FILEGDB_BEGIN_SQL" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FILEGDB_COORDINATE_SYSTEM_GRANULARITY" PARM_VALUE="FEATURE_TYPE"/>
+#!     <XFORM_PARM PARM_NAME="FILEGDB_DATASET_TEMPLATE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FILEGDB_DESTINATION_DATASETTYPE_VALIDATION" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="FILEGDB_END_SQL" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FILEGDB_OVERWRITE_GEODB" PARM_VALUE="YES"/>
+#!     <XFORM_PARM PARM_NAME="FILEGDB_WRITE_UNZONED_UTC" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="FILEGDB"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT_DIRECTIVES" PARM_VALUE="RUNTIME_MACROS,OVERWRITE_GEODB&lt;comma&gt;YES&lt;comma&gt;DATASET_TEMPLATE&lt;comma&gt;&lt;comma&gt;WRITE_UNZONED_UTC&lt;comma&gt;No&lt;comma&gt;DESTINATION_DATASETTYPE_VALIDATION&lt;comma&gt;Yes&lt;comma&gt;COORDINATE_SYSTEM_GRANULARITY&lt;comma&gt;FEATURE_TYPE&lt;comma&gt;ADVANCED&lt;comma&gt;&lt;comma&gt;BEGIN_SQL&lt;comma&gt;&lt;comma&gt;END_SQL&lt;comma&gt;,METAFILE,FILEGDB"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="FILEGDB_COORDINATE_SYSTEM_GRANULARITY,&quot;OPTIONAL NO_EDIT TEXT&quot;,FILEGDB&lt;space&gt;,FILEGDB_WRITE_UNZONED_UTC,&quot;OPTIONAL NO_EDIT TEXT&quot;,FILEGDB&lt;space&gt;,FILEGDB_BEGIN_SQL,&quot;OPTIONAL TEXT_EDIT_SQL_CFG_ENCODED MODE,SQL;FORMAT,FILEGDB&quot;,FILEGDB&lt;space&gt;SQL&lt;space&gt;To&lt;space&gt;Run&lt;space&gt;Before&lt;space&gt;Write,FILEGDB_DATASET_TEMPLATE,&quot;OPTIONAL SOURCE_GEODATABASE_CFG SWIZZLER:NO&quot;,FILEGDB&lt;space&gt;Template&lt;space&gt;File&lt;space&gt;Geodatabase:,FILEGDB_OVERWRITE_GEODB,&quot;OPTIONAL ACTIVECHECK YES%NO,DATASET_TEMPLATE&quot;,FILEGDB&lt;space&gt;Overwrite&lt;space&gt;Existing&lt;space&gt;Geodatabase:,FILEGDB_DESTINATION_DATASETTYPE_VALIDATION,&quot;OPTIONAL NO_EDIT TEXT&quot;,FILEGDB&lt;space&gt;,FILEGDB_ADVANCED,&quot;OPTIONAL DISCLOSUREGROUP BEGIN_SQL%END_SQL&quot;,FILEGDB&lt;space&gt;Advanced,FILEGDB_END_SQL,&quot;OPTIONAL TEXT_EDIT_SQL_CFG_ENCODED MODE,SQL;FORMAT,FILEGDB&quot;,FILEGDB&lt;space&gt;SQL&lt;space&gt;To&lt;space&gt;Run&lt;space&gt;After&lt;space&gt;Write"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_PROCESSING_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="MORE_SUMMARY_ATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NO_OUTPUT_PORTS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OUTPUTPORTS_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_PORTS" PARM_VALUE="&quot;&quot;"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_PORTS_MODE" PARM_VALUE="NO_OUTPUT_PORTS"/>
+#!     <XFORM_PARM PARM_NAME="PER_EACH_INPUT" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SELECTED_PORTS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="SUMMARY_ATTRS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TOTAL_FEATURES_WRITTEN_ATTR" PARM_VALUE="_total_features_written"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="WRITER_DIRECTIVES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="WRITER_FEATURE_TYPE_PARAMS" PARM_VALUE="Snipper:Chopped,ftp_feature_type_name,Snipper,ftp_writer,FILEGDB,ftp_geometry,geodb_point,ftp_dynamic_schema,no,ftp_dynamic_feature_type_name_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_geometry_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_schema_def_name_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_schema_sources,&lt;lt&gt;lt&lt;gt&gt;Unused&lt;lt&gt;gt&lt;gt&gt;,ftp_attribute_source,0,ftp_user_attributes,index&lt;comma&gt;text&lt;lt&gt;openparen&lt;gt&gt;200&lt;lt&gt;closeparen&lt;gt&gt;&lt;comma&gt;code_duiker&lt;comma&gt;text&lt;lt&gt;openparen&lt;gt&gt;200&lt;lt&gt;closeparen&lt;gt&gt;&lt;comma&gt;bok_duiker_bov&lt;comma&gt;text&lt;lt&gt;openparen&lt;gt&gt;200&lt;lt&gt;closeparen&lt;gt&gt;&lt;comma&gt;bok_duiker_ben&lt;comma&gt;text&lt;lt&gt;openparen&lt;gt&gt;200&lt;lt&gt;closeparen&lt;gt&gt;&lt;comma&gt;breedte_duiker&lt;comma&gt;text&lt;lt&gt;openparen&lt;gt&gt;200&lt;lt&gt;closeparen&lt;gt&gt;&lt;comma&gt;hoogte_duiker&lt;comma&gt;text&lt;lt&gt;openparen&lt;gt&gt;200&lt;lt&gt;closeparen&lt;gt&gt;&lt;comma&gt;vorm_duiker&lt;comma&gt;text&lt;lt&gt;openparen&lt;gt&gt;200&lt;lt&gt;closeparen&lt;gt&gt;,ftp_user_attribute_values,&lt;comma&gt;&lt;comma&gt;&lt;comma&gt;&lt;comma&gt;&lt;comma&gt;&lt;comma&gt;,ftp_format_parameters,fme_configuration_group&lt;comma&gt;&lt;comma&gt;fme_configuration_common_group&lt;comma&gt;&lt;comma&gt;fme_feature_operation&lt;comma&gt;INSERT&lt;comma&gt;fme_table_handling&lt;comma&gt;CREATE_IF_MISSING&lt;comma&gt;fme_update_geometry&lt;comma&gt;&lt;lt&gt;lt&lt;gt&gt;Unused&lt;lt&gt;gt&lt;gt&gt;&lt;comma&gt;fme_selection_group&lt;comma&gt;&lt;comma&gt;fme_selection_method&lt;comma&gt;&lt;lt&gt;lt&lt;gt&gt;Unused&lt;lt&gt;gt&lt;gt&gt;&lt;comma&gt;fme_match_columns&lt;comma&gt;&lt;lt&gt;lt&lt;gt&gt;Unused&lt;lt&gt;gt&lt;gt&gt;&lt;comma&gt;fme_where_builder_clause&lt;comma&gt;&lt;lt&gt;lt&lt;gt&gt;Unused&lt;lt&gt;gt&lt;gt&gt;&lt;comma&gt;fme_table_creation_group&lt;comma&gt;&lt;comma&gt;filegdb_object_id_field&lt;comma&gt;OBJECTID&lt;comma&gt;filegdb_object_id_alias&lt;comma&gt;OBJECTID&lt;comma&gt;filegdb_shape_field&lt;comma&gt;SHAPE&lt;comma&gt;filegdb_shape_alias&lt;comma&gt;SHAPE&lt;comma&gt;filegdb_config_keyword&lt;comma&gt;DEFAULTS&lt;comma&gt;filegdb_xy_tolerance&lt;comma&gt;&lt;comma&gt;filegdb_z_tolerance&lt;comma&gt;0.001&lt;comma&gt;filegdb_m_tolerance&lt;comma&gt;0.001"/>
+#!     <XFORM_PARM PARM_NAME="WRITER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="WRITER_METAFILE" PARM_VALUE="ATTRIBUTE_CASE,ANY_FIRST_NONNUMERIC,ATTRIBUTE_INVALID_CHARS,&lt;backslash&gt;&lt;backslash&gt;&lt;quote&gt;:&lt;dollar&gt;?*&lt;closeparen&gt;&lt;openparen&gt;&lt;lt&gt;&lt;gt&gt;|&lt;openbracket&gt;%#&lt;space&gt;&lt;apos&gt;&lt;amp&gt;+-&lt;closebracket&gt;.^&lt;backslash&gt;&lt;opencurly&gt;&lt;backslash&gt;&lt;closecurly&gt;~&lt;comma&gt;&lt;solidus&gt;,ATTRIBUTE_LENGTH,64,ATTR_TYPE_MAP,text&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;fme_varchar&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;text&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;fme_char&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;text&lt;openparen&gt;2048&lt;closeparen&gt;&lt;comma&gt;fme_buffer&lt;comma&gt;text&lt;openparen&gt;2048&lt;closeparen&gt;&lt;comma&gt;fme_xml&lt;comma&gt;text&lt;openparen&gt;2048&lt;closeparen&gt;&lt;comma&gt;fme_json&lt;comma&gt;blob&lt;comma&gt;fme_binarybuffer&lt;comma&gt;blob&lt;comma&gt;fme_varbinary&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;blob&lt;comma&gt;fme_binary&lt;openparen&gt;width&lt;closeparen&gt;&lt;comma&gt;date&lt;comma&gt;fme_datetime&lt;comma&gt;date&lt;comma&gt;fme_date&lt;comma&gt;date&lt;comma&gt;fme_time&lt;comma&gt;single&lt;comma&gt;fme_real32&lt;comma&gt;double&lt;comma&gt;fme_real64&lt;comma&gt;double&lt;comma&gt;&lt;quote&gt;fme_decimal&lt;openparen&gt;width&lt;comma&gt;decimal&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;int&lt;comma&gt;fme_int32&lt;comma&gt;double&lt;comma&gt;fme_uint32&lt;comma&gt;text&lt;openparen&gt;20&lt;closeparen&gt;&lt;comma&gt;fme_int64&lt;comma&gt;text&lt;openparen&gt;20&lt;closeparen&gt;&lt;comma&gt;fme_uint64&lt;comma&gt;smallint&lt;comma&gt;fme_int16&lt;comma&gt;int&lt;comma&gt;fme_uint16&lt;comma&gt;smallint&lt;comma&gt;fme_int8&lt;comma&gt;smallint&lt;comma&gt;fme_uint8&lt;comma&gt;smallint&lt;comma&gt;fme_boolean&lt;comma&gt;objectid&lt;comma&gt;fme_int32&lt;comma&gt;guid&lt;comma&gt;fme_buffer&lt;comma&gt;globalid&lt;comma&gt;fme_buffer,DEST_ILLEGAL_ATTR_LIST,,FEATURE_TYPE_CASE,ANY_FIRST_NONNUMERIC,FEATURE_TYPE_INVALID_CHARS,&lt;backslash&gt;&lt;backslash&gt;&lt;quote&gt;:&lt;dollar&gt;?*&lt;closeparen&gt;&lt;openparen&gt;&lt;lt&gt;&lt;gt&gt;|&lt;openbracket&gt;%#&lt;space&gt;&lt;apos&gt;&lt;amp&gt;+-&lt;closebracket&gt;.^&lt;backslash&gt;&lt;opencurly&gt;&lt;backslash&gt;&lt;closecurly&gt;~&lt;comma&gt;,FEATURE_TYPE_LENGTH,0,FEATURE_TYPE_LENGTH_INCLUDES_PREFIX,false,FEATURE_TYPE_RESERVED_WORDS,,FORMAT_METAFILE,$(FME_HOME_ENCODED)metafile&lt;backslash&gt;FILEGDB.fmf,FORMAT_NAME,FILEGDB,GEOM_MAP,geodb_point&lt;comma&gt;fme_point&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_polygon&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_rounded_rectangle&lt;comma&gt;geodb_polyline&lt;comma&gt;fme_line&lt;comma&gt;geodb_multipoint&lt;comma&gt;fme_point&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_rectangle&lt;comma&gt;geodb_point&lt;comma&gt;fme_text&lt;comma&gt;geodb_polyline&lt;comma&gt;fme_arc&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_ellipse&lt;comma&gt;geodb_no_geom&lt;comma&gt;fme_no_geom&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_raster&lt;comma&gt;geodb_polyline&lt;comma&gt;fme_surface&lt;comma&gt;geodb_polyline&lt;comma&gt;fme_solid&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_point_cloud&lt;comma&gt;geodb_polygon&lt;comma&gt;fme_voxel_grid&lt;comma&gt;geodb_no_geom&lt;comma&gt;fme_feature_table&lt;comma&gt;geodb_no_geom&lt;comma&gt;fme_collection,READER_ATTR_INDEX_TYPES,Indexed,READER_USES_DEF,yes,SOURCE,no,SUPPORTS_FEAT_TYPE_FANOUT,yes,SUPPORTS_MULTI_GEOM,no,WORKBENCH_CANNED_SCHEMA,,WRITER,FILEGDB,WRITER_ATTR_INDEX_TYPES,Indexed,WRITER_DEFLINE_PARMS,&lt;quote&gt;GUI&lt;space&gt;NAMEDGROUP&lt;space&gt;fme_configuration_group&lt;space&gt;fme_configuration_common_group%fme_spatial_group%fme_advanced_group%oracle_advanced_group&lt;space&gt;Table&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;NAMEDGROUP&lt;space&gt;fme_configuration_common_group&lt;space&gt;fme_feature_operation%fme_table_handling%mie_pack%oracle_model%fme_update_geometry%fme_selection_group%fme_table_creation_group&lt;space&gt;General&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;ACTIVECHOICE_LOOKUP&lt;space&gt;fme_feature_operation&lt;space&gt;Insert&lt;comma&gt;INSERT&lt;comma&gt;fme_update_geometry&lt;comma&gt;fme_selection_group&lt;comma&gt;mie_pack%Update&lt;comma&gt;UPDATE&lt;comma&gt;++fme_table_handling+USE_EXISTING&lt;comma&gt;++fme_selection_group+FME_DISCLOSURE_OPEN%Delete&lt;comma&gt;DELETE&lt;comma&gt;++fme_table_handling+USE_EXISTING&lt;comma&gt;fme_update_geometry&lt;comma&gt;++fme_selection_group+FME_DISCLOSURE_OPEN&lt;comma&gt;fme_spatial_group&lt;comma&gt;fme_advanced_group&lt;comma&gt;oracle_sequenced_cols%&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;fme_db_operation&lt;lt&gt;closeparen&lt;gt&gt;&lt;comma&gt;MULTIPLE&lt;comma&gt;++fme_table_handling+USE_EXISTING&lt;comma&gt;++fme_selection_group+FME_DISCLOSURE_OPEN&lt;space&gt;Feature&lt;space&gt;Operation&lt;quote&gt;&lt;comma&gt;INSERT&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;ACTIVECHOICE_LOOKUP&lt;space&gt;fme_table_handling&lt;space&gt;Use&lt;lt&gt;space&lt;gt&gt;Existing&lt;comma&gt;USE_EXISTING&lt;comma&gt;fme_table_creation_group%Create&lt;lt&gt;space&lt;gt&gt;If&lt;lt&gt;space&lt;gt&gt;Needed&lt;comma&gt;CREATE_IF_MISSING%Drop&lt;lt&gt;space&lt;gt&gt;and&lt;lt&gt;space&lt;gt&gt;Create&lt;comma&gt;DROP_CREATE%Truncate&lt;lt&gt;space&lt;gt&gt;Existing&lt;comma&gt;TRUNCATE_EXISTING&lt;comma&gt;fme_table_creation_group&lt;space&gt;Table&lt;space&gt;Handling&lt;quote&gt;&lt;comma&gt;CREATE_IF_MISSING&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;WHOLE_LINE&lt;space&gt;LOOKUP_CHOICE&lt;space&gt;fme_update_geometry&lt;space&gt;Yes&lt;comma&gt;YES%No&lt;comma&gt;NO&lt;space&gt;Update&lt;space&gt;Spatial&lt;space&gt;Column&lt;openparen&gt;s&lt;closeparen&gt;&lt;quote&gt;&lt;comma&gt;YES&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;DISCLOSUREGROUP&lt;space&gt;fme_selection_group&lt;space&gt;fme_selection_method&lt;space&gt;Row&lt;space&gt;Selection&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;WHOLE_LINE&lt;space&gt;RADIOPARAMETERGROUP&lt;space&gt;fme_selection_method&lt;space&gt;fme_match_columns&lt;comma&gt;MATCH_COLUMNS%fme_where_builder_clause&lt;comma&gt;BUILDER&lt;space&gt;Row&lt;space&gt;Selection&lt;space&gt;Method&lt;quote&gt;&lt;comma&gt;MATCH_COLUMNS&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;WHOLE_LINE&lt;space&gt;ATTRLIST_COMMAS&lt;space&gt;fme_match_columns&lt;space&gt;Match&lt;space&gt;Columns&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;WHOLE_LINE&lt;space&gt;TEXT_EDIT_SQL_CFG_OR_ATTR&lt;space&gt;fme_where_builder_clause&lt;space&gt;MODE&lt;comma&gt;WHERE&lt;space&gt;WHERE&lt;space&gt;Clause&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;DISCLOSUREGROUP&lt;space&gt;fme_table_creation_group&lt;space&gt;filegdb_object_id_field%filegdb_object_id_alias%filegdb_shape_field%filegdb_shape_alias%filegdb_config_keyword%filegdb_xy_tolerance%filegdb_z_tolerance%filegdb_m_tolerance&lt;space&gt;Table&lt;space&gt;Creation&lt;space&gt;Parameters&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;TEXT&lt;space&gt;filegdb_object_id_field&lt;space&gt;Object&lt;space&gt;ID&lt;space&gt;Field&lt;quote&gt;&lt;comma&gt;OBJECTID&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;TEXT&lt;space&gt;filegdb_object_id_alias&lt;space&gt;Object&lt;space&gt;ID&lt;space&gt;Alias&lt;quote&gt;&lt;comma&gt;OBJECTID&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;TEXT&lt;space&gt;filegdb_shape_field&lt;space&gt;Shape&lt;space&gt;Field&lt;quote&gt;&lt;comma&gt;SHAPE&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;TEXT&lt;space&gt;filegdb_shape_alias&lt;space&gt;Shape&lt;space&gt;Alias&lt;quote&gt;&lt;comma&gt;SHAPE&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;TEXT&lt;space&gt;filegdb_config_keyword&lt;space&gt;Configuration&lt;space&gt;Keyword&lt;quote&gt;&lt;comma&gt;DEFAULTS&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;OPTIONAL&lt;space&gt;FLOAT&lt;space&gt;filegdb_xy_tolerance&lt;space&gt;XY&lt;space&gt;Tolerance&lt;quote&gt;&lt;comma&gt;&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;FLOAT&lt;space&gt;filegdb_z_tolerance&lt;space&gt;Z&lt;space&gt;Tolerance&lt;quote&gt;&lt;comma&gt;0.001&lt;comma&gt;&lt;quote&gt;GUI&lt;space&gt;FLOAT&lt;space&gt;filegdb_m_tolerance&lt;space&gt;M&lt;space&gt;Tolerance&lt;quote&gt;&lt;comma&gt;0.001,WRITER_DEF_LINE_TEMPLATE,&lt;opencurly&gt;FME_GEN_GROUP_NAME&lt;closecurly&gt;&lt;comma&gt;filegdb_type&lt;comma&gt;&lt;opencurly&gt;FME_GEN_GEOMETRY&lt;closecurly&gt;&lt;comma&gt;filegdb_drop_table&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;filegdb_truncate_table&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;fme_feature_operation&lt;comma&gt;INSERT&lt;comma&gt;fme_table_handling&lt;comma&gt;CREATE_IF_MISSING&lt;comma&gt;fme_selection_method&lt;comma&gt;MATCH_COLUMNS&lt;comma&gt;fme_match_columns&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;fme_where_builder_clause&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;fme_update_geometry&lt;comma&gt;YES&lt;comma&gt;filegdb_object_id_field&lt;comma&gt;OBJECTID&lt;comma&gt;filegdb_object_id_alias&lt;comma&gt;OBJECTID&lt;comma&gt;filegdb_shape_field&lt;comma&gt;SHAPE&lt;comma&gt;filegdb_shape_alias&lt;comma&gt;SHAPE&lt;comma&gt;filegdb_config_keyword&lt;comma&gt;DEFAULTS&lt;comma&gt;filegdb_xy_tolerance&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;filegdb_z_tolerance&lt;comma&gt;0.001&lt;comma&gt;filegdb_m_tolerance&lt;comma&gt;0.001,WRITER_FORMAT_PARAMETER,DATASET_NAME&lt;comma&gt;&lt;quote&gt;gdb&lt;space&gt;file&lt;quote&gt;&lt;comma&gt;FEATURE_TYPE_NAME&lt;comma&gt;&lt;quote&gt;Feature&lt;space&gt;Class&lt;space&gt;or&lt;space&gt;Table&lt;quote&gt;&lt;comma&gt;FEATURE_TYPE_DEFAULT_NAME&lt;comma&gt;FeatureClass1&lt;comma&gt;READER_DATASET_HINT&lt;comma&gt;&lt;quote&gt;Select&lt;space&gt;the&lt;space&gt;File&lt;space&gt;Geodatabase&lt;space&gt;folder&lt;quote&gt;&lt;comma&gt;WRITER_DATASET_HINT&lt;comma&gt;&lt;quote&gt;Specify&lt;space&gt;File&lt;space&gt;Geodatabase&lt;space&gt;folder&lt;quote&gt;&lt;comma&gt;ATTRIBUTE_READING&lt;comma&gt;DEFLINE&lt;comma&gt;ATTRIBUTE_READING_HISTORIC&lt;comma&gt;ALL&lt;comma&gt;ADVANCED_PARMS&lt;comma&gt;&lt;quote&gt;FILEGDB_IN_BEGIN_SQL&lt;space&gt;FILEGDB_IN_END_SQL&lt;space&gt;FILEGDB_OUT_BEGIN_SQL&lt;space&gt;FILEGDB_OUT_END_SQL&lt;quote&gt;,WRITER_HAS_DEFLINE_ATTRS,yes,WRITER_USES_DEF,yes"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureWriter_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="35"
+#!   TYPE="Snipper"
+#!   VERSION="2"
+#!   POSITION="-468.75468754687552 -428.12928129281295"
+#!   BOUNDING_RECT="-468.75468754687552 -428.12928129281295 462.00106825772946 71"
+#!   ORDER="500000000000016"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20238"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_bov" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_ben" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vorm_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="REMNANTS"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="code_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_bov" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_ben" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="breedte_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="vorm_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="code_duiker" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_bov" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_ben" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="breedte_duiker" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte_duiker" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="vorm_duiker" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_PARM PARM_NAME="DEAGGREGATE_INPUT" PARM_VALUE="YES"/>
+#!     <XFORM_PARM PARM_NAME="ENDLOCATIONATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="ENDVERTEXATTR" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="INDEX_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="MEASUREMENTTYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MEASUREMENT_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MEASURE_GROUP" PARM_VALUE="FME_DISCLOSURE_CLOSED"/>
+#!     <XFORM_PARM PARM_NAME="MEASURE_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SNIPMODE" PARM_VALUE="Vertex"/>
+#!     <XFORM_PARM PARM_NAME="STARTLOCATIONATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="STARTVERTEXATTR" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="Values_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Snipper_startingpoint"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="37"
+#!   TYPE="Snipper"
+#!   VERSION="2"
+#!   POSITION="-436.75361928914606 -911.38435612078251"
+#!   BOUNDING_RECT="-436.75361928914606 -911.38435612078251 430 71"
+#!   ORDER="500000000000016"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20238"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_bov" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_ben" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vorm_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="REMNANTS"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="code_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_bov" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_ben" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="breedte_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="vorm_duiker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="code_duiker" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_bov" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_ben" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="breedte_duiker" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte_duiker" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="vorm_duiker" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_PARM PARM_NAME="DEAGGREGATE_INPUT" PARM_VALUE="YES"/>
+#!     <XFORM_PARM PARM_NAME="ENDLOCATIONATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="ENDVERTEXATTR" PARM_VALUE="-1"/>
+#!     <XFORM_PARM PARM_NAME="INDEX_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="MEASUREMENTTYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MEASUREMENT_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MEASURE_GROUP" PARM_VALUE="FME_DISCLOSURE_CLOSED"/>
+#!     <XFORM_PARM PARM_NAME="MEASURE_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SNIPMODE" PARM_VALUE="Vertex"/>
+#!     <XFORM_PARM PARM_NAME="STARTLOCATIONATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="STARTVERTEXATTR" PARM_VALUE="-1"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="Values_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Snipper_endpoint"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="30"
+#!   TYPE="AttributeCreator"
+#!   VERSION="9"
+#!   POSITION="231.25231252312517 -497.50437504375049"
+#!   BOUNDING_RECT="231.25231252312517 -497.50437504375049 454 71"
+#!   ORDER="500000000000017"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20238"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="code_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_bov" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_ben" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vorm_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; index SET_TO 0"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="39"
+#!   TYPE="AttributeCreator"
+#!   VERSION="9"
+#!   POSITION="231.25231252312517 -827.00821399937604"
+#!   BOUNDING_RECT="231.25231252312517 -827.00821399937604 454 71"
+#!   ORDER="500000000000017"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20238"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="code_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_bov" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bok_duiker_ben" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogte_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vorm_duiker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; index SET_TO -1"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_2"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <SUBDOCUMENT_IOS>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="2"
+#!   NAME="GeonisBlaeu_Afsluiter"
+#!   POSITION="-468.75468754687552 240.62840628406283"
+#!   BOUNDING_RECT="-468.75468754687552 240.62840628406283 650.00750007500073 71"
+#!   COLLAPSED="true"
+#!   PUBLISHED="true"
+#!   IS_SOURCE="true"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="3"
+#!   NAME="HyDAMO_Afsluitmiddel"
+#!   POSITION="5091.5248752487514 -223.12903129031292"
+#!   BOUNDING_RECT="5091.5248752487514 -223.12903129031292 738.40884408844067 71"
+#!   COLLAPSED="true"
+#!   IS_SOURCE="false"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="11"
+#!   NAME="GeonisBlaeu_Duiker"
+#!   POSITION="-2212.5231252312497 -471.87971879718799"
+#!   BOUNDING_RECT="-2212.5231252312497 -471.87971879718799 612.5061250612506 71"
+#!   COLLAPSED="true"
+#!   PUBLISHED="true"
+#!   IS_SOURCE="true"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! </SUBDOCUMENT_IOS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="6"
+#!   SOURCE_NODE="2"
+#!   TARGET_NODE="5"
+#!   SOURCE_PORT_DESC="0"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="24"
+#!   SOURCE_NODE="11"
+#!   TARGET_NODE="19"
+#!   SOURCE_PORT_DESC="0"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="18"
+#!   SOURCE_NODE="5"
+#!   TARGET_NODE="16"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 Requestor"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="10"
+#!   SOURCE_NODE="8"
+#!   TARGET_NODE="3"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="0"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="14"
+#!   SOURCE_NODE="12"
+#!   TARGET_NODE="26"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="20"
+#!   SOURCE_NODE="15"
+#!   TARGET_NODE="16"
+#!   SOURCE_PORT_DESC="fo 0 BUFFERED"
+#!   TARGET_PORT_DESC="fi 1 Supplier"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="33"
+#!   SOURCE_NODE="15"
+#!   TARGET_NODE="25"
+#!   SOURCE_PORT_DESC="fo 0 BUFFERED"
+#!   TARGET_PORT_DESC="fi 0 Chopped"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="1"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="22"
+#!   SOURCE_NODE="16"
+#!   TARGET_NODE="21"
+#!   SOURCE_PORT_DESC="fo 0 Output"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="36"
+#!   SOURCE_NODE="19"
+#!   TARGET_NODE="35"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="38"
+#!   SOURCE_NODE="19"
+#!   TARGET_NODE="37"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="1"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="23"
+#!   SOURCE_NODE="21"
+#!   TARGET_NODE="12"
+#!   SOURCE_PORT_DESC="fo 0 PASSED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="29"
+#!   SOURCE_NODE="26"
+#!   TARGET_NODE="8"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="32"
+#!   SOURCE_NODE="30"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="42"
+#!   SOURCE_NODE="30"
+#!   TARGET_NODE="34"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 Chopped"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="1"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="31"
+#!   SOURCE_NODE="35"
+#!   TARGET_NODE="30"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="40"
+#!   SOURCE_NODE="37"
+#!   TARGET_NODE="39"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="41"
+#!   SOURCE_NODE="39"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="43"
+#!   SOURCE_NODE="39"
+#!   TARGET_NODE="34"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 Chopped"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="1"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </TRANSFORMER>
+
+# ============================================================================
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_code_af 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_globalID_AKN 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_duikersifonhevelID 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_statusObject 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_CREATED_DATE 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_LAST_EDITED_DATE 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_soortAfsluitmiddel 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_soortRegelbaarheid 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_breedte 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_hoogte 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_minimaleHoogteBovenkant 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_maximaleHoogteBovenkant 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_afvoerCoefficient 1
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_administratiefgebied 12
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_code_d 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_globalID_KDU 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_breedte_d 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_hoogte_d 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_hoogtebinnenonderkantbov_d 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_zoek_afstand 1
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_overlaatOnderlaat 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_hoogtebinnenonderkantben_d 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_vorm_duiker 
+# ============================================================================
+# ============================================================================
+USER_PARAMETERS eyJwYXJhbWV0ZXJzIjpbeyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiY29kZV9hZiIsInByb21wdCI6ImNvZGUgYWZzbHVpdG1pZGRlbCAoS1dLSURFTlQpIiwicmVxdWlyZWQiOnRydWUsInNob3dFZGl0QnV0dG9uIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiZ2xvYmFsSURfQUtOIiwicHJvbXB0IjoiZ2xvYmFsSUQgYWZzbHVpdG1pZGRlbCAoR0xPQkFMSURfQUtOKSIsInJlcXVpcmVkIjpmYWxzZSwic2hvd0VkaXRCdXR0b24iOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJkdWlrZXJzaWZvbmhldmVsSUQiLCJwcm9tcHQiOiJkdWlrZXJzaWZvbmhldmVsSUQiLCJyZXF1aXJlZCI6ZmFsc2UsInNob3dFZGl0QnV0dG9uIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoic3RhdHVzT2JqZWN0IiwicHJvbXB0Ijoic3RhdHVzT2JqZWN0IChLV0tTVEFUVSk6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJDUkVBVEVEX0RBVEUiLCJwcm9tcHQiOiJDUkVBVEVEX0RBVEUgKENSRUFURURfREFURSkiLCJyZXF1aXJlZCI6ZmFsc2UsInNob3dFZGl0QnV0dG9uIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiTEFTVF9FRElURURfREFURSIsInByb21wdCI6IkxBU1RfRURJVEVEX0RBVEUgKExBU1QgRURJVEVEIERBVEUpOiIsInJlcXVpcmVkIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoic29vcnRBZnNsdWl0bWlkZGVsIiwicHJvbXB0Ijoic29vcnRBZnNsdWl0bWlkZGVsIChLV0tBRlNMMSk6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6InNvb3J0UmVnZWxiYWFyaGVpZCIsInByb21wdCI6InNvb3J0UmVnZWxiYWFyaGVpZCAoV1JJSl9UWVBFX1JFR0VMQkFBUkhFSUQpOiIsInJlcXVpcmVkIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiYnJlZWR0ZSIsInByb21wdCI6ImJyZWVkdGU6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJob29ndGUiLCJwcm9tcHQiOiJob29ndGU6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJtaW5pbWFsZUhvb2d0ZUJvdmVua2FudCIsInByb21wdCI6Im1pbmltYWxlSG9vZ3RlQm92ZW5rYW50OiIsInJlcXVpcmVkIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoibWF4aW1hbGVIb29ndGVCb3ZlbmthbnQiLCJwcm9tcHQiOiJtYXhpbWFsZUhvb2d0ZUJvdmVua2FudCIsInJlcXVpcmVkIjpmYWxzZSwic2hvd0VkaXRCdXR0b24iOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImRlZmF1bHRWYWx1ZSI6IjEiLCJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiYWZ2b2VyQ29lZmZpY2llbnQiLCJwcm9tcHQiOiJhZnZvZXJDb2VmZmljaWVudDoiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJjaG9pY2VzIjpbeyJkaXNwbGF5IjoiMSAtIGFhIGVuIG1hYXMiLCJ2YWx1ZSI6IjEifSx7ImRpc3BsYXkiOiIyIC0gYW1zdGVsIGdvb2kgZW4gdmVjaHQiLCJ2YWx1ZSI6IjIifSx7ImRpc3BsYXkiOiIzIC0gYnJhYmFudHNlIGRlbHRhIiwidmFsdWUiOiIzIn0seyJkaXNwbGF5IjoiNCAtIGRlbGZsYW5kIiwidmFsdWUiOiI0In0seyJkaXNwbGF5IjoiNSAtIGRvbW1lbCIsInZhbHVlIjoiNSJ9LHsiZGlzcGxheSI6IjYgLSBmcnlzbGFuIiwidmFsdWUiOiI2In0seyJkaXNwbGF5IjoiNyAtIGhvbGxhbmRzIG5vb3JkZXJrd2FydGllciIsInZhbHVlIjoiNyJ9LHsiZGlzcGxheSI6IjggLSBob2xsYW5kc2UgZGVsdGEiLCJ2YWx1ZSI6IjgifSx7ImRpc3BsYXkiOiI5IC0gaHVuemUgZW4gYWFzIiwidmFsdWUiOiI5In0seyJkaXNwbGF5IjoiMTAgLSBub29yZGVyemlqbHZlc3QiLCJ2YWx1ZSI6IjEwIn0seyJkaXNwbGF5IjoiMTEgLSBsaW1idXJnIiwidmFsdWUiOiIxMSJ9LHsiZGlzcGxheSI6IjEyIC0gcmlqbiBlbiBpanNzZWwiLCJ2YWx1ZSI6IjEyIn0seyJkaXNwbGF5IjoiMTMgLSByaWpubGFuZCIsInZhbHVlIjoiMTMifSx7ImRpc3BsYXkiOiIxNCAtIHJpdmllcmVubGFuZCIsInZhbHVlIjoiMTQifSx7ImRpc3BsYXkiOiIxNiAtIHNjaGllbGFuZCBlbiBrcmltcGVuZXJ3YWFyZCIsInZhbHVlIjoiMTYifSx7ImRpc3BsYXkiOiIxNyAtIHN0aWNodHNlIHJpam5sYW5kZW4iLCJ2YWx1ZSI6IjE3In0seyJkaXNwbGF5IjoiMTggLSB6dWlkZXJ6ZWVsYW5kIiwidmFsdWUiOiIxOCJ9LHsiZGlzcGxheSI6IjE5IC0gc2NoZWxkZXN0cm9tZW4iLCJ2YWx1ZSI6IjE5In0seyJkaXNwbGF5IjoiMjAgLSB2YWxsZWkgZW4gdmVsdXdlIiwidmFsdWUiOiIyMCJ9LHsiZGlzcGxheSI6IjIxIC0gdmVjaHRzdHJvbWVuIiwidmFsdWUiOiIyMSJ9LHsiZGlzcGxheSI6IjIyIC0gZHJlbnRzIG92ZXJpanNzZWxzZSBkZWx0YSIsInZhbHVlIjoiMjIifSx7ImRpc3BsYXkiOiIyMCAtIHJpamtzd2F0ZXJzdGFhdCIsInZhbHVlIjoiMzAifV0sImRlZmF1bHRWYWx1ZSI6IjEyIiwibmFtZSI6ImFkbWluaXN0cmF0aWVmZ2ViaWVkIiwicHJvbXB0IjoiYWRtaW5pc3RyYXRpZWZnZWJpZWQ6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoiZHJvcGRvd24iLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJjb2RlX2QiLCJwcm9tcHQiOiJjb2RlIGR1aWtlcihLRFVJREVOVCkiLCJyZXF1aXJlZCI6dHJ1ZSwic2hvd0VkaXRCdXR0b24iOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJnbG9iYWxJRF9LRFUiLCJwcm9tcHQiOiJnbG9iYWxJRCBkdWlrZXIgKEdMT0JBTElEX0tEVSkiLCJyZXF1aXJlZCI6ZmFsc2UsInNob3dFZGl0QnV0dG9uIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiYnJlZWR0ZV9kIiwicHJvbXB0IjoiYnJlZWR0ZSBkdWlrZXIgKEtEVUJSRUVEKToiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiaG9vZ3RlX2QiLCJwcm9tcHQiOiJob29ndGUgZHVpa2VyIChLRFVIR0ExKToiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiaG9vZ3RlYmlubmVub25kZXJrYW50Ym92X2QiLCJwcm9tcHQiOiJob29ndGViaW5uZW5vbmRlcmthbnRib3YgZHVpa2VyIChLRFVCT0tCTyk6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZGVmYXVsdFZhbHVlIjoiMSIsIm5hbWUiOiJ6b2VrX2Fmc3RhbmQiLCJwcm9tcHQiOiJab2VrYWZzdGFuZCB2b29yIG1hdGNoZW5kZSBkdWlrZXIgKG0pOiIsInJlcXVpcmVkIjp0cnVlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6Im51bWJlciIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6Im92ZXJsYWF0T25kZXJsYWF0IiwicHJvbXB0Ijoib3ZlcmxhYXRPbmRlcmxhYXQ6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJob29ndGViaW5uZW5vbmRlcmthbnRiZW5fZCIsInByb21wdCI6Imhvb2d0ZWJpbm5lbm9uZGVya2FudGJlbiBkdWlrZXIgKEtEVUJPS0JFKToiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoidm9ybV9kdWlrZXIiLCJwcm9tcHQiOiJ2b3JtX2R1aWtlciAoS0RVVk9STSk6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifV19
+# ============================================================================
+#! START_HEADER
+#! END_HEADER
+
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+DEFAULT_MACRO GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME ""
+INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_GeonisBlaeu_Afsluiter1630496903 Input Splitter"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_GeonisBlaeu_Afsluiter"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_GeonisBlaeu_Afsluiter"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_GeonisBlaeu_Duiker1630496903 Input Splitter"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_GeonisBlaeu_Duiker"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_GeonisBlaeu_Duiker"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeManager_2 }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_GeonisBlaeu_Duiker"    MULTI_FEATURE_MODE { NO }    NULL_ATTR_MODE { NO_OP }    ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "" "code_duiker" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_code_d$encode)" "SET_TO" }      ATTR_ACTION { "" "bok_duiker_bov" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_hoogtebinnenonderkantbov_d$encode)" "SET_TO" }      ATTR_ACTION { "" "bok_duiker_ben" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_hoogtebinnenonderkantben_d$encode)" "SET_TO" }      ATTR_ACTION { "" "breedte_duiker" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_breedte_d$encode)" "SET_TO" }      ATTR_ACTION { "" "hoogte_duiker" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_hoogte_d$encode)" "SET_TO" }      ATTR_ACTION { "" "vorm_duiker" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_vorm_duiker$encode)" "SET_TO" }      ATTR_ACTION { "" "globalID" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_globalID_KDU$encode)" "SET_TO" }    OUTPUT { OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeManager_2_OUTPUT"        }
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeManager_2 OUTPUT Splitter"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeManager_2_OUTPUT"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeManager_2_OUTPUT_0_4O70WvrjfYE="   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeManager_2_OUTPUT_1_HDXmj46PrZs="
+# -------------------------------------------------------------------------
+# The Snipper takes the constant "end" to mean the last vertex of the line,
+# but Workbench won't let us put an alpha string into the "last vertex" textfield.
+# We'll interpret an ending vertex of -1 as being the same as "end".
+# This is used only in the distance and percentage.
+Tcl2 proc $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_fixIndex {numIndex} {     if {$numIndex < 0} {         return "end";     } else {         return $numIndex;     } }
+INCLUDE [          if { ({VERTEX} == {DISTANCE} || {VERTEX} == {PERCENTAGE}) } {             puts {MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_snipFunc @Snip(@Tcl2("$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_fixIndex <Unused>"),@Tcl2("$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_fixIndex <Unused>"),VERTEX,<Unused>,OUTPUT_REMNANT)};          } elseif { ({VERTEX} == {MEASURE_RELATIVE_FROM_START} || {VERTEX} == {MEASURE_REAL_VALUES}) } {             puts {MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_snipFunc @Snip("<Unused>", "<Unused>", "<Unused>", VERTEX,OUTPUT_REMNANT)};          } elseif { ({VERTEX} == {VERTEX}) } {             puts {MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_snipFunc @Snip("0","0",VERTEX,OUTPUT_REMNANT)};          }          ]
+FACTORY_DEF {*} TestFactory    FACTORY_NAME  { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_modeFilter }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeManager_2_OUTPUT_0_4O70WvrjfYE="    TEST { VERTEX == "VERTEX" }    OUTPUT { PASSED FEATURE_TYPE ___TO_VERTEXFILTER___ }    OUTPUT { FAILED FEATURE_TYPE ___TO_LOCATIONFILTER___ }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME  { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_vertexFilter }    INPUT FEATURE_TYPE ___TO_VERTEXFILTER___    TEST { "0" TYPE INT ENCODED }    TEST { "0" TYPE INT ENCODED }    BOOLEAN_OPERATOR AND    OUTPUT { PASSED FEATURE_TYPE ___TO_DEAGGFILTER___ }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME  { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_locationVerifier }    INPUT FEATURE_TYPE ___TO_LOCATIONFILTER___    TEST { "<Unused>" TYPE DOUBLE ENCODED }    TEST { "<Unused>" TYPE DOUBLE ENCODED }    BOOLEAN_OPERATOR AND    OUTPUT { PASSED FEATURE_TYPE ___TO_DEAGGFILTER___ }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME  { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_DeaggFilter }    INPUT FEATURE_TYPE ___TO_DEAGGFILTER___    TEST { YES == "YES" }    TEST @Value(fme_geometry) == "fme_aggregate"    TEST @Value(fme_type) != "fme_solid"    BOOLEAN_OPERATOR AND    OUTPUT { PASSED FEATURE_TYPE ____DEAGGREGATE_INPUT____ }    OUTPUT { FAILED FEATURE_TYPE ___AGG_FILTER___ }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME  { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_Aggfilter }    INPUT FEATURE_TYPE ___AGG_FILTER___    TEST @Value(fme_geometry) != "fme_aggregate"    OUTPUT { PASSED FEATURE_TYPE ___TO_TYPEFILTER___ }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME  { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_Typefilter }    INPUT FEATURE_TYPE ___TO_TYPEFILTER___    TEST @Value(fme_type) == "fme_line"    TEST @Value(fme_type) == "fme_arc"    TEST @Value(fme_geometry) == "fme_polygon"    BOOLEAN_OPERATOR OR    OUTPUT { PASSED FEATURE_TYPE ___TO_INPUT___ }
+FACTORY_DEF {*} DeaggregateFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_DeaggInput }    INPUT FEATURE_TYPE ____DEAGGREGATE_INPUT____    RECURSIVE Yes    SPLIT_COMPOSITES No    SPLIT_MULTIS No    SET_FME_TYPE Yes    GEOMETRY_NAME_FIELD _geometry_name    OUTPUT { POINT FEATURE_TYPE ___TO_MULTITYPEFILTER___ }    OUTPUT { LINE FEATURE_TYPE ___TO_MULTITYPEFILTER___ }    OUTPUT { POLYGON FEATURE_TYPE ___TO_MULTITYPEFILTER___ }    OUTPUT { DONUT FEATURE_TYPE ___TO_MULTITYPEFILTER___ }    OUTPUT { AGGREGATE FEATURE_TYPE ___TO_MULTITYPEFILTER___ }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME  { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_MultiTypefilter }    INPUT FEATURE_TYPE ___TO_MULTITYPEFILTER___    TEST @Value(fme_type) == "fme_line"    TEST @Value(fme_type) == "fme_area"    BOOLEAN_OPERATOR OR    OUTPUT { PASSED FEATURE_TYPE ____DEAGGREGATE_MULTIS____ }
+FACTORY_DEF {*} DeaggregateFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_DeaggMultis }    INPUT FEATURE_TYPE ____DEAGGREGATE_MULTIS____    RECURSIVE Yes    SPLIT_COMPOSITES No    SPLIT_MULTIS Yes    SET_FME_TYPE Yes    GEOMETRY_NAME_FIELD _geometry_name    OUTPUT { LINE FEATURE_TYPE ___DEAGG_NULLNUKER___          $($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_snipFunc) }    OUTPUT { POLYGON FEATURE_TYPE ___DEAGG_NULLNUKER___          $($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_snipFunc) }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_DeaggNullNuker }    INPUT FEATURE_TYPE ___DEAGG_NULLNUKER___    TEST @Value(fme_geometry) == "fme_undefined"    TEST @Value(fme_type) == "fme_no_geom"    BOOLEAN_OPERATOR AND    OUTPUT { FAILED FEATURE_TYPE ____TO_DEAGGREGATOR____ }
+FACTORY_DEF {*} TeeFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_Input }    INPUT FEATURE_TYPE ___TO_INPUT___    OUTPUT { FEATURE_TYPE ____TO_DEAGGREGATOR____         $($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_snipFunc) }
+FACTORY_DEF {*} DeaggregateFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_SplitRemnants }    INPUT FEATURE_TYPE ____TO_DEAGGREGATOR____    RECURSIVE No    SPLIT_COMPOSITES No    SET_FME_TYPE Yes    PART_NUMBER_FIELD _part_number    GEOMETRY_NAME_FIELD _geometry_name    OUTPUT { POINT FEATURE_TYPE ___TO_NULLNUKER___ }    OUTPUT { LINE FEATURE_TYPE ___TO_NULLNUKER___ }    OUTPUT { POLYGON FEATURE_TYPE ___TO_NULLNUKER___ }    OUTPUT { DONUT FEATURE_TYPE ___TO_NULLNUKER___ }    OUTPUT { AGGREGATE FEATURE_TYPE ___TO_NULLNUKER___ }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_NullNuker }    INPUT FEATURE_TYPE ___TO_NULLNUKER___    TEST @Value(_part_number) == 0    TEST @NumCoords() == 0    BOOLEAN_OPERATOR AND    OUTPUT { FAILED FEATURE_TYPE ___TO_OUTPUTTER___ }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_Outputter }    INPUT FEATURE_TYPE ___TO_OUTPUTTER___    TEST @Value(_part_number) == 0    TEST @Tcl2("FME_AttributeExists _part_number") == 0    BOOLEAN_OPERATOR OR    OUTPUT { PASSED FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_OUTPUT"       @RemoveAttributes(_part_number)        }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeCreator }    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_startingpoint_OUTPUT"    MULTI_FEATURE_MODE { NO }    NULL_ATTR_MODE { NO_OP }    ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ATTR_ACTION { "" "index" "SET_TO" "0" }    OUTPUT { OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeCreator_OUTPUT"        }
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeCreator OUTPUT Splitter"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeCreator_OUTPUT"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeCreator_OUTPUT_0_HbdigVh/JZI="   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeCreator_OUTPUT_1_qfDaBYpb4iE="
+# -------------------------------------------------------------------------
+# The Snipper takes the constant "end" to mean the last vertex of the line,
+# but Workbench won't let us put an alpha string into the "last vertex" textfield.
+# We'll interpret an ending vertex of -1 as being the same as "end".
+# This is used only in the distance and percentage.
+Tcl2 proc $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_fixIndex {numIndex} {     if {$numIndex < 0} {         return "end";     } else {         return $numIndex;     } }
+INCLUDE [          if { ({VERTEX} == {DISTANCE} || {VERTEX} == {PERCENTAGE}) } {             puts {MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_snipFunc @Snip(@Tcl2("$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_fixIndex <Unused>"),@Tcl2("$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_fixIndex <Unused>"),VERTEX,<Unused>,OUTPUT_REMNANT)};          } elseif { ({VERTEX} == {MEASURE_RELATIVE_FROM_START} || {VERTEX} == {MEASURE_REAL_VALUES}) } {             puts {MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_snipFunc @Snip("<Unused>", "<Unused>", "<Unused>", VERTEX,OUTPUT_REMNANT)};          } elseif { ({VERTEX} == {VERTEX}) } {             puts {MACRO $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_snipFunc @Snip("-1","-1",VERTEX,OUTPUT_REMNANT)};          }          ]
+FACTORY_DEF {*} TestFactory    FACTORY_NAME  { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_modeFilter }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeManager_2_OUTPUT_1_HDXmj46PrZs="    TEST { VERTEX == "VERTEX" }    OUTPUT { PASSED FEATURE_TYPE ___TO_VERTEXFILTER___ }    OUTPUT { FAILED FEATURE_TYPE ___TO_LOCATIONFILTER___ }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME  { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_vertexFilter }    INPUT FEATURE_TYPE ___TO_VERTEXFILTER___    TEST { "-1" TYPE INT ENCODED }    TEST { "-1" TYPE INT ENCODED }    BOOLEAN_OPERATOR AND    OUTPUT { PASSED FEATURE_TYPE ___TO_DEAGGFILTER___ }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME  { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_locationVerifier }    INPUT FEATURE_TYPE ___TO_LOCATIONFILTER___    TEST { "<Unused>" TYPE DOUBLE ENCODED }    TEST { "<Unused>" TYPE DOUBLE ENCODED }    BOOLEAN_OPERATOR AND    OUTPUT { PASSED FEATURE_TYPE ___TO_DEAGGFILTER___ }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME  { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_DeaggFilter }    INPUT FEATURE_TYPE ___TO_DEAGGFILTER___    TEST { YES == "YES" }    TEST @Value(fme_geometry) == "fme_aggregate"    TEST @Value(fme_type) != "fme_solid"    BOOLEAN_OPERATOR AND    OUTPUT { PASSED FEATURE_TYPE ____DEAGGREGATE_INPUT____ }    OUTPUT { FAILED FEATURE_TYPE ___AGG_FILTER___ }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME  { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_Aggfilter }    INPUT FEATURE_TYPE ___AGG_FILTER___    TEST @Value(fme_geometry) != "fme_aggregate"    OUTPUT { PASSED FEATURE_TYPE ___TO_TYPEFILTER___ }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME  { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_Typefilter }    INPUT FEATURE_TYPE ___TO_TYPEFILTER___    TEST @Value(fme_type) == "fme_line"    TEST @Value(fme_type) == "fme_arc"    TEST @Value(fme_geometry) == "fme_polygon"    BOOLEAN_OPERATOR OR    OUTPUT { PASSED FEATURE_TYPE ___TO_INPUT___ }
+FACTORY_DEF {*} DeaggregateFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_DeaggInput }    INPUT FEATURE_TYPE ____DEAGGREGATE_INPUT____    RECURSIVE Yes    SPLIT_COMPOSITES No    SPLIT_MULTIS No    SET_FME_TYPE Yes    GEOMETRY_NAME_FIELD _geometry_name    OUTPUT { POINT FEATURE_TYPE ___TO_MULTITYPEFILTER___ }    OUTPUT { LINE FEATURE_TYPE ___TO_MULTITYPEFILTER___ }    OUTPUT { POLYGON FEATURE_TYPE ___TO_MULTITYPEFILTER___ }    OUTPUT { DONUT FEATURE_TYPE ___TO_MULTITYPEFILTER___ }    OUTPUT { AGGREGATE FEATURE_TYPE ___TO_MULTITYPEFILTER___ }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME  { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_MultiTypefilter }    INPUT FEATURE_TYPE ___TO_MULTITYPEFILTER___    TEST @Value(fme_type) == "fme_line"    TEST @Value(fme_type) == "fme_area"    BOOLEAN_OPERATOR OR    OUTPUT { PASSED FEATURE_TYPE ____DEAGGREGATE_MULTIS____ }
+FACTORY_DEF {*} DeaggregateFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_DeaggMultis }    INPUT FEATURE_TYPE ____DEAGGREGATE_MULTIS____    RECURSIVE Yes    SPLIT_COMPOSITES No    SPLIT_MULTIS Yes    SET_FME_TYPE Yes    GEOMETRY_NAME_FIELD _geometry_name    OUTPUT { LINE FEATURE_TYPE ___DEAGG_NULLNUKER___          $($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_snipFunc) }    OUTPUT { POLYGON FEATURE_TYPE ___DEAGG_NULLNUKER___          $($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_snipFunc) }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_DeaggNullNuker }    INPUT FEATURE_TYPE ___DEAGG_NULLNUKER___    TEST @Value(fme_geometry) == "fme_undefined"    TEST @Value(fme_type) == "fme_no_geom"    BOOLEAN_OPERATOR AND    OUTPUT { FAILED FEATURE_TYPE ____TO_DEAGGREGATOR____ }
+FACTORY_DEF {*} TeeFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_Input }    INPUT FEATURE_TYPE ___TO_INPUT___    OUTPUT { FEATURE_TYPE ____TO_DEAGGREGATOR____         $($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_snipFunc) }
+FACTORY_DEF {*} DeaggregateFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_SplitRemnants }    INPUT FEATURE_TYPE ____TO_DEAGGREGATOR____    RECURSIVE No    SPLIT_COMPOSITES No    SET_FME_TYPE Yes    PART_NUMBER_FIELD _part_number    GEOMETRY_NAME_FIELD _geometry_name    OUTPUT { POINT FEATURE_TYPE ___TO_NULLNUKER___ }    OUTPUT { LINE FEATURE_TYPE ___TO_NULLNUKER___ }    OUTPUT { POLYGON FEATURE_TYPE ___TO_NULLNUKER___ }    OUTPUT { DONUT FEATURE_TYPE ___TO_NULLNUKER___ }    OUTPUT { AGGREGATE FEATURE_TYPE ___TO_NULLNUKER___ }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_NullNuker }    INPUT FEATURE_TYPE ___TO_NULLNUKER___    TEST @Value(_part_number) == 0    TEST @NumCoords() == 0    BOOLEAN_OPERATOR AND    OUTPUT { FAILED FEATURE_TYPE ___TO_OUTPUTTER___ }
+FACTORY_DEF {*} TestFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_Outputter }    INPUT FEATURE_TYPE ___TO_OUTPUTTER___    TEST @Value(_part_number) == 0    TEST @Tcl2("FME_AttributeExists _part_number") == 0    BOOLEAN_OPERATOR OR    OUTPUT { PASSED FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_OUTPUT"       @RemoveAttributes(_part_number)        }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeCreator_2 }    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Snipper_endpoint_OUTPUT"    MULTI_FEATURE_MODE { NO }    NULL_ATTR_MODE { NO_OP }    ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ATTR_ACTION { "" "index" "SET_TO" "-1" }    OUTPUT { OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeCreator_2_OUTPUT"        }
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeCreator_2 OUTPUT Splitter"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeCreator_2_OUTPUT"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeCreator_2_OUTPUT_0_zR1bHFMXzg0="   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeCreator_2_OUTPUT_1_VNaIY2ikJFA="
+# -------------------------------------------------------------------------
+INCLUDE [if { ("JOIN_ROUND" == "JOIN_MITER") } {         } else {             puts "MACRO MITER_TO_USE 0"         }         ]
+FACTORY_DEF * TestFactory    FACTORY_NAME $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Bufferer    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeCreator_OUTPUT_0_HbdigVh/JZI="    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeCreator_2_OUTPUT_0_zR1bHFMXzg0="    TEST "AREA" == "SOLID"    OUTPUT PASSED FEATURE_TYPE __TOSOLIDBUFFERINGFACTORY__    OUTPUT FAILED FEATURE_TYPE __TOPOLYGONDISSOLVEFACTORY__
+#
+# This is the AREA part of the buffering:
+#
+FACTORY_DEF * PolygonDissolveFactory    FACTORY_NAME $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Bufferer_2DBuffering    INPUT FEATURE_TYPE __TOPOLYGONDISSOLVEFACTORY__    REJECT_INVALID_GEOM Yes    PRE_BUFFER "@EvaluateExpression(FDIV,FLOAT,$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_zoek_afstand$encode),$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Bufferer)" "22.5" "CAP_ROUND" "JOIN_ROUND" "$(MITER_TO_USE)" FULL    DISSOLVE_MODE GEOS    LIST_ATTRS_TO_INCLUDE { <Unused> }    LIST_ATTRS_TO_INCLUDE_MODE <Unused>    OUTPUT POLYGON FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Bufferer_BUFFERED"    OUTPUT NON_POLYGON FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Bufferer_BUFFERED"
+#
+# This is the SOLID part of the buffering:
+#
+FACTORY_DEF * SolidBufferingFactory    FACTORY_NAME $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Bufferer_3DBuffering    INPUT FEATURE_TYPE __TOSOLIDBUFFERINGFACTORY__    SPHERE_RADIUS "@EvaluateExpression(FDIV,FLOAT,$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_zoek_afstand$encode),$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Bufferer)"    SPHERE_DIVISIONS "<Unused>"    OUTPUT BUFFERED FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Bufferer_BUFFERED"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Bufferer BUFFERED Splitter"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Bufferer_BUFFERED"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Bufferer_BUFFERED_0_z2VPLLNEjaA="   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Bufferer_BUFFERED_1_fqVQIsF6XLc="
+# -------------------------------------------------------------------------
+INCLUDE [    puts {DEFAULT_MACRO FeatureWriterDataset_$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_FeatureWriter G:<backslash>GIS<space>WATERSYSTEEM<backslash>HyDAMO<backslash>FME<backslash>output_v2021<backslash>testDHS<backslash>test_bufferer.gdb}; ]
+FACTORY_DEF {*} WriterFactory    FLUSH_WHEN_GROUPS_CHANGE { <Unused> }    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_FeatureWriter }    WRITER_TYPE { FILEGDB }    WRITER_DATASET { "$(FeatureWriterDataset_$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_FeatureWriter)" }    WRITER_SETTINGS { "RUNTIME_MACROS,OVERWRITE_GEODB<comma>YES<comma>DATASET_TEMPLATE<comma><comma>WRITE_UNZONED_UTC<comma>No<comma>DESTINATION_DATASETTYPE_VALIDATION<comma>Yes<comma>COORDINATE_SYSTEM_GRANULARITY<comma>FEATURE_TYPE<comma>ADVANCED<comma><comma>BEGIN_SQL<comma><comma>END_SQL<comma>,METAFILE,FILEGDB" }    WRITER_METAFILE { "ATTRIBUTE_CASE,ANY_FIRST_NONNUMERIC,ATTRIBUTE_INVALID_CHARS,<backslash><backslash><quote>:<dollar>?*<closeparen><openparen><lt><gt>|<openbracket>%#<space><apos><amp>+-<closebracket>.^<backslash><opencurly><backslash><closecurly>~<comma><solidus>,ATTRIBUTE_LENGTH,64,ATTR_TYPE_MAP,text<openparen>width<closeparen><comma>fme_varchar<openparen>width<closeparen><comma>text<openparen>width<closeparen><comma>fme_char<openparen>width<closeparen><comma>text<openparen>2048<closeparen><comma>fme_buffer<comma>text<openparen>2048<closeparen><comma>fme_xml<comma>text<openparen>2048<closeparen><comma>fme_json<comma>blob<comma>fme_binarybuffer<comma>blob<comma>fme_varbinary<openparen>width<closeparen><comma>blob<comma>fme_binary<openparen>width<closeparen><comma>date<comma>fme_datetime<comma>date<comma>fme_date<comma>date<comma>fme_time<comma>single<comma>fme_real32<comma>double<comma>fme_real64<comma>double<comma><quote>fme_decimal<openparen>width<comma>decimal<closeparen><quote><comma>int<comma>fme_int32<comma>double<comma>fme_uint32<comma>text<openparen>20<closeparen><comma>fme_int64<comma>text<openparen>20<closeparen><comma>fme_uint64<comma>smallint<comma>fme_int16<comma>int<comma>fme_uint16<comma>smallint<comma>fme_int8<comma>smallint<comma>fme_uint8<comma>smallint<comma>fme_boolean<comma>objectid<comma>fme_int32<comma>guid<comma>fme_buffer<comma>globalid<comma>fme_buffer,DEST_ILLEGAL_ATTR_LIST,,FEATURE_TYPE_CASE,ANY_FIRST_NONNUMERIC,FEATURE_TYPE_INVALID_CHARS,<backslash><backslash><quote>:<dollar>?*<closeparen><openparen><lt><gt>|<openbracket>%#<space><apos><amp>+-<closebracket>.^<backslash><opencurly><backslash><closecurly>~<comma>,FEATURE_TYPE_LENGTH,0,FEATURE_TYPE_LENGTH_INCLUDES_PREFIX,false,FEATURE_TYPE_RESERVED_WORDS,,FORMAT_METAFILE,$(FME_HOME_ENCODED)metafile<backslash>FILEGDB.fmf,FORMAT_NAME,FILEGDB,GEOM_MAP,geodb_point<comma>fme_point<comma>geodb_polygon<comma>fme_polygon<comma>geodb_polygon<comma>fme_rounded_rectangle<comma>geodb_polyline<comma>fme_line<comma>geodb_multipoint<comma>fme_point<comma>geodb_polygon<comma>fme_rectangle<comma>geodb_point<comma>fme_text<comma>geodb_polyline<comma>fme_arc<comma>geodb_polygon<comma>fme_ellipse<comma>geodb_no_geom<comma>fme_no_geom<comma>geodb_polygon<comma>fme_raster<comma>geodb_polyline<comma>fme_surface<comma>geodb_polyline<comma>fme_solid<comma>geodb_polygon<comma>fme_point_cloud<comma>geodb_polygon<comma>fme_voxel_grid<comma>geodb_no_geom<comma>fme_feature_table<comma>geodb_no_geom<comma>fme_collection,READER_ATTR_INDEX_TYPES,Indexed,READER_USES_DEF,yes,SOURCE,no,SUPPORTS_FEAT_TYPE_FANOUT,yes,SUPPORTS_MULTI_GEOM,no,WORKBENCH_CANNED_SCHEMA,,WRITER,FILEGDB,WRITER_ATTR_INDEX_TYPES,Indexed,WRITER_DEFLINE_PARMS,<quote>GUI<space>NAMEDGROUP<space>fme_configuration_group<space>fme_configuration_common_group%fme_spatial_group%fme_advanced_group%oracle_advanced_group<space>Table<quote><comma><comma><quote>GUI<space>NAMEDGROUP<space>fme_configuration_common_group<space>fme_feature_operation%fme_table_handling%mie_pack%oracle_model%fme_update_geometry%fme_selection_group%fme_table_creation_group<space>General<quote><comma><comma><quote>GUI<space>ACTIVECHOICE_LOOKUP<space>fme_feature_operation<space>Insert<comma>INSERT<comma>fme_update_geometry<comma>fme_selection_group<comma>mie_pack%Update<comma>UPDATE<comma>++fme_table_handling+USE_EXISTING<comma>++fme_selection_group+FME_DISCLOSURE_OPEN%Delete<comma>DELETE<comma>++fme_table_handling+USE_EXISTING<comma>fme_update_geometry<comma>++fme_selection_group+FME_DISCLOSURE_OPEN<comma>fme_spatial_group<comma>fme_advanced_group<comma>oracle_sequenced_cols%<lt>at<gt>Value<lt>openparen<gt>fme_db_operation<lt>closeparen<gt><comma>MULTIPLE<comma>++fme_table_handling+USE_EXISTING<comma>++fme_selection_group+FME_DISCLOSURE_OPEN<space>Feature<space>Operation<quote><comma>INSERT<comma><quote>GUI<space>ACTIVECHOICE_LOOKUP<space>fme_table_handling<space>Use<lt>space<gt>Existing<comma>USE_EXISTING<comma>fme_table_creation_group%Create<lt>space<gt>If<lt>space<gt>Needed<comma>CREATE_IF_MISSING%Drop<lt>space<gt>and<lt>space<gt>Create<comma>DROP_CREATE%Truncate<lt>space<gt>Existing<comma>TRUNCATE_EXISTING<comma>fme_table_creation_group<space>Table<space>Handling<quote><comma>CREATE_IF_MISSING<comma><quote>GUI<space>WHOLE_LINE<space>LOOKUP_CHOICE<space>fme_update_geometry<space>Yes<comma>YES%No<comma>NO<space>Update<space>Spatial<space>Column<openparen>s<closeparen><quote><comma>YES<comma><quote>GUI<space>DISCLOSUREGROUP<space>fme_selection_group<space>fme_selection_method<space>Row<space>Selection<quote><comma><comma><quote>GUI<space>WHOLE_LINE<space>RADIOPARAMETERGROUP<space>fme_selection_method<space>fme_match_columns<comma>MATCH_COLUMNS%fme_where_builder_clause<comma>BUILDER<space>Row<space>Selection<space>Method<quote><comma>MATCH_COLUMNS<comma><quote>GUI<space>WHOLE_LINE<space>ATTRLIST_COMMAS<space>fme_match_columns<space>Match<space>Columns<quote><comma><comma><quote>GUI<space>WHOLE_LINE<space>TEXT_EDIT_SQL_CFG_OR_ATTR<space>fme_where_builder_clause<space>MODE<comma>WHERE<space>WHERE<space>Clause<quote><comma><comma><quote>GUI<space>DISCLOSUREGROUP<space>fme_table_creation_group<space>filegdb_object_id_field%filegdb_object_id_alias%filegdb_shape_field%filegdb_shape_alias%filegdb_config_keyword%filegdb_xy_tolerance%filegdb_z_tolerance%filegdb_m_tolerance<space>Table<space>Creation<space>Parameters<quote><comma><comma><quote>GUI<space>TEXT<space>filegdb_object_id_field<space>Object<space>ID<space>Field<quote><comma>OBJECTID<comma><quote>GUI<space>TEXT<space>filegdb_object_id_alias<space>Object<space>ID<space>Alias<quote><comma>OBJECTID<comma><quote>GUI<space>TEXT<space>filegdb_shape_field<space>Shape<space>Field<quote><comma>SHAPE<comma><quote>GUI<space>TEXT<space>filegdb_shape_alias<space>Shape<space>Alias<quote><comma>SHAPE<comma><quote>GUI<space>TEXT<space>filegdb_config_keyword<space>Configuration<space>Keyword<quote><comma>DEFAULTS<comma><quote>GUI<space>OPTIONAL<space>FLOAT<space>filegdb_xy_tolerance<space>XY<space>Tolerance<quote><comma><comma><quote>GUI<space>FLOAT<space>filegdb_z_tolerance<space>Z<space>Tolerance<quote><comma>0.001<comma><quote>GUI<space>FLOAT<space>filegdb_m_tolerance<space>M<space>Tolerance<quote><comma>0.001,WRITER_DEF_LINE_TEMPLATE,<opencurly>FME_GEN_GROUP_NAME<closecurly><comma>filegdb_type<comma><opencurly>FME_GEN_GEOMETRY<closecurly><comma>filegdb_drop_table<comma><quote><quote><quote><quote><quote><quote><comma>filegdb_truncate_table<comma><quote><quote><quote><quote><quote><quote><comma>fme_feature_operation<comma>INSERT<comma>fme_table_handling<comma>CREATE_IF_MISSING<comma>fme_selection_method<comma>MATCH_COLUMNS<comma>fme_match_columns<comma><quote><quote><quote><quote><quote><quote><comma>fme_where_builder_clause<comma><quote><quote><quote><quote><quote><quote><comma>fme_update_geometry<comma>YES<comma>filegdb_object_id_field<comma>OBJECTID<comma>filegdb_object_id_alias<comma>OBJECTID<comma>filegdb_shape_field<comma>SHAPE<comma>filegdb_shape_alias<comma>SHAPE<comma>filegdb_config_keyword<comma>DEFAULTS<comma>filegdb_xy_tolerance<comma><quote><quote><quote><quote><quote><quote><comma>filegdb_z_tolerance<comma>0.001<comma>filegdb_m_tolerance<comma>0.001,WRITER_FORMAT_PARAMETER,DATASET_NAME<comma><quote>gdb<space>file<quote><comma>FEATURE_TYPE_NAME<comma><quote>Feature<space>Class<space>or<space>Table<quote><comma>FEATURE_TYPE_DEFAULT_NAME<comma>FeatureClass1<comma>READER_DATASET_HINT<comma><quote>Select<space>the<space>File<space>Geodatabase<space>folder<quote><comma>WRITER_DATASET_HINT<comma><quote>Specify<space>File<space>Geodatabase<space>folder<quote><comma>ATTRIBUTE_READING<comma>DEFLINE<comma>ATTRIBUTE_READING_HISTORIC<comma>ALL<comma>ADVANCED_PARMS<comma><quote>FILEGDB_IN_BEGIN_SQL<space>FILEGDB_IN_END_SQL<space>FILEGDB_OUT_BEGIN_SQL<space>FILEGDB_OUT_END_SQL<quote>,WRITER_HAS_DEFLINE_ATTRS,yes,WRITER_USES_DEF,yes" }    WRITER_FEATURE_TYPES { "Bufferer:Chopped,ftp_feature_type_name,Bufferer,ftp_writer,FILEGDB,ftp_geometry,geodb_polygon,ftp_dynamic_schema,no,ftp_dynamic_feature_type_name_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_geometry_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_schema_def_name_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_schema_sources,<lt>lt<gt>Unused<lt>gt<gt>,ftp_attribute_source,0,ftp_user_attributes,index<comma>text<lt>openparen<gt>200<lt>closeparen<gt><comma>code_duiker<comma>text<lt>openparen<gt>200<lt>closeparen<gt><comma>bok_duiker_bov<comma>text<lt>openparen<gt>200<lt>closeparen<gt><comma>bok_duiker_ben<comma>text<lt>openparen<gt>200<lt>closeparen<gt><comma>breedte_duiker<comma>text<lt>openparen<gt>200<lt>closeparen<gt><comma>hoogte_duiker<comma>text<lt>openparen<gt>200<lt>closeparen<gt><comma>vorm_duiker<comma>text<lt>openparen<gt>200<lt>closeparen<gt>,ftp_user_attribute_values,<comma><comma><comma><comma><comma><comma>,ftp_format_parameters,fme_configuration_group<comma><comma>fme_configuration_common_group<comma><comma>fme_feature_operation<comma>INSERT<comma>fme_table_handling<comma>CREATE_IF_MISSING<comma>fme_update_geometry<comma><lt>lt<gt>Unused<lt>gt<gt><comma>fme_selection_group<comma><comma>fme_selection_method<comma><lt>lt<gt>Unused<lt>gt<gt><comma>fme_match_columns<comma><lt>lt<gt>Unused<lt>gt<gt><comma>fme_where_builder_clause<comma><lt>lt<gt>Unused<lt>gt<gt><comma>fme_table_creation_group<comma><comma>filegdb_object_id_field<comma>OBJECTID<comma>filegdb_object_id_alias<comma>OBJECTID<comma>filegdb_shape_field<comma>SHAPE<comma>filegdb_shape_alias<comma>SHAPE<comma>filegdb_config_keyword<comma>DEFAULTS<comma>filegdb_xy_tolerance<comma><comma>filegdb_z_tolerance<comma>0.001<comma>filegdb_m_tolerance<comma>0.001" }    WRITER_PARAMS { "COORDINATE_SYSTEM_GRANULARITY,FEATURE_TYPE,WRITE_UNZONED_UTC,No,OVERWRITE_GEODB,YES,DESTINATION_DATASETTYPE_VALIDATION,Yes" }    WRITER_COORDSYS { "EPSG:28992" }    DATASET_ATTR { "_dataset" }    FEATURE_TYPE_LIST_ATTR { "_feature_type" }    TOTAL_FEATURES_WRITTEN_ATTR { "_total_features_written" }    OUTPUT_PORTS { "" }    INPUT Chopped FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Bufferer_BUFFERED_1_fqVQIsF6XLc="  @FeatureType(ENCODED,Bufferer)
+# -------------------------------------------------------------------------
+INCLUDE [    puts {DEFAULT_MACRO FeatureWriterDataset_$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_FeatureWriter_2 G:<backslash>GIS<space>WATERSYSTEEM<backslash>HyDAMO<backslash>FME<backslash>output_v2021<backslash>testDHS<backslash>test_snipper_point.gdb}; ]
+FACTORY_DEF {*} WriterFactory    FLUSH_WHEN_GROUPS_CHANGE { <Unused> }    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_FeatureWriter_2 }    WRITER_TYPE { FILEGDB }    WRITER_DATASET { "$(FeatureWriterDataset_$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_FeatureWriter_2)" }    WRITER_SETTINGS { "RUNTIME_MACROS,OVERWRITE_GEODB<comma>YES<comma>DATASET_TEMPLATE<comma><comma>WRITE_UNZONED_UTC<comma>No<comma>DESTINATION_DATASETTYPE_VALIDATION<comma>Yes<comma>COORDINATE_SYSTEM_GRANULARITY<comma>FEATURE_TYPE<comma>ADVANCED<comma><comma>BEGIN_SQL<comma><comma>END_SQL<comma>,METAFILE,FILEGDB" }    WRITER_METAFILE { "ATTRIBUTE_CASE,ANY_FIRST_NONNUMERIC,ATTRIBUTE_INVALID_CHARS,<backslash><backslash><quote>:<dollar>?*<closeparen><openparen><lt><gt>|<openbracket>%#<space><apos><amp>+-<closebracket>.^<backslash><opencurly><backslash><closecurly>~<comma><solidus>,ATTRIBUTE_LENGTH,64,ATTR_TYPE_MAP,text<openparen>width<closeparen><comma>fme_varchar<openparen>width<closeparen><comma>text<openparen>width<closeparen><comma>fme_char<openparen>width<closeparen><comma>text<openparen>2048<closeparen><comma>fme_buffer<comma>text<openparen>2048<closeparen><comma>fme_xml<comma>text<openparen>2048<closeparen><comma>fme_json<comma>blob<comma>fme_binarybuffer<comma>blob<comma>fme_varbinary<openparen>width<closeparen><comma>blob<comma>fme_binary<openparen>width<closeparen><comma>date<comma>fme_datetime<comma>date<comma>fme_date<comma>date<comma>fme_time<comma>single<comma>fme_real32<comma>double<comma>fme_real64<comma>double<comma><quote>fme_decimal<openparen>width<comma>decimal<closeparen><quote><comma>int<comma>fme_int32<comma>double<comma>fme_uint32<comma>text<openparen>20<closeparen><comma>fme_int64<comma>text<openparen>20<closeparen><comma>fme_uint64<comma>smallint<comma>fme_int16<comma>int<comma>fme_uint16<comma>smallint<comma>fme_int8<comma>smallint<comma>fme_uint8<comma>smallint<comma>fme_boolean<comma>objectid<comma>fme_int32<comma>guid<comma>fme_buffer<comma>globalid<comma>fme_buffer,DEST_ILLEGAL_ATTR_LIST,,FEATURE_TYPE_CASE,ANY_FIRST_NONNUMERIC,FEATURE_TYPE_INVALID_CHARS,<backslash><backslash><quote>:<dollar>?*<closeparen><openparen><lt><gt>|<openbracket>%#<space><apos><amp>+-<closebracket>.^<backslash><opencurly><backslash><closecurly>~<comma>,FEATURE_TYPE_LENGTH,0,FEATURE_TYPE_LENGTH_INCLUDES_PREFIX,false,FEATURE_TYPE_RESERVED_WORDS,,FORMAT_METAFILE,$(FME_HOME_ENCODED)metafile<backslash>FILEGDB.fmf,FORMAT_NAME,FILEGDB,GEOM_MAP,geodb_point<comma>fme_point<comma>geodb_polygon<comma>fme_polygon<comma>geodb_polygon<comma>fme_rounded_rectangle<comma>geodb_polyline<comma>fme_line<comma>geodb_multipoint<comma>fme_point<comma>geodb_polygon<comma>fme_rectangle<comma>geodb_point<comma>fme_text<comma>geodb_polyline<comma>fme_arc<comma>geodb_polygon<comma>fme_ellipse<comma>geodb_no_geom<comma>fme_no_geom<comma>geodb_polygon<comma>fme_raster<comma>geodb_polyline<comma>fme_surface<comma>geodb_polyline<comma>fme_solid<comma>geodb_polygon<comma>fme_point_cloud<comma>geodb_polygon<comma>fme_voxel_grid<comma>geodb_no_geom<comma>fme_feature_table<comma>geodb_no_geom<comma>fme_collection,READER_ATTR_INDEX_TYPES,Indexed,READER_USES_DEF,yes,SOURCE,no,SUPPORTS_FEAT_TYPE_FANOUT,yes,SUPPORTS_MULTI_GEOM,no,WORKBENCH_CANNED_SCHEMA,,WRITER,FILEGDB,WRITER_ATTR_INDEX_TYPES,Indexed,WRITER_DEFLINE_PARMS,<quote>GUI<space>NAMEDGROUP<space>fme_configuration_group<space>fme_configuration_common_group%fme_spatial_group%fme_advanced_group%oracle_advanced_group<space>Table<quote><comma><comma><quote>GUI<space>NAMEDGROUP<space>fme_configuration_common_group<space>fme_feature_operation%fme_table_handling%mie_pack%oracle_model%fme_update_geometry%fme_selection_group%fme_table_creation_group<space>General<quote><comma><comma><quote>GUI<space>ACTIVECHOICE_LOOKUP<space>fme_feature_operation<space>Insert<comma>INSERT<comma>fme_update_geometry<comma>fme_selection_group<comma>mie_pack%Update<comma>UPDATE<comma>++fme_table_handling+USE_EXISTING<comma>++fme_selection_group+FME_DISCLOSURE_OPEN%Delete<comma>DELETE<comma>++fme_table_handling+USE_EXISTING<comma>fme_update_geometry<comma>++fme_selection_group+FME_DISCLOSURE_OPEN<comma>fme_spatial_group<comma>fme_advanced_group<comma>oracle_sequenced_cols%<lt>at<gt>Value<lt>openparen<gt>fme_db_operation<lt>closeparen<gt><comma>MULTIPLE<comma>++fme_table_handling+USE_EXISTING<comma>++fme_selection_group+FME_DISCLOSURE_OPEN<space>Feature<space>Operation<quote><comma>INSERT<comma><quote>GUI<space>ACTIVECHOICE_LOOKUP<space>fme_table_handling<space>Use<lt>space<gt>Existing<comma>USE_EXISTING<comma>fme_table_creation_group%Create<lt>space<gt>If<lt>space<gt>Needed<comma>CREATE_IF_MISSING%Drop<lt>space<gt>and<lt>space<gt>Create<comma>DROP_CREATE%Truncate<lt>space<gt>Existing<comma>TRUNCATE_EXISTING<comma>fme_table_creation_group<space>Table<space>Handling<quote><comma>CREATE_IF_MISSING<comma><quote>GUI<space>WHOLE_LINE<space>LOOKUP_CHOICE<space>fme_update_geometry<space>Yes<comma>YES%No<comma>NO<space>Update<space>Spatial<space>Column<openparen>s<closeparen><quote><comma>YES<comma><quote>GUI<space>DISCLOSUREGROUP<space>fme_selection_group<space>fme_selection_method<space>Row<space>Selection<quote><comma><comma><quote>GUI<space>WHOLE_LINE<space>RADIOPARAMETERGROUP<space>fme_selection_method<space>fme_match_columns<comma>MATCH_COLUMNS%fme_where_builder_clause<comma>BUILDER<space>Row<space>Selection<space>Method<quote><comma>MATCH_COLUMNS<comma><quote>GUI<space>WHOLE_LINE<space>ATTRLIST_COMMAS<space>fme_match_columns<space>Match<space>Columns<quote><comma><comma><quote>GUI<space>WHOLE_LINE<space>TEXT_EDIT_SQL_CFG_OR_ATTR<space>fme_where_builder_clause<space>MODE<comma>WHERE<space>WHERE<space>Clause<quote><comma><comma><quote>GUI<space>DISCLOSUREGROUP<space>fme_table_creation_group<space>filegdb_object_id_field%filegdb_object_id_alias%filegdb_shape_field%filegdb_shape_alias%filegdb_config_keyword%filegdb_xy_tolerance%filegdb_z_tolerance%filegdb_m_tolerance<space>Table<space>Creation<space>Parameters<quote><comma><comma><quote>GUI<space>TEXT<space>filegdb_object_id_field<space>Object<space>ID<space>Field<quote><comma>OBJECTID<comma><quote>GUI<space>TEXT<space>filegdb_object_id_alias<space>Object<space>ID<space>Alias<quote><comma>OBJECTID<comma><quote>GUI<space>TEXT<space>filegdb_shape_field<space>Shape<space>Field<quote><comma>SHAPE<comma><quote>GUI<space>TEXT<space>filegdb_shape_alias<space>Shape<space>Alias<quote><comma>SHAPE<comma><quote>GUI<space>TEXT<space>filegdb_config_keyword<space>Configuration<space>Keyword<quote><comma>DEFAULTS<comma><quote>GUI<space>OPTIONAL<space>FLOAT<space>filegdb_xy_tolerance<space>XY<space>Tolerance<quote><comma><comma><quote>GUI<space>FLOAT<space>filegdb_z_tolerance<space>Z<space>Tolerance<quote><comma>0.001<comma><quote>GUI<space>FLOAT<space>filegdb_m_tolerance<space>M<space>Tolerance<quote><comma>0.001,WRITER_DEF_LINE_TEMPLATE,<opencurly>FME_GEN_GROUP_NAME<closecurly><comma>filegdb_type<comma><opencurly>FME_GEN_GEOMETRY<closecurly><comma>filegdb_drop_table<comma><quote><quote><quote><quote><quote><quote><comma>filegdb_truncate_table<comma><quote><quote><quote><quote><quote><quote><comma>fme_feature_operation<comma>INSERT<comma>fme_table_handling<comma>CREATE_IF_MISSING<comma>fme_selection_method<comma>MATCH_COLUMNS<comma>fme_match_columns<comma><quote><quote><quote><quote><quote><quote><comma>fme_where_builder_clause<comma><quote><quote><quote><quote><quote><quote><comma>fme_update_geometry<comma>YES<comma>filegdb_object_id_field<comma>OBJECTID<comma>filegdb_object_id_alias<comma>OBJECTID<comma>filegdb_shape_field<comma>SHAPE<comma>filegdb_shape_alias<comma>SHAPE<comma>filegdb_config_keyword<comma>DEFAULTS<comma>filegdb_xy_tolerance<comma><quote><quote><quote><quote><quote><quote><comma>filegdb_z_tolerance<comma>0.001<comma>filegdb_m_tolerance<comma>0.001,WRITER_FORMAT_PARAMETER,DATASET_NAME<comma><quote>gdb<space>file<quote><comma>FEATURE_TYPE_NAME<comma><quote>Feature<space>Class<space>or<space>Table<quote><comma>FEATURE_TYPE_DEFAULT_NAME<comma>FeatureClass1<comma>READER_DATASET_HINT<comma><quote>Select<space>the<space>File<space>Geodatabase<space>folder<quote><comma>WRITER_DATASET_HINT<comma><quote>Specify<space>File<space>Geodatabase<space>folder<quote><comma>ATTRIBUTE_READING<comma>DEFLINE<comma>ATTRIBUTE_READING_HISTORIC<comma>ALL<comma>ADVANCED_PARMS<comma><quote>FILEGDB_IN_BEGIN_SQL<space>FILEGDB_IN_END_SQL<space>FILEGDB_OUT_BEGIN_SQL<space>FILEGDB_OUT_END_SQL<quote>,WRITER_HAS_DEFLINE_ATTRS,yes,WRITER_USES_DEF,yes" }    WRITER_FEATURE_TYPES { "Snipper:Chopped,ftp_feature_type_name,Snipper,ftp_writer,FILEGDB,ftp_geometry,geodb_point,ftp_dynamic_schema,no,ftp_dynamic_feature_type_name_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_geometry_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_schema_def_name_type,DYN_SCHEMA_PROP_AUTO,ftp_dynamic_schema_sources,<lt>lt<gt>Unused<lt>gt<gt>,ftp_attribute_source,0,ftp_user_attributes,index<comma>text<lt>openparen<gt>200<lt>closeparen<gt><comma>code_duiker<comma>text<lt>openparen<gt>200<lt>closeparen<gt><comma>bok_duiker_bov<comma>text<lt>openparen<gt>200<lt>closeparen<gt><comma>bok_duiker_ben<comma>text<lt>openparen<gt>200<lt>closeparen<gt><comma>breedte_duiker<comma>text<lt>openparen<gt>200<lt>closeparen<gt><comma>hoogte_duiker<comma>text<lt>openparen<gt>200<lt>closeparen<gt><comma>vorm_duiker<comma>text<lt>openparen<gt>200<lt>closeparen<gt>,ftp_user_attribute_values,<comma><comma><comma><comma><comma><comma>,ftp_format_parameters,fme_configuration_group<comma><comma>fme_configuration_common_group<comma><comma>fme_feature_operation<comma>INSERT<comma>fme_table_handling<comma>CREATE_IF_MISSING<comma>fme_update_geometry<comma><lt>lt<gt>Unused<lt>gt<gt><comma>fme_selection_group<comma><comma>fme_selection_method<comma><lt>lt<gt>Unused<lt>gt<gt><comma>fme_match_columns<comma><lt>lt<gt>Unused<lt>gt<gt><comma>fme_where_builder_clause<comma><lt>lt<gt>Unused<lt>gt<gt><comma>fme_table_creation_group<comma><comma>filegdb_object_id_field<comma>OBJECTID<comma>filegdb_object_id_alias<comma>OBJECTID<comma>filegdb_shape_field<comma>SHAPE<comma>filegdb_shape_alias<comma>SHAPE<comma>filegdb_config_keyword<comma>DEFAULTS<comma>filegdb_xy_tolerance<comma><comma>filegdb_z_tolerance<comma>0.001<comma>filegdb_m_tolerance<comma>0.001" }    WRITER_PARAMS { "COORDINATE_SYSTEM_GRANULARITY,FEATURE_TYPE,WRITE_UNZONED_UTC,No,OVERWRITE_GEODB,YES,DESTINATION_DATASETTYPE_VALIDATION,Yes" }    WRITER_COORDSYS { "EPSG:28992" }    DATASET_ATTR { "_dataset" }    FEATURE_TYPE_LIST_ATTR { "_feature_type" }    TOTAL_FEATURES_WRITTEN_ATTR { "_total_features_written" }    OUTPUT_PORTS { "" }    INPUT Chopped FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeCreator_OUTPUT_1_qfDaBYpb4iE="  @FeatureType(ENCODED,Snipper)      INPUT Chopped FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeCreator_2_OUTPUT_1_VNaIY2ikJFA="  @FeatureType(ENCODED,Snipper)
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeManager_3 }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_GeonisBlaeu_Afsluiter"    MULTI_FEATURE_MODE { NO }    NULL_ATTR_MODE { NO_OP }    ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "" "code" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_code_af$encode)" "SET_TO" }      ATTR_ACTION { "" "duikersifonhevelID" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_duikersifonhevelID$encode)" "SET_TO" }      ATTR_ACTION { "" "statusObject" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_statusObject$encode)" "SET_TO" }      ATTR_ACTION { "" "CREATED_DATE" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_CREATED_DATE$encode)" "SET_TO" }      ATTR_ACTION { "" "LAST_EDITED_DATE" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_LAST_EDITED_DATE$encode)" "SET_TO" }      ATTR_ACTION { "" "soortAfsluitmiddel" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_soortAfsluitmiddel$encode)" "SET_TO" }      ATTR_ACTION { "" "soortRegelbaarheid" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_soortRegelbaarheid$encode)" "SET_TO" }      ATTR_ACTION { "" "breedte" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_breedte$encode)" "SET_TO" }      ATTR_ACTION { "" "hoogte" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_hoogte$encode)" "SET_TO" }      ATTR_ACTION { "" "minimaleHoogteBovenkant" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_minimaleHoogteBovenkant$encode)" "SET_TO" }      ATTR_ACTION { "" "maximaleHoogteBovenkant" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_maximaleHoogteBovenkant$encode)" "SET_TO" }      ATTR_ACTION { "" "afvoerCoefficient" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_afvoerCoefficient$encode)" "SET_TO" }      ATTR_ACTION { "" "administratiefgebied" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_administratiefgebied)" "SET_TO" }      ATTR_ACTION { "" "overlaatOnderlaat" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_overlaatOnderlaat$encode)" "SET_TO" }      ATTR_ACTION { "" "globalID" "$($(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_globalID_AKN$encode)" "SET_TO" }    OUTPUT { OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeManager_3_OUTPUT"        }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} SpatialRelationshipFactory    FACTORY_NAME $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_SpatialRelator    INPUT BASE FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeManager_3_OUTPUT"    INPUT CANDIDATE FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Bufferer_BUFFERED_0_z2VPLLNEjaA="    PREDICATE "WITHIN"    LIST_ATTRS_TO_INCLUDE { <Unused> }    LIST_ATTRS_TO_INCLUDE_MODE <Unused>    SUCCESS_ATTR "_related_candidates"    REJECT_INVALID_GEOM Yes    REJECT_INVALID_PREDICATES Yes    REJECT_RASTERS No    ALLOW_NULLS Yes    CUSTOM_MULTI_HANDLING Yes    CURVE_BOUNDARY_RULE ENDPOINTS_MOD2    CALCULATE_CARDINALITY No    MERGE_INCOMING_ATTR YES    ATTR_ACCUM_MODE HANDLE_CONFLICT    ATTR_CONFLICT_RES ORIGINAL_IF_CONFLICT    INCOMING_ATTR_PREFIX "<Unused>"    OUTPUT TAGGED FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_SpatialRelator_Output"
+# -------------------------------------------------------------------------
+FACTORY_DEF * TestFactory    FACTORY_NAME $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Tester    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_SpatialRelator_Output"    TEST "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>_related_candidates<closeparen>,$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Tester)" = 1 ENCODED    BOOLEAN_OPERATOR OR    COMPOSITE_TEST_EXPR "1"    OUTPUT PASSED FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Tester_PASSED"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeManager }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_Tester_PASSED"    MULTI_FEATURE_MODE { NO }    NULL_ATTR_MODE { NO_OP }    ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "duikersifonhevelID" "duikersifonhevelID" "<at>Value<openparen>code_duiker<closeparen>" "SET_TO" }      ATTR_ACTION { "breedte" "breedte" "<at>Value<openparen>breedte_duiker<closeparen>" "SET_TO" }      ATTR_ACTION { "hoogte" "hoogte" "FME_CONDITIONAL:DEFAULT_VALUE'<at>Value<openparen>hoogte_duiker<closeparen>'BOOL_OP;AND;COMPOSITE_TEST;1 AND 2;TEST <at>Value<openparen>vorm_duiker<closeparen> = 1;TEST hoogte_duiker ATTRIBUTE_VALUE_NULL _FME_BLANK_STRING_'<at>Value<openparen>breedte_duiker<closeparen>'FME_NUM_CONDITIONS2___" "SET_TO" }      ATTR_ACTION { "minimaleHoogteBovenkant" "minimaleHoogteBovenkant" "FME_CONDITIONAL:DEFAULT_VALUE'<at>Evaluate<openparen><at>Evaluate<openparen><at>Value<openparen>hoogte<closeparen>+<at>Value<openparen>bok_duiker_bov<closeparen><closeparen><closeparen>'BOOL_OP;OR;COMPOSITE_TEST;1;TEST <at>Value<openparen>index<closeparen> = 0'<at>Evaluate<openparen><at>Value<openparen>hoogte<closeparen>+<at>Value<openparen>bok_duiker_bov<closeparen><closeparen>'BOOL_OP;OR;COMPOSITE_TEST;1;TEST <at>Value<openparen>index<closeparen> = -1'<at>Evaluate<openparen><at>Value<openparen>hoogte<closeparen>+<at>Value<openparen>bok_duiker_ben<closeparen><closeparen>'FME_NUM_CONDITIONS3___" "SET_TO" }      ATTR_ACTION { "maximaleHoogteBovenkant" "maximaleHoogteBovenkant" "FME_CONDITIONAL:DEFAULT_VALUE'<at>Evaluate<openparen><at>Evaluate<openparen>2*<at>Value<openparen>hoogte<closeparen>+<at>Value<openparen>bok_duiker_bov<closeparen><closeparen><closeparen>'BOOL_OP;OR;COMPOSITE_TEST;1;TEST <at>Value<openparen>index<closeparen> = 0'<at>Evaluate<openparen>2*<at>Value<openparen>hoogte<closeparen>+<at>Value<openparen>bok_duiker_bov<closeparen><closeparen>'BOOL_OP;OR;COMPOSITE_TEST;1;TEST <at>Value<openparen>index<closeparen> = -1'<at>Evaluate<openparen>2*<at>Value<openparen>hoogte<closeparen>+<at>Value<openparen>bok_duiker_ben<closeparen><closeparen>'FME_NUM_CONDITIONS3___" "SET_TO" }    OUTPUT { OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeManager_OUTPUT"        }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeManager_4 }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeManager_OUTPUT"    MULTI_FEATURE_MODE { NO }    NULL_ATTR_MODE { NO_OP }    ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "statusObject" "statusObject" "FME_CONDITIONAL:DEFAULT_VALUE'99'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 100'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 300'3'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 400'4'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 500'5'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 201'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 202'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 203'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 204'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 9900'98'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 9800'99'FME_NUM_CONDITIONS11___" "SET_TO" }      ATTR_ACTION { "soortAfsluitmiddel" "soortAfsluitmiddel" "FME_CONDITIONAL:DEFAULT_VALUE'99'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>soortAfsluitmiddel<closeparen> = 1'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>soortAfsluitmiddel<closeparen> = 2'2'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>soortAfsluitmiddel<closeparen> = 3'3'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>soortAfsluitmiddel<closeparen> = 4'4'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>soortAfsluitmiddel<closeparen> = 5'5'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>soortAfsluitmiddel<closeparen> = 6'6'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>soortAfsluitmiddel<closeparen> = 7'4'BOOL_OP;OR;COMPOSITE_TEST;1;TEST <at>Value<openparen>soortAfsluitmiddel<closeparen> = 70'7'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>soortAfsluitmiddel<closeparen> = 71'98'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>soortAfsluitmiddel<closeparen> = 50'97'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>soortAfsluitmiddel<closeparen> = 99'98'FME_NUM_CONDITIONS12___" "SET_TO" }      ATTR_ACTION { "soortRegelbaarheid" "soortRegelbaarheid" "FME_CONDITIONAL:DEFAULT_VALUE'99'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>soortRegelbaarheid<closeparen> = 1'4'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>soortRegelbaarheid<closeparen> = 2'3'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>soortRegelbaarheid<closeparen> = 3'2'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>soortRegelbaarheid<closeparen> = 4'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>soortRegelbaarheid<closeparen> = 98'99'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>soortRegelbaarheid<closeparen> = 99'98'FME_NUM_CONDITIONS7___" "SET_TO" }      ATTR_ACTION { "overlaatOnderlaat" "overlaatOnderlaat" "FME_CONDITIONAL:DEFAULT_VALUE'3'BOOL_OP;OR;COMPOSITE_TEST;1;TEST <at>Value<openparen>soortAfsluitmiddel<closeparen> IN 1<comma>2<comma>3<comma>6<comma>7'1'BOOL_OP;OR;COMPOSITE_TEST;1;TEST <at>Value<openparen>soortAfsluitmiddel<closeparen> IN 4<comma>5'2'FME_NUM_CONDITIONS3___" "SET_TO" }    OUTPUT { OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeManager_4_OUTPUT"        }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttributeKeeperFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeKeeper }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeManager_4_OUTPUT"    KEEP_ATTRS { administratiefgebied,breedte,afvoerCoefficient,code,maximaleHoogteBovenkant,statusObject,soortAfsluitmiddel,soortRegelbaarheid,minimaleHoogteBovenkant,hoogte,LAST_EDITED_DATE,CREATED_DATE,duikersifonhevelID,overlaatOnderlaat,globalID }    KEEP_LISTS {  }    KEEP_FME_ATTRIBUTES Yes    BUILD_FEATURE_TABLES { NO }    OUTPUT_ON_ATTRIBUTE_CHANGE { <Unused> }    OUTPUT { OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeKeeper_OUTPUT"        }
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_HyDAMO_Afsluitmiddel1630496903 Output Collector"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_AttributeKeeper_OUTPUT"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME)_HyDAMO_Afsluitmiddel"
+INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(GeonisBlaeuToHyDAMOConverterAfsluitmiddel_WORKSPACE_NAME))}]

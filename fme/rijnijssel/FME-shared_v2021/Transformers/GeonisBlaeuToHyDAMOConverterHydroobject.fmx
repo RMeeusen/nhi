@@ -1,0 +1,607 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <TRANSFORMER
+# TRANSFORMER_BEGIN GeonisBlaeuToHyDAMOConverterHydroobject,1,Workflows,a9d1a00d-377e-4de1-9257-528e9c4dbecd,"Linked by Default",No,NO_PARALLELISM,,No,21326,YES,No,,No,
+# <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Custom Transformer om data van watergangen van Geonis Blaeu format om te zetten naar Hydamo v13 format. </p>
+# <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
+#     <br/>
+# </p>
+# <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Opgesteld in 2020 door Sweco - Tessa Andringa (tessa.andringa@sweco.nl) </p>
+# <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Gebaseerd op script WRIJ</p>
+# 
+# TRANSFORMER_END
+#!   ARCGIS_COMPATIBILITY="ARCGIS_AUTO"
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BLOCKED_LOOPING="No"
+#!   CATEGORY="Workflows"
+#!   DESCRIPTION="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Custom Transformer om data van watergangen van Geonis Blaeu format om te zetten naar Hydamo v13 format. &lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Opgesteld in 2020 door Sweco - Tessa Andringa (tessa.andringa@sweco.nl) &lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Gebaseerd op script WRIJ&lt;/p&gt;&#10;"
+#!   DOC_EXTENTS="9591.11 3192.53"
+#!   DOC_TOP_LEFT="991.765 -2310.71"
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="21326"
+#!   FME_DOCUMENT_GUID="a9d1a00d-377e-4de1-9257-528e9c4dbecd"
+#!   FME_DOCUMENT_PRIORGUID="53dfd80f-5281-434f-b724-30353301e181,b3817bc2-725b-4561-8538-3ad8400d1342,fe215ce3-6fed-491e-b04b-46981dd9f5cb,b66b3c90-2740-4f7f-bb31-733df76ab82a,79a2d576-fd46-48f4-a268-5712bf629e74,d280b8b3-eda0-4402-bbdd-a9eff450bc76,c3c0486a-f93c-44a7-963e-21d8abe849ae,810db9dc-890f-41d7-ad2d-8dd211b26167,019e31f8-664b-456e-ba36-0fb151b52e1b,4f2018ec-3fc6-4b67-99b8-a3eef8278498,50ab7497-ceb0-4278-bc1e-512dc6847642"
+#!   FME_LINKED_TRANSFORMER_VERSION="1"
+#!   FME_NAMES_ENCODING="windows-1252"
+#!   FME_PROCESS_COUNT="NO_PARALLELISM"
+#!   FME_PROCESS_GROUPS_ORDERED="No"
+#!   FME_PROCESS_GROUP_BY=""
+#!   FME_PROCESS_PRESERVE_GROUP_ATTR="No"
+#!   FME_SERVER_SERVICES=""
+#!   FMX_ATTRIBUTE_PROPOGATION_MODE="AUTO"
+#!   FMX_INSERT_MODE="Linked by Default"
+#!   HISTORY=""
+#!   ITERATION_COUNT_ATTR=""
+#!   LAST_SAVE_BUILD="FME(R) 2021.0.3.0 (20210528 - Build 21326 - WIN64)"
+#!   LAST_SAVE_DATE="2021-08-05T09:49:46"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOOP_ITERATIONS=""
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY=""
+#!   REPLACED_BY=""
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   TITLE="GeonisBlaeuToHyDAMOConverterHydroobject"
+#!   USAGE=""
+#!   USE_MARKDOWN="NO"
+#!   VIEW_POSITION="5905.73 222.803"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   XFORM_DEPRECATED="No"
+#!   ZOOM_SCALE="108"
+#! >
+#! <DATASETS>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI STRING_OR_ATTR code code (OVKIDENT)"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL STRING_OR_ATTR GLOBALID_LV GLOBALID_LV (GLOBALID_LV)"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL STRING_OR_ATTR naam naam (OWANAAM)"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL STRING_OR_ATTR statusObject statusObject (KWKSTATU)"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR CREATED_DATE CREATED_DATE:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR LAST_EDITED_DATE LAST_EDITED_DATE:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR hyperlink hyperlink:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR categorieOppwaterlichaam categorieOppwaterlichaam (IWS_CATEGORIEEN):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI LOOKUP_CHOICE_OR_ATTR typeRuwheid Chezy,1%Manning,2%StricklelrKn,3%StricklerKs,4%White&lt;space&gt;Colebrook,5%Bos&lt;space&gt;en&lt;space&gt;Bijkerk,6%overig,98%onbekend,99 typeRuwheid:"
+#!   DEFAULT_VALUE="4"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_EDIT_OR_NUM_MULTI_FEATURE_OR_ATTR ruwheidLaag &quot; &quot; ruwheidLaag:"
+#!   DEFAULT_VALUE="25"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_EDIT_OR_NUM_MULTI_FEATURE_OR_ATTR ruwheidHoog &quot; &quot; ruwheidHoog:"
+#!   DEFAULT_VALUE="15"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI LOOKUP_CHOICE_OR_ATTR administratiefgebied 1&lt;space&gt;-&lt;space&gt;aa&lt;space&gt;en&lt;space&gt;maas,1%2&lt;space&gt;-&lt;space&gt;amstel&lt;space&gt;gooi&lt;space&gt;en&lt;space&gt;vecht,2%3&lt;space&gt;-&lt;space&gt;brabantse&lt;space&gt;delta,3%4&lt;space&gt;-&lt;space&gt;delfland,4%5&lt;space&gt;-&lt;space&gt;dommel,5%6&lt;space&gt;-&lt;space&gt;fryslan,6%7&lt;space&gt;-&lt;space&gt;hollands&lt;space&gt;noorderkwartier,7%8&lt;space&gt;-&lt;space&gt;hollandse&lt;space&gt;delta,8%9&lt;space&gt;-&lt;space&gt;hunze&lt;space&gt;en&lt;space&gt;aas,9%10&lt;space&gt;-&lt;space&gt;noorderzijlvest,10%11&lt;space&gt;-&lt;space&gt;limburg,11%12&lt;space&gt;-&lt;space&gt;rijn&lt;space&gt;en&lt;space&gt;ijssel,12%13&lt;space&gt;-&lt;space&gt;rijnland,13%14&lt;space&gt;-&lt;space&gt;rivierenland,14%16&lt;space&gt;-&lt;space&gt;schieland&lt;space&gt;en&lt;space&gt;krimpenerwaard,16%17&lt;space&gt;-&lt;space&gt;stichtse&lt;space&gt;rijnlanden,17%18&lt;space&gt;-&lt;space&gt;zuiderzeeland,18%19&lt;space&gt;-&lt;space&gt;scheldestromen,19%20&lt;space&gt;-&lt;space&gt;vallei&lt;space&gt;en&lt;space&gt;veluwe,20%21&lt;space&gt;-&lt;space&gt;vechtstromen,21%22&lt;space&gt;-&lt;space&gt;drents&lt;space&gt;overijsselse&lt;space&gt;delta,22%20&lt;space&gt;-&lt;space&gt;rijkswaterstaat,30 administratiefgebied:"
+#!   DEFAULT_VALUE="12"
+#!   IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <USER_PARAMETERS
+#!   FORM="eyJwYXJhbWV0ZXJzIjpbeyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiY29kZSIsInByb21wdCI6ImNvZGUgKE9WS0lERU5UKSIsInJlcXVpcmVkIjp0cnVlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6IkdMT0JBTElEX0xWIiwicHJvbXB0IjoiR0xPQkFMSURfTFYgKEdMT0JBTElEX0xWKSIsInJlcXVpcmVkIjpmYWxzZSwic2hvd0VkaXRCdXR0b24iOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJuYWFtIiwicHJvbXB0IjoibmFhbSAoT1dBTkFBTSkiLCJyZXF1aXJlZCI6ZmFsc2UsInNob3dFZGl0QnV0dG9uIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoic3RhdHVzT2JqZWN0IiwicHJvbXB0Ijoic3RhdHVzT2JqZWN0IChLV0tTVEFUVSkiLCJyZXF1aXJlZCI6ZmFsc2UsInNob3dFZGl0QnV0dG9uIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiQ1JFQVRFRF9EQVRFIiwicHJvbXB0IjoiQ1JFQVRFRF9EQVRFOiIsInJlcXVpcmVkIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiTEFTVF9FRElURURfREFURSIsInByb21wdCI6IkxBU1RfRURJVEVEX0RBVEU6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJoeXBlcmxpbmsiLCJwcm9tcHQiOiJoeXBlcmxpbms6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJjYXRlZ29yaWVPcHB3YXRlcmxpY2hhYW0iLCJwcm9tcHQiOiJjYXRlZ29yaWVPcHB3YXRlcmxpY2hhYW0gKElXU19DQVRFR09SSUVFTik6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiY2hvaWNlcyI6W3siZGlzcGxheSI6IkNoZXp5IiwidmFsdWUiOiIxIn0seyJkaXNwbGF5IjoiTWFubmluZyIsInZhbHVlIjoiMiJ9LHsiZGlzcGxheSI6IlN0cmlja2xlbHJLbiIsInZhbHVlIjoiMyJ9LHsiZGlzcGxheSI6IlN0cmlja2xlcktzIiwidmFsdWUiOiI0In0seyJkaXNwbGF5IjoiV2hpdGUgQ29sZWJyb29rIiwidmFsdWUiOiI1In0seyJkaXNwbGF5IjoiQm9zIGVuIEJpamtlcmsiLCJ2YWx1ZSI6IjYifSx7ImRpc3BsYXkiOiJvdmVyaWciLCJ2YWx1ZSI6Ijk4In0seyJkaXNwbGF5Ijoib25iZWtlbmQiLCJ2YWx1ZSI6Ijk5In1dLCJkZWZhdWx0VmFsdWUiOiI0IiwibmFtZSI6InR5cGVSdXdoZWlkIiwicHJvbXB0IjoidHlwZVJ1d2hlaWQ6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoiZHJvcGRvd24iLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImRlZmF1bHRWYWx1ZSI6IjI1IiwiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6InJ1d2hlaWRMYWFnIiwicHJvbXB0IjoicnV3aGVpZExhYWc6IiwicmVxdWlyZWQiOnRydWUsInNob3dBcml0aG1ldGljRWRpdG9yIjp0cnVlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmdFbmNvZGVkIn0seyJkZWZhdWx0VmFsdWUiOiIxNSIsImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJydXdoZWlkSG9vZyIsInByb21wdCI6InJ1d2hlaWRIb29nOiIsInJlcXVpcmVkIjp0cnVlLCJzaG93QXJpdGhtZXRpY0VkaXRvciI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nRW5jb2RlZCJ9LHsiY2hvaWNlcyI6W3siZGlzcGxheSI6IjEgLSBhYSBlbiBtYWFzIiwidmFsdWUiOiIxIn0seyJkaXNwbGF5IjoiMiAtIGFtc3RlbCBnb29pIGVuIHZlY2h0IiwidmFsdWUiOiIyIn0seyJkaXNwbGF5IjoiMyAtIGJyYWJhbnRzZSBkZWx0YSIsInZhbHVlIjoiMyJ9LHsiZGlzcGxheSI6IjQgLSBkZWxmbGFuZCIsInZhbHVlIjoiNCJ9LHsiZGlzcGxheSI6IjUgLSBkb21tZWwiLCJ2YWx1ZSI6IjUifSx7ImRpc3BsYXkiOiI2IC0gZnJ5c2xhbiIsInZhbHVlIjoiNiJ9LHsiZGlzcGxheSI6IjcgLSBob2xsYW5kcyBub29yZGVya3dhcnRpZXIiLCJ2YWx1ZSI6IjcifSx7ImRpc3BsYXkiOiI4IC0gaG9sbGFuZHNlIGRlbHRhIiwidmFsdWUiOiI4In0seyJkaXNwbGF5IjoiOSAtIGh1bnplIGVuIGFhcyIsInZhbHVlIjoiOSJ9LHsiZGlzcGxheSI6IjEwIC0gbm9vcmRlcnppamx2ZXN0IiwidmFsdWUiOiIxMCJ9LHsiZGlzcGxheSI6IjExIC0gbGltYnVyZyIsInZhbHVlIjoiMTEifSx7ImRpc3BsYXkiOiIxMiAtIHJpam4gZW4gaWpzc2VsIiwidmFsdWUiOiIxMiJ9LHsiZGlzcGxheSI6IjEzIC0gcmlqbmxhbmQiLCJ2YWx1ZSI6IjEzIn0seyJkaXNwbGF5IjoiMTQgLSByaXZpZXJlbmxhbmQiLCJ2YWx1ZSI6IjE0In0seyJkaXNwbGF5IjoiMTYgLSBzY2hpZWxhbmQgZW4ga3JpbXBlbmVyd2FhcmQiLCJ2YWx1ZSI6IjE2In0seyJkaXNwbGF5IjoiMTcgLSBzdGljaHRzZSByaWpubGFuZGVuIiwidmFsdWUiOiIxNyJ9LHsiZGlzcGxheSI6IjE4IC0genVpZGVyemVlbGFuZCIsInZhbHVlIjoiMTgifSx7ImRpc3BsYXkiOiIxOSAtIHNjaGVsZGVzdHJvbWVuIiwidmFsdWUiOiIxOSJ9LHsiZGlzcGxheSI6IjIwIC0gdmFsbGVpIGVuIHZlbHV3ZSIsInZhbHVlIjoiMjAifSx7ImRpc3BsYXkiOiIyMSAtIHZlY2h0c3Ryb21lbiIsInZhbHVlIjoiMjEifSx7ImRpc3BsYXkiOiIyMiAtIGRyZW50cyBvdmVyaWpzc2Vsc2UgZGVsdGEiLCJ2YWx1ZSI6IjIyIn0seyJkaXNwbGF5IjoiMjAgLSByaWprc3dhdGVyc3RhYXQiLCJ2YWx1ZSI6IjMwIn1dLCJkZWZhdWx0VmFsdWUiOiIxMiIsIm5hbWUiOiJhZG1pbmlzdHJhdGllZmdlYmllZCIsInByb21wdCI6ImFkbWluaXN0cmF0aWVmZ2ViaWVkOiIsInJlcXVpcmVkIjp0cnVlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6ImRyb3Bkb3duIiwidmFsdWVUeXBlIjoic3RyaW5nIn1dfQ=="
+#! >
+#! <PARAMETER_INFO>
+#!     <INFO NAME="CREATED_DATE" IS_STAND_ALONE="true" />
+#!     <INFO NAME="GLOBALID_LV" IS_STAND_ALONE="true" />
+#!     <INFO NAME="LAST_EDITED_DATE" IS_STAND_ALONE="true" />
+#!     <INFO NAME="administratiefgebied" IS_STAND_ALONE="true" />
+#!     <INFO NAME="categorieOppwaterlichaam" IS_STAND_ALONE="true" />
+#!     <INFO NAME="code" IS_STAND_ALONE="true" />
+#!     <INFO NAME="hyperlink" IS_STAND_ALONE="true" />
+#!     <INFO NAME="naam" IS_STAND_ALONE="true" />
+#!     <INFO NAME="ruwheidHoog" IS_STAND_ALONE="false" />
+#!     <INFO NAME="ruwheidLaag" IS_STAND_ALONE="false" />
+#!     <INFO NAME="statusObject" IS_STAND_ALONE="true" />
+#!     <INFO NAME="typeRuwheid" IS_STAND_ALONE="true" />
+#! </PARAMETER_INFO>
+#! </USER_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="20"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8.25pt;&quot;&gt;Filter KWKSTATU&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8.25pt;&quot;&gt;100-203  = 1-planvorming&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8.25pt;&quot;&gt;204, 300, 9800, 9900 = 3-gerealiseerd&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8.25pt;&quot;&gt;4-buiten bedrijf, 5-niet meer aanwezig, 7-te verwijderen en 98-onbekend worden voorlopig niet gebruikt.&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8.25pt;&quot;&gt;Categorie OppwatLichaam:&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8.25pt;&quot;&gt;Alls wat niet primair (1) is, wordt secundair (2).&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8.25pt;&quot;&gt;Want tertiair (3) is per definitie geen Legger wtg en staat niet bij ons op de Legger.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="6077.6912109674913 243.09080870982604"
+#!   TOP_LEFT="6077.6912109674913 243.09080870982604"
+#!   BOTTOM_RIGHT="6949.6967507945446 -258.7889100873619"
+#!   BOUNDING_RECT="6077.6912109674913 243.09080870982604 872.00553982705333 501.87971879718793"
+#!   ORDER="500000000000000"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="1,1,0.95686274509803926,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="5"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="21"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Lijsten&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;KSTSOORT (Soort stuw: BLS_STUW_SOORTEN)&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;1 = schotbalkstuw&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;2 = stuw met schuif&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;3 = stuw met klep&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;4 = segmentstuw&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;5 = cascadestuw&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;6 = hevelstuw&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;7 = meetstuw&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;8 = meetschot&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;9 = stuw met contra-gewicht&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;10 = inlaat- en/of aflaatstuw&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;11 = overlaat&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;12 = drijverstuw&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;15 = kantelstuw&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;70 = knijpstuw&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;71 = samengestelde stuw&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;98 = overig&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;99 = onbekend&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;KSTREGEL (regelbaarheid: BLS_REGELBAARHEID_SOORTEN_VOO)&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;1 = vaste stuw&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;2 = regelbaar stuw, niet automatisch&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;3 = regelbaar stuw, automatisch&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;4 = handmatig&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;99 = overig&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IWS_LEGGERSTATUS (Leggerstatus: BLS_LEGGERSTATUS)&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1 = vastgesteld&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2 = gewijzigd&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3 = verwijderd&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4 = niet van toepassing&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;KWKSTATU (Ind. status kunstwerk: BLS_PLANSTATUS_INCL_ONBEKEND_)&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;100 = planvorming&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;201 = realisatie plan (lange termijn)&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;202 = realisatie plan (middellange termijn)&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;203 = realisatie plan (korte termijn)&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;204 = realisatie plan (in uitvoering)&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;300 = gerealiseerd/in bedrijf/in gebruik/operationeel&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;400 = buiten bedrijf/gesloten&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;500 = niet meer aanwezig&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;9800 = onbekend&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;9900 = overig&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;KDUVORM (duikervorm: BLS_VORMEN)&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1 = rond&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2 = rechthoekig&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3 = eivormig&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4 = muil&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;5 = ellips&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;6 = heul&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;7 = pyramide&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;98 = Overig&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;99 = onbekend&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;KSTKRVRM (Kruinvorm: BLS_KRUINVORMEN)&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1 = rechthoek&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2 = driehoek&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3 = trapezium&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4 = parabool&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;5 = cirkel&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;6 = kruin met speciale vorm&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;10 = rechthoek verdiept&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;11 = trapezium verdiept&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;99 = onbekend&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;KDUAFSLx (Afsluitwijze: BLS_AFSLUITWIJZEN)&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1 = deur&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2 = schotbalk&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3 = zandzakken&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4 = verticale schuif&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;5 = terugslagklep&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;6 = tolklep&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;7 = spindel&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;50 = niet afsluitbaar&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;99 = overig&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;KDUAFSBE (Afsluiting benedenstrooms: BLS_AFSLUITING_DUIKERS)&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1 = schotbalksponning&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2 = schuif&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3 = afsluiter&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4 = terugslagklep&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;98 = overig&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;99 = onbekend&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="991.76484779086968 881.81755298419057"
+#!   TOP_LEFT="991.76484779086968 881.81755298419057"
+#!   BOTTOM_RIGHT="2726.4848477908699 -2310.7124470158096"
+#!   BOUNDING_RECT="991.76484779086968 881.81755298419057 1734.72 3192.5300000000002"
+#!   ORDER="500000000000000"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="1,1,0.95686274509803926,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="0"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="5"
+#!   TYPE="AttributeCreator"
+#!   VERSION="8"
+#!   POSITION="6090.1760870262515 -394.55036724156309"
+#!   BOUNDING_RECT="6090.1760870262515 -394.55036724156309 859.49599999999998 71"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21326"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="naam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hyperlink" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="typeRuwheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheidLaag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheidHoog" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="categorieOppwaterlichaam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="GLOBALID_LV" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_predicate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; code SET_TO $(code)  naam SET_TO $(naam)  statusObject SET_TO &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;FME_NULL_VALUE&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST $(statusObject) RANGE &lt;openbracket&gt;100&lt;comma&gt;203&lt;closebracket&gt;&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST $(statusObject) &gt; 203&apos;3&apos;FME_NUM_CONDITIONS3___&quot;  CREATED_DATE SET_TO $(CREATED_DATE)  hyperlink SET_TO $(hyperlink)  administratiefgebied SET_TO $(administratiefgebied)  typeRuwheid SET_TO $(typeRuwheid)  ruwheidLaag SET_TO $(ruwheidLaag)  ruwheidHoog SET_TO $(ruwheidHoog)  categorieOppwaterlichaam SET_TO &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;2&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST $(categorieOppwaterlichaam) = 1&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST $(categorieOppwaterlichaam) = 2&apos;2&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST $(categorieOppwaterlichaam) = 3&apos;2&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST $(categorieOppwaterlichaam) = 99&apos;2&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST $(categorieOppwaterlichaam) ATTRIBUTE_VALUE_NULL _FME_BLANK_STRING_&apos;2&apos;FME_NUM_CONDITIONS6___&quot;  LAST_EDITED_DATE SET_TO $(LAST_EDITED_DATE)  GLOBALID_LV SET_TO $(GLOBALID_LV)"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_Transformaties_HyDAMO"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="6"
+#!   TYPE="Junction"
+#!   VERSION="0"
+#!   POSITION="5115.4457120225006 -144.78636724156308"
+#!   BOUNDING_RECT="5115.4457120225006 -144.78636724156308 61 61"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16609"
+#! >
+#!     <OUTPUT_FEAT NAME="Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Tester_DatumCheck_PASSED_Output"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="7"
+#!   TYPE="AttributeKeeper"
+#!   VERSION="3"
+#!   POSITION="8320.6196393686987 -423.61878748085587"
+#!   BOUNDING_RECT="8320.6196393686987 -423.61878748085587 431 71"
+#!   ORDER="500000000000686"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21326"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="naam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hyperlink" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="typeRuwheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheidLaag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheidHoog" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="categorieOppwaterlichaam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="CREATE_BULK_MODE_FEATURES" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="KEEP_ATTRS" PARM_VALUE="administratiefgebied,naam,code,hyperlink,categorieOppwaterlichaam,CREATED_DATE,LAST_EDITED_DATE,ruwheidHoog,ruwheidLaag,statusObject,typeRuwheid,globalID"/>
+#!     <XFORM_PARM PARM_NAME="KEEP_LIST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_ON_ATTRIBUTE_CHANGE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeKeeper"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="8"
+#!   TYPE="AttributeManager"
+#!   VERSION="3"
+#!   POSITION="7378.5460076822983 -394.55036724156309"
+#!   BOUNDING_RECT="7378.5460076822983 -394.55036724156309 454 71"
+#!   ORDER="500000000000688"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21326"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="naam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hyperlink" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="typeRuwheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheidLaag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheidHoog" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="categorieOppwaterlichaam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_predicate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="code code  NO_OP naam naam  NO_OP statusObject statusObject  NO_OP CREATED_DATE CREATED_DATE  NO_OP hyperlink hyperlink  NO_OP administratiefgebied administratiefgebied  NO_OP typeRuwheid typeRuwheid  NO_OP ruwheidLaag ruwheidLaag  NO_OP ruwheidHoog ruwheidHoog  NO_OP categorieOppwaterlichaam categorieOppwaterlichaam  NO_OP LAST_EDITED_DATE LAST_EDITED_DATE  NO_OP GLOBALID_LV globalID  RENAME_SET_VALUE _predicate _predicate  NO_OP"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="9"
+#!   TYPE="Bufferer"
+#!   VERSION="17"
+#!   POSITION="4329.1418867768407 -522.17923907002194"
+#!   BOUNDING_RECT="4329.1418867768407 -522.17923907002194 694.05649335510861 71"
+#!   ORDER="500000000000689"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21326"
+#! >
+#!     <OUTPUT_FEAT NAME="BUFFERED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ANGLE" PARM_VALUE="22.5"/>
+#!     <XFORM_PARM PARM_NAME="AREA_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="CAP_STYLE" PARM_VALUE="Arc"/>
+#!     <XFORM_PARM PARM_NAME="CORNER_STYLE" PARM_VALUE="Arc"/>
+#!     <XFORM_PARM PARM_NAME="GENERATE_LIST_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS_TO_INCLUDE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS_TO_INCLUDE_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MITER_LIMIT" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MODE" PARM_VALUE="AREA"/>
+#!     <XFORM_PARM PARM_NAME="OFFSET" PARM_VALUE="2"/>
+#!     <XFORM_PARM PARM_NAME="OFFSET_UNITS" PARM_VALUE="NONE"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PRECISION" PARM_VALUE="APPROX"/>
+#!     <XFORM_PARM PARM_NAME="SOLID_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SPHERE_DIVISIONS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Bufferer"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="10"
+#!   TYPE="SpatialFilter"
+#!   VERSION="11"
+#!   POSITION="5415.631565580391 -251.34621703609787"
+#!   BOUNDING_RECT="5415.631565580391 -251.34621703609787 430 71"
+#!   ORDER="500000000000690"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21326"
+#!   INPUT_FT_ORDER="Candidate%Filter"
+#! >
+#!     <OUTPUT_FEAT NAME="PASSED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_predicate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="FAILED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_PARM PARM_NAME="AGGREGATE_HANDLING" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_ACCUM_GROUP" PARM_VALUE="YES"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_ACCUM_MODE" PARM_VALUE="Merge Filter"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_CONFLICT_RES" PARM_VALUE="Use Candidate"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_PREFIX" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="BASE_TYPE" PARM_VALUE="Multiple Filters"/>
+#!     <XFORM_PARM PARM_NAME="CURVE_BOUNDARY_RULE_PARAM" PARM_VALUE="Default Rule"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_PROCESSING_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PASS_CRITERIA" PARM_VALUE="Pass Against One Filter"/>
+#!     <XFORM_PARM PARM_NAME="PREDATTR" PARM_VALUE="_predicate"/>
+#!     <XFORM_PARM PARM_NAME="PREDICATES" PARM_VALUE="CONTAINS"/>
+#!     <XFORM_PARM PARM_NAME="TESTS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="USE_BOUNDING_BOX" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SpatialFilter_2"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <SUBDOCUMENT_IOS>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="2"
+#!   NAME="GeonisBlaeuWaterlopen"
+#!   POSITION="3258.698833655003 -493.70228389406293"
+#!   BOUNDING_RECT="3258.698833655003 -493.70228389406293 741.65946272715064 71"
+#!   COLLAPSED="true"
+#!   PUBLISHED="true"
+#!   IS_SOURCE="true"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="3"
+#!   NAME="HyDAMO_Hydroobject"
+#!   POSITION="9943.7076444952199 -423.61878748085587"
+#!   BOUNDING_RECT="9943.7076444952199 -423.61878748085587 639.16712277097031 71"
+#!   COLLAPSED="true"
+#!   IS_SOURCE="false"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="4"
+#!   NAME="GeonisBlaeu_Leidingvakken"
+#!   POSITION="3271.1989586562527 -97.625971420938185"
+#!   BOUNDING_RECT="3271.1989586562527 -97.625971420938185 729.15933772590097 71"
+#!   COLLAPSED="true"
+#!   PUBLISHED="true"
+#!   IS_SOURCE="true"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! </SUBDOCUMENT_IOS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="11"
+#!   SOURCE_NODE="2"
+#!   TARGET_NODE="9"
+#!   SOURCE_PORT_DESC="0"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="12"
+#!   SOURCE_NODE="4"
+#!   TARGET_NODE="6"
+#!   SOURCE_PORT_DESC="0"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="13"
+#!   SOURCE_NODE="5"
+#!   TARGET_NODE="8"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="14"
+#!   SOURCE_NODE="6"
+#!   TARGET_NODE="10"
+#!   SOURCE_PORT_DESC="fo 0 Output"
+#!   TARGET_PORT_DESC="fi 0 Candidate"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="15"
+#!   SOURCE_NODE="7"
+#!   TARGET_NODE="3"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="0"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="16"
+#!   SOURCE_NODE="8"
+#!   TARGET_NODE="7"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="17"
+#!   SOURCE_NODE="9"
+#!   TARGET_NODE="10"
+#!   SOURCE_PORT_DESC="fo 0 BUFFERED"
+#!   TARGET_PORT_DESC="fi 1 Filter"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="18"
+#!   SOURCE_NODE="10"
+#!   TARGET_NODE="5"
+#!   SOURCE_PORT_DESC="fo 0 PASSED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="19"
+#!   SOURCE_NODE="10"
+#!   TARGET_NODE="5"
+#!   SOURCE_PORT_DESC="fo 1 FAILED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </TRANSFORMER>
+
+# ============================================================================
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_code 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_GLOBALID_LV 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_naam 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_statusObject 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_CREATED_DATE 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_LAST_EDITED_DATE 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_hyperlink 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_categorieOppwaterlichaam 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_typeRuwheid 4
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_ruwheidLaag 25
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_ruwheidHoog 15
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_administratiefgebied 12
+# ============================================================================
+# ============================================================================
+USER_PARAMETERS eyJwYXJhbWV0ZXJzIjpbeyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiY29kZSIsInByb21wdCI6ImNvZGUgKE9WS0lERU5UKSIsInJlcXVpcmVkIjp0cnVlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6IkdMT0JBTElEX0xWIiwicHJvbXB0IjoiR0xPQkFMSURfTFYgKEdMT0JBTElEX0xWKSIsInJlcXVpcmVkIjpmYWxzZSwic2hvd0VkaXRCdXR0b24iOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJuYWFtIiwicHJvbXB0IjoibmFhbSAoT1dBTkFBTSkiLCJyZXF1aXJlZCI6ZmFsc2UsInNob3dFZGl0QnV0dG9uIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoic3RhdHVzT2JqZWN0IiwicHJvbXB0Ijoic3RhdHVzT2JqZWN0IChLV0tTVEFUVSkiLCJyZXF1aXJlZCI6ZmFsc2UsInNob3dFZGl0QnV0dG9uIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiQ1JFQVRFRF9EQVRFIiwicHJvbXB0IjoiQ1JFQVRFRF9EQVRFOiIsInJlcXVpcmVkIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiTEFTVF9FRElURURfREFURSIsInByb21wdCI6IkxBU1RfRURJVEVEX0RBVEU6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJoeXBlcmxpbmsiLCJwcm9tcHQiOiJoeXBlcmxpbms6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJjYXRlZ29yaWVPcHB3YXRlcmxpY2hhYW0iLCJwcm9tcHQiOiJjYXRlZ29yaWVPcHB3YXRlcmxpY2hhYW0gKElXU19DQVRFR09SSUVFTik6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiY2hvaWNlcyI6W3siZGlzcGxheSI6IkNoZXp5IiwidmFsdWUiOiIxIn0seyJkaXNwbGF5IjoiTWFubmluZyIsInZhbHVlIjoiMiJ9LHsiZGlzcGxheSI6IlN0cmlja2xlbHJLbiIsInZhbHVlIjoiMyJ9LHsiZGlzcGxheSI6IlN0cmlja2xlcktzIiwidmFsdWUiOiI0In0seyJkaXNwbGF5IjoiV2hpdGUgQ29sZWJyb29rIiwidmFsdWUiOiI1In0seyJkaXNwbGF5IjoiQm9zIGVuIEJpamtlcmsiLCJ2YWx1ZSI6IjYifSx7ImRpc3BsYXkiOiJvdmVyaWciLCJ2YWx1ZSI6Ijk4In0seyJkaXNwbGF5Ijoib25iZWtlbmQiLCJ2YWx1ZSI6Ijk5In1dLCJkZWZhdWx0VmFsdWUiOiI0IiwibmFtZSI6InR5cGVSdXdoZWlkIiwicHJvbXB0IjoidHlwZVJ1d2hlaWQ6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoiZHJvcGRvd24iLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImRlZmF1bHRWYWx1ZSI6IjI1IiwiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6InJ1d2hlaWRMYWFnIiwicHJvbXB0IjoicnV3aGVpZExhYWc6IiwicmVxdWlyZWQiOnRydWUsInNob3dBcml0aG1ldGljRWRpdG9yIjp0cnVlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmdFbmNvZGVkIn0seyJkZWZhdWx0VmFsdWUiOiIxNSIsImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJydXdoZWlkSG9vZyIsInByb21wdCI6InJ1d2hlaWRIb29nOiIsInJlcXVpcmVkIjp0cnVlLCJzaG93QXJpdGhtZXRpY0VkaXRvciI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nRW5jb2RlZCJ9LHsiY2hvaWNlcyI6W3siZGlzcGxheSI6IjEgLSBhYSBlbiBtYWFzIiwidmFsdWUiOiIxIn0seyJkaXNwbGF5IjoiMiAtIGFtc3RlbCBnb29pIGVuIHZlY2h0IiwidmFsdWUiOiIyIn0seyJkaXNwbGF5IjoiMyAtIGJyYWJhbnRzZSBkZWx0YSIsInZhbHVlIjoiMyJ9LHsiZGlzcGxheSI6IjQgLSBkZWxmbGFuZCIsInZhbHVlIjoiNCJ9LHsiZGlzcGxheSI6IjUgLSBkb21tZWwiLCJ2YWx1ZSI6IjUifSx7ImRpc3BsYXkiOiI2IC0gZnJ5c2xhbiIsInZhbHVlIjoiNiJ9LHsiZGlzcGxheSI6IjcgLSBob2xsYW5kcyBub29yZGVya3dhcnRpZXIiLCJ2YWx1ZSI6IjcifSx7ImRpc3BsYXkiOiI4IC0gaG9sbGFuZHNlIGRlbHRhIiwidmFsdWUiOiI4In0seyJkaXNwbGF5IjoiOSAtIGh1bnplIGVuIGFhcyIsInZhbHVlIjoiOSJ9LHsiZGlzcGxheSI6IjEwIC0gbm9vcmRlcnppamx2ZXN0IiwidmFsdWUiOiIxMCJ9LHsiZGlzcGxheSI6IjExIC0gbGltYnVyZyIsInZhbHVlIjoiMTEifSx7ImRpc3BsYXkiOiIxMiAtIHJpam4gZW4gaWpzc2VsIiwidmFsdWUiOiIxMiJ9LHsiZGlzcGxheSI6IjEzIC0gcmlqbmxhbmQiLCJ2YWx1ZSI6IjEzIn0seyJkaXNwbGF5IjoiMTQgLSByaXZpZXJlbmxhbmQiLCJ2YWx1ZSI6IjE0In0seyJkaXNwbGF5IjoiMTYgLSBzY2hpZWxhbmQgZW4ga3JpbXBlbmVyd2FhcmQiLCJ2YWx1ZSI6IjE2In0seyJkaXNwbGF5IjoiMTcgLSBzdGljaHRzZSByaWpubGFuZGVuIiwidmFsdWUiOiIxNyJ9LHsiZGlzcGxheSI6IjE4IC0genVpZGVyemVlbGFuZCIsInZhbHVlIjoiMTgifSx7ImRpc3BsYXkiOiIxOSAtIHNjaGVsZGVzdHJvbWVuIiwidmFsdWUiOiIxOSJ9LHsiZGlzcGxheSI6IjIwIC0gdmFsbGVpIGVuIHZlbHV3ZSIsInZhbHVlIjoiMjAifSx7ImRpc3BsYXkiOiIyMSAtIHZlY2h0c3Ryb21lbiIsInZhbHVlIjoiMjEifSx7ImRpc3BsYXkiOiIyMiAtIGRyZW50cyBvdmVyaWpzc2Vsc2UgZGVsdGEiLCJ2YWx1ZSI6IjIyIn0seyJkaXNwbGF5IjoiMjAgLSByaWprc3dhdGVyc3RhYXQiLCJ2YWx1ZSI6IjMwIn1dLCJkZWZhdWx0VmFsdWUiOiIxMiIsIm5hbWUiOiJhZG1pbmlzdHJhdGllZmdlYmllZCIsInByb21wdCI6ImFkbWluaXN0cmF0aWVmZ2ViaWVkOiIsInJlcXVpcmVkIjp0cnVlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6ImRyb3Bkb3duIiwidmFsdWVUeXBlIjoic3RyaW5nIn1dfQ==
+# ============================================================================
+#! START_HEADER
+#! END_HEADER
+
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+DEFAULT_MACRO GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME ""
+INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_GeonisBlaeuWaterlopen1628149786 Input Splitter"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_GeonisBlaeuWaterlopen"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_GeonisBlaeuWaterlopen"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_GeonisBlaeu_Leidingvakken1628149786 Input Splitter"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_GeonisBlaeu_Leidingvakken"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_GeonisBlaeu_Leidingvakken"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} TeeFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_Tester_DatumCheck_PASSED_Output }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_GeonisBlaeu_Leidingvakken"    OUTPUT { FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_Tester_DatumCheck_PASSED_Output_Output"         }
+# -------------------------------------------------------------------------
+INCLUDE [if { ("JOIN_ARC" == "JOIN_MITER") } {         } else {             puts "MACRO MITER_TO_USE 0"         }         ]
+FACTORY_DEF {*} TestFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_Bufferer }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_GeonisBlaeuWaterlopen"    TEST { "AREA" == "SOLID" }    OUTPUT { PASSED FEATURE_TYPE __TOSOLIDBUFFERINGFACTORY__ }    OUTPUT { FAILED FEATURE_TYPE __TOPOLYGONDISSOLVEFACTORY__ }
+#
+# This is the AREA part of the buffering:
+#
+FACTORY_DEF {*} PolygonDissolveFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_Bufferer_2DBuffering }    INPUT FEATURE_TYPE __TOPOLYGONDISSOLVEFACTORY__    FLUSH_WHEN_GROUPS_CHANGE { No }    REJECT_INVALID_GEOM Yes    USE_AZMED_NEIGHBORHOOD Yes    PRE_BUFFER { "2" "22.5" "CAP_ARC" "JOIN_ARC" "$(MITER_TO_USE)" FULL OFFSET_UNITS "NONE" PRECISION "APPROX" }    DISSOLVE_MODE GEOS    CLEANING_TOLERANCE { AUTO }    LIST_ATTRS_TO_INCLUDE { <Unused> }    LIST_ATTRS_TO_INCLUDE_MODE { <Unused> }    OUTPUT { POLYGON FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_Bufferer_BUFFERED"         }    OUTPUT { NON_POLYGON FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_Bufferer_BUFFERED"         }
+#
+# This is the SOLID part of the buffering:
+#
+FACTORY_DEF {*} SolidBufferingFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_Bufferer_3DBuffering }    INPUT FEATURE_TYPE __TOSOLIDBUFFERINGFACTORY__    SPHERE_RADIUS { "2" }    SPHERE_DIVISIONS { "<Unused>" }    OUTPUT { BUFFERED FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_Bufferer_BUFFERED"        }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} SpatialFilterFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_SpatialFilter_2 }    INPUT BASE FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_Bufferer_BUFFERED"    INPUT CANDIDATE FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_Tester_DatumCheck_PASSED_Output_Output"    PREDICATE { "CONTAINS" }    USE_BOUNDING_BOX { NO }    MULTIPLE_BASES { YES }    MERGE_BASE_ATTR { YES }    ATTR_ACCUM_MODE { "HANDLE_CONFLICT" }    ATTR_CONFLICT_RES { "CANDIDATE_IF_CONFLICT" }    BASE_ATTR_PREFIX { "<Unused>" }    PREDICATE_ATTR { "_predicate" }    BOOLEAN_OPERATOR { OR }    REJECT_INVALID_GEOM Yes    REJECT_INVALID_PREDICATES Yes    REJECT_RASTERS No    ALLOW_NULLS Yes    CUSTOM_MULTI_HANDLING { Yes }    DIMENSION 2    FLUSH_WHEN_GROUPS_CHANGE { <Unused>  }    CURVE_BOUNDARY_RULE { ENDPOINTS_MOD2 }    OUTPUT { PASSED FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_SpatialFilter_2_PASSED"         }    OUTPUT { FAILED FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_SpatialFilter_2_FAILED"         }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_AttributeCreator_Transformaties_HyDAMO    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_SpatialFilter_2_PASSED"    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_SpatialFilter_2_FAILED"    MULTI_FEATURE_MODE NO    NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV     ATTR_ACTION { "" "code" "SET_TO" "$($(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_code$encode)" }      ATTR_ACTION { "" "naam" "SET_TO" "$($(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_naam$encode)" }      ATTR_ACTION { "" "statusObject" "SET_TO" "FME_CONDITIONAL:DEFAULT_VALUE'FME_NULL_VALUE'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST $($(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_statusObject$encode) RANGE <openbracket>100<comma>203<closebracket>'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST $($(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_statusObject$encode) > 203'3'FME_NUM_CONDITIONS3___" }      ATTR_ACTION { "" "CREATED_DATE" "SET_TO" "$($(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_CREATED_DATE$encode)" }      ATTR_ACTION { "" "hyperlink" "SET_TO" "$($(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_hyperlink$encode)" }      ATTR_ACTION { "" "administratiefgebied" "SET_TO" "$($(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_administratiefgebied)" }      ATTR_ACTION { "" "typeRuwheid" "SET_TO" "$($(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_typeRuwheid)" }      ATTR_ACTION { "" "ruwheidLaag" "SET_TO" "$($(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_ruwheidLaag)" }      ATTR_ACTION { "" "ruwheidHoog" "SET_TO" "$($(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_ruwheidHoog)" }      ATTR_ACTION { "" "categorieOppwaterlichaam" "SET_TO" "FME_CONDITIONAL:DEFAULT_VALUE'2'BOOL_OP;OR;COMPOSITE_TEST;1;TEST $($(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_categorieOppwaterlichaam$encode) = 1'1'BOOL_OP;OR;COMPOSITE_TEST;1;TEST $($(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_categorieOppwaterlichaam$encode) = 2'2'BOOL_OP;OR;COMPOSITE_TEST;1;TEST $($(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_categorieOppwaterlichaam$encode) = 3'2'BOOL_OP;OR;COMPOSITE_TEST;1;TEST $($(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_categorieOppwaterlichaam$encode) = 99'2'BOOL_OP;OR;COMPOSITE_TEST;1;TEST $($(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_categorieOppwaterlichaam$encode) ATTRIBUTE_VALUE_NULL _FME_BLANK_STRING_'2'FME_NUM_CONDITIONS6___" }      ATTR_ACTION { "" "LAST_EDITED_DATE" "SET_TO" "$($(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_LAST_EDITED_DATE$encode)" }      ATTR_ACTION { "" "GLOBALID_LV" "SET_TO" "$($(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_GLOBALID_LV$encode)" }    OUTPUT OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_AttributeCreator_Transformaties_HyDAMO_OUTPUT"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_AttributeManager }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_AttributeCreator_Transformaties_HyDAMO_OUTPUT"    MULTI_FEATURE_MODE { NO }    NULL_ATTR_MODE { NO_OP }    ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    MISSING_INPUT_ATTR_HANDLING RENAME_SET_VALUE REMOVE    ATTR_ACTION { "GLOBALID_LV" "globalID" "" "RENAME_SET_VALUE" }    OUTPUT { OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_AttributeManager_OUTPUT"        }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttributeKeeperFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_AttributeKeeper }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_AttributeManager_OUTPUT"    KEEP_ATTRS { administratiefgebied,naam,code,hyperlink,categorieOppwaterlichaam,CREATED_DATE,LAST_EDITED_DATE,ruwheidHoog,ruwheidLaag,statusObject,typeRuwheid,globalID }    KEEP_LISTS {  }    KEEP_FME_ATTRIBUTES Yes    BUILD_FEATURE_TABLES { NO }    OUTPUT_ON_ATTRIBUTE_CHANGE { <Unused> }    OUTPUT { OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_AttributeKeeper_OUTPUT"        }
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_HyDAMO_Hydroobject1628149786 Output Collector"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_AttributeKeeper_OUTPUT"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME)_HyDAMO_Hydroobject"
+INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(GeonisBlaeuToHyDAMOConverterHydroobject_WORKSPACE_NAME))}]

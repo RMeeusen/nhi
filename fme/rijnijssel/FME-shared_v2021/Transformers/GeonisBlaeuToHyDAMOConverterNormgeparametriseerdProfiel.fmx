@@ -1,0 +1,262 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <TRANSFORMER
+# TRANSFORMER_BEGIN GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel,1,,d612dc2b-bd85-4994-b686-663e85d662d5,"Linked Always",No,NO_PARALLELISM,,No,20238,YES,No,,No,
+# 
+# TRANSFORMER_END
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BLOCKED_LOOPING="No"
+#!   CATEGORY=""
+#!   DESCRIPTION=""
+#!   DOC_EXTENTS="4350.64 71"
+#!   DOC_TOP_LEFT="554 -171"
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="20238"
+#!   FME_DOCUMENT_GUID="d612dc2b-bd85-4994-b686-663e85d662d5"
+#!   FME_DOCUMENT_PRIORGUID=""
+#!   FME_LINKED_TRANSFORMER_VERSION="1"
+#!   FME_PROCESS_COUNT="NO_PARALLELISM"
+#!   FME_PROCESS_GROUPS_ORDERED="No"
+#!   FME_PROCESS_GROUP_BY=""
+#!   FME_PROCESS_PRESERVE_GROUP_ATTR="No"
+#!   FME_SERVER_SERVICES=""
+#!   FMX_ATTRIBUTE_PROPOGATION_MODE="AUTO"
+#!   FMX_INSERT_MODE="Linked Always"
+#!   HISTORY=""
+#!   ITERATION_COUNT_ATTR=""
+#!   LAST_SAVE_BUILD="FME(R) 2020.0.2.1 (20200511 - Build 20238 - WIN32)"
+#!   LAST_SAVE_DATE="2020-10-30T11:35:31"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOOP_ITERATIONS=""
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY=""
+#!   REPLACED_BY=""
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   TITLE="GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel"
+#!   USAGE=""
+#!   USE_MARKDOWN="NO"
+#!   VIEW_POSITION="1150.01 246.877"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   XFORM_DEPRECATED="No"
+#!   ZOOM_SCALE="100"
+#! >
+#! <DATASETS>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR bodemhoogteBenedenstrooms bodemhoogteBenedenstrooms: (IWS_AVVHOBES_L):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI LOOKUP_CHOICE_OR_ATTR typeRuwheid Chezy,1%Manning,2%StricklerKn,3%StricklerKs,4%White&lt;space&gt;Colebrook,5%Bos&lt;space&gt;en&lt;space&gt;Bijkerk,6 typeRuwheid:"
+#!   DEFAULT_VALUE="4"
+#!   IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="4"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="1525.0152501525019 -100"
+#!   BOUNDING_RECT="1525.0152501525019 -100 454 71"
+#!   ORDER="500000000000001"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20238"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="bodemhoogteBenedenstrooms" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="typeRuwheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; bodemhoogteBenedenstrooms $(bodemhoogteBenedenstrooms) SET_TO  typeRuwheid $(typeRuwheid) SET_TO"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="6"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="2400.0240002400024 -100"
+#!   BOUNDING_RECT="2400.0240002400024 -100 454 71"
+#!   ORDER="500000000000002"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20238"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bodemhoogteBenedenstrooms" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="typeRuwheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot;   SET_TO statusObject statusObject &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;99&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 100&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 300&apos;3&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 400&apos;4&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 500&apos;5&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 201&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 202&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 203&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 204&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 9900&apos;98&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 9800&apos;99&apos;FME_NUM_CONDITIONS11___&quot; SET_TO"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="8"
+#!   TYPE="AttributeKeeper"
+#!   VERSION="3"
+#!   POSITION="3203.1570315703157 -100"
+#!   BOUNDING_RECT="3203.1570315703157 -100 454 71"
+#!   ORDER="500000000000003"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20238"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bodemhoogteBenedenstrooms" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="typeRuwheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="KEEP_ATTRS" PARM_VALUE="bodemhoogteBenedenstrooms,typeRuwheid,statusObject"/>
+#!     <XFORM_PARM PARM_NAME="KEEP_LIST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeKeeper"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <SUBDOCUMENT_IOS>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="2"
+#!   NAME="GeonisBlaeu_Leidingvakken"
+#!   POSITION="554 -100"
+#!   BOUNDING_RECT="554 -100 665.00106825772946 71"
+#!   COLLAPSED="true"
+#!   PUBLISHED="true"
+#!   IS_SOURCE="true"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="3"
+#!   NAME="HyDAMO_NormgeparametriseerdProfiel"
+#!   POSITION="4031.6396563965636 -100"
+#!   BOUNDING_RECT="4031.6396563965636 -100 873.00106825772946 71"
+#!   COLLAPSED="true"
+#!   IS_SOURCE="false"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! </SUBDOCUMENT_IOS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="5"
+#!   SOURCE_NODE="2"
+#!   TARGET_NODE="4"
+#!   SOURCE_PORT_DESC="0"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="7"
+#!   SOURCE_NODE="4"
+#!   TARGET_NODE="6"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="9"
+#!   SOURCE_NODE="6"
+#!   TARGET_NODE="8"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="10"
+#!   SOURCE_NODE="8"
+#!   TARGET_NODE="3"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="0"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </TRANSFORMER>
+
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_bodemhoogteBenedenstrooms 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_typeRuwheid 4
+#! START_HEADER
+#! END_HEADER
+
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+DEFAULT_MACRO GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME ""
+INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_GeonisBlaeu_Leidingvakken1604054131 Input Splitter"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_GeonisBlaeu_Leidingvakken"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_GeonisBlaeu_Leidingvakken"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME $(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_AttributeManager    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_GeonisBlaeu_Leidingvakken"    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "" "bodemhoogteBenedenstrooms" "$($(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_bodemhoogteBenedenstrooms$encode)" "SET_TO" }      ATTR_ACTION { "" "typeRuwheid" "$($(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_typeRuwheid)" "SET_TO" }    OUTPUT OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_AttributeManager_OUTPUT"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME $(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_AttributeManager_2    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_AttributeManager_OUTPUT"    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "" "" "" "SET_TO" }      ATTR_ACTION { "statusObject" "statusObject" "FME_CONDITIONAL:DEFAULT_VALUE'99'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 100'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 300'3'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 400'4'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 500'5'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 201'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 202'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 203'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 204'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 9900'98'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 9800'99'FME_NUM_CONDITIONS11___" "SET_TO" }    OUTPUT OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_AttributeManager_2_OUTPUT"
+# -------------------------------------------------------------------------
+INCLUDE [    set macroLine "MACRO $(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_AttributeKeeper_79c4aa19_027b_4b5d_afdd_64413df54bdf0_LIST_EXP ";    foreach attr [split ""] {       set attr [FME_DecodeText $attr];       set attr [regsub "{}$" $attr "{}.*"];       set attr [regsub -all "{}" $attr "\\{\[0-9\]+\\}"];       append macroLine ",^$attr$";    };    puts $macroLine; ]
+FACTORY_DEF {*} TeeFactory    FACTORY_NAME $(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_AttributeKeeper    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_AttributeManager_2_OUTPUT"    OUTPUT { FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_AttributeKeeper_OUTPUT"        @KeepAttributes(fme_encoded,bodemhoogteBenedenstrooms,typeRuwheid,statusObject,fme_pcre_match,"^fme_$($(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_AttributeKeeper_79c4aa19_027b_4b5d_afdd_64413df54bdf0_LIST_EXP)")         }
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_HyDAMO_NormgeparametriseerdProfiel1604054131 Output Collector"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_AttributeKeeper_OUTPUT"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME)_HyDAMO_NormgeparametriseerdProfiel"
+INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(GeonisBlaeuToHyDAMOConverterNormgeparametriseerdProfiel_WORKSPACE_NAME))}]

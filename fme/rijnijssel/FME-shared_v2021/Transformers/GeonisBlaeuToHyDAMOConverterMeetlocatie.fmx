@@ -1,0 +1,346 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <TRANSFORMER
+# TRANSFORMER_BEGIN GeonisBlaeuToHyDAMOConverterMeetlocatie,1,,760ff2cb-20b7-48b4-9091-428ca13d43db,"Linked Always",No,NO_PARALLELISM,,No,18586,YES,No,27
+# <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Custom Transformer om data van meetlocaties van Geonis Blaeu format om te zetten naar Hydamo v13 format. </p>
+# <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
+#     <br/>
+# </p>
+# <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Opgesteld in 2020 door Sweco - Tessa Andringa (tessa.andringa@sweco.nl) </p>
+# 
+# TRANSFORMER_END
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BLOCKED_LOOPING="No"
+#!   CATEGORY=""
+#!   DESCRIPTION="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Custom Transformer om data van meetlocaties van Geonis Blaeu format om te zetten naar Hydamo v13 format. &lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Opgesteld in 2020 door Sweco - Tessa Andringa (tessa.andringa@sweco.nl) &lt;/p&gt;&#10;"
+#!   DOC_EXTENTS="3383.04 71"
+#!   DOC_TOP_LEFT="100 -171"
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="18586"
+#!   FME_DOCUMENT_GUID="760ff2cb-20b7-48b4-9091-428ca13d43db"
+#!   FME_DOCUMENT_PRIORGUID="d63ee0c2-f7a4-44ae-bb48-4faad792e491,f32477e1-16d2-4744-b458-5d47a5917b54,a7edfe5d-b5a6-46d6-b5e5-8693f688987d,0fd5c383-274b-4591-b1f3-bc39b5f7cba1"
+#!   FME_LINKED_TRANSFORMER_VERSION="1"
+#!   FME_PROCESS_COUNT="NO_PARALLELISM"
+#!   FME_PROCESS_GROUPS_ORDERED="No"
+#!   FME_PROCESS_GROUP_BY=""
+#!   FME_SERVER_SERVICES=""
+#!   FMX_ATTRIBUTE_PROPOGATION_MODE="AUTO"
+#!   FMX_INSERT_MODE="Linked Always"
+#!   HISTORY=""
+#!   ITERATION_COUNT_ATTR=""
+#!   LAST_SAVE_BUILD="FME(R) 2018.1.1.2 (20190121 - Build 18586 - WIN64)"
+#!   LAST_SAVE_DATE="2020-07-31T16:07:17"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOOP_ITERATIONS=""
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="27"
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   TITLE="GeonisBlaeuToHyDAMOConverterMeetlocatie"
+#!   USAGE=""
+#!   USE_MARKDOWN="NO"
+#!   VIEW_POSITION="-634.381 1728.14"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   XFORM_DEPRECATED="No"
+#!   ZOOM_SCALE="100"
+#! >
+#! <DATASETS>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR code code (SITE_NO):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR statusObject statusObject (STATUS):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR CREATED_DATE CREATED_DATE:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR objecteindtijd objecteindtijd:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR LAST_EDITED_DATE LAST_EDITED_DATE:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR hyperlink hyperlink:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR naam naam (SITE_NAME):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR metingWaterstand metingWaterstand:"
+#!   DEFAULT_VALUE="1"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR metingKlepOfSchuifstand metingKlepOfSchuifstand:"
+#!   DEFAULT_VALUE="3"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR metingAfvoer metingAfvoer (SITE_NAME):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR metingStroomsnelheid metingStroomsnelheid:"
+#!   DEFAULT_VALUE="3"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR metingWaterkwaliteit metingWaterkwaliteit:"
+#!   DEFAULT_VALUE="3"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI LOOKUP_CHOICE_OR_ATTR administratiefgebied 1&lt;space&gt;-&lt;space&gt;aa&lt;space&gt;en&lt;space&gt;maas,1%2&lt;space&gt;-&lt;space&gt;amstel&lt;space&gt;gooi&lt;space&gt;en&lt;space&gt;vecht,2%3&lt;space&gt;-&lt;space&gt;brabantse&lt;space&gt;delta,3%4&lt;space&gt;-&lt;space&gt;delfland,4%5&lt;space&gt;-&lt;space&gt;dommel,5%6&lt;space&gt;-&lt;space&gt;fryslan,6%7&lt;space&gt;-&lt;space&gt;hollands&lt;space&gt;noorderkwartier,7%8&lt;space&gt;-&lt;space&gt;hollandse&lt;space&gt;delta,8%9&lt;space&gt;-&lt;space&gt;hunze&lt;space&gt;en&lt;space&gt;aas,9%10&lt;space&gt;-&lt;space&gt;noorderzijlvest,10%11&lt;space&gt;-&lt;space&gt;limburg,11%12&lt;space&gt;-&lt;space&gt;rijn&lt;space&gt;en&lt;space&gt;ijssel,12%13&lt;space&gt;-&lt;space&gt;rijnland,13%14&lt;space&gt;-&lt;space&gt;rivierenland,14%16&lt;space&gt;-&lt;space&gt;schieland&lt;space&gt;en&lt;space&gt;krimpenerwaard,16%17&lt;space&gt;-&lt;space&gt;stichtse&lt;space&gt;rijnlanden,17%18&lt;space&gt;-&lt;space&gt;zuiderzeeland,18%19&lt;space&gt;-&lt;space&gt;scheldestromen,19%20&lt;space&gt;-&lt;space&gt;vallei&lt;space&gt;en&lt;space&gt;veluwe,20%21&lt;space&gt;-&lt;space&gt;vechtstromen,21%22&lt;space&gt;-&lt;space&gt;drents&lt;space&gt;overijsselse&lt;space&gt;delta,22%20&lt;space&gt;-&lt;space&gt;rijkswaterstaat,30 administratiefgebied:"
+#!   DEFAULT_VALUE="12"
+#!   IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="4"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="937.51090799641975 -100"
+#!   BOUNDING_RECT="937.51090799641975 -100 -1 -1"
+#!   ORDER="500000000000001"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18586"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="naam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="objecteindtijd" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hyperlink" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metingWaterstand" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metingKlepOfSchuifstand" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metingAfvoer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metingStroomsnelheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metingWaterkwaliteit" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; code $(code) SET_TO  naam $(naam) SET_TO  statusObject $(statusObject) SET_TO  CREATED_DATE $(CREATED_DATE) SET_TO  objecteindtijd $(objecteindtijd) SET_TO  LAST_EDITED_DATE $(LAST_EDITED_DATE) SET_TO  hyperlink $(hyperlink) SET_TO  metingWaterstand $(metingWaterstand) SET_TO  metingKlepOfSchuifstand $(metingKlepOfSchuifstand) SET_TO  metingAfvoer $(metingAfvoer) SET_TO  metingStroomsnelheid $(metingStroomsnelheid) SET_TO  metingWaterkwaliteit $(metingWaterkwaliteit) SET_TO  administratiefgebied $(administratiefgebied) SET_TO"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="6"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="1609.3910939109394 -100"
+#!   BOUNDING_RECT="1609.3910939109394 -100 -1 -1"
+#!   ORDER="500000000000003"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18586"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="naam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="objecteindtijd" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hyperlink" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metingWaterstand" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metingKlepOfSchuifstand" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metingAfvoer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metingStroomsnelheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metingWaterkwaliteit" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="code code  NO_OP naam naam  NO_OP statusObject statusObject &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;99&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = ACTIEF&apos;3&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = GEEN&apos;98&apos;FME_NUM_CONDITIONS3___&quot; SET_TO CREATED_DATE CREATED_DATE  NO_OP objecteindtijd objecteindtijd  NO_OP LAST_EDITED_DATE LAST_EDITED_DATE  NO_OP hyperlink hyperlink  NO_OP metingWaterstand metingWaterstand  NO_OP metingKlepOfSchuifstand metingKlepOfSchuifstand  NO_OP metingAfvoer metingAfvoer &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;3&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;CASE_INSENSITIVE_TEST &lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt; BEGINS_WITH Debietmeting;CASE_INSENSITIVE_TEST &lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt; BEGINS_WITH Gemaal;CASE_INSENSITIVE_TEST &lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt; BEGINS_WITH Inlaat;CASE_INSENSITIVE_TEST &lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt; BEGINS_WITH RWZI;CASE_INSENSITIVE_TEST &lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt; BEGINS_WITH Verdeelwerk&apos;1&apos;FME_NUM_CONDITIONS2___&quot; SET_TO metingStroomsnelheid metingStroomsnelheid  NO_OP metingWaterkwaliteit metingWaterkwaliteit  NO_OP administratiefgebied administratiefgebied  NO_OP"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="9"
+#!   TYPE="AttributeKeeper"
+#!   VERSION="3"
+#!   POSITION="2212.5221252212514 -100"
+#!   BOUNDING_RECT="2212.5221252212514 -100 -1 -1"
+#!   ORDER="500000000000004"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18586"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="naam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="objecteindtijd" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hyperlink" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metingWaterstand" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metingKlepOfSchuifstand" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metingAfvoer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metingStroomsnelheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="metingWaterkwaliteit" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="KEEP_ATTRS" PARM_VALUE="hyperlink,metingAfvoer,code,CREATED_DATE,metingWaterstand,objecteindtijd,statusObject,metingKlepOfSchuifstand,metingStroomsnelheid,administratiefgebied,naam,metingWaterkwaliteit,LAST_EDITED_DATE"/>
+#!     <XFORM_PARM PARM_NAME="KEEP_LIST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeKeeper"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <SUBDOCUMENT_IOS>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="2"
+#!   NAME="GeonisBlaeu_Meetlocatie"
+#!   POSITION="100 -100"
+#!   BOUNDING_RECT="100 -100 681.25781257812582 71"
+#!   COLLAPSED="true"
+#!   PUBLISHED="true"
+#!   IS_SOURCE="true"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="3"
+#!   NAME="HyDAMO_Meetlocatie"
+#!   POSITION="2844.6274062740627 -100"
+#!   BOUNDING_RECT="2844.6274062740627 -100 638.40784407844058 71"
+#!   COLLAPSED="true"
+#!   IS_SOURCE="false"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! </SUBDOCUMENT_IOS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="5"
+#!   SOURCE_NODE="2"
+#!   TARGET_NODE="4"
+#!   SOURCE_PORT_DESC="0"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="7"
+#!   SOURCE_NODE="4"
+#!   TARGET_NODE="6"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="10"
+#!   SOURCE_NODE="6"
+#!   TARGET_NODE="9"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="11"
+#!   SOURCE_NODE="9"
+#!   TARGET_NODE="3"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="0"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </TRANSFORMER>
+
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_code 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_statusObject 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_CREATED_DATE 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_objecteindtijd 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_LAST_EDITED_DATE 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_hyperlink 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_naam 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_metingWaterstand 1
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_metingKlepOfSchuifstand 3
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_metingAfvoer 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_metingStroomsnelheid 3
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_metingWaterkwaliteit 3
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_administratiefgebied 12
+#! START_HEADER
+#! END_HEADER
+
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+DEFAULT_MACRO GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME ""
+INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_GeonisBlaeu_Meetlocatie1596204437 Input Splitter"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_GeonisBlaeu_Meetlocatie"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_GeonisBlaeu_Meetlocatie"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_AttributeManager    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_GeonisBlaeu_Meetlocatie"    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "" "code" "$($(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_code$encode)" "SET_TO" }      ATTR_ACTION { "" "naam" "$($(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_naam$encode)" "SET_TO" }      ATTR_ACTION { "" "statusObject" "$($(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_statusObject$encode)" "SET_TO" }      ATTR_ACTION { "" "CREATED_DATE" "$($(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_CREATED_DATE$encode)" "SET_TO" }      ATTR_ACTION { "" "objecteindtijd" "$($(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_objecteindtijd$encode)" "SET_TO" }      ATTR_ACTION { "" "LAST_EDITED_DATE" "$($(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_LAST_EDITED_DATE$encode)" "SET_TO" }      ATTR_ACTION { "" "hyperlink" "$($(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_hyperlink$encode)" "SET_TO" }      ATTR_ACTION { "" "metingWaterstand" "$($(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_metingWaterstand$encode)" "SET_TO" }      ATTR_ACTION { "" "metingKlepOfSchuifstand" "$($(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_metingKlepOfSchuifstand$encode)" "SET_TO" }      ATTR_ACTION { "" "metingAfvoer" "$($(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_metingAfvoer$encode)" "SET_TO" }      ATTR_ACTION { "" "metingStroomsnelheid" "$($(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_metingStroomsnelheid$encode)" "SET_TO" }      ATTR_ACTION { "" "metingWaterkwaliteit" "$($(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_metingWaterkwaliteit$encode)" "SET_TO" }      ATTR_ACTION { "" "administratiefgebied" "$($(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_administratiefgebied)" "SET_TO" }    OUTPUT OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_AttributeManager_OUTPUT"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_AttributeManager_2    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_AttributeManager_OUTPUT"    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "statusObject" "statusObject" "FME_CONDITIONAL:DEFAULT_VALUE'99'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = ACTIEF'3'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = GEEN'98'FME_NUM_CONDITIONS3___" "SET_TO" }      ATTR_ACTION { "metingAfvoer" "metingAfvoer" "FME_CONDITIONAL:DEFAULT_VALUE'3'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;CASE_INSENSITIVE_TEST <at>Value<openparen>naam<closeparen> BEGINS_WITH Debietmeting;CASE_INSENSITIVE_TEST <at>Value<openparen>naam<closeparen> BEGINS_WITH Gemaal;CASE_INSENSITIVE_TEST <at>Value<openparen>naam<closeparen> BEGINS_WITH Inlaat;CASE_INSENSITIVE_TEST <at>Value<openparen>naam<closeparen> BEGINS_WITH RWZI;CASE_INSENSITIVE_TEST <at>Value<openparen>naam<closeparen> BEGINS_WITH Verdeelwerk'1'FME_NUM_CONDITIONS2___" "SET_TO" }    OUTPUT OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_AttributeManager_2_OUTPUT"
+# -------------------------------------------------------------------------
+INCLUDE [    set macroLine "MACRO $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_AttributeKeeper_d879132e_21b4_4db4_bfdc_a6c894db882d0_LIST_EXP ";    foreach attr [split ""] {       set attr [FME_DecodeText $attr];       set attr [regsub "{}$" $attr "{}.*"];       set attr [regsub -all "{}" $attr "\\{\[0-9\]+\\}"];       append macroLine ",^$attr$";    };    puts $macroLine; ]
+FACTORY_DEF {*} TeeFactory    FACTORY_NAME $(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_AttributeKeeper    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_AttributeManager_2_OUTPUT"    OUTPUT { FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_AttributeKeeper_OUTPUT"        @KeepAttributes(fme_encoded,hyperlink,metingAfvoer,code,CREATED_DATE,metingWaterstand,objecteindtijd,statusObject,metingKlepOfSchuifstand,metingStroomsnelheid,administratiefgebied,naam,metingWaterkwaliteit,LAST_EDITED_DATE,fme_pcre_match,"^fme_$($(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_AttributeKeeper_d879132e_21b4_4db4_bfdc_a6c894db882d0_LIST_EXP)")         }
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_HyDAMO_Meetlocatie1596204437 Output Collector"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_AttributeKeeper_OUTPUT"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME)_HyDAMO_Meetlocatie"
+INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(GeonisBlaeuToHyDAMOConverterMeetlocatie_WORKSPACE_NAME))}]

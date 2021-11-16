@@ -1,0 +1,657 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <TRANSFORMER
+# TRANSFORMER_BEGIN GeonisBlaeuToHyDAMOConverterDuikerSifonHevel,1,,eedb691c-fc39-4591-a2bb-4420c0ac8acf,"Linked by Default",No,NO_PARALLELISM,,No,21326,YES,No,38,No,
+# <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Custom Transformer om data van duikers van Geonis Blaeu format om te zetten naar Hydamo v13 format. </p>
+# <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
+#     <br/>
+# </p>
+# <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Opgesteld in 2020 door Sweco - Tessa Andringa (tessa.andringa@sweco.nl)</p>
+# 
+# TRANSFORMER_END
+#!   ARCGIS_COMPATIBILITY="ARCGIS_AUTO"
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BLOCKED_LOOPING="No"
+#!   CATEGORY=""
+#!   DESCRIPTION="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Custom Transformer om data van duikers van Geonis Blaeu format om te zetten naar Hydamo v13 format. &lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Opgesteld in 2020 door Sweco - Tessa Andringa (tessa.andringa@sweco.nl)&lt;/p&gt;&#10;"
+#!   DOC_EXTENTS="4397.41 759.843"
+#!   DOC_TOP_LEFT="-619.636 -1000.47"
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="21326"
+#!   FME_DOCUMENT_GUID="eedb691c-fc39-4591-a2bb-4420c0ac8acf"
+#!   FME_DOCUMENT_PRIORGUID="cbb7ffef-7437-4774-bc03-0f1c847fb515,1a941d46-8e60-4c02-b7d8-92763e3267e7,d8fcea12-dcf2-4d02-b9f8-6d1d4b16e622,0c9f7431-5fb7-48f3-abaf-5454ca64f195,08933a75-987d-4c35-adb0-7765d9cbdf26,71887881-42b2-4ff3-a76e-3e27d2618bb7,8c04c3e0-e490-404c-b63d-2e6836749be1,1e9fc59b-211f-42fd-a5d5-96b1e63ac742,fc96e37e-336a-49b0-8839-7929cc0e0cf1,30d2a705-fc78-4023-9c2d-0b82d811d040,55207d05-1bda-458e-a3c9-991355b37af0,06b2a7db-ed15-4363-b73f-fce98ff9d53b,14c8ed41-007b-4ef7-9996-9df4390e5deb,3ebdaac6-4a32-4fb4-8765-692878ed155b,53006087-ba22-4592-b8c1-db86edc23d35,6523bb72-cade-4353-acef-eb32d7495ee7,ccd6d2ea-3920-48ef-aa14-d45e864d718b,efc36636-cd9f-47ac-a6ac-b6cc31659d5c,d870f555-885d-4454-a277-76e9e3fdc249,011f5a4e-0d01-4447-a7dd-ab754f76dda9,3d96e4b9-819a-4da2-b093-d22202926416,892aefd5-c88d-46ae-81a4-266b67e077cb,6bfa2c91-a1b9-4e5b-ba9c-ed7dafb40cda,315957cc-3463-450f-b0f2-e9088cad66ef,acb17fff-cf0b-4d58-a475-89ba3f570723"
+#!   FME_LINKED_TRANSFORMER_VERSION="1"
+#!   FME_NAMES_ENCODING="windows-1252"
+#!   FME_PROCESS_COUNT="NO_PARALLELISM"
+#!   FME_PROCESS_GROUPS_ORDERED="No"
+#!   FME_PROCESS_GROUP_BY=""
+#!   FME_PROCESS_PRESERVE_GROUP_ATTR="No"
+#!   FME_SERVER_SERVICES=""
+#!   FMX_ATTRIBUTE_PROPOGATION_MODE="AUTO"
+#!   FMX_INSERT_MODE="Linked by Default"
+#!   HISTORY=""
+#!   ITERATION_COUNT_ATTR=""
+#!   LAST_SAVE_BUILD="FME(R) 2021.0.3.0 (20210528 - Build 21326 - WIN64)"
+#!   LAST_SAVE_DATE="2021-08-29T21:48:30"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOOP_ITERATIONS=""
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="38"
+#!   REPLACED_BY=""
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   TITLE="GeonisBlaeuToHyDAMOConverterDuikerSifonHevel"
+#!   USAGE=""
+#!   USE_MARKDOWN="NO"
+#!   VIEW_POSITION="-343.495 -100.724"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   XFORM_DEPRECATED="No"
+#!   ZOOM_SCALE="121"
+#! >
+#! <DATASETS>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI STRING_OR_ATTR code code (KDUIDENT)"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL STRING_OR_ATTR GLOBALID_KDU globalID (GLOBALID_KDU)"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL STRING_OR_ATTR statusObject statusObject (KWKSTATU)"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR CREATED_DATE CREATED_DATE (CREATED_DATE):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR LAST_EDITED_DATE LAST_EDITED_DATE (LAST EDITED DATE):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR hyperlink hyperlink (IWS_HYPERLINK):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR indPeilRegulPeilScheidend indPeilRegulPeilScheidend (KDUAFSBO):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR indPeilregulPeilScheidend_temp indPeilregulPeilScheidend temp (KDUAFSBE):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR lengte lengte (SHAPE.LEN):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR hoogteOpening hoogteOpening (KDUHGA1):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR breedteOpening breedteOpening (KDUBREED):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR breedte_temp breedteOpening temp (KDUBUIS):"
+#!   DEFAULT_VALUE="1"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR hoogteBinnenOnderkantBene hoogteBinnenOnderkantBene (KDUBOKBE):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR hoogteBinnenOnderkantBove hoogteBinnenOnderkantBove (KDUBOKBO):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR vormKoker vormKoker(KDUVORM):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI LOOKUP_CHOICE_OR_ATTR typeKruising hevel,5%duiker,3%sifon,4 typeKruising:"
+#!   DEFAULT_VALUE="3"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI LOOKUP_CHOICE_OR_ATTR typeRuwheid Chezy,1%Manning,2%StricklelrKn,3%StricklerKs,4%White&lt;space&gt;Colebrook,5%Bos&lt;space&gt;en&lt;space&gt;Bijkerk,6 typeRuwheid:"
+#!   DEFAULT_VALUE="4"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR ruwheid ruwheid (XXXMATER):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR intreeverlies intreeverlies:"
+#!   DEFAULT_VALUE="1"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR uittreeverlies uittreeverlies:"
+#!   DEFAULT_VALUE="0.7"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR bochtEnKnikverlies bochtEnKnikverlies:"
+#!   DEFAULT_VALUE="0"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI LOOKUP_CHOICE_OR_ATTR administratiefgebied 1&lt;space&gt;-&lt;space&gt;aa&lt;space&gt;en&lt;space&gt;maas,1%2&lt;space&gt;-&lt;space&gt;amstel&lt;space&gt;gooi&lt;space&gt;en&lt;space&gt;vecht,2%3&lt;space&gt;-&lt;space&gt;brabantse&lt;space&gt;delta,3%4&lt;space&gt;-&lt;space&gt;delfland,4%5&lt;space&gt;-&lt;space&gt;dommel,5%6&lt;space&gt;-&lt;space&gt;fryslan,6%7&lt;space&gt;-&lt;space&gt;hollands&lt;space&gt;noorderkwartier,7%8&lt;space&gt;-&lt;space&gt;hollandse&lt;space&gt;delta,8%9&lt;space&gt;-&lt;space&gt;hunze&lt;space&gt;en&lt;space&gt;aas,9%10&lt;space&gt;-&lt;space&gt;noorderzijlvest,10%11&lt;space&gt;-&lt;space&gt;limburg,11%12&lt;space&gt;-&lt;space&gt;rijn&lt;space&gt;en&lt;space&gt;ijssel,12%13&lt;space&gt;-&lt;space&gt;rijnland,13%14&lt;space&gt;-&lt;space&gt;rivierenland,14%16&lt;space&gt;-&lt;space&gt;schieland&lt;space&gt;en&lt;space&gt;krimpenerwaard,16%17&lt;space&gt;-&lt;space&gt;stichtse&lt;space&gt;rijnlanden,17%18&lt;space&gt;-&lt;space&gt;zuiderzeeland,18%19&lt;space&gt;-&lt;space&gt;scheldestromen,19%20&lt;space&gt;-&lt;space&gt;vallei&lt;space&gt;en&lt;space&gt;veluwe,20%21&lt;space&gt;-&lt;space&gt;vechtstromen,21%22&lt;space&gt;-&lt;space&gt;drents&lt;space&gt;overijsselse&lt;space&gt;delta,22%20&lt;space&gt;-&lt;space&gt;rijkswaterstaat,30 administratiefgebied:"
+#!   DEFAULT_VALUE="12"
+#!   IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <USER_PARAMETERS
+#!   FORM="eyJwYXJhbWV0ZXJzIjpbeyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiY29kZSIsInByb21wdCI6ImNvZGUgKEtEVUlERU5UKSIsInJlcXVpcmVkIjp0cnVlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6IkdMT0JBTElEX0tEVSIsInByb21wdCI6Imdsb2JhbElEIChHTE9CQUxJRF9LRFUpIiwicmVxdWlyZWQiOmZhbHNlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6InN0YXR1c09iamVjdCIsInByb21wdCI6InN0YXR1c09iamVjdCAoS1dLU1RBVFUpIiwicmVxdWlyZWQiOmZhbHNlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6IkNSRUFURURfREFURSIsInByb21wdCI6IkNSRUFURURfREFURSAoQ1JFQVRFRF9EQVRFKToiLCJyZXF1aXJlZCI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6IkxBU1RfRURJVEVEX0RBVEUiLCJwcm9tcHQiOiJMQVNUX0VESVRFRF9EQVRFIChMQVNUIEVESVRFRCBEQVRFKToiLCJyZXF1aXJlZCI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6Imh5cGVybGluayIsInByb21wdCI6Imh5cGVybGluayAoSVdTX0hZUEVSTElOSyk6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJpbmRQZWlsUmVndWxQZWlsU2NoZWlkZW5kIiwicHJvbXB0IjoiaW5kUGVpbFJlZ3VsUGVpbFNjaGVpZGVuZCAoS0RVQUZTQk8pOiIsInJlcXVpcmVkIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiaW5kUGVpbHJlZ3VsUGVpbFNjaGVpZGVuZF90ZW1wIiwicHJvbXB0IjoiaW5kUGVpbHJlZ3VsUGVpbFNjaGVpZGVuZCB0ZW1wIChLRFVBRlNCRSk6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJsZW5ndGUiLCJwcm9tcHQiOiJsZW5ndGUgKFNIQVBFLkxFTik6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6Imhvb2d0ZU9wZW5pbmciLCJwcm9tcHQiOiJob29ndGVPcGVuaW5nIChLRFVIR0ExKToiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiYnJlZWR0ZU9wZW5pbmciLCJwcm9tcHQiOiJicmVlZHRlT3BlbmluZyAoS0RVQlJFRUQpOiIsInJlcXVpcmVkIjp0cnVlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImRlZmF1bHRWYWx1ZSI6IjEiLCJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiYnJlZWR0ZV90ZW1wIiwicHJvbXB0IjoiYnJlZWR0ZU9wZW5pbmcgdGVtcCAoS0RVQlVJUyk6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6Imhvb2d0ZUJpbm5lbk9uZGVya2FudEJlbmUiLCJwcm9tcHQiOiJob29ndGVCaW5uZW5PbmRlcmthbnRCZW5lIChLRFVCT0tCRSk6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6Imhvb2d0ZUJpbm5lbk9uZGVya2FudEJvdmUiLCJwcm9tcHQiOiJob29ndGVCaW5uZW5PbmRlcmthbnRCb3ZlIChLRFVCT0tCTyk6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6InZvcm1Lb2tlciIsInByb21wdCI6InZvcm1Lb2tlcihLRFVWT1JNKToiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJjaG9pY2VzIjpbeyJkaXNwbGF5IjoiaGV2ZWwiLCJ2YWx1ZSI6IjUifSx7ImRpc3BsYXkiOiJkdWlrZXIiLCJ2YWx1ZSI6IjMifSx7ImRpc3BsYXkiOiJzaWZvbiIsInZhbHVlIjoiNCJ9XSwiZGVmYXVsdFZhbHVlIjoiMyIsIm5hbWUiOiJ0eXBlS3J1aXNpbmciLCJwcm9tcHQiOiJ0eXBlS3J1aXNpbmc6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoiZHJvcGRvd24iLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImNob2ljZXMiOlt7ImRpc3BsYXkiOiJDaGV6eSIsInZhbHVlIjoiMSJ9LHsiZGlzcGxheSI6Ik1hbm5pbmciLCJ2YWx1ZSI6IjIifSx7ImRpc3BsYXkiOiJTdHJpY2tsZWxyS24iLCJ2YWx1ZSI6IjMifSx7ImRpc3BsYXkiOiJTdHJpY2tsZXJLcyIsInZhbHVlIjoiNCJ9LHsiZGlzcGxheSI6IldoaXRlIENvbGVicm9vayIsInZhbHVlIjoiNSJ9LHsiZGlzcGxheSI6IkJvcyBlbiBCaWprZXJrIiwidmFsdWUiOiI2In1dLCJkZWZhdWx0VmFsdWUiOiI0IiwibmFtZSI6InR5cGVSdXdoZWlkIiwicHJvbXB0IjoidHlwZVJ1d2hlaWQ6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoiZHJvcGRvd24iLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJydXdoZWlkIiwicHJvbXB0IjoicnV3aGVpZCAoWFhYTUFURVIpOiIsInJlcXVpcmVkIjp0cnVlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImRlZmF1bHRWYWx1ZSI6IjEiLCJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiaW50cmVldmVybGllcyIsInByb21wdCI6ImludHJlZXZlcmxpZXM6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZGVmYXVsdFZhbHVlIjoiMC43IiwiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6InVpdHRyZWV2ZXJsaWVzIiwicHJvbXB0IjoidWl0dHJlZXZlcmxpZXM6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZGVmYXVsdFZhbHVlIjoiMCIsImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJib2NodEVuS25pa3ZlcmxpZXMiLCJwcm9tcHQiOiJib2NodEVuS25pa3ZlcmxpZXM6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImNob2ljZXMiOlt7ImRpc3BsYXkiOiIxIC0gYWEgZW4gbWFhcyIsInZhbHVlIjoiMSJ9LHsiZGlzcGxheSI6IjIgLSBhbXN0ZWwgZ29vaSBlbiB2ZWNodCIsInZhbHVlIjoiMiJ9LHsiZGlzcGxheSI6IjMgLSBicmFiYW50c2UgZGVsdGEiLCJ2YWx1ZSI6IjMifSx7ImRpc3BsYXkiOiI0IC0gZGVsZmxhbmQiLCJ2YWx1ZSI6IjQifSx7ImRpc3BsYXkiOiI1IC0gZG9tbWVsIiwidmFsdWUiOiI1In0seyJkaXNwbGF5IjoiNiAtIGZyeXNsYW4iLCJ2YWx1ZSI6IjYifSx7ImRpc3BsYXkiOiI3IC0gaG9sbGFuZHMgbm9vcmRlcmt3YXJ0aWVyIiwidmFsdWUiOiI3In0seyJkaXNwbGF5IjoiOCAtIGhvbGxhbmRzZSBkZWx0YSIsInZhbHVlIjoiOCJ9LHsiZGlzcGxheSI6IjkgLSBodW56ZSBlbiBhYXMiLCJ2YWx1ZSI6IjkifSx7ImRpc3BsYXkiOiIxMCAtIG5vb3JkZXJ6aWpsdmVzdCIsInZhbHVlIjoiMTAifSx7ImRpc3BsYXkiOiIxMSAtIGxpbWJ1cmciLCJ2YWx1ZSI6IjExIn0seyJkaXNwbGF5IjoiMTIgLSByaWpuIGVuIGlqc3NlbCIsInZhbHVlIjoiMTIifSx7ImRpc3BsYXkiOiIxMyAtIHJpam5sYW5kIiwidmFsdWUiOiIxMyJ9LHsiZGlzcGxheSI6IjE0IC0gcml2aWVyZW5sYW5kIiwidmFsdWUiOiIxNCJ9LHsiZGlzcGxheSI6IjE2IC0gc2NoaWVsYW5kIGVuIGtyaW1wZW5lcndhYXJkIiwidmFsdWUiOiIxNiJ9LHsiZGlzcGxheSI6IjE3IC0gc3RpY2h0c2UgcmlqbmxhbmRlbiIsInZhbHVlIjoiMTcifSx7ImRpc3BsYXkiOiIxOCAtIHp1aWRlcnplZWxhbmQiLCJ2YWx1ZSI6IjE4In0seyJkaXNwbGF5IjoiMTkgLSBzY2hlbGRlc3Ryb21lbiIsInZhbHVlIjoiMTkifSx7ImRpc3BsYXkiOiIyMCAtIHZhbGxlaSBlbiB2ZWx1d2UiLCJ2YWx1ZSI6IjIwIn0seyJkaXNwbGF5IjoiMjEgLSB2ZWNodHN0cm9tZW4iLCJ2YWx1ZSI6IjIxIn0seyJkaXNwbGF5IjoiMjIgLSBkcmVudHMgb3Zlcmlqc3NlbHNlIGRlbHRhIiwidmFsdWUiOiIyMiJ9LHsiZGlzcGxheSI6IjIwIC0gcmlqa3N3YXRlcnN0YWF0IiwidmFsdWUiOiIzMCJ9XSwiZGVmYXVsdFZhbHVlIjoiMTIiLCJuYW1lIjoiYWRtaW5pc3RyYXRpZWZnZWJpZWQiLCJwcm9tcHQiOiJhZG1pbmlzdHJhdGllZmdlYmllZDoiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJkcm9wZG93biIsInZhbHVlVHlwZSI6InN0cmluZyJ9XX0="
+#! >
+#! <PARAMETER_INFO>
+#!     <INFO NAME="CREATED_DATE" IS_STAND_ALONE="true" />
+#!     <INFO NAME="GLOBALID_KDU" IS_STAND_ALONE="true" />
+#!     <INFO NAME="LAST_EDITED_DATE" IS_STAND_ALONE="true" />
+#!     <INFO NAME="administratiefgebied" IS_STAND_ALONE="true" />
+#!     <INFO NAME="bochtEnKnikverlies" IS_STAND_ALONE="true" />
+#!     <INFO NAME="breedteOpening" IS_STAND_ALONE="true" />
+#!     <INFO NAME="breedte_temp" IS_STAND_ALONE="true" />
+#!     <INFO NAME="code" IS_STAND_ALONE="true" />
+#!     <INFO NAME="hoogteBinnenOnderkantBene" IS_STAND_ALONE="true" />
+#!     <INFO NAME="hoogteBinnenOnderkantBove" IS_STAND_ALONE="true" />
+#!     <INFO NAME="hoogteOpening" IS_STAND_ALONE="true" />
+#!     <INFO NAME="hyperlink" IS_STAND_ALONE="true" />
+#!     <INFO NAME="indPeilRegulPeilScheidend" IS_STAND_ALONE="true" />
+#!     <INFO NAME="indPeilregulPeilScheidend_temp" IS_STAND_ALONE="true" />
+#!     <INFO NAME="intreeverlies" IS_STAND_ALONE="true" />
+#!     <INFO NAME="lengte" IS_STAND_ALONE="true" />
+#!     <INFO NAME="ruwheid" IS_STAND_ALONE="true" />
+#!     <INFO NAME="statusObject" IS_STAND_ALONE="true" />
+#!     <INFO NAME="typeKruising" IS_STAND_ALONE="true" />
+#!     <INFO NAME="typeRuwheid" IS_STAND_ALONE="true" />
+#!     <INFO NAME="uittreeverlies" IS_STAND_ALONE="true" />
+#!     <INFO NAME="vormKoker" IS_STAND_ALONE="true" />
+#! </PARAMETER_INFO>
+#! </USER_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="18"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Indien meerdere duikers: samenvoegen tot 1. Breedte = breedte * aantal duikers. Rechthoekige duikers blijven rechthoekig, rest wordt ellipsvormig. Dit geeft de beste benadering van daadwerkelijke nat oppervlak.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="1610.9923495929156 -726.72099828820717"
+#!   TOP_LEFT="1610.9923495929156 -726.72099828820717"
+#!   BOTTOM_RIGHT="2562.009091165291 -1000.4734358125825"
+#!   BOUNDING_RECT="1610.9923495929156 -726.72099828820717 951.01674157237539 273.75243752437524"
+#!   ORDER="500000000000652"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="1,1,0.95686274509803926,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="11"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="2"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="108.15853127905683 -240.63077664218883"
+#!   BOUNDING_RECT="108.15853127905683 -240.63077664218883 431 71"
+#!   ORDER="500000000000645"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21326"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hyperlink" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="indPeilRegulPeilScheidend_temp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="indPeilRegulPeilScheidend" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lengte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteOpening" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedteOpening" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedteOpening_temp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteBinnenOnderkantBene" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteBinnenOnderkantBove" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vormKoker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="typeKruising" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="typeRuwheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="intreeverlies" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bochtEnKnikverlies" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="uittreeverlies" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; code $(code) SET_TO  statusObject $(statusObject) SET_TO  CREATED_DATE $(CREATED_DATE) SET_TO  LAST_EDITED_DATE $(LAST_EDITED_DATE) SET_TO  hyperlink $(hyperlink) SET_TO  indPeilRegulPeilScheidend_temp $(indPeilregulPeilScheidend_temp) SET_TO  indPeilRegulPeilScheidend $(indPeilRegulPeilScheidend) SET_TO  lengte $(lengte) SET_TO  hoogteOpening $(hoogteOpening) SET_TO  breedteOpening $(breedteOpening) SET_TO  breedteOpening_temp $(breedte_temp) SET_TO  hoogteBinnenOnderkantBene $(hoogteBinnenOnderkantBene) SET_TO  hoogteBinnenOnderkantBove $(hoogteBinnenOnderkantBove) SET_TO  vormKoker $(vormKoker) SET_TO  typeKruising $(typeKruising) SET_TO  typeRuwheid $(typeRuwheid) SET_TO  ruwheid $(ruwheid) SET_TO  intreeverlies $(intreeverlies) SET_TO  bochtEnKnikverlies $(bochtEnKnikverlies) SET_TO  uittreeverlies $(uittreeverlies) SET_TO  administratiefgebied $(administratiefgebied) SET_TO  globalID $(GLOBALID_KDU) SET_TO"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="10"
+#!   TYPE="AttributeKeeper"
+#!   VERSION="3"
+#!   POSITION="2442.1990087669469 -300.63077664218883"
+#!   BOUNDING_RECT="2442.1990087669469 -300.63077664218883 431 71"
+#!   ORDER="500000000000648"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21326"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hyperlink" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lengte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteOpening" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedteOpening" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteBinnenOnderkantBene" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteBinnenOnderkantBove" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="typeKruising" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="typeRuwheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="intreeverlies" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="uittreeverlies" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bochtEnKnikverlies" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="indPeilRegulPeilScheidend" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vormKoker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="CREATE_BULK_MODE_FEATURES" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="KEEP_ATTRS" PARM_VALUE="breedteOpening,hoogteBinnenOnderkantBove,hoogteOpening,hyperlink,code,ruwheid,typeRuwheid,lengte,intreeverlies,typeKruising,statusObject,LAST_EDITED_DATE,hoogteBinnenOnderkantBene,CREATED_DATE,bochtEnKnikverlies,uittreeverlies,administratiefgebied,indPeilRegulPeilScheidend,vormKoker,globalID"/>
+#!     <XFORM_PARM PARM_NAME="KEEP_LIST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_ON_ATTRIBUTE_CHANGE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeKeeper"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="8"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="679.06154268154262 -240.63077664218883"
+#!   BOUNDING_RECT="679.06154268154262 -240.63077664218883 431 71"
+#!   ORDER="500000000000649"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21326"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hyperlink" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="indPeilRegulPeilScheidend" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="indPeilRegulPeilScheidend_temp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lengte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteOpening" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedteOpening_temp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedteOpening" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteBinnenOnderkantBene" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteBinnenOnderkantBove" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="typeKruising" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="typeRuwheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="intreeverlies" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="uittreeverlies" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bochtEnKnikverlies" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vormKoker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="code code  NO_OP statusObject statusObject &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;99&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 100&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 300&apos;3&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 400&apos;4&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 500&apos;5&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 201&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 202&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 203&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 204&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 9900&apos;98&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;statusObject&lt;closeparen&gt; = 9800&apos;99&apos;FME_NUM_CONDITIONS11___&quot; SET_TO CREATED_DATE CREATED_DATE  NO_OP hyperlink hyperlink  NO_OP indPeilRegulPeilScheidend indPeilRegulPeilScheidend &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;2&apos;BOOL_OP;OR;COMPOSITE_TEST;1 OR 2;TEST &lt;at&gt;Value&lt;openparen&gt;indPeilRegulPeilScheidend&lt;closeparen&gt; IN 1&lt;comma&gt;2&lt;comma&gt;3&lt;comma&gt;4;TEST &lt;at&gt;Value&lt;openparen&gt;indPeilRegulPeilScheidend_temp&lt;closeparen&gt; IN 1&lt;comma&gt;2&lt;comma&gt;3&lt;comma&gt;4&apos;1&apos;FME_NUM_CONDITIONS2___&quot; SET_TO indPeilRegulPeilScheidend_temp indPeilRegulPeilScheidend_temp  NO_OP lengte lengte  NO_OP hoogteOpening hoogteOpening &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;_FME_NO_OP_&apos;BOOL_OP;AND;COMPOSITE_TEST;1 AND 2;TEST &lt;at&gt;Value&lt;openparen&gt;vormKoker&lt;closeparen&gt; = 1;TEST hoogteOpening NOT_ATTRIBUTE_HAS_A_VALUE _FME_BLANK_STRING_&apos;&lt;at&gt;Value&lt;openparen&gt;breedteOpening&lt;closeparen&gt;&apos;FME_NUM_CONDITIONS2___&quot; SET_TO breedteOpening_temp breedteOpening_temp  NO_OP breedteOpening breedteOpening &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;_FME_NO_OP_&apos;BOOL_OP;AND;COMPOSITE_TEST;1 AND 2;TEST &lt;at&gt;Value&lt;openparen&gt;vormKoker&lt;closeparen&gt; = 1;TEST breedteOpening NOT_ATTRIBUTE_HAS_A_VALUE _FME_BLANK_STRING_&apos;&lt;at&gt;Value&lt;openparen&gt;hoogteOpening&lt;closeparen&gt;&apos;FME_NUM_CONDITIONS2___&quot; SET_TO hoogteBinnenOnderkantBene hoogteBinnenOnderkantBene  NO_OP hoogteBinnenOnderkantBove hoogteBinnenOnderkantBove  NO_OP typeKruising typeKruising  NO_OP typeRuwheid typeRuwheid  NO_OP ruwheid ruwheid &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;75&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Value&lt;openparen&gt;ruwheid&lt;closeparen&gt; = 4&apos;35&apos;FME_NUM_CONDITIONS2___&quot; SET_TO intreeverlies intreeverlies  NO_OP uittreeverlies uittreeverlies  NO_OP bochtEnKnikverlies bochtEnKnikverlies  NO_OP administratiefgebied administratiefgebied  NO_OP LAST_EDITED_DATE LAST_EDITED_DATE  NO_OP vormKoker vormKoker &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;99&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST &lt;at&gt;Value&lt;openparen&gt;vormKoker&lt;closeparen&gt; = 1&apos;1&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST &lt;at&gt;Value&lt;openparen&gt;vormKoker&lt;closeparen&gt; = 2&apos;3&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST &lt;at&gt;Value&lt;openparen&gt;vormKoker&lt;closeparen&gt; = 3&apos;4&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST &lt;at&gt;Value&lt;openparen&gt;vormKoker&lt;closeparen&gt; = 4&apos;9&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST &lt;at&gt;Value&lt;openparen&gt;vormKoker&lt;closeparen&gt; = 5&apos;5&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST &lt;at&gt;Value&lt;openparen&gt;vormKoker&lt;closeparen&gt; = 6&apos;8&apos;FME_NUM_CONDITIONS7___&quot; SET_TO globalID globalID  NO_OP"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="11"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="1888.094054163681 -452.40975393609409"
+#!   BOUNDING_RECT="1888.094054163681 -452.40975393609409 431 71"
+#!   ORDER="500000000000650"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20238"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hyperlink" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lengte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteOpening" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedteOpening_temp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedteOpening" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteBinnenOnderkantBene" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteBinnenOnderkantBove" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="typeKruising" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="typeRuwheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="intreeverlies" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="uittreeverlies" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bochtEnKnikverlies" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="indPeilRegulPeilScheidend" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="indPeilRegulPeilScheidend_temp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vormKoker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="code code  NO_OP statusObject statusObject  NO_OP CREATED_DATE CREATED_DATE  NO_OP hyperlink hyperlink  NO_OP lengte lengte  NO_OP hoogteOpening hoogteOpening  NO_OP breedteOpening_temp breedteOpening_temp  NO_OP breedteOpening breedteOpening &lt;at&gt;Evaluate&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;breedteOpening_temp&lt;closeparen&gt;*&lt;at&gt;Value&lt;openparen&gt;breedteOpening&lt;closeparen&gt;&lt;closeparen&gt; SET_TO hoogteBinnenOnderkantBene hoogteBinnenOnderkantBene  NO_OP hoogteBinnenOnderkantBove hoogteBinnenOnderkantBove  NO_OP typeKruising typeKruising  NO_OP typeRuwheid typeRuwheid  NO_OP ruwheid ruwheid  NO_OP intreeverlies intreeverlies  NO_OP uittreeverlies uittreeverlies  NO_OP administratiefgebied administratiefgebied  NO_OP bochtEnKnikverlies bochtEnKnikverlies  NO_OP LAST_EDITED_DATE LAST_EDITED_DATE  NO_OP indPeilRegulPeilScheidend indPeilRegulPeilScheidend  NO_OP indPeilRegulPeilScheidend_temp indPeilRegulPeilScheidend_temp  NO_OP vormKoker vormKoker &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;5&apos;BOOL_OP;OR;COMPOSITE_TEST;1;TEST &lt;at&gt;Value&lt;openparen&gt;vormKoker&lt;closeparen&gt; = 3&apos;_FME_NO_OP_&apos;FME_NUM_CONDITIONS2___&quot; SET_TO"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager_3"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="15"
+#!   TYPE="TestFilter"
+#!   VERSION="1"
+#!   POSITION="1234.5164773961797 -240.63077664218883"
+#!   BOUNDING_RECT="1234.5164773961797 -240.63077664218883 539.77812505397742 71"
+#!   ORDER="500000000000651"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18586"
+#!   OUTPUT_FT_ORDER="1&lt;space&gt;duiker%Meer&lt;space&gt;dan&lt;space&gt;1&lt;space&gt;duiker"
+#! >
+#!     <OUTPUT_FEAT NAME="1&lt;space&gt;duiker"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hyperlink" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="indPeilRegulPeilScheidend" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="indPeilRegulPeilScheidend_temp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lengte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteOpening" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedteOpening_temp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="breedteOpening" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteBinnenOnderkantBene" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteBinnenOnderkantBove" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="typeKruising" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="typeRuwheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="intreeverlies" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="uittreeverlies" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="bochtEnKnikverlies" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vormKoker" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="Meer&lt;space&gt;dan&lt;space&gt;1&lt;space&gt;duiker"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="hyperlink" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="indPeilRegulPeilScheidend" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="indPeilRegulPeilScheidend_temp" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="lengte" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteOpening" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="breedteOpening_temp" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="breedteOpening" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteBinnenOnderkantBene" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="hoogteBinnenOnderkantBove" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="typeKruising" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="typeRuwheid" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ruwheid" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="intreeverlies" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="uittreeverlies" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="bochtEnKnikverlies" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="vormKoker" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="DEFAULT_VALUE" PARM_VALUE="1&lt;space&gt;duiker"/>
+#!     <XFORM_PARM PARM_NAME="TESTLISTGRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE="&quot;BOOL_OP,OR,COMPOSITE_TEST,&quot;&quot;&quot;&quot;&quot;&quot;&lt;Unused&gt;&quot;&quot;&quot;&quot;&quot;&quot;,TEST_CLAUSE,TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;breedteOpening_temp&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;&lt;gt&gt;&lt;space&gt;1&quot;,Meer&lt;space&gt;dan&lt;space&gt;1&lt;space&gt;duiker"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="TestFilter"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <SUBDOCUMENT_IOS>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="3"
+#!   NAME="GeonisBlaeu_Duiker"
+#!   POSITION="-619.6363550995593 -240.63077664218883"
+#!   BOUNDING_RECT="-619.6363550995593 -240.63077664218883 549.9042528198587 71"
+#!   COLLAPSED="true"
+#!   PUBLISHED="true"
+#!   IS_SOURCE="true"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="5"
+#!   NAME="HyDAMO_DuikerSifonHevel"
+#!   POSITION="3089.8171053854576 -300.63077664218883"
+#!   BOUNDING_RECT="3089.8171053854576 -300.63077664218883 687.95249726924658 71"
+#!   COLLAPSED="true"
+#!   IS_SOURCE="false"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! </SUBDOCUMENT_IOS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="4"
+#!   SOURCE_NODE="3"
+#!   TARGET_NODE="2"
+#!   SOURCE_PORT_DESC="0"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="9"
+#!   SOURCE_NODE="2"
+#!   TARGET_NODE="8"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="16"
+#!   SOURCE_NODE="8"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="12"
+#!   SOURCE_NODE="10"
+#!   TARGET_NODE="5"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="0"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="14"
+#!   SOURCE_NODE="11"
+#!   TARGET_NODE="10"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="17"
+#!   SOURCE_NODE="15"
+#!   TARGET_NODE="11"
+#!   SOURCE_PORT_DESC="fo 1 Meer&lt;lt&gt;space&lt;gt&gt;dan&lt;lt&gt;space&lt;gt&gt;1&lt;lt&gt;space&lt;gt&gt;duiker"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="13"
+#!   SOURCE_NODE="15"
+#!   TARGET_NODE="10"
+#!   SOURCE_PORT_DESC="fo 0 1&lt;lt&gt;space&lt;gt&gt;duiker"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </TRANSFORMER>
+
+# ============================================================================
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_code 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_GLOBALID_KDU 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_statusObject 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_CREATED_DATE 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_LAST_EDITED_DATE 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_hyperlink 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_indPeilRegulPeilScheidend 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_indPeilregulPeilScheidend_temp 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_lengte 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_hoogteOpening 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_breedteOpening 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_breedte_temp 1
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_hoogteBinnenOnderkantBene 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_hoogteBinnenOnderkantBove 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_vormKoker 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_typeKruising 3
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_typeRuwheid 4
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_ruwheid 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_intreeverlies 1
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_uittreeverlies 0.7
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_bochtEnKnikverlies 0
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_administratiefgebied 12
+# ============================================================================
+# ============================================================================
+USER_PARAMETERS eyJwYXJhbWV0ZXJzIjpbeyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiY29kZSIsInByb21wdCI6ImNvZGUgKEtEVUlERU5UKSIsInJlcXVpcmVkIjp0cnVlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6IkdMT0JBTElEX0tEVSIsInByb21wdCI6Imdsb2JhbElEIChHTE9CQUxJRF9LRFUpIiwicmVxdWlyZWQiOmZhbHNlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6InN0YXR1c09iamVjdCIsInByb21wdCI6InN0YXR1c09iamVjdCAoS1dLU1RBVFUpIiwicmVxdWlyZWQiOmZhbHNlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6IkNSRUFURURfREFURSIsInByb21wdCI6IkNSRUFURURfREFURSAoQ1JFQVRFRF9EQVRFKToiLCJyZXF1aXJlZCI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6IkxBU1RfRURJVEVEX0RBVEUiLCJwcm9tcHQiOiJMQVNUX0VESVRFRF9EQVRFIChMQVNUIEVESVRFRCBEQVRFKToiLCJyZXF1aXJlZCI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6Imh5cGVybGluayIsInByb21wdCI6Imh5cGVybGluayAoSVdTX0hZUEVSTElOSyk6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJpbmRQZWlsUmVndWxQZWlsU2NoZWlkZW5kIiwicHJvbXB0IjoiaW5kUGVpbFJlZ3VsUGVpbFNjaGVpZGVuZCAoS0RVQUZTQk8pOiIsInJlcXVpcmVkIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiaW5kUGVpbHJlZ3VsUGVpbFNjaGVpZGVuZF90ZW1wIiwicHJvbXB0IjoiaW5kUGVpbHJlZ3VsUGVpbFNjaGVpZGVuZCB0ZW1wIChLRFVBRlNCRSk6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJsZW5ndGUiLCJwcm9tcHQiOiJsZW5ndGUgKFNIQVBFLkxFTik6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6Imhvb2d0ZU9wZW5pbmciLCJwcm9tcHQiOiJob29ndGVPcGVuaW5nIChLRFVIR0ExKToiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiYnJlZWR0ZU9wZW5pbmciLCJwcm9tcHQiOiJicmVlZHRlT3BlbmluZyAoS0RVQlJFRUQpOiIsInJlcXVpcmVkIjp0cnVlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImRlZmF1bHRWYWx1ZSI6IjEiLCJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiYnJlZWR0ZV90ZW1wIiwicHJvbXB0IjoiYnJlZWR0ZU9wZW5pbmcgdGVtcCAoS0RVQlVJUyk6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6Imhvb2d0ZUJpbm5lbk9uZGVya2FudEJlbmUiLCJwcm9tcHQiOiJob29ndGVCaW5uZW5PbmRlcmthbnRCZW5lIChLRFVCT0tCRSk6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6Imhvb2d0ZUJpbm5lbk9uZGVya2FudEJvdmUiLCJwcm9tcHQiOiJob29ndGVCaW5uZW5PbmRlcmthbnRCb3ZlIChLRFVCT0tCTyk6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6InZvcm1Lb2tlciIsInByb21wdCI6InZvcm1Lb2tlcihLRFVWT1JNKToiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJjaG9pY2VzIjpbeyJkaXNwbGF5IjoiaGV2ZWwiLCJ2YWx1ZSI6IjUifSx7ImRpc3BsYXkiOiJkdWlrZXIiLCJ2YWx1ZSI6IjMifSx7ImRpc3BsYXkiOiJzaWZvbiIsInZhbHVlIjoiNCJ9XSwiZGVmYXVsdFZhbHVlIjoiMyIsIm5hbWUiOiJ0eXBlS3J1aXNpbmciLCJwcm9tcHQiOiJ0eXBlS3J1aXNpbmc6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoiZHJvcGRvd24iLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImNob2ljZXMiOlt7ImRpc3BsYXkiOiJDaGV6eSIsInZhbHVlIjoiMSJ9LHsiZGlzcGxheSI6Ik1hbm5pbmciLCJ2YWx1ZSI6IjIifSx7ImRpc3BsYXkiOiJTdHJpY2tsZWxyS24iLCJ2YWx1ZSI6IjMifSx7ImRpc3BsYXkiOiJTdHJpY2tsZXJLcyIsInZhbHVlIjoiNCJ9LHsiZGlzcGxheSI6IldoaXRlIENvbGVicm9vayIsInZhbHVlIjoiNSJ9LHsiZGlzcGxheSI6IkJvcyBlbiBCaWprZXJrIiwidmFsdWUiOiI2In1dLCJkZWZhdWx0VmFsdWUiOiI0IiwibmFtZSI6InR5cGVSdXdoZWlkIiwicHJvbXB0IjoidHlwZVJ1d2hlaWQ6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoiZHJvcGRvd24iLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJydXdoZWlkIiwicHJvbXB0IjoicnV3aGVpZCAoWFhYTUFURVIpOiIsInJlcXVpcmVkIjp0cnVlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImRlZmF1bHRWYWx1ZSI6IjEiLCJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiaW50cmVldmVybGllcyIsInByb21wdCI6ImludHJlZXZlcmxpZXM6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZGVmYXVsdFZhbHVlIjoiMC43IiwiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6InVpdHRyZWV2ZXJsaWVzIiwicHJvbXB0IjoidWl0dHJlZXZlcmxpZXM6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZGVmYXVsdFZhbHVlIjoiMCIsImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJib2NodEVuS25pa3ZlcmxpZXMiLCJwcm9tcHQiOiJib2NodEVuS25pa3ZlcmxpZXM6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImNob2ljZXMiOlt7ImRpc3BsYXkiOiIxIC0gYWEgZW4gbWFhcyIsInZhbHVlIjoiMSJ9LHsiZGlzcGxheSI6IjIgLSBhbXN0ZWwgZ29vaSBlbiB2ZWNodCIsInZhbHVlIjoiMiJ9LHsiZGlzcGxheSI6IjMgLSBicmFiYW50c2UgZGVsdGEiLCJ2YWx1ZSI6IjMifSx7ImRpc3BsYXkiOiI0IC0gZGVsZmxhbmQiLCJ2YWx1ZSI6IjQifSx7ImRpc3BsYXkiOiI1IC0gZG9tbWVsIiwidmFsdWUiOiI1In0seyJkaXNwbGF5IjoiNiAtIGZyeXNsYW4iLCJ2YWx1ZSI6IjYifSx7ImRpc3BsYXkiOiI3IC0gaG9sbGFuZHMgbm9vcmRlcmt3YXJ0aWVyIiwidmFsdWUiOiI3In0seyJkaXNwbGF5IjoiOCAtIGhvbGxhbmRzZSBkZWx0YSIsInZhbHVlIjoiOCJ9LHsiZGlzcGxheSI6IjkgLSBodW56ZSBlbiBhYXMiLCJ2YWx1ZSI6IjkifSx7ImRpc3BsYXkiOiIxMCAtIG5vb3JkZXJ6aWpsdmVzdCIsInZhbHVlIjoiMTAifSx7ImRpc3BsYXkiOiIxMSAtIGxpbWJ1cmciLCJ2YWx1ZSI6IjExIn0seyJkaXNwbGF5IjoiMTIgLSByaWpuIGVuIGlqc3NlbCIsInZhbHVlIjoiMTIifSx7ImRpc3BsYXkiOiIxMyAtIHJpam5sYW5kIiwidmFsdWUiOiIxMyJ9LHsiZGlzcGxheSI6IjE0IC0gcml2aWVyZW5sYW5kIiwidmFsdWUiOiIxNCJ9LHsiZGlzcGxheSI6IjE2IC0gc2NoaWVsYW5kIGVuIGtyaW1wZW5lcndhYXJkIiwidmFsdWUiOiIxNiJ9LHsiZGlzcGxheSI6IjE3IC0gc3RpY2h0c2UgcmlqbmxhbmRlbiIsInZhbHVlIjoiMTcifSx7ImRpc3BsYXkiOiIxOCAtIHp1aWRlcnplZWxhbmQiLCJ2YWx1ZSI6IjE4In0seyJkaXNwbGF5IjoiMTkgLSBzY2hlbGRlc3Ryb21lbiIsInZhbHVlIjoiMTkifSx7ImRpc3BsYXkiOiIyMCAtIHZhbGxlaSBlbiB2ZWx1d2UiLCJ2YWx1ZSI6IjIwIn0seyJkaXNwbGF5IjoiMjEgLSB2ZWNodHN0cm9tZW4iLCJ2YWx1ZSI6IjIxIn0seyJkaXNwbGF5IjoiMjIgLSBkcmVudHMgb3Zlcmlqc3NlbHNlIGRlbHRhIiwidmFsdWUiOiIyMiJ9LHsiZGlzcGxheSI6IjIwIC0gcmlqa3N3YXRlcnN0YWF0IiwidmFsdWUiOiIzMCJ9XSwiZGVmYXVsdFZhbHVlIjoiMTIiLCJuYW1lIjoiYWRtaW5pc3RyYXRpZWZnZWJpZWQiLCJwcm9tcHQiOiJhZG1pbmlzdHJhdGllZmdlYmllZDoiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJkcm9wZG93biIsInZhbHVlVHlwZSI6InN0cmluZyJ9XX0=
+# ============================================================================
+#! START_HEADER
+#! END_HEADER
+
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+DEFAULT_MACRO GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME ""
+INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_GeonisBlaeu_Duiker1630266510 Input Splitter"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_GeonisBlaeu_Duiker"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_GeonisBlaeu_Duiker"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_AttributeManager }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_GeonisBlaeu_Duiker"    MULTI_FEATURE_MODE { NO }    NULL_ATTR_MODE { NO_OP }    ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "" "code" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_code$encode)" "SET_TO" }      ATTR_ACTION { "" "statusObject" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_statusObject$encode)" "SET_TO" }      ATTR_ACTION { "" "CREATED_DATE" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_CREATED_DATE$encode)" "SET_TO" }      ATTR_ACTION { "" "LAST_EDITED_DATE" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_LAST_EDITED_DATE$encode)" "SET_TO" }      ATTR_ACTION { "" "hyperlink" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_hyperlink$encode)" "SET_TO" }      ATTR_ACTION { "" "indPeilRegulPeilScheidend_temp" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_indPeilregulPeilScheidend_temp$encode)" "SET_TO" }      ATTR_ACTION { "" "indPeilRegulPeilScheidend" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_indPeilRegulPeilScheidend$encode)" "SET_TO" }      ATTR_ACTION { "" "lengte" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_lengte$encode)" "SET_TO" }      ATTR_ACTION { "" "hoogteOpening" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_hoogteOpening$encode)" "SET_TO" }      ATTR_ACTION { "" "breedteOpening" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_breedteOpening$encode)" "SET_TO" }      ATTR_ACTION { "" "breedteOpening_temp" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_breedte_temp$encode)" "SET_TO" }      ATTR_ACTION { "" "hoogteBinnenOnderkantBene" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_hoogteBinnenOnderkantBene$encode)" "SET_TO" }      ATTR_ACTION { "" "hoogteBinnenOnderkantBove" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_hoogteBinnenOnderkantBove$encode)" "SET_TO" }      ATTR_ACTION { "" "vormKoker" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_vormKoker$encode)" "SET_TO" }      ATTR_ACTION { "" "typeKruising" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_typeKruising)" "SET_TO" }      ATTR_ACTION { "" "typeRuwheid" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_typeRuwheid)" "SET_TO" }      ATTR_ACTION { "" "ruwheid" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_ruwheid$encode)" "SET_TO" }      ATTR_ACTION { "" "intreeverlies" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_intreeverlies$encode)" "SET_TO" }      ATTR_ACTION { "" "bochtEnKnikverlies" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_bochtEnKnikverlies$encode)" "SET_TO" }      ATTR_ACTION { "" "uittreeverlies" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_uittreeverlies$encode)" "SET_TO" }      ATTR_ACTION { "" "administratiefgebied" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_administratiefgebied)" "SET_TO" }      ATTR_ACTION { "" "globalID" "$($(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_GLOBALID_KDU$encode)" "SET_TO" }    OUTPUT { OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_AttributeManager_OUTPUT"        }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_AttributeManager_2 }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_AttributeManager_OUTPUT"    MULTI_FEATURE_MODE { NO }    NULL_ATTR_MODE { NO_OP }    ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "statusObject" "statusObject" "FME_CONDITIONAL:DEFAULT_VALUE'99'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 100'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 300'3'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 400'4'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 500'5'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 201'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 202'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 203'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 204'1'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 9900'98'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>statusObject<closeparen> = 9800'99'FME_NUM_CONDITIONS11___" "SET_TO" }      ATTR_ACTION { "indPeilRegulPeilScheidend" "indPeilRegulPeilScheidend" "FME_CONDITIONAL:DEFAULT_VALUE'2'BOOL_OP;OR;COMPOSITE_TEST;1 OR 2;TEST <at>Value<openparen>indPeilRegulPeilScheidend<closeparen> IN 1<comma>2<comma>3<comma>4;TEST <at>Value<openparen>indPeilRegulPeilScheidend_temp<closeparen> IN 1<comma>2<comma>3<comma>4'1'FME_NUM_CONDITIONS2___" "SET_TO" }      ATTR_ACTION { "hoogteOpening" "hoogteOpening" "FME_CONDITIONAL:DEFAULT_VALUE'_FME_NO_OP_'BOOL_OP;AND;COMPOSITE_TEST;1 AND 2;TEST <at>Value<openparen>vormKoker<closeparen> = 1;TEST hoogteOpening NOT_ATTRIBUTE_HAS_A_VALUE _FME_BLANK_STRING_'<at>Value<openparen>breedteOpening<closeparen>'FME_NUM_CONDITIONS2___" "SET_TO" }      ATTR_ACTION { "breedteOpening" "breedteOpening" "FME_CONDITIONAL:DEFAULT_VALUE'_FME_NO_OP_'BOOL_OP;AND;COMPOSITE_TEST;1 AND 2;TEST <at>Value<openparen>vormKoker<closeparen> = 1;TEST breedteOpening NOT_ATTRIBUTE_HAS_A_VALUE _FME_BLANK_STRING_'<at>Value<openparen>hoogteOpening<closeparen>'FME_NUM_CONDITIONS2___" "SET_TO" }      ATTR_ACTION { "ruwheid" "ruwheid" "FME_CONDITIONAL:DEFAULT_VALUE'75'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Value<openparen>ruwheid<closeparen> = 4'35'FME_NUM_CONDITIONS2___" "SET_TO" }      ATTR_ACTION { "vormKoker" "vormKoker" "FME_CONDITIONAL:DEFAULT_VALUE'99'BOOL_OP;OR;COMPOSITE_TEST;1;TEST <at>Value<openparen>vormKoker<closeparen> = 1'1'BOOL_OP;OR;COMPOSITE_TEST;1;TEST <at>Value<openparen>vormKoker<closeparen> = 2'3'BOOL_OP;OR;COMPOSITE_TEST;1;TEST <at>Value<openparen>vormKoker<closeparen> = 3'4'BOOL_OP;OR;COMPOSITE_TEST;1;TEST <at>Value<openparen>vormKoker<closeparen> = 4'9'BOOL_OP;OR;COMPOSITE_TEST;1;TEST <at>Value<openparen>vormKoker<closeparen> = 5'5'BOOL_OP;OR;COMPOSITE_TEST;1;TEST <at>Value<openparen>vormKoker<closeparen> = 6'8'FME_NUM_CONDITIONS7___" "SET_TO" }    OUTPUT { OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_AttributeManager_2_OUTPUT"        }
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_TestFilter    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_AttributeManager_2_OUTPUT"    OUTPUT FEATURE_TYPE $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_TestFilter_TESTFILTERINPUTLINE_0
+FACTORY_DEF * TestFactory FACTORY_NAME $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_TestFilter_Condition_1 INPUT FEATURE_TYPE $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_TestFilter_TESTFILTERINPUTLINE_0 TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>breedteOpening_temp<closeparen>,$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_TestFilter) > 1 ENCODED BOOLEAN_OPERATOR OR COMPOSITE_TEST_EXPR "<Unused>" OUTPUT PASSED FEATURE_TYPE $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_TestFilter_Meer<space>dan<space>1<space>duiker OUTPUT FAILED FEATURE_TYPE $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_TestFilter_TESTFILTERINPUTLINE_1
+FACTORY_DEF * TeeFactory FACTORY_NAME $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_TestFilter_1<space>duiker INPUT FEATURE_TYPE $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_TestFilter_TESTFILTERINPUTLINE_1 OUTPUT FEATURE_TYPE $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_TestFilter_1<space>duiker
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_AttributeManager_3 }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_TestFilter_Meer<space>dan<space>1<space>duiker"    MULTI_FEATURE_MODE { NO }    NULL_ATTR_MODE { NO_OP }    ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "breedteOpening" "breedteOpening" "<at>Evaluate<openparen><at>Value<openparen>breedteOpening_temp<closeparen>*<at>Value<openparen>breedteOpening<closeparen><closeparen>" "SET_TO" }      ATTR_ACTION { "vormKoker" "vormKoker" "FME_CONDITIONAL:DEFAULT_VALUE'5'BOOL_OP;OR;COMPOSITE_TEST;1;TEST <at>Value<openparen>vormKoker<closeparen> = 3'_FME_NO_OP_'FME_NUM_CONDITIONS2___" "SET_TO" }    OUTPUT { OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_AttributeManager_3_OUTPUT"        }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttributeKeeperFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_AttributeKeeper }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_AttributeManager_3_OUTPUT"    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_TestFilter_1<space>duiker"    KEEP_ATTRS { breedteOpening,hoogteBinnenOnderkantBove,hoogteOpening,hyperlink,code,ruwheid,typeRuwheid,lengte,intreeverlies,typeKruising,statusObject,LAST_EDITED_DATE,hoogteBinnenOnderkantBene,CREATED_DATE,bochtEnKnikverlies,uittreeverlies,administratiefgebied,indPeilRegulPeilScheidend,vormKoker,globalID }    KEEP_LISTS {  }    KEEP_FME_ATTRIBUTES Yes    BUILD_FEATURE_TABLES { NO }    OUTPUT_ON_ATTRIBUTE_CHANGE { <Unused> }    OUTPUT { OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_AttributeKeeper_OUTPUT"        }
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_HyDAMO_DuikerSifonHevel1630266510 Output Collector"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_AttributeKeeper_OUTPUT"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME)_HyDAMO_DuikerSifonHevel"
+INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(GeonisBlaeuToHyDAMOConverterDuikerSifonHevel_WORKSPACE_NAME))}]

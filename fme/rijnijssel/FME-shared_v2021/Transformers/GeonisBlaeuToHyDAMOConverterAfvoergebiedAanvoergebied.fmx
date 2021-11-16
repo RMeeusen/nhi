@@ -1,0 +1,381 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <TRANSFORMER
+# TRANSFORMER_BEGIN GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied,1,,88652458-20eb-4bdb-8e99-e10befe23da5,"Linked by Default",No,NO_PARALLELISM,,No,21326,YES,No,38,No,
+# <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Custom Transformer om data van aan- en afvoergebieden van Geonis Blaeu format om te zetten naar Hydamo v13 format. </p>
+# <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
+#     <br/>
+# </p>
+# <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Opgesteld in 2020 door Sweco - Tessa Andringa (tessa.andringa@sweco.nl) </p>
+# 
+# TRANSFORMER_END
+#!   ARCGIS_COMPATIBILITY="ARCGIS_AUTO"
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BLOCKED_LOOPING="No"
+#!   CATEGORY=""
+#!   DESCRIPTION="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Custom Transformer om data van aan- en afvoergebieden van Geonis Blaeu format om te zetten naar Hydamo v13 format. &lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Opgesteld in 2020 door Sweco - Tessa Andringa (tessa.andringa@sweco.nl) &lt;/p&gt;&#10;"
+#!   DOC_EXTENTS="4133.04 71"
+#!   DOC_TOP_LEFT="100 -171"
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="21326"
+#!   FME_DOCUMENT_GUID="88652458-20eb-4bdb-8e99-e10befe23da5"
+#!   FME_DOCUMENT_PRIORGUID="510002f2-3fc6-440d-871e-7c4b866a0cb8,349932e7-1ca8-4a9c-a8b4-da313fb9c8c8,dbd8a299-8e8a-41d0-be3c-a3805e9898b4,efd9d5e2-bde9-422e-be44-fbd026a5ec82,b20100ca-65a5-49ea-88a8-057056b970b7,53e162d7-2344-46f2-babc-636655ea86b8,f6525b90-4a36-4440-bf5a-4fcff5b828cd"
+#!   FME_LINKED_TRANSFORMER_VERSION="1"
+#!   FME_NAMES_ENCODING="windows-1252"
+#!   FME_PROCESS_COUNT="NO_PARALLELISM"
+#!   FME_PROCESS_GROUPS_ORDERED="No"
+#!   FME_PROCESS_GROUP_BY=""
+#!   FME_PROCESS_PRESERVE_GROUP_ATTR="No"
+#!   FME_SERVER_SERVICES=""
+#!   FMX_ATTRIBUTE_PROPOGATION_MODE="AUTO"
+#!   FMX_INSERT_MODE="Linked by Default"
+#!   HISTORY=""
+#!   ITERATION_COUNT_ATTR=""
+#!   LAST_SAVE_BUILD="FME(R) 2021.0.3.0 (20210528 - Build 21326 - WIN64)"
+#!   LAST_SAVE_DATE="2021-08-03T22:39:52"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOOP_ITERATIONS=""
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="38"
+#!   REPLACED_BY=""
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   TITLE="GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied"
+#!   USAGE=""
+#!   USE_MARKDOWN="NO"
+#!   VIEW_POSITION="768.758 621.881"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   XFORM_DEPRECATED="No"
+#!   ZOOM_SCALE="100"
+#! >
+#! <DATASETS>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI STRING_OR_ATTR code code (GFEIDENT)"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL STRING_OR_ATTR globalID globalID (GLOBAL_GFE)"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR naam naam (GFEIDENT):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI LOOKUP_CHOICE_OR_ATTR statusObject 1&lt;space&gt;-&lt;space&gt;planvorming,1%3&lt;space&gt;-&lt;space&gt;gerealiseerd,3%4&lt;space&gt;-&lt;space&gt;buiten&lt;space&gt;bedrijf,4%5&lt;space&gt;-&lt;space&gt;niet&lt;space&gt;meer&lt;space&gt;aanwezig,5%7&lt;space&gt;-&lt;space&gt;te&lt;space&gt;verwijderen,7%98&lt;space&gt;-&lt;space&gt;overig,98%99&lt;space&gt;-&lt;space&gt;onbekend,99 statusObject:"
+#!   DEFAULT_VALUE="3"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL STRING_OR_ATTR CREATED_DATE CREATED_DATE"
+#!   DEFAULT_VALUE="20000101"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR LAST_EDITED_DATE LAST_EDITED_DATE (LAST EDITED DATE):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR hyperlink hyperlink:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI LOOKUP_CHOICE_OR_ATTR soortAfvoerAanvoergebied 1&lt;space&gt;-&lt;space&gt;bemalingsgebied,1%2&lt;space&gt;-&lt;space&gt;afvoergebied,2%3&lt;space&gt;-&lt;space&gt;deelstroomgebied,3%4&lt;space&gt;-&lt;space&gt;afwateringsgebied,4%5&lt;space&gt;-&lt;space&gt;afwateringseenheid,5%6&lt;space&gt;-&lt;space&gt;aanvoergebied,6%98&lt;space&gt;-&lt;space&gt;overig,98%99&lt;space&gt;-&lt;space&gt;onbekend,99 soortAfvoerAanvoergebied:"
+#!   DEFAULT_VALUE="5"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR ordeCode ordeCode:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR oppervlakte oppervlakte (SHAPE_AREA):"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR lateraleknoopID lateraleknoopID:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI LOOKUP_CHOICE_OR_ATTR administratiefgebied 1&lt;space&gt;-&lt;space&gt;aa&lt;space&gt;en&lt;space&gt;maas,1%2&lt;space&gt;-&lt;space&gt;amstel&lt;space&gt;gooi&lt;space&gt;en&lt;space&gt;vecht,2%3&lt;space&gt;-&lt;space&gt;brabantse&lt;space&gt;delta,3%4&lt;space&gt;-&lt;space&gt;delfland,4%5&lt;space&gt;-&lt;space&gt;dommel,5%6&lt;space&gt;-&lt;space&gt;fryslan,6%7&lt;space&gt;-&lt;space&gt;hollands&lt;space&gt;noorderkwartier,7%8&lt;space&gt;-&lt;space&gt;hollandse&lt;space&gt;delta,8%9&lt;space&gt;-&lt;space&gt;hunze&lt;space&gt;en&lt;space&gt;aas,9%10&lt;space&gt;-&lt;space&gt;noorderzijlvest,10%11&lt;space&gt;-&lt;space&gt;limburg,11%12&lt;space&gt;-&lt;space&gt;rijn&lt;space&gt;en&lt;space&gt;ijssel,12%13&lt;space&gt;-&lt;space&gt;rijnland,13%14&lt;space&gt;-&lt;space&gt;rivierenland,14%16&lt;space&gt;-&lt;space&gt;schieland&lt;space&gt;en&lt;space&gt;krimpenerwaard,16%17&lt;space&gt;-&lt;space&gt;stichtse&lt;space&gt;rijnlanden,17%18&lt;space&gt;-&lt;space&gt;zuiderzeeland,18%19&lt;space&gt;-&lt;space&gt;scheldestromen,19%20&lt;space&gt;-&lt;space&gt;vallei&lt;space&gt;en&lt;space&gt;veluwe,20%21&lt;space&gt;-&lt;space&gt;vechtstromen,21%22&lt;space&gt;-&lt;space&gt;drents&lt;space&gt;overijsselse&lt;space&gt;delta,22%20&lt;space&gt;-&lt;space&gt;rijkswaterstaat,30 administratiefgebied:"
+#!   DEFAULT_VALUE="12"
+#!   IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <USER_PARAMETERS
+#!   FORM="eyJwYXJhbWV0ZXJzIjpbeyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiY29kZSIsInByb21wdCI6ImNvZGUgKEdGRUlERU5UKSIsInJlcXVpcmVkIjp0cnVlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6Imdsb2JhbElEIiwicHJvbXB0IjoiZ2xvYmFsSUQgKEdMT0JBTF9HRkUpIiwicmVxdWlyZWQiOmZhbHNlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6Im5hYW0iLCJwcm9tcHQiOiJuYWFtIChHRkVJREVOVCk6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImNob2ljZXMiOlt7ImRpc3BsYXkiOiIxIC0gcGxhbnZvcm1pbmciLCJ2YWx1ZSI6IjEifSx7ImRpc3BsYXkiOiIzIC0gZ2VyZWFsaXNlZXJkIiwidmFsdWUiOiIzIn0seyJkaXNwbGF5IjoiNCAtIGJ1aXRlbiBiZWRyaWpmIiwidmFsdWUiOiI0In0seyJkaXNwbGF5IjoiNSAtIG5pZXQgbWVlciBhYW53ZXppZyIsInZhbHVlIjoiNSJ9LHsiZGlzcGxheSI6IjcgLSB0ZSB2ZXJ3aWpkZXJlbiIsInZhbHVlIjoiNyJ9LHsiZGlzcGxheSI6Ijk4IC0gb3ZlcmlnIiwidmFsdWUiOiI5OCJ9LHsiZGlzcGxheSI6Ijk5IC0gb25iZWtlbmQiLCJ2YWx1ZSI6Ijk5In1dLCJkZWZhdWx0VmFsdWUiOiIzIiwibmFtZSI6InN0YXR1c09iamVjdCIsInByb21wdCI6InN0YXR1c09iamVjdDoiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJkcm9wZG93biIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZGVmYXVsdFZhbHVlIjoiMjAwMDAxMDEiLCJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiQ1JFQVRFRF9EQVRFIiwicHJvbXB0IjoiQ1JFQVRFRF9EQVRFIiwicmVxdWlyZWQiOmZhbHNlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6IkxBU1RfRURJVEVEX0RBVEUiLCJwcm9tcHQiOiJMQVNUX0VESVRFRF9EQVRFIChMQVNUIEVESVRFRCBEQVRFKToiLCJyZXF1aXJlZCI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6Imh5cGVybGluayIsInByb21wdCI6Imh5cGVybGluazoiLCJyZXF1aXJlZCI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiY2hvaWNlcyI6W3siZGlzcGxheSI6IjEgLSBiZW1hbGluZ3NnZWJpZWQiLCJ2YWx1ZSI6IjEifSx7ImRpc3BsYXkiOiIyIC0gYWZ2b2VyZ2ViaWVkIiwidmFsdWUiOiIyIn0seyJkaXNwbGF5IjoiMyAtIGRlZWxzdHJvb21nZWJpZWQiLCJ2YWx1ZSI6IjMifSx7ImRpc3BsYXkiOiI0IC0gYWZ3YXRlcmluZ3NnZWJpZWQiLCJ2YWx1ZSI6IjQifSx7ImRpc3BsYXkiOiI1IC0gYWZ3YXRlcmluZ3NlZW5oZWlkIiwidmFsdWUiOiI1In0seyJkaXNwbGF5IjoiNiAtIGFhbnZvZXJnZWJpZWQiLCJ2YWx1ZSI6IjYifSx7ImRpc3BsYXkiOiI5OCAtIG92ZXJpZyIsInZhbHVlIjoiOTgifSx7ImRpc3BsYXkiOiI5OSAtIG9uYmVrZW5kIiwidmFsdWUiOiI5OSJ9XSwiZGVmYXVsdFZhbHVlIjoiNSIsIm5hbWUiOiJzb29ydEFmdm9lckFhbnZvZXJnZWJpZWQiLCJwcm9tcHQiOiJzb29ydEFmdm9lckFhbnZvZXJnZWJpZWQ6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoiZHJvcGRvd24iLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJvcmRlQ29kZSIsInByb21wdCI6Im9yZGVDb2RlOiIsInJlcXVpcmVkIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoib3BwZXJ2bGFrdGUiLCJwcm9tcHQiOiJvcHBlcnZsYWt0ZSAoU0hBUEVfQVJFQSk6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6ImxhdGVyYWxla25vb3BJRCIsInByb21wdCI6ImxhdGVyYWxla25vb3BJRDoiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJjaG9pY2VzIjpbeyJkaXNwbGF5IjoiMSAtIGFhIGVuIG1hYXMiLCJ2YWx1ZSI6IjEifSx7ImRpc3BsYXkiOiIyIC0gYW1zdGVsIGdvb2kgZW4gdmVjaHQiLCJ2YWx1ZSI6IjIifSx7ImRpc3BsYXkiOiIzIC0gYnJhYmFudHNlIGRlbHRhIiwidmFsdWUiOiIzIn0seyJkaXNwbGF5IjoiNCAtIGRlbGZsYW5kIiwidmFsdWUiOiI0In0seyJkaXNwbGF5IjoiNSAtIGRvbW1lbCIsInZhbHVlIjoiNSJ9LHsiZGlzcGxheSI6IjYgLSBmcnlzbGFuIiwidmFsdWUiOiI2In0seyJkaXNwbGF5IjoiNyAtIGhvbGxhbmRzIG5vb3JkZXJrd2FydGllciIsInZhbHVlIjoiNyJ9LHsiZGlzcGxheSI6IjggLSBob2xsYW5kc2UgZGVsdGEiLCJ2YWx1ZSI6IjgifSx7ImRpc3BsYXkiOiI5IC0gaHVuemUgZW4gYWFzIiwidmFsdWUiOiI5In0seyJkaXNwbGF5IjoiMTAgLSBub29yZGVyemlqbHZlc3QiLCJ2YWx1ZSI6IjEwIn0seyJkaXNwbGF5IjoiMTEgLSBsaW1idXJnIiwidmFsdWUiOiIxMSJ9LHsiZGlzcGxheSI6IjEyIC0gcmlqbiBlbiBpanNzZWwiLCJ2YWx1ZSI6IjEyIn0seyJkaXNwbGF5IjoiMTMgLSByaWpubGFuZCIsInZhbHVlIjoiMTMifSx7ImRpc3BsYXkiOiIxNCAtIHJpdmllcmVubGFuZCIsInZhbHVlIjoiMTQifSx7ImRpc3BsYXkiOiIxNiAtIHNjaGllbGFuZCBlbiBrcmltcGVuZXJ3YWFyZCIsInZhbHVlIjoiMTYifSx7ImRpc3BsYXkiOiIxNyAtIHN0aWNodHNlIHJpam5sYW5kZW4iLCJ2YWx1ZSI6IjE3In0seyJkaXNwbGF5IjoiMTggLSB6dWlkZXJ6ZWVsYW5kIiwidmFsdWUiOiIxOCJ9LHsiZGlzcGxheSI6IjE5IC0gc2NoZWxkZXN0cm9tZW4iLCJ2YWx1ZSI6IjE5In0seyJkaXNwbGF5IjoiMjAgLSB2YWxsZWkgZW4gdmVsdXdlIiwidmFsdWUiOiIyMCJ9LHsiZGlzcGxheSI6IjIxIC0gdmVjaHRzdHJvbWVuIiwidmFsdWUiOiIyMSJ9LHsiZGlzcGxheSI6IjIyIC0gZHJlbnRzIG92ZXJpanNzZWxzZSBkZWx0YSIsInZhbHVlIjoiMjIifSx7ImRpc3BsYXkiOiIyMCAtIHJpamtzd2F0ZXJzdGFhdCIsInZhbHVlIjoiMzAifV0sImRlZmF1bHRWYWx1ZSI6IjEyIiwibmFtZSI6ImFkbWluaXN0cmF0aWVmZ2ViaWVkIiwicHJvbXB0IjoiYWRtaW5pc3RyYXRpZWZnZWJpZWQ6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoiZHJvcGRvd24iLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifV19"
+#! >
+#! <PARAMETER_INFO>
+#!     <INFO NAME="CREATED_DATE" IS_STAND_ALONE="true" />
+#!     <INFO NAME="LAST_EDITED_DATE" IS_STAND_ALONE="true" />
+#!     <INFO NAME="administratiefgebied" IS_STAND_ALONE="true" />
+#!     <INFO NAME="code" IS_STAND_ALONE="true" />
+#!     <INFO NAME="globalID" IS_STAND_ALONE="true" />
+#!     <INFO NAME="hyperlink" IS_STAND_ALONE="true" />
+#!     <INFO NAME="lateraleknoopID" IS_STAND_ALONE="true" />
+#!     <INFO NAME="naam" IS_STAND_ALONE="true" />
+#!     <INFO NAME="oppervlakte" IS_STAND_ALONE="true" />
+#!     <INFO NAME="ordeCode" IS_STAND_ALONE="true" />
+#!     <INFO NAME="soortAfvoerAanvoergebied" IS_STAND_ALONE="true" />
+#!     <INFO NAME="statusObject" IS_STAND_ALONE="true" />
+#! </PARAMETER_INFO>
+#! </USER_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="4"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="1365.6401892892325 -100"
+#!   BOUNDING_RECT="1365.6401892892325 -100 431 71"
+#!   ORDER="500000000000001"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21326"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="naam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hyperlink" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="soortAfvoerAanvoergebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ordeCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="oppervlakte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lateraleknoopID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; code $(code) SET_TO  naam $(naam) SET_TO  statusObject $(statusObject) SET_TO  CREATED_DATE $(CREATED_DATE) SET_TO  LAST_EDITED_DATE $(LAST_EDITED_DATE) SET_TO  hyperlink $(hyperlink) SET_TO  soortAfvoerAanvoergebied $(soortAfvoerAanvoergebied) SET_TO  ordeCode $(ordeCode) SET_TO  oppervlakte $(oppervlakte) SET_TO  lateraleknoopID $(lateraleknoopID) SET_TO  administratiefgebied $(administratiefgebied) SET_TO  globalID $(globalID) SET_TO"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="7"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="1975.0197501975008 -100"
+#!   BOUNDING_RECT="1975.0197501975008 -100 431 71"
+#!   ORDER="500000000000002"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20238"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="naam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hyperlink" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="soortAfvoerAanvoergebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ordeCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="oppervlakte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lateraleknoopID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="code code  NO_OP naam naam &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;FME_NULL_VALUE&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 01&apos;Grenskanaal&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 04&apos;Rijnstrangen&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 07&apos;Grenskanaal&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 08&apos;Grenskanaal&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 09&apos;Rijnstrangen&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 10&apos;Rijnstrangen&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 12&apos;Veluwe&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 16&apos;Veluwe&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 20&apos;Veluwe&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 24&apos;Veluwe&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 28&apos;Liemers&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 32&apos;Veluwe&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 40&apos;Liemers&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 44&apos;Liemers&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 48&apos;Havikerwaard&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 50&apos;Veluwe&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 54&apos;Oude&lt;space&gt;IJssel&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 62&apos;Grote&lt;space&gt;Beek&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 66&apos;Grote&lt;space&gt;Beek&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 74&apos;Baakse&lt;space&gt;Beek&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 80&apos;Berkel&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 84&apos;Twentekanaal&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 88&apos;Oude&lt;space&gt;Flierderbeek&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 92&apos;Dommerbeek&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 96&apos;Schipbeek&apos;BOOL_OP;OR;COMPOSITE_TEST;&lt;Unused&gt;;TEST &lt;at&gt;Substring&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;naam&lt;closeparen&gt;&lt;comma&gt;2&lt;comma&gt;2&lt;closeparen&gt; = 99&apos;Veluwe&apos;FME_NUM_CONDITIONS27___&quot; SET_TO statusObject statusObject  NO_OP CREATED_DATE CREATED_DATE  NO_OP LAST_EDITED_DATE LAST_EDITED_DATE  NO_OP hyperlink hyperlink  NO_OP soortAfvoerAanvoergebied soortAfvoerAanvoergebied  NO_OP ordeCode ordeCode  NO_OP oppervlakte oppervlakte  NO_OP lateraleknoopID lateraleknoopID  NO_OP administratiefgebied administratiefgebied  NO_OP"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="10"
+#!   TYPE="AttributeKeeper"
+#!   VERSION="3"
+#!   POSITION="2590.6509065090645 -100"
+#!   BOUNDING_RECT="2590.6509065090645 -100 431 71"
+#!   ORDER="500000000000003"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="21326"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="naam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="statusObject" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CREATED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAST_EDITED_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hyperlink" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="soortAfvoerAanvoergebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ordeCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="oppervlakte" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="lateraleknoopID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="administratiefgebied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="globalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="CREATE_BULK_MODE_FEATURES" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="KEEP_ATTRS" PARM_VALUE="oppervlakte,administratiefgebied,CREATED_DATE,LAST_EDITED_DATE,hyperlink,code,ordeCode,lateraleknoopID,statusObject,naam,soortAfvoerAanvoergebied,globalID"/>
+#!     <XFORM_PARM PARM_NAME="KEEP_LIST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_ON_ATTRIBUTE_CHANGE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeKeeper"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <SUBDOCUMENT_IOS>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="2"
+#!   NAME="GeonisBlaeu_Afwateringsgebied"
+#!   POSITION="100 -100"
+#!   BOUNDING_RECT="100 -100 1075.0117501175012 71"
+#!   COLLAPSED="true"
+#!   PUBLISHED="true"
+#!   IS_SOURCE="true"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="3"
+#!   NAME="HyDAMO_AfvoergebiedAanvoergebied"
+#!   POSITION="3294.6319063190631 -100"
+#!   BOUNDING_RECT="3294.6319063190631 -100 938.41084410844087 71"
+#!   COLLAPSED="true"
+#!   IS_SOURCE="false"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! </SUBDOCUMENT_IOS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="5"
+#!   SOURCE_NODE="2"
+#!   TARGET_NODE="4"
+#!   SOURCE_PORT_DESC="0"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="8"
+#!   SOURCE_NODE="4"
+#!   TARGET_NODE="7"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="11"
+#!   SOURCE_NODE="7"
+#!   TARGET_NODE="10"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="12"
+#!   SOURCE_NODE="10"
+#!   TARGET_NODE="3"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="0"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </TRANSFORMER>
+
+# ============================================================================
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_code 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_globalID 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_naam 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_statusObject 3
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_CREATED_DATE 20000101
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_LAST_EDITED_DATE 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_hyperlink 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_soortAfvoerAanvoergebied 5
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_ordeCode 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_oppervlakte 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_lateraleknoopID 
+DEFAULT_MACRO $(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_administratiefgebied 12
+# ============================================================================
+# ============================================================================
+USER_PARAMETERS eyJwYXJhbWV0ZXJzIjpbeyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiY29kZSIsInByb21wdCI6ImNvZGUgKEdGRUlERU5UKSIsInJlcXVpcmVkIjp0cnVlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6Imdsb2JhbElEIiwicHJvbXB0IjoiZ2xvYmFsSUQgKEdMT0JBTF9HRkUpIiwicmVxdWlyZWQiOmZhbHNlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6Im5hYW0iLCJwcm9tcHQiOiJuYWFtIChHRkVJREVOVCk6IiwicmVxdWlyZWQiOmZhbHNlLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwidHlwZSI6InRleHQiLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImNob2ljZXMiOlt7ImRpc3BsYXkiOiIxIC0gcGxhbnZvcm1pbmciLCJ2YWx1ZSI6IjEifSx7ImRpc3BsYXkiOiIzIC0gZ2VyZWFsaXNlZXJkIiwidmFsdWUiOiIzIn0seyJkaXNwbGF5IjoiNCAtIGJ1aXRlbiBiZWRyaWpmIiwidmFsdWUiOiI0In0seyJkaXNwbGF5IjoiNSAtIG5pZXQgbWVlciBhYW53ZXppZyIsInZhbHVlIjoiNSJ9LHsiZGlzcGxheSI6IjcgLSB0ZSB2ZXJ3aWpkZXJlbiIsInZhbHVlIjoiNyJ9LHsiZGlzcGxheSI6Ijk4IC0gb3ZlcmlnIiwidmFsdWUiOiI5OCJ9LHsiZGlzcGxheSI6Ijk5IC0gb25iZWtlbmQiLCJ2YWx1ZSI6Ijk5In1dLCJkZWZhdWx0VmFsdWUiOiIzIiwibmFtZSI6InN0YXR1c09iamVjdCIsInByb21wdCI6InN0YXR1c09iamVjdDoiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJkcm9wZG93biIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZGVmYXVsdFZhbHVlIjoiMjAwMDAxMDEiLCJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoiQ1JFQVRFRF9EQVRFIiwicHJvbXB0IjoiQ1JFQVRFRF9EQVRFIiwicmVxdWlyZWQiOmZhbHNlLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6IkxBU1RfRURJVEVEX0RBVEUiLCJwcm9tcHQiOiJMQVNUX0VESVRFRF9EQVRFIChMQVNUIEVESVRFRCBEQVRFKToiLCJyZXF1aXJlZCI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6Imh5cGVybGluayIsInByb21wdCI6Imh5cGVybGluazoiLCJyZXF1aXJlZCI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiY2hvaWNlcyI6W3siZGlzcGxheSI6IjEgLSBiZW1hbGluZ3NnZWJpZWQiLCJ2YWx1ZSI6IjEifSx7ImRpc3BsYXkiOiIyIC0gYWZ2b2VyZ2ViaWVkIiwidmFsdWUiOiIyIn0seyJkaXNwbGF5IjoiMyAtIGRlZWxzdHJvb21nZWJpZWQiLCJ2YWx1ZSI6IjMifSx7ImRpc3BsYXkiOiI0IC0gYWZ3YXRlcmluZ3NnZWJpZWQiLCJ2YWx1ZSI6IjQifSx7ImRpc3BsYXkiOiI1IC0gYWZ3YXRlcmluZ3NlZW5oZWlkIiwidmFsdWUiOiI1In0seyJkaXNwbGF5IjoiNiAtIGFhbnZvZXJnZWJpZWQiLCJ2YWx1ZSI6IjYifSx7ImRpc3BsYXkiOiI5OCAtIG92ZXJpZyIsInZhbHVlIjoiOTgifSx7ImRpc3BsYXkiOiI5OSAtIG9uYmVrZW5kIiwidmFsdWUiOiI5OSJ9XSwiZGVmYXVsdFZhbHVlIjoiNSIsIm5hbWUiOiJzb29ydEFmdm9lckFhbnZvZXJnZWJpZWQiLCJwcm9tcHQiOiJzb29ydEFmdm9lckFhbnZvZXJnZWJpZWQ6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoiZHJvcGRvd24iLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifSx7ImVkaXRvciI6InBsYWludGV4dCIsIm5hbWUiOiJvcmRlQ29kZSIsInByb21wdCI6Im9yZGVDb2RlOiIsInJlcXVpcmVkIjpmYWxzZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJlZGl0b3IiOiJwbGFpbnRleHQiLCJuYW1lIjoib3BwZXJ2bGFrdGUiLCJwcm9tcHQiOiJvcHBlcnZsYWt0ZSAoU0hBUEVfQVJFQSk6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9LHsiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6ImxhdGVyYWxla25vb3BJRCIsInByb21wdCI6ImxhdGVyYWxla25vb3BJRDoiLCJyZXF1aXJlZCI6dHJ1ZSwic3VwcG9ydGVkVmFsdWVUeXBlcyI6WyJleHByZXNzaW9uIiwiZ2xvYmFsUGFyYW1ldGVyIl0sInR5cGUiOiJ0ZXh0IiwidmFsdWVUeXBlIjoic3RyaW5nIn0seyJjaG9pY2VzIjpbeyJkaXNwbGF5IjoiMSAtIGFhIGVuIG1hYXMiLCJ2YWx1ZSI6IjEifSx7ImRpc3BsYXkiOiIyIC0gYW1zdGVsIGdvb2kgZW4gdmVjaHQiLCJ2YWx1ZSI6IjIifSx7ImRpc3BsYXkiOiIzIC0gYnJhYmFudHNlIGRlbHRhIiwidmFsdWUiOiIzIn0seyJkaXNwbGF5IjoiNCAtIGRlbGZsYW5kIiwidmFsdWUiOiI0In0seyJkaXNwbGF5IjoiNSAtIGRvbW1lbCIsInZhbHVlIjoiNSJ9LHsiZGlzcGxheSI6IjYgLSBmcnlzbGFuIiwidmFsdWUiOiI2In0seyJkaXNwbGF5IjoiNyAtIGhvbGxhbmRzIG5vb3JkZXJrd2FydGllciIsInZhbHVlIjoiNyJ9LHsiZGlzcGxheSI6IjggLSBob2xsYW5kc2UgZGVsdGEiLCJ2YWx1ZSI6IjgifSx7ImRpc3BsYXkiOiI5IC0gaHVuemUgZW4gYWFzIiwidmFsdWUiOiI5In0seyJkaXNwbGF5IjoiMTAgLSBub29yZGVyemlqbHZlc3QiLCJ2YWx1ZSI6IjEwIn0seyJkaXNwbGF5IjoiMTEgLSBsaW1idXJnIiwidmFsdWUiOiIxMSJ9LHsiZGlzcGxheSI6IjEyIC0gcmlqbiBlbiBpanNzZWwiLCJ2YWx1ZSI6IjEyIn0seyJkaXNwbGF5IjoiMTMgLSByaWpubGFuZCIsInZhbHVlIjoiMTMifSx7ImRpc3BsYXkiOiIxNCAtIHJpdmllcmVubGFuZCIsInZhbHVlIjoiMTQifSx7ImRpc3BsYXkiOiIxNiAtIHNjaGllbGFuZCBlbiBrcmltcGVuZXJ3YWFyZCIsInZhbHVlIjoiMTYifSx7ImRpc3BsYXkiOiIxNyAtIHN0aWNodHNlIHJpam5sYW5kZW4iLCJ2YWx1ZSI6IjE3In0seyJkaXNwbGF5IjoiMTggLSB6dWlkZXJ6ZWVsYW5kIiwidmFsdWUiOiIxOCJ9LHsiZGlzcGxheSI6IjE5IC0gc2NoZWxkZXN0cm9tZW4iLCJ2YWx1ZSI6IjE5In0seyJkaXNwbGF5IjoiMjAgLSB2YWxsZWkgZW4gdmVsdXdlIiwidmFsdWUiOiIyMCJ9LHsiZGlzcGxheSI6IjIxIC0gdmVjaHRzdHJvbWVuIiwidmFsdWUiOiIyMSJ9LHsiZGlzcGxheSI6IjIyIC0gZHJlbnRzIG92ZXJpanNzZWxzZSBkZWx0YSIsInZhbHVlIjoiMjIifSx7ImRpc3BsYXkiOiIyMCAtIHJpamtzd2F0ZXJzdGFhdCIsInZhbHVlIjoiMzAifV0sImRlZmF1bHRWYWx1ZSI6IjEyIiwibmFtZSI6ImFkbWluaXN0cmF0aWVmZ2ViaWVkIiwicHJvbXB0IjoiYWRtaW5pc3RyYXRpZWZnZWJpZWQ6IiwicmVxdWlyZWQiOnRydWUsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoiZHJvcGRvd24iLCJ2YWx1ZVR5cGUiOiJzdHJpbmcifV19
+# ============================================================================
+#! START_HEADER
+#! END_HEADER
+
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+DEFAULT_MACRO GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME ""
+INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_GeonisBlaeu_Afwateringsgebied1628023192 Input Splitter"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_GeonisBlaeu_Afwateringsgebied"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_GeonisBlaeu_Afwateringsgebied"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_AttributeManager }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_GeonisBlaeu_Afwateringsgebied"    MULTI_FEATURE_MODE { NO }    NULL_ATTR_MODE { NO_OP }    ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "" "code" "$($(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_code$encode)" "SET_TO" }      ATTR_ACTION { "" "naam" "$($(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_naam$encode)" "SET_TO" }      ATTR_ACTION { "" "statusObject" "$($(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_statusObject)" "SET_TO" }      ATTR_ACTION { "" "CREATED_DATE" "$($(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_CREATED_DATE$encode)" "SET_TO" }      ATTR_ACTION { "" "LAST_EDITED_DATE" "$($(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_LAST_EDITED_DATE$encode)" "SET_TO" }      ATTR_ACTION { "" "hyperlink" "$($(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_hyperlink$encode)" "SET_TO" }      ATTR_ACTION { "" "soortAfvoerAanvoergebied" "$($(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_soortAfvoerAanvoergebied)" "SET_TO" }      ATTR_ACTION { "" "ordeCode" "$($(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_ordeCode$encode)" "SET_TO" }      ATTR_ACTION { "" "oppervlakte" "$($(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_oppervlakte$encode)" "SET_TO" }      ATTR_ACTION { "" "lateraleknoopID" "$($(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_lateraleknoopID$encode)" "SET_TO" }      ATTR_ACTION { "" "administratiefgebied" "$($(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_administratiefgebied)" "SET_TO" }      ATTR_ACTION { "" "globalID" "$($(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_globalID$encode)" "SET_TO" }    OUTPUT { OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_AttributeManager_OUTPUT"        }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_AttributeManager_2 }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_AttributeManager_OUTPUT"    MULTI_FEATURE_MODE { NO }    NULL_ATTR_MODE { NO_OP }    ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "naam" "naam" "FME_CONDITIONAL:DEFAULT_VALUE'FME_NULL_VALUE'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 01'Grenskanaal'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 04'Rijnstrangen'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 07'Grenskanaal'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 08'Grenskanaal'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 09'Rijnstrangen'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 10'Rijnstrangen'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 12'Veluwe'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 16'Veluwe'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 20'Veluwe'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 24'Veluwe'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 28'Liemers'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 32'Veluwe'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 40'Liemers'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 44'Liemers'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 48'Havikerwaard'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 50'Veluwe'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 54'Oude<space>IJssel'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 62'Grote<space>Beek'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 66'Grote<space>Beek'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 74'Baakse<space>Beek'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 80'Berkel'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 84'Twentekanaal'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 88'Oude<space>Flierderbeek'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 92'Dommerbeek'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 96'Schipbeek'BOOL_OP;OR;COMPOSITE_TEST;<Unused>;TEST <at>Substring<openparen><at>Value<openparen>naam<closeparen><comma>2<comma>2<closeparen> = 99'Veluwe'FME_NUM_CONDITIONS27___" "SET_TO" }    OUTPUT { OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_AttributeManager_2_OUTPUT"        }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttributeKeeperFactory    FACTORY_NAME { $(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_AttributeKeeper }    INPUT  FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_AttributeManager_2_OUTPUT"    KEEP_ATTRS { oppervlakte,administratiefgebied,CREATED_DATE,LAST_EDITED_DATE,hyperlink,code,ordeCode,lateraleknoopID,statusObject,naam,soortAfvoerAanvoergebied,globalID }    KEEP_LISTS {  }    KEEP_FME_ATTRIBUTES Yes    BUILD_FEATURE_TABLES { NO }    OUTPUT_ON_ATTRIBUTE_CHANGE { <Unused> }    OUTPUT { OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_AttributeKeeper_OUTPUT"        }
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_HyDAMO_AfvoergebiedAanvoergebied1628023192 Output Collector"   INPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_AttributeKeeper_OUTPUT"   OUTPUT FEATURE_TYPE "$(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME)_HyDAMO_AfvoergebiedAanvoergebied"
+INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(GeonisBlaeuToHyDAMOConverterAfvoergebiedAanvoergebied_WORKSPACE_NAME))}]
