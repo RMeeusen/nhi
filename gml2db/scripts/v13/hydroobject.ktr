@@ -12,9 +12,9 @@
     </parameters>
     <log>
       <trans-log-table>
-        <connection>mylog</connection>
-        <schema>log</schema>
-        <table>log_transformation</table>
+        <connection/>
+        <schema></schema>
+        <table></table>
         <size_limit_lines/>
         <interval/>
         <timeout_days>28</timeout_days>
@@ -274,7 +274,7 @@
         </field>
       </channel-log-table>
       <step-log-table>
-        <connection>mylog</connection>
+        <connection/>
         <schema>log</schema>
         <table>log_step</table>
         <timeout_days>28</timeout_days>
