@@ -1,0 +1,42 @@
+
+SIF-tools (open-source)
+#######################
+
+Beschrijving
+============
+The SIF-tools are part of SIF-basis, a framework by Sweco for working with iMOD-groundwatermodels and processing iMOD-files (i.e. IDF, IPF, GEN, etc.). 
+
+No installation is needed for the SIF-tools. The tools should be run via the command-line. Each SIF-tool executable shows basic instructions for syntax and use when run without parameters. Currently the following tools are available:
+
+* Del2Bin: For deleting files or subdirectories to the recycle bin
+* ExcelMapper: For mapping data from Excel rows to textfile, based on a template file
+* ExcelSelect: For selection of rows and/or sheets in Excel file(s)
+* GENcreate: For creating GEN-files for specified extent coordinates
+* HydroMonitorIPFconvert: For converting HydroMonitor Excel-files to IPF-files
+* IDFbnd: For correcting boundary- condition around selected IDF-cells
+* IDFexp: For evaluating multiple (nested) IDF-expressions on IDF-files
+* IDFGENconvert: For IDF-GEN (convex hull) or GEN-IDF (polygons/lines) conversion
+* IDFinfo: For retrieving info about IDF-file (e.g. extent, cellsize, nr of values)
+* IDFmath: For simple math operations on IDF-files (use IDFexp if complex)
+* IDFresample: For resampling values in IDF-file with nearest neighbor method
+* IMFcreate: For creating iMOD IMF-files with specified iMOD-files, legends, etc.
+* iMODclip: For clipping iMOD-files (IDF/ASC/IPF) to specified extent
+* iMODdel: For selective deletion of iMOD-files (IDF/IPF/GEN) (e.g. empty files)
+* iMODmetadata: For adding or merging metadata to iMOD .MET-files
+* iMODstats: For creating Excelfile with statistics of IDF-file(s)
+* iMODValidator: For checking iMOD-models (RUN-file) for some known modelissues
+* IPFreorder: For reordering columns from IPF-file(s) with simple column expressions
+* LayerManager: For checking REGIS/iMOD-layermodel for inconsistencies or kD/c-calculation
+* ReplaceLine: For replacing line at specified linenumber within a text file
+* ReplaceText: For replacing text in one or more files, optionally using regular expressions
+* Tee: for teeing standard output of a command to both standard output and file
+
+De C# tools are all directly compilable with Visual Studio C# Express 2017 which is a free to download C# programming environment. Instructions for this can be found on the GitHub page.   
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: SIF-tools (open-source).csv
+   :stub-columns: 1
+

@@ -1,0 +1,15 @@
+
+iMOD5
+#####
+
+Beschrijving
+============
+GUI omgeving en batch functies voor het voor- en nabewerken van modeldata.
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: iMOD5.csv
+   :stub-columns: 1
+

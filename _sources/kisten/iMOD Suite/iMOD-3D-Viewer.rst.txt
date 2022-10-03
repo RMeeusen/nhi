@@ -1,0 +1,15 @@
+
+iMOD-3D-Viewer
+##############
+
+Beschrijving
+============
+3D viewer voor ondergronddata, kan opgeroepen worden vanuit de iMOD QGIS plugin
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: iMOD-3D-Viewer.csv
+   :stub-columns: 1
+

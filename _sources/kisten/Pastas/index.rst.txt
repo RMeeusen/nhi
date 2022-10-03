@@ -1,0 +1,15 @@
+
+Pastas
+######
+
+Beschrijving
+============
+maken, simuleren en visualiseren van tijdserie modellen
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: index.csv
+   :stub-columns: 1
+

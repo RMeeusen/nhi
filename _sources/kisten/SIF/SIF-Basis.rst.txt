@@ -1,0 +1,15 @@
+
+SIF-Basis
+#########
+
+Beschrijving
+============
+Instrumentarium voor werken met iMOD-data, inclusief scripts for workflows, SIF-tools, foutafhandeling, logging, instellingen, padencorrectie, etc.
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: SIF-Basis.csv
+   :stub-columns: 1
+

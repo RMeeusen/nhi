@@ -1,0 +1,15 @@
+
+SIF-batch
+#########
+
+Beschrijving
+============
+De batchfiles die gebruikt worden om de SIF-tools te starten, inclusief toelichting, logging en foutafhandeling
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: SIF-batch.csv
+   :stub-columns: 1
+

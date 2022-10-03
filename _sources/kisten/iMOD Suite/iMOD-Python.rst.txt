@@ -1,0 +1,15 @@
+
+iMOD-Python
+###########
+
+Beschrijving
+============
+The imod Python package is designed to help you in your MODFLOW groundwater modeling efforts. It makes it easy to go from your raw data to a fully defined MODFLOW model, with the aim to make this process reproducable. Whether you want to build a simple 2D conceptual model, or a complex 3D regional model with millions of cells, imod-python scales automatically by making use of dask. https://imod.xyz/ (bevat ook GxG en grondwateraanvulling berekeningsprocedure)
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: iMOD-Python.csv
+   :stub-columns: 1
+

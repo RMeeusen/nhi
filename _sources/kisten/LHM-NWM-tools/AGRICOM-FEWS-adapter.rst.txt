@@ -1,0 +1,15 @@
+
+AGRICOM-FEWS-adapter
+####################
+
+Beschrijving
+============
+Voor aansturing van Agricom vanuit FEWS
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: AGRICOM-FEWS-adapter.csv
+   :stub-columns: 1
+

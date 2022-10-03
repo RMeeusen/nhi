@@ -1,0 +1,15 @@
+
+ToHyDAMOgml
+###########
+
+Beschrijving
+============
+Python tooling waarmee GML files in NHI HyDAMO formaat gemaakt worden vanuit een DAMO database of vanuit een ESRI File Geodatabase. Deze kunnen gebruikt worden voor This can be used as input for the NHI HyDAMO database or D-Hydamo modelgenerator.
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: ToHyDAMOgml.csv
+   :stub-columns: 1
+

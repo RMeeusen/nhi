@@ -1,0 +1,15 @@
+
+WFS2ISG.py
+##########
+
+Beschrijving
+============
+Met de tool is het mogelijk om vanuit webservices een eenvoudige schematisatie voor het grondwatermodel te maken.
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: index.csv
+   :stub-columns: 1
+

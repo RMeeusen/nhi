@@ -1,0 +1,15 @@
+
+D-Hydro Suite 1D2D
+##################
+
+Beschrijving
+============
+Simulatiesoftware voor 1D2D oppervlaktewater. Opvolger van SOBEK voor toepassing in 1D, 2D en 1D2D regionale en stedelijke oppervlaktewatertoepassingen, inclusief neerslag-afvoer en realtime-control.
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: D-Hydro Suite 1D2D.csv
+   :stub-columns: 1
+

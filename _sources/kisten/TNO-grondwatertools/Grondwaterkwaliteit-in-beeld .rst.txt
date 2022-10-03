@@ -1,0 +1,15 @@
+
+Grondwaterkwaliteit-in-beeld 
+#############################
+
+Beschrijving
+============
+Grondwaterkwaliteit-in-beeld bevat allerlei selectiemogelijkheden en mogelijkheid om dwarsdoorsnedes te maken voor grondwaterkwaliteitsparameters met verschillende soorten hulpinformatie. Ook kunnen samenvattende statistieken voor gebieden of geologische eenheden gemaakt worden.
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: Grondwaterkwaliteit-in-beeld .csv
+   :stub-columns: 1
+

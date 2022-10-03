@@ -1,0 +1,15 @@
+
+D-HyDAMO
+########
+
+Beschrijving
+============
+Een modelgenerator waarmee volledig geautomatiseerd een 1D2D-RR D-HYDRO model kan worden gegenereerd op basis van oppervlaktewaterdata in HyDAMO en andere bronnen Ookwel Delft3D-Flexible-Mesh-Python genoemd. Wordt momenteel gemigreerd naar HYDROLIB.
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: D-HyDAMO.csv
+   :stub-columns: 1
+

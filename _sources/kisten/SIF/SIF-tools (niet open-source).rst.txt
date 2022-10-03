@@ -1,0 +1,35 @@
+
+SIF-tools (niet open-source)
+############################
+
+Beschrijving
+============
+Er zijn verschillende SIF tools die op dit moment nog niet open-source verkrijgbaar zijn. Van onderstaande tools is de verwachting dat ze komend jaar beschikbaar komen
+
+* GEN3D2DAT: For creation of DAT-file with characteristics of GEN 3D-files (TOP/BOT)
+* IDFselect: For selecting cells in IDF-files defined by several conditions (zone file, regions that overlap with zone, value expression)
+* IPFcolidx: For searching and returning a column number in an IPF-file for a specified columnname
+* IPFsample: For sampling values in an IDF-file for specified IPF-points, optionally uses bilineair interpolation
+* IPFsplit: For splitting rows from IPF-file(s) into two or more new IPF-file(s).
+* ISGinfo: For retrieving info about ISG-file (extent or number of segments)
+* NumberRounder: Rounds number values in textfile(s)
+* ResidualAnalysis: For statistics and analysis of IPF-files with model residuals; creates Excelsheet with results for different models; optionally IPF-files witrh residual differences
+* ISDcreate: For creating ISD-files based from IPF- or GEN-files
+* iMODWBalFormat: Formats CSV-output of WBALANCE iMOD-batchfunction into Excelsheet per zone, layer and/or layergroup
+* GENSHPconvert: For converting GEN-files to shapefiles or vice versa. 
+* IPFSHPconvert: For converting IPF-files to shapefiles or vice versa. 
+* IPFselect: For selecting IPF-points in relation to a volume (level, zone), a logical expression and/or some other conditions
+* IFFselect: For selecting IFF-pathlines by volume (level, zone) or traveltime; also corresponding IPF-files will be written.
+* IPFGENconvert: For converting IPF- to GEN-files (IPF-points are converted to regular polygon features)
+* IFFSHPconvert: For converting IFF-files to shapefiles
+* IPFplot: For plotting timeseries from IPF-files as graphs to png/jpg/etc-files, with several options for formatting, combining lines, etc.
+* IPFTXTcreate: For creating associated TXT-files (for an IPF-file) with levels (i.e. lithology or filterlevel) for specified columns in an input IPF-file
+* IDFvoxel: For adding TOP/BOT voxel levels to GeoTOP IDF-files; for adding IDF-files with lithology probabily from input GeoTOP CSV-files
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: SIF-tools (niet open-source).csv
+   :stub-columns: 1
+

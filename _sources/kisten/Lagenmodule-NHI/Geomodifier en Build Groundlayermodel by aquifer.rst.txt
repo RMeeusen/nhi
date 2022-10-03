@@ -1,0 +1,15 @@
+
+Geomodifier en Build Groundlayermodel by aquifer
+################################################
+
+Beschrijving
+============
+Voor de NHI lagentool functionaliteiten Geomodifier en Build Groundlayermodel by aquifer zijn batchable versies beschikbaar. Met deze batchable versie kan net als met de lagentool vanuit een geologische basisdataset (zoals REGIS) een lagenmodel ten behoeve van een numerieke grondwatermodel op te kunnen zetten, waarbij ook verbeteringen aan het geologische basismodel doorgevoerd kunnen worden
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: Geomodifier en Build Groundlayermodel by aquifer.csv
+   :stub-columns: 1
+

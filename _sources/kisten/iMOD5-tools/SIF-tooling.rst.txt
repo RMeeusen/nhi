@@ -1,0 +1,15 @@
+
+SIF-tooling
+###########
+
+Beschrijving
+============
+Gereedschappenset ontwikkeld voor iMOD 5  om het omzetten van data naar modelinvoer en foutafhandeling eenvoudiger te maken. Het zijn allemaal tools die flexibel zijn en daarmee voor verschillende doelen in te zetten. Je kan het zien als bouwstenen waarmee je door slim combineren een complexe workflow kan maken. Zie het kopje SIF voor het complete overzicht van de tooling
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: SIF-tooling.csv
+   :stub-columns: 1
+

@@ -1,0 +1,19 @@
+
+Grondwaterstanden-in-beeld 
+###########################
+
+Beschrijving
+============
+Grondwaterstanden-in-beeld heeft onderdelen:
+* Dynamiek (waarbij interactief tijdreeksmodellering kan worden uitgevoerd met de GDN-tijdreeksmodelleringstool Metran voor een geselecteerde reeks in aanvulling op alle vooraf berekende informatie op basis van de laatste 8 jaar aan metingen per meetpunt en tijdreeksmodellen daarvan die op kaart en in dwarsdoorsnede getoond kunnen worden)
+* Trends (met lineaire trends voor verschillende perioden op basis van gemeten grondwaterstanden)
+* Kwel/wegzijging (met stijghoogteverschillen tussen opeenvolgende filters in putten met meerdere filters;
+* Isohypsen (met interactieve GDN-isohypsentool om kaarten met gelijke stijghoogte te maken op basis van uitkomsten van het Landelijk Hydrologisch Model (LHM, onderdeel van het NHI) mogelijk in combinatie met jaargemiddelden van metingen, met een selectiehulp om een LHM-laag te selecteren op basis van de gewenste diepte of REGIS II-eenheid.
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: Grondwaterstanden-in-beeld .csv
+   :stub-columns: 1
+

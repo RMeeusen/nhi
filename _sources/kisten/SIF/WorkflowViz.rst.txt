@@ -1,0 +1,15 @@
+
+WorkflowViz
+###########
+
+Beschrijving
+============
+SIF-workflows (met .bat en .log files) visualiseren en de status van uitvoering weergeven als HTML
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: WorkflowViz.csv
+   :stub-columns: 1
+

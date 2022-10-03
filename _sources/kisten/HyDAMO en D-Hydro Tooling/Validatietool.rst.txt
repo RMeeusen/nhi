@@ -1,0 +1,15 @@
+
+Validatietool
+#############
+
+Beschrijving
+============
+validatie van m.n. waterschapsdata voor modellereen, scripts om o.a. CDL te valideren en  verwerken tot model informatie
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: Validatietool.csv
+   :stub-columns: 1
+

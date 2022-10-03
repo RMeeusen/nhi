@@ -1,0 +1,15 @@
+
+MF6-tools
+#########
+
+Beschrijving
+============
+voor- en nabewerkingstools rond MODFLOW 6
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: index.csv
+   :stub-columns: 1
+

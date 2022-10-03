@@ -1,0 +1,28 @@
+
+HyDAMO en D-Hydro Tooling
+#########################
+
+Beschrijving
+============
+Verschillende tools om vanuit basisdata uit de kernregistratie (waterschappen) tot een volledig oppervlaktewatermodel te komen
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: index.csv
+   :stub-columns: 1
+
+Gereedschappen
+==============
+
+
+.. toctree:: 
+   :numbered:
+   :maxdepth: 1
+
+   D-HyDAMO
+   Validatietool
+   ToHyDAMOgml
+   HyDAMO-toolbox
+   D-Hydro Suite 1D2D

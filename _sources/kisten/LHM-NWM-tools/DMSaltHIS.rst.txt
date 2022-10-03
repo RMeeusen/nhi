@@ -1,0 +1,15 @@
+
+DMSaltHIS
+#########
+
+Beschrijving
+============
+Converts a Delft-FEWS XML file with 10 minute chloride concentrations to a decadal chloride concentration HIS file, including the % under critical level such that it can be used by LHM/DM.
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: DMSaltHIS.csv
+   :stub-columns: 1
+

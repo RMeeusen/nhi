@@ -1,0 +1,15 @@
+
+iMOD-QGIS
+#########
+
+Beschrijving
+============
+QGIS plugin om ondergronddata te visualizeren
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: iMOD-QGIS.csv
+   :stub-columns: 1
+

@@ -1,0 +1,15 @@
+
+ISG-tool
+########
+
+Beschrijving
+============
+Deze tool wordt gebruikt om een ISG te maken voor de grote rivieren (Maas, Rijn, IJssel, Waal, Nederrijn, Lek en IJssel (Rijntakken)). Waterstandsmetingen worden aan de hand van betrekkingslijnen geinterpoleerd. Verder bevat de ISG Maas bathymetrie, en zomer en winterdijkhoogten voor de bepaling van de breedte van de rivier.
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: index.csv
+   :stub-columns: 1
+

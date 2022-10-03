@@ -1,0 +1,27 @@
+
+iMOD5-tools
+###########
+
+Beschrijving
+============
+Verschillende tools om de input en output van iMOD 5 modellen te bewerken om zo makkelijker tot een grondwatermodel te komen en de resultaten uit te lezen.
+
+Specificaties
+=============
+
+.. csv-table:: 
+   :file: index.csv
+   :stub-columns: 1
+
+Gereedschappen
+==============
+
+
+.. toctree:: 
+   :numbered:
+   :maxdepth: 1
+
+   iMOD5
+   SIF-tooling
+   IDFPY
+   Profile2IPF
