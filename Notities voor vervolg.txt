@@ -1,0 +1,20 @@
+Mogelijke extra tools die toegevoegd kunnen worden
+-	software voor boorbeschrijvingen en geologische profielen https://www.dinoloket.nl/licentievoorwaarden-boris-profiler;
+-	subsurfaceviewer voor visualisatie GeoTOP https://www.dinoloket.nl/subsurfaceviewer.
+-	Verder als TimML er tussen staat is het ook logisch om TTim op te nemen in die lijst (zelfde als TimML maar dan voor tijdsafhankelijke stroming).
+-	GWO database van KWR – of is dat geen tool?
+
+Mogelijke leads om met mensen over te hebben
+Wouter Engel - WSF2ISG.py  --> meer informatie
+Wouter Engel - ISG-tools  --> meer informatie mogelijk? Wouter Swierstra (RHDHV) heeft al wat aangeleverd
+Jeroen Winkelhorst/Lisa Weijers --> ToHyDAMOgml --> wordt geupdate voor DAMO2.2?
+Gerry Roelofs -- HyDAMO toolbox --heeft gerry nog aanvullingen?
+HKV - validatiescripts - LHM
+
+
+Dingen in de toekomst om te checken of ze zijn gebeurt/wat vervolg is/mogelijk meerwerk?
+-  ISG-tools – documentatie niet vrij beschikbaar – zouden met toestemming Deltares (notitie Deltares vermeld bijvoorbeeld dat het gaat om concept versie uitsluitend voor discussie) en of opdrachtgevers vrijgegeven moeten worden. 
+   Er is nog niks geregeld voor beheer en onderhoud. Open Source dus nog maar even nee laten staan, maar mijns inziens zou het goed zijn als er 1 openbaar document documentatie komt (ipv 3 project rapporten) en de tool vervolgens wel gedeeld gaat worden via GitHUB o.i.d.  Over de licentie die dan moet gaan gelden moet dan ook gesproken worden.  N.b. hiervoor is nog geen project gedefinieerd / financiering. 
+-  Verder geldt voor de UGW tools dat deze nog niet op een manier zijn gemaakt om direct van de plank te pakken en toe te passen op eigen data. Het is eerder een voorbeeld van een workflow die overgenomen/aangepast kan worden om toe te passen op je eigen gebied, dus vergt iets meer werk om toe te passen. Wat dat betreft is dat ook een verbetering die nog gemaakt zou moeten worden, maar het zou kunnen dat het Data & Tooling project daarmee aan de slag gaat.
+-  NHI-lagenmodule – batchable tools : *De batchable Lagentool zal voor het project NHI data en tooling open source gemaakt worden, mogelijk onder de GPL3 licentie. Dit is voor de nabije toekomst dus voorzien
+

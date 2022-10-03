@@ -58,7 +58,7 @@ TOCTEMPLATE = jinja2.Template(
 # %% Read
 script_dir = Path(__file__).parent
 
-df = pd.read_csv(script_dir / "NHI-gereedschapskist_inventarisatie.csv")
+df = pd.read_csv(script_dir / "NHI-gereedschapskist_inventarisatie.csv", sep=';')
 
 # %% Fill nans
 # Ffill group name to convert hierarchy into long table format.
