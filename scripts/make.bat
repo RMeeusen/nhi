@@ -10,4 +10,4 @@ call python %~dp0\convert_master_table.py
 cd ..
 call sphinx-build -a -d "docs\_build\docs_doctree" docs "docs\_build\docs_out" --color -bhtml
 
-pause
+pause 
